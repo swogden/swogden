@@ -40,7 +40,7 @@
 
   *{ box-sizing:border-box; margin:0; padding:0; }
 
-  html{ scroll-behavior:smooth; }
+  html{ scroll-behavior:smooth; overflow-x:hidden; }
 
   body{
     background:var(--vellum);
@@ -49,6 +49,7 @@
     font-size:19px;
     line-height:1.65;
     position:relative;
+    overflow-x:hidden;
   }
   body::after{
     content:"";
@@ -130,6 +131,26 @@
     position:relative;
   }
   nav.links a:hover{ color:var(--ember); }
+
+  .nav-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:34px; height:34px;
+    background:none; border:none;
+    cursor:pointer;
+    padding:0;
+  }
+  .nav-toggle span{
+    display:block;
+    width:100%; height:2px;
+    background:var(--vellum-dark);
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
   /* ---------- HERO ---------- */
   .hero{
@@ -465,9 +486,65 @@
   footer .colophon{ opacity:0.55; font-style:italic; }
 
   @media (max-width: 760px){
-    nav.links{ display:none; }
-    .featured .wrap, .about .wrap{ grid-template-columns:1fr; text-align:center; }
+    .wrap{ padding:0 22px; }
+
+    header.site .wrap{ height:66px; }
+    .nav-toggle{ display:flex; }
+    nav.links{
+      display:flex;
+      flex-direction:column;
+      position:absolute;
+      top:66px; left:0; right:0;
+      background:rgba(24,17,11,0.98);
+      padding:8px 22px 20px;
+      gap:2px;
+      max-height:0;
+      overflow:hidden;
+      opacity:0;
+      transition:max-height .3s ease, opacity .25s ease;
+      border-bottom:1px solid rgba(198,138,63,0.25);
+    }
+    nav.links.open{
+      max-height:400px;
+      opacity:1;
+    }
+    nav.links a{
+      padding:13px 0;
+      font-size:0.85rem;
+      border-bottom:1px solid rgba(236,224,196,0.08);
+    }
+
+    .hero{ padding:100px 0 80px; }
+    .hero h1{ line-height:1.22; }
+    .hero .cta-row{ flex-direction:column; align-items:stretch; }
+    .hero .cta-row .btn{ text-align:center; }
+
+    .featured{ padding:64px 0; }
+    .featured .wrap, .about .wrap{ grid-template-columns:1fr; text-align:center; gap:36px; }
     .lectern, .portrait{ justify-self:center; margin:0 auto; }
+    .cover{ width:190px; height:285px; }
+    .portrait{ width:150px; height:150px; }
+
+    .shelf{ padding:56px 0 10px; }
+    .shelf-head{ gap:14px; }
+    .seal{ width:44px; height:44px; }
+    .seal svg{ width:20px; height:20px; }
+    .shelf-title h2{ font-size:1.25rem; }
+
+    .books-row{ grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:18px; }
+
+    .letter{ padding:64px 0; }
+    .letter form{ flex-direction:column; align-items:stretch; }
+    .letter input[type=email]{ width:100%; }
+    .letter .btn{ width:100%; }
+
+    footer .foot-links{ flex-wrap:wrap; row-gap:12px; }
+  }
+
+  @media (max-width: 420px){
+    body{ font-size:17px; }
+    .hero h1{ font-size:1.9rem; }
+    .books-row{ grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -525,13 +602,16 @@
 <header class="site">
   <div class="wrap">
     <a href="#" class="brand"><span class="mark">✦</span> S. W. OGDEN</a>
-    <nav class="links">
+    <nav class="links" id="navLinks">
       <a href="#believers">Believers Series</a>
       <a href="#message">Message Believer</a>
       <a href="#fiction">Fiction</a>
       <a href="#studies">Studies</a>
       <a href="#about">About</a>
     </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -745,6 +825,21 @@
 
 <script>
   document.documentElement.classList.add('js-anim');
+
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+
+  navToggle.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  navLinks.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

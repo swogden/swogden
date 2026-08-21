@@ -1,0 +1,127 @@
+:root{
+  --vellum: #ECE0C4;
+  --vellum-dark: #DECBA0;
+  --umber: #221810;
+  --amber: #C68A3F;
+  --ember: #E8A94C;
+  --oxblood: #6E2430;
+  --ash: #3A2E20;
+  --ash-soft: #5c4c37;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--vellum);
+  color:var(--ash);
+  font-family:'EB Garamond', serif;
+  font-size:19px;
+  line-height:1.65;
+}
+h1,h2,h3,nav a,.btn{ font-family:'Cinzel', serif; }
+a{ color:inherit; text-decoration:none; }
+img{ max-width:100%; display:block; }
+.wrap{ max-width:1000px; margin:0 auto; padding:0 32px; }
+
+/* ---------- HEADER ---------- */
+header.site{ padding:32px 0 18px; text-align:center; border-bottom:1px solid rgba(58,46,32,0.15); }
+.brand{ font-size:1.6rem; letter-spacing:0.15em; color:var(--ash); margin-bottom:18px; display:flex; align-items:center; justify-content:center; gap:12px; }
+.brand .mark{ width:32px; height:32px; }
+nav.main{ display:flex; justify-content:center; gap:34px; flex-wrap:wrap; }
+nav.main a{ font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; padding-bottom:4px; }
+nav.main a.active{ border-bottom:2px solid var(--oxblood); }
+
+/* ---------- BUTTONS ---------- */
+.btn{ font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; padding:13px 26px; border-radius:2px; display:inline-block; }
+.btn-solid{ background:var(--oxblood); color:var(--vellum); }
+.btn-outline{ border:1.5px solid var(--ash); color:var(--ash); }
+
+/* ---------- FEATURED (HOME) ---------- */
+.featured{ padding:60px 0; }
+.featured .grid{ display:grid; grid-template-columns:280px 1fr; gap:56px; align-items:start; }
+.featured.reverse .grid{ grid-template-columns:1fr 280px; }
+.featured.reverse .grid img{ order:2; }
+.featured.reverse .grid > div{ order:1; }
+.featured img{ width:100%; border-radius:2px; box-shadow:0 16px 30px rgba(58,46,32,0.22); }
+.featured .eyebrow{ font-size:0.78rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--oxblood); display:block; margin-bottom:10px; }
+.featured h1{ font-size:2.1rem; margin-bottom:16px; line-height:1.2; }
+.btn-row{ display:flex; gap:16px; margin-bottom:26px; flex-wrap:wrap; }
+.featured p{ margin-bottom:16px; color:var(--ash-soft); }
+.featured p.hook{ font-weight:600; color:var(--ash); font-size:1.05rem; }
+
+.intro{ text-align:center; padding:10px 0 50px; }
+.intro p{ max-width:640px; margin:0 auto; color:var(--ash-soft); font-size:1.05rem; }
+
+/* ---------- BOOKS PAGE / COLLECTIONS ---------- */
+.collection{ padding:44px 0; border-top:1px solid rgba(58,46,32,0.12); }
+.collection:first-of-type{ border-top:none; }
+.collection-head{ text-align:center; margin-bottom:32px; }
+.collection-head .tag{ font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--oxblood); display:block; margin-bottom:6px; }
+.collection-head h2{ font-size:1.4rem; }
+.collection-desc{ text-align:center; max-width:600px; margin:0 auto 32px; color:var(--ash-soft); }
+
+.book-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:26px; }
+.book-grid a{ display:block; }
+.book-grid img{ border-radius:2px; box-shadow:0 8px 16px rgba(58,46,32,0.18); margin-bottom:10px; transition:box-shadow .2s ease, transform .2s ease; }
+.book-grid a:hover img{ transform:translateY(-3px); box-shadow:0 12px 22px rgba(58,46,32,0.26); }
+.book-grid span{ font-size:0.88rem; display:block; text-align:center; }
+.book-grid .badge-soon{ display:block; text-align:center; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--oxblood); margin-top:4px; }
+.coming-soon-tile{ opacity:0.65; filter:grayscale(0.3); }
+.coming-soon-tile .placeholder{
+  width:100%; aspect-ratio:2/3; border-radius:2px; margin-bottom:10px;
+  background:linear-gradient(155deg, #3a2b16, #17100a);
+  display:flex; align-items:flex-end; justify-content:center; padding-bottom:16px;
+  font-family:'Cinzel', serif; font-size:0.8rem; color:var(--vellum-dark);
+}
+
+/* ---------- INDIVIDUAL BOOK PAGE ---------- */
+.book-page{ padding:60px 0 80px; }
+.book-page .grid{ display:grid; grid-template-columns:300px 1fr; gap:60px; align-items:start; }
+.book-page .grid img{ width:100%; border-radius:2px; box-shadow:0 18px 34px rgba(58,46,32,0.25); }
+.book-page h1{ font-size:2.2rem; margin-bottom:12px; line-height:1.2; }
+.retailer-label{ font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ash-soft); margin-bottom:12px; }
+.series-tag{ font-size:0.95rem; color:var(--oxblood); margin-bottom:20px; display:block; }
+.series-tag a{ text-decoration:underline; }
+.book-page p{ margin-bottom:18px; color:var(--ash-soft); }
+.book-page p.hook{ font-weight:600; color:var(--ash); font-size:1.1rem; }
+.back-link{ display:inline-block; margin-top:16px; font-size:0.85rem; color:var(--oxblood); text-decoration:underline; }
+.blog-hero{ width:100%; border-radius:2px; box-shadow:0 16px 30px rgba(58,46,32,0.22); margin:22px 0 8px; }
+
+.share-bar{
+  display:flex; align-items:center; gap:16px;
+  margin-top:32px; padding-top:24px;
+  border-top:1px solid rgba(58,46,32,0.15);
+}
+.share-label{ font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ash-soft); }
+.share-bar a{ color:var(--oxblood); display:flex; align-items:center; transition:opacity .2s ease; }
+.share-bar a:hover{ opacity:0.65; }
+.copy-link-btn{
+  font-family:'Cinzel', serif; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--oxblood); background:none; border:1px solid var(--oxblood); border-radius:2px;
+  padding:7px 14px; cursor:pointer; transition:background .2s ease, color .2s ease;
+}
+.copy-link-btn:hover{ background:var(--oxblood); color:var(--vellum); }
+
+/* ---------- ABOUT PAGE ---------- */
+.about-page{ padding:60px 0 80px; }
+.about-page .grid{ display:grid; grid-template-columns:220px 1fr; gap:50px; align-items:start; }
+.about-page img{ border-radius:50%; width:100%; box-shadow:0 12px 24px rgba(58,46,32,0.2); }
+.about-page h1{ font-size:2rem; margin-bottom:18px; }
+.about-page p{ margin-bottom:18px; color:var(--ash-soft); }
+
+/* ---------- CONTACT PAGE ---------- */
+.contact-page{ padding:70px 0 90px; text-align:center; }
+.contact-page h1{ font-size:2rem; margin-bottom:20px; }
+.contact-page p{ max-width:560px; margin:0 auto 28px; color:var(--ash-soft); }
+
+/* ---------- FOOTER ---------- */
+footer.site{ text-align:center; padding:40px 0; border-top:1px solid rgba(58,46,32,0.15); font-size:0.85rem; color:var(--ash-soft); }
+footer.site .foot-links{ display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-bottom:16px; font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; }
+footer.site .colophon{ opacity:0.7; font-style:italic; }
+
+@media (max-width:700px){
+  .featured .grid, .book-page .grid, .about-page .grid{ grid-template-columns:1fr; text-align:center; }
+  .featured .grid img, .featured .grid > div{ order:0 !important; }
+  .featured img, .book-page .grid img{ max-width:220px; margin:0 auto; }
+  .about-page img{ max-width:160px; margin:0 auto; }
+  .btn-row{ justify-content:center; }
+  nav.main{ gap:18px; }
+}

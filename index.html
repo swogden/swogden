@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S.W. Ogden — Author</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --vellum: #ECE0C4;
+    --vellum-dark: #DECBA0;
+    --umber: #221810;
+    --umber-soft: #35271A;
+    --amber: #C68A3F;
+    --ember: #E8A94C;
+    --oxblood: #6E2430;
+    --oxblood-light: #8A3038;
+    --ash: #3A2E20;
+    --ash-soft: #5c4c37;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background:var(--vellum);
+    color:var(--ash);
+    font-family:'EB Garamond', serif;
+    font-size:19px;
+    line-height:1.65;
+  }
+
+  h1,h2,h3,.eyebrow,nav a,.btn{
+    font-family:'Cinzel', serif;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+
+  img{ max-width:100%; display:block; }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* texture */
+  body{
+    background-image:
+      radial-gradient(circle at 15% 8%, rgba(198,138,63,0.05), transparent 45%),
+      radial-gradient(circle at 85% 30%, rgba(110,36,48,0.04), transparent 40%);
+  }
+
+  .grain{
+    position:relative;
+  }
+  .grain::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events:none;
+    mix-blend-mode:multiply;
+  }
+
+  /* ---------- NAV ---------- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(34,24,16,0.94);
+    border-bottom:1px solid rgba(198,138,63,0.25);
+    backdrop-filter: blur(6px);
+  }
+  header.site .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:78px;
+  }
+  .brand{
+    color:var(--vellum);
+    font-size:1.15rem;
+    letter-spacing:0.12em;
+    display:flex; align-items:center; gap:12px;
+  }
+  .brand .mark{
+    width:34px;height:34px;border-radius:50%;
+    border:1.5px solid var(--amber);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--ember); font-size:0.85rem;
+  }
+  nav.links{ display:flex; gap:34px; }
+  nav.links a{
+    color:var(--vellum-dark);
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    transition:color .2s ease;
+    position:relative;
+  }
+  nav.links a:hover{ color:var(--ember); }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(ellipse 700px 500px at 50% -10%, rgba(232,169,76,0.18), transparent 60%),
+      linear-gradient(180deg, rgba(20,14,9,0.88) 0%, rgba(15,10,7,0.94) 55%, #100b07 100%),
+      url('assets/from-eden-to-amen.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    color:var(--vellum);
+    padding:150px 0 120px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; left:50%; top:0; transform:translateX(-50%);
+    width:2px; height:70px; top:-70px;
+    background:linear-gradient(180deg, transparent, var(--ember));
+  }
+  .hero .eyebrow{
+    display:inline-block;
+    font-size:0.75rem;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+    color:var(--ember);
+    margin-bottom:26px;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 5.4vw, 4.4rem);
+    font-weight:600;
+    line-height:1.15;
+    letter-spacing:0.01em;
+    color:var(--vellum);
+    text-shadow:0 0 40px rgba(232,169,76,0.18);
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--ember);
+  }
+  .hero p.lede{
+    max-width:560px;
+    margin:28px auto 0;
+    font-size:1.2rem;
+    color:var(--vellum-dark);
+  }
+  .hero .cta-row{
+    margin-top:44px;
+    display:flex; gap:20px; justify-content:center; flex-wrap:wrap;
+  }
+
+  .btn{
+    display:inline-block;
+    font-size:0.78rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    padding:15px 30px;
+    border-radius:2px;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn-amber{
+    background:linear-gradient(180deg, var(--ember), var(--amber));
+    color:var(--umber);
+    box-shadow:0 8px 24px rgba(198,138,63,0.28);
+  }
+  .btn-amber:hover{ transform:translateY(-2px); box-shadow:0 12px 30px rgba(198,138,63,0.4); }
+  .btn-ghost{
+    border:1px solid rgba(236,224,196,0.35);
+    color:var(--vellum-dark);
+  }
+  .btn-ghost:hover{ border-color:var(--ember); color:var(--ember); }
+
+  /* ---------- FEATURED ---------- */
+  .featured{
+    background:var(--umber-soft);
+    color:var(--vellum);
+    padding:90px 0;
+    position:relative;
+  }
+  .featured .wrap{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:64px;
+    align-items:center;
+  }
+  .lectern{
+    position:relative;
+    display:flex; justify-content:center;
+  }
+  .cover{
+    width:230px; height:345px;
+    border-radius:1px;
+    display:flex; align-items:flex-end;
+    padding:26px 22px;
+    box-shadow:0 30px 60px rgba(0,0,0,0.55), 0 0 60px rgba(232,169,76,0.18);
+    position:relative;
+  }
+  .cover::before{
+    content:"";
+    position:absolute; inset:0;
+    border:1px solid rgba(236,224,196,0.18);
+  }
+  .cover-title{
+    font-family:'Cinzel', serif;
+    color:var(--vellum);
+    font-size:1.15rem;
+    line-height:1.35;
+    letter-spacing:0.02em;
+  }
+  .cover.c1{ background:linear-gradient(155deg, #4a1a1f, #1c0a0c); }
+  .cover.c2{ background:linear-gradient(155deg, #35291a, #1c150c); }
+  .cover.c3{ background:linear-gradient(155deg, #26343a, #0e181b); }
+  .cover.c4{ background:linear-gradient(155deg, #3a2b16, #17100a); }
+
+  .cover img, .book-cover img{
+    width:100%; height:100%;
+    object-fit:cover;
+    border-radius:1px;
+  }
+  .cover{ padding:0; overflow:hidden; }
+  .book-cover{ padding:0; overflow:hidden; align-items:stretch; }
+
+  .portrait img{
+    width:100%; height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    filter: sepia(0.18) saturate(1.05) contrast(1.02);
+  }
+
+  .featured .eyebrow{ color:var(--ember); font-size:0.75rem; letter-spacing:0.28em; text-transform:uppercase; }
+  .featured h2{
+    font-size:2.1rem; margin:18px 0 16px; color:var(--vellum); font-weight:600;
+  }
+  .featured p{ color:var(--vellum-dark); max-width:520px; margin-bottom:28px; }
+
+  /* ---------- SHELVES ---------- */
+  .shelf{
+    padding:96px 0 20px;
+  }
+  .shelf-head{
+    display:flex; align-items:center; gap:22px; margin-bottom:14px;
+  }
+  .seal{
+    width:56px; height:56px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--oxblood-light), var(--oxblood) 70%);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 14px rgba(110,36,48,0.35), inset 0 0 0 1px rgba(236,224,196,0.15);
+    flex-shrink:0;
+  }
+  .seal svg{ width:26px; height:26px; }
+  .shelf-title h2{
+    font-size:1.5rem; color:var(--ash); font-weight:600; letter-spacing:0.02em;
+  }
+  .shelf-title .tag{
+    font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--oxblood);
+    margin-bottom:4px; display:block;
+  }
+  .shelf-desc{
+    max-width:600px; color:var(--ash-soft); margin:18px 0 36px; font-size:1.02rem;
+  }
+
+  .books-row{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(190px, 1fr));
+    gap:28px;
+  }
+  .book-card{
+    background:linear-gradient(180deg, #f4ead2, var(--vellum-dark));
+    border:1px solid rgba(58,46,32,0.14);
+    border-radius:2px;
+    padding:18px;
+    display:flex; flex-direction:column;
+    box-shadow:0 10px 24px rgba(58,46,32,0.08);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .book-card:hover{ transform:translateY(-4px); box-shadow:0 16px 32px rgba(58,46,32,0.16); }
+  .book-cover{
+    width:100%; aspect-ratio:2/3;
+    border-radius:1px;
+    display:flex; align-items:flex-end;
+    padding:16px 14px;
+    margin-bottom:16px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.28);
+  }
+  .book-cover span{
+    font-family:'Cinzel', serif; color:var(--vellum);
+    font-size:0.95rem; line-height:1.3;
+  }
+  .book-card h3{
+    font-family:'EB Garamond', serif;
+    font-weight:600; font-size:1.08rem; color:var(--ash);
+    margin-bottom:6px;
+  }
+  .book-card .blurb{
+    font-size:0.92rem; color:var(--ash-soft); flex:1; margin-bottom:16px;
+  }
+  .book-card .badge{
+    display:inline-block; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--oxblood); margin-bottom:8px;
+  }
+  .buy-link{
+    font-size:0.75rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--oxblood); border-bottom:1px solid var(--oxblood);
+    align-self:flex-start; padding-bottom:2px;
+    transition:opacity .2s ease;
+  }
+  .buy-link:hover{ opacity:0.65; }
+
+  .coming-soon{
+    opacity:0.55;
+  }
+  .coming-soon .book-cover{ filter:grayscale(0.3); }
+
+  /* ---------- ABOUT ---------- */
+  .about{
+    background:var(--umber);
+    color:var(--vellum);
+    padding:100px 0;
+    margin-top:80px;
+  }
+  .about .wrap{
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .portrait{
+    width:180px; height:180px; border-radius:50%;
+    border:1.5px solid var(--amber);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cinzel', serif; font-size:2.4rem; color:var(--ember);
+    background:radial-gradient(circle, rgba(198,138,63,0.08), transparent 70%);
+  }
+  .about .eyebrow{ color:var(--ember); font-size:0.75rem; letter-spacing:0.28em; text-transform:uppercase; }
+  .about h2{ font-size:1.9rem; margin:16px 0 18px; font-weight:600; }
+  .about p{ color:var(--vellum-dark); max-width:560px; margin-bottom:22px; }
+
+  /* ---------- NEWSLETTER ---------- */
+  .letter{
+    background:var(--vellum-dark);
+    padding:90px 0;
+    text-align:center;
+  }
+  .letter .eyebrow{ color:var(--oxblood); font-size:0.75rem; letter-spacing:0.28em; text-transform:uppercase; }
+  .letter h2{ font-size:1.9rem; margin:16px 0 12px; color:var(--ash); font-weight:600; }
+  .letter p{ color:var(--ash-soft); max-width:480px; margin:0 auto 32px; }
+  .letter form{
+    display:flex; max-width:440px; margin:0 auto; gap:12px; flex-wrap:wrap; justify-content:center;
+  }
+  .letter input[type=email]{
+    flex:1; min-width:220px;
+    padding:14px 18px;
+    border:1px solid rgba(58,46,32,0.3);
+    background:var(--vellum);
+    font-family:'EB Garamond', serif; font-size:1rem; color:var(--ash);
+    border-radius:2px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--umber);
+    color:var(--vellum-dark);
+    padding:56px 0 40px;
+    text-align:center;
+    font-size:0.85rem;
+  }
+  footer .brand{ justify-content:center; margin-bottom:18px; color:var(--vellum); }
+  footer .foot-links{ display:flex; gap:26px; justify-content:center; margin-bottom:22px; }
+  footer .foot-links a{ letter-spacing:0.08em; text-transform:uppercase; font-size:0.72rem; color:var(--vellum-dark); }
+  footer .foot-links a:hover{ color:var(--ember); }
+  footer .colophon{ opacity:0.55; font-style:italic; }
+
+  @media (max-width: 760px){
+    nav.links{ display:none; }
+    .featured .wrap, .about .wrap{ grid-template-columns:1fr; text-align:center; }
+    .lectern, .portrait{ justify-self:center; margin:0 auto; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ scroll-behavior:auto !important; transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="#" class="brand"><span class="mark">✦</span> S. W. OGDEN</a>
+    <nav class="links">
+      <a href="#believers">Believers Series</a>
+      <a href="#message">Message Believer</a>
+      <a href="#fiction">Fiction</a>
+      <a href="#studies">Studies</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero grain">
+  <div class="wrap">
+    <span class="eyebrow">Higher Ground Press</span>
+    <h1>Chronicles of faith,<br>carried by <em>candlelight</em></h1>
+    <p class="lede">Biblical biography, apologetics, and fiction for readers who want scripture explained with weight — not watered down.</p>
+    <div class="cta-row">
+      <a href="#believers" class="btn btn-amber">Enter the Library</a>
+      <a href="#letter" class="btn btn-ghost">Join the Correspondence</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="wrap">
+    <div class="lectern">
+      <div class="cover c1">
+        <img src="assets/generation-of-vipers.png" alt="Generation of Vipers cover">
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Newest From the Scriptorium</span>
+      <h2>Generation of Vipers: The Seed of the Serpent in Scripture</h2>
+      <p>A sobering study tracing the serpent's seed through scripture — confronting counterfeit faith with the same fire the prophets used.</p>
+      <a href="#" class="btn btn-amber">View on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <section class="shelf" id="believers">
+    <div class="shelf-head">
+      <div class="seal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ECE0C4" stroke-width="1.4"><path d="M4 18 L4 10 L12 4 L20 10 L20 18 Z"/><path d="M4 18 L20 18" /><circle cx="12" cy="12" r="1.6" fill="#ECE0C4" stroke="none"/></svg>
+      </div>
+      <div class="shelf-title">
+        <span class="tag">A Chronicle in Three Parts</span>
+        <h2>The Believers Series</h2>
+      </div>
+    </div>
+    <p class="shelf-desc">Narrative biographies of scripture's most tested men — told in full, in order, as their faith was actually forged.</p>
+    <div class="books-row">
+      <div class="book-card">
+        <div class="book-cover c2"><img src="assets/elijah.jpg" alt="Elijah: Fire on the Mountain cover"></div>
+        <span class="badge">Book One</span>
+        <h3>Elijah: The Still Small Voice</h3>
+        <p class="blurb">A prophet undone by triumph, remade in the silence after the fire.</p>
+        <a href="#" class="buy-link">View on Amazon</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover c3"><img src="assets/daniel.png" alt="Daniel: The Man in Babylon cover"></div>
+        <span class="badge">Book Two</span>
+        <h3>Daniel: The Man in Babylon</h3>
+        <p class="blurb">Faithful in an empire built to erase it — the life of an exile who never once bent.</p>
+        <a href="#" class="buy-link">View on Amazon</a>
+      </div>
+      <div class="book-card coming-soon">
+        <div class="book-cover c4"><span>JOSHUA</span></div>
+        <span class="badge">Book Three · Coming Soon</span>
+        <h3>Joshua</h3>
+        <p class="blurb">The next chronicle in the series — in progress.</p>
+        <span class="buy-link" style="border-color:transparent;">Notify Me →</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="shelf" id="message">
+    <div class="shelf-head">
+      <div class="seal">
+        <svg viewBox="0 0 24 24" fill="#ECE0C4"><circle cx="12" cy="4" r="1.3"/><circle cx="18" cy="8" r="1.3"/><circle cx="19" cy="15" r="1.3"/><circle cx="12" cy="20" r="1.3"/><circle cx="5" cy="15" r="1.3"/><circle cx="6" cy="8" r="1.3"/><circle cx="12" cy="12" r="1.5"/></svg>
+      </div>
+      <div class="shelf-title">
+        <span class="tag">Seven Stars, One Message</span>
+        <h2>For the Message Believer</h2>
+      </div>
+    </div>
+    <p class="shelf-desc">Studies written for readers tracing the church ages and the Message of the hour — grounded, careful, and unflinching.</p>
+    <div class="books-row">
+      <div class="book-card">
+        <div class="book-cover c1"><img src="assets/seven-stars.jpg" alt="Seven Stars In His Hand cover"></div>
+        <h3>Seven Stars In His Hand</h3>
+        <p class="blurb">The messengers of the seven church ages, examined one by one.</p>
+        <a href="#" class="buy-link">View on Amazon</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover c4"><img src="assets/generation-of-vipers.png" alt="Generation of Vipers cover"></div>
+        <h3>Generation of Vipers</h3>
+        <p class="blurb">The seed of the serpent, traced from Eden to the present hour.</p>
+        <a href="#" class="buy-link">View on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="shelf" id="fiction">
+    <div class="shelf-head">
+      <div class="seal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ECE0C4" stroke-width="1.4"><path d="M12 3 C12 3 6 11 6 15 a6 6 0 0 0 12 0 C18 11 12 3 12 3 Z"/></svg>
+      </div>
+      <div class="shelf-title">
+        <span class="tag">Biblical Fiction</span>
+        <h2>The Pillar Left Behind</h2>
+      </div>
+    </div>
+    <p class="shelf-desc">Scripture's margins, imagined in full — faithful to the text, unafraid of the silence between its lines.</p>
+    <div class="books-row" style="max-width:420px;">
+      <div class="book-card">
+        <div class="book-cover c3"><img src="assets/salt.jpg" alt="Salt: Remember Lot's Wife cover"></div>
+        <h3>Salt: Remember Lot's Wife</h3>
+        <p class="blurb">One glance back, and a warning carried in a pillar of salt for three thousand years.</p>
+        <a href="#" class="buy-link">View on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="shelf" id="studies">
+    <div class="shelf-head">
+      <div class="seal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ECE0C4" stroke-width="1.4"><path d="M4 5.5 C7 4 9.5 4 12 5.5 C14.5 4 17 4 20 5.5 V18 C17 16.5 14.5 16.5 12 18 C9.5 16.5 7 16.5 4 18 Z"/><path d="M12 5.5 V18"/></svg>
+      </div>
+      <div class="shelf-title">
+        <span class="tag">Apologetics & Exposition</span>
+        <h2>Biblical Studies</h2>
+      </div>
+    </div>
+    <p class="shelf-desc">Careful, well-sourced answers for the honest skeptic and the searching believer alike.</p>
+    <div class="books-row">
+      <div class="book-card">
+        <div class="book-cover c1"><img src="assets/breaking-canaans-curse.jpg" alt="Breaking Canaan's Curse cover"></div>
+        <h3>Breaking Canaan's Curse</h3>
+        <p class="blurb">The great faith of the Gentile woman of Matthew 15.</p>
+        <a href="#" class="buy-link">View on Amazon</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover c2"><img src="assets/out-of-the-tombs.jpg" alt="Out of the Tombs cover"></div>
+        <h3>Out of the Tombs</h3>
+        <p class="blurb">From Legion to witness — a study in complete deliverance.</p>
+        <a href="#" class="buy-link">View on Amazon</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover c4"><img src="assets/behold.png" alt="BEHOLD: The Hidden Prophecy in God's Name cover"></div>
+        <h3>BEHOLD: The Hidden Prophecy in God's Name</h3>
+        <p class="blurb">A name that has carried prophecy since before the burning bush.</p>
+        <a href="#" class="buy-link">View on Amazon</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover c3"><img src="assets/from-eden-to-amen.jpg" alt="From Eden To Amen cover"></div>
+        <h3>From Eden To Amen</h3>
+        <p class="blurb">Tracing God's design from the first word to the last.</p>
+        <a href="#" class="buy-link">View on Amazon</a>
+      </div>
+      <div class="book-card">
+        <div class="book-cover c1"><img src="assets/777-reasons.jpg" alt="777 Reasons the Bible Can Be Trusted cover"></div>
+        <h3>777 Reasons the Bible Can Be Trusted</h3>
+        <p class="blurb">A comprehensive case for the divine inspiration of scripture.</p>
+        <a href="#" class="buy-link">View on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="portrait"><img src="assets/author-photo.jpg" alt="S.W. Ogden, author"></div>
+    <div>
+      <span class="eyebrow">The Author</span>
+      <h2>S. W. Ogden</h2>
+      <p>Wesley writes from Lexington, Kentucky, at the intersection of biblical biography, apologetics, and the Message — chasing the same question through every book: what did faith actually cost the people who lived it?</p>
+      <a href="#" class="btn btn-ghost">Read the Full Story</a>
+    </div>
+  </div>
+</section>
+
+<section class="letter" id="letter">
+  <div class="wrap">
+    <span class="eyebrow">Join the Correspondence</span>
+    <h2>A letter, now and then</h2>
+    <p>New releases, studies in progress, and the occasional note from the writing desk — nothing more.</p>
+    <form>
+      <input type="email" placeholder="your@email.com" required>
+      <button type="submit" class="btn btn-amber">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="#" class="brand"><span class="mark">✦</span> S. W. OGDEN</a>
+    <div class="foot-links">
+      <a href="#believers">Books</a>
+      <a href="#about">About</a>
+      <a href="#letter">Newsletter</a>
+      <a href="#">Contact</a>
+    </div>
+    <p class="colophon">© 2026 S.W. Ogden · Higher Ground Press</p>
+  </div>
+</footer>
+
+</body>
+</html>

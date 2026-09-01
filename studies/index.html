@@ -79,6 +79,8 @@
   .status-pill.pending{ background:rgba(58,46,32,0.1); color:var(--ash-soft); }
   .studies-table a.title-link{ color:var(--ash); font-weight:600; text-decoration:none; }
   .studies-table a.title-link:hover{ color:var(--oxblood); text-decoration:underline; }
+  .studies-table a.vgr-link{ color:var(--ash-soft); font-size:0.85rem; text-decoration:none; white-space:nowrap; }
+  .studies-table a.vgr-link:hover{ color:var(--oxblood); text-decoration:underline; }
   .no-results{ text-align:center; padding:40px 0; color:var(--ash-soft); font-style:italic; }
   #studiesTableWrap{ max-height:640px; overflow-y:auto; border:1px solid rgba(58,46,32,0.12); border-radius:2px; }
   #studiesTableWrap table{ margin:0; }
@@ -149,6 +151,7 @@
             <th data-sort="code">Date</th>
             <th data-sort="title">Title</th>
             <th data-sort="status">Status</th>
+            <th>Listen/Read</th>
           </tr>
         </thead>
         <tbody id="studiesBody"></tbody>
@@ -259,7 +262,8 @@
         var statusCell = s.slug
           ? '<span class="status-pill studied">Studied</span>'
           : '<span class="status-pill pending">Not yet</span>';
-        tr.innerHTML = '<td class="code-cell">' + s.code + '</td><td>' + titleCell + '</td><td>' + statusCell + '</td>';
+        var vgrCell = '<a href="https://branham.org/en/messagestream/ENG=' + encodeURIComponent(s.code) + '" target="_blank" rel="noopener" class="vgr-link">VGR &rarr;</a>';
+        tr.innerHTML = '<td class="code-cell">' + s.code + '</td><td>' + titleCell + '</td><td>' + statusCell + '</td><td>' + vgrCell + '</td>';
         frag.appendChild(tr);
       });
       tbody.appendChild(frag);

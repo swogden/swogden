@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bible Study</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=UnifrakturMaguntia&display=swap">
+<style>
+  :root { --accent: #a8792e; }
+  body { margin: 0; font-family: 'EB Garamond', serif; background: #f4ecd8; color: #2b1d10; }
+  a { color: inherit; text-decoration: none; }
+  .book-link:hover { background: #ece0c4; border-color: var(--accent); }
+  .rule { flex-grow: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(43,29,16,0.35), transparent); }
+  .diamond { width: 9px; height: 9px; transform: rotate(45deg); background: var(--accent); flex-shrink: 0; }
+  .wrap { max-width: 1280px; margin: 0 auto; box-sizing: border-box; padding: 88px 60px 72px; display: flex; flex-direction: column; gap: 56px; }
+  .col-head { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); font-weight: 600; padding-bottom: 6px; border-bottom: 1px solid rgba(168,121,46,0.35); }
+  .book { padding: 8px 10px; font-size: 17px; color: #5a4632; }
+  .testament-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 28px; }
+  @media (max-width: 900px) {
+    .testament-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .wrap { padding: 56px 24px 48px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center;">
+    <div style="font-style: italic; font-size: 15px; letter-spacing: 3px; text-transform: uppercase; color: #5a4632;">A Daily Walk Through Scripture</div>
+    <h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 56px; line-height: 1.05;">Bible Study</h1>
+    <div style="font-style: italic; font-size: 19px; color: #5a4632; max-width: 560px;">Chapter by chapter, from inside the Message of the Hour &mdash; with the relevant teachings of Wm. Branham woven in where they belong.</div>
+    <div style="display: flex; align-items: center; gap: 14px; width: 380px; max-width: 100%; margin-top: 8px;">
+      <div class="rule"></div>
+      <div class="diamond"></div>
+      <div class="rule"></div>
+    </div>
+  </div>
+
+  <!-- Old Testament -->
+  <div style="display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 26px; letter-spacing: 1px;">Old Testament</div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="testament-grid">
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="col-head">The Law</div>
+        <a class="book-link" href="genesis.html" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border-radius: 4px; border: 1px solid var(--accent); background: #fbf6e9; font-weight: 600; font-size: 17px;">Genesis <span style="font-size: 11px; color: var(--accent); letter-spacing: 1px;">CH. 1</span></a>
+        <div class="book">Exodus</div>
+        <div class="book">Leviticus</div>
+        <div class="book">Numbers</div>
+        <div class="book">Deuteronomy</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="col-head">History</div>
+        <div class="book">Joshua</div>
+        <div class="book">Judges</div>
+        <div class="book">Ruth</div>
+        <div class="book">1 Samuel</div>
+        <div class="book">2 Samuel</div>
+        <div class="book">1 Kings</div>
+        <div class="book">2 Kings</div>
+        <div class="book">1 Chronicles</div>
+        <div class="book">2 Chronicles</div>
+        <div class="book">Ezra</div>
+        <div class="book">Nehemiah</div>
+        <div class="book">Esther</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="col-head">Wisdom</div>
+        <div class="book">Job</div>
+        <div class="book">Psalms</div>
+        <div class="book">Proverbs</div>
+        <div class="book">Ecclesiastes</div>
+        <div class="book">Song of Solomon</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="col-head">Major Prophets</div>
+        <div class="book">Isaiah</div>
+        <div class="book">Jeremiah</div>
+        <div class="book">Lamentations</div>
+        <div class="book">Ezekiel</div>
+        <div class="book">Daniel</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="col-head">Minor Prophets</div>
+        <div class="book">Hosea</div>
+        <div class="book">Joel</div>
+        <div class="book">Amos</div>
+        <div class="book">Obadiah</div>
+        <div class="book">Jonah</div>
+        <div class="book">Micah</div>
+        <div class="book">Nahum</div>
+        <div class="book">Habakkuk</div>
+        <div class="book">Zephaniah</div>
+        <div class="book">Haggai</div>
+        <div class="book">Zechariah</div>
+        <div class="book">Malachi</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- New Testament -->
+  <div style="display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <div style="font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 26px; letter-spacing: 1px;">New Testament</div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="testament-grid">
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="col-head">Gospels</div>
+        <div class="book">Matthew</div>
+        <div class="book">Mark</div>
+        <div class="book">Luke</div>
+        <div class="book">John</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="col-head">History</div>
+        <div class="book">Acts</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="col-head">Pauline Epistles</div>
+        <div class="book">Romans</div>
+        <div class="book">1 Corinthians</div>
+        <div class="book">2 Corinthians</div>
+        <div class="book">Galatians</div>
+        <div class="book">Ephesians</div>
+        <div class="book">Philippians</div>
+        <div class="book">Colossians</div>
+        <div class="book">1 Thessalonians</div>
+        <div class="book">2 Thessalonians</div>
+        <div class="book">1 Timothy</div>
+        <div class="book">2 Timothy</div>
+        <div class="book">Titus</div>
+        <div class="book">Philemon</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="col-head">General Epistles</div>
+        <div class="book">Hebrews</div>
+        <div class="book">James</div>
+        <div class="book">1 Peter</div>
+        <div class="book">2 Peter</div>
+        <div class="book">1 John</div>
+        <div class="book">2 John</div>
+        <div class="book">3 John</div>
+        <div class="book">Jude</div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="col-head">Prophecy</div>
+        <div class="book">Revelation</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div style="display: flex; align-items: center; gap: 14px; margin-top: 12px;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+  <div style="text-align: center; font-style: italic; font-size: 14px; color: #8a765d;">A private study, kept off the main site navigation.</div>
+
+</div>
+</body>
+</html>

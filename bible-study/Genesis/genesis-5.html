@@ -25,10 +25,24 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-  .placeholder-note { font-size: 13px; font-style: italic; color: #a89a80; text-align: center; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .gen-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .gen-table th, .gen-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid rgba(43,29,16,0.15); }
+  .gen-table th { color: var(--accent); text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px; }
+  .gen-table tr.enoch-row td { color: #6d2331; font-weight: 600; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
+    .gen-table { font-size: 13px; }
   }
 </style>
 </head>
@@ -42,9 +56,8 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-5-hero.jpg" alt="Enoch walking, placeholder image pending a revised hero">
+    <img src="images/genesis-5-hero.jpg" alt="Enoch walking with God in the fields at twilight, taken up in light, while the generations of Adam stretch behind him toward the grave">
   </div>
-  <div class="placeholder-note">Placeholder hero &mdash; to be revisited.</div>
 
   <!-- Scripture -->
   <div class="center-col">
@@ -87,91 +100,236 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: The Weight of &ldquo;And He Died&rdquo;</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: The Book of the Generations, and the One Man Who Never Died</h2>
 
-    <div class="study-p">
-      Genesis 5 is the first true genealogy in the Bible, and it reads like one: a name, a lifespan measured in centuries, sons and daughters, a final total, and then the same four words closing it out &mdash; "and he died." Adam, Seth, Enos, Cainan, Mahalaleel, Jared: six men, six enormous lifespans, six identical endings. The refrain is almost hypnotic by design. It is what makes the seventh name land the way it does.
+    <div class="tag-row">
+      <span class="tag">The Book of the Generations</span>
+      <span class="tag">Enoch, Seventh From Adam</span>
+      <span class="tag">Enoch's Translation: A Type of the Rapture</span>
+      <span class="tag">No Man Reaches the Day</span>
+      <span class="tag">Lamech's Comfort</span>
     </div>
 
     <div class="study-p">
-      Enoch is the seventh generation counted from Adam &mdash; and that count matters, because Cain is not in this line at all. Genesis 4 already made the case, from the same source we've been drawing on, that Cain was not Adam's son by nature; this genealogy quietly confirms it in its own way, by never mentioning him.
+      Genesis 5 reads like a ledger, and on a first pass a reader can be forgiven for skimming it: a name, a lifespan, &ldquo;and he died,&rdquo; a name, a lifespan, &ldquo;and he died,&rdquo; nine times over. But this is the very list Brother Branham reached for repeatedly to settle a dispute that began two chapters earlier &mdash; and it is broken, once, by a man who does not appear in that refrain at all.
     </div>
 
-    <!-- Branham quote 1: Enoch as the seventh, type of the rapture -->
+    <h3 class="sec-head">The Book of the Generations</h3>
+    <div class="study-p">
+      Verse 1 calls this &ldquo;the book of the generations of Adam,&rdquo; and Brother Branham treated that heading as more than a label. This is the official record of Adam's line, name by name, and he pointed to it &mdash; and to Luke's genealogy, which follows the same list forward to Christ &mdash; as settled proof of who does not belong on it.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Enoch was the seventh from Noah [i.e., from Adam]... which was a type of the church ages. Now, all of the rest of the six men, before him, died, but Enoch was translated... showing that it's the seventh church age that takes the Rapture.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Rapture&rdquo; (65-1204)</div>
+        <div class="quote-text">&ldquo;Her first son was not the son of Adam. If it was, he had the birthrights. The Bible, in Jude, said that&hellip;&lsquo;Enoch was the seventh from Adam.&rsquo; Is that right? And he starts out, &lsquo;Adam begot his son, Seth.&rsquo; What about Cain, which had the birthrights? He wasn't Adam's son.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Harvest Time&rdquo; (64-1212, para. 304)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Verses 22 and 24 both use the same unusual phrase for Enoch that no other name in the chapter receives: he did not merely live, he "walked with God." The distinction is doing real work. Everyone else in this chapter lived and died on the same terms as the rest of fallen humanity. Enoch's whole life, in the space of two verses, is defined by a relationship rather than a lifespan.
+      Count the names in verses 3 through 21 of this very chapter &mdash; Adam, Seth, Enos, Cainan, Mahalaleel, Jared, Enoch &mdash; and Enoch is the seventh, exactly as Jude 14 calls him. Cain's name is nowhere in the list, though he was Eve's firstborn. On this reading, Genesis 5 is not neutral background to the paternity question raised in chapters 3 and 4; it is Moses' own genealogical answer to it.
     </div>
 
-    <!-- Branham quote 2: walked with God, type of the raptured Church -->
+    <h3 class="sec-head">Enoch, Seventh From Adam</h3>
+    <div class="study-p">
+      Brother Branham returned often to the number itself, not just the name. Being the seventh in this specific list, to him, was not incidental.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Enoch walked with God five hundred years, and had a testimony that he pleased God. And he was a type of the raptured Church.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Hear Ye Him&rdquo; (60-0313)</div>
+        <div class="quote-text">&ldquo;If we turn back in Genesis, about the&hellip;5th chapter, you can also turn to Luke and find out, that Enoch was the seventh&hellip;For, if Cain was Abel's son, then he was the eighth. See? But nowhere in the Bible it said that Cain was&hellip;Adam's son. Because&hellip;the Bible said, &lsquo;He was of that evil one.&rsquo; And Adam wasn't the evil one.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Rapture&rdquo; (65-1204, para. 104)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Everything else in the chapter simply resumes after him. Methuselah lives longer than any man in Scripture and still dies. Lamech names his own son Noah &mdash; "rest," or "comfort" &mdash; out loud hoping for relief from a curse that has now weighed on the ground for five generations. It is a small, human moment of hope tucked into a wall of numbers, and it points forward directly into the chapter that follows.
+      He then carried the number forward into a second, larger typology: Enoch's place as the seventh name is also, in his reading, a picture of which church age produces the Rapture.
     </div>
 
-    <h3 style="margin: 8px 0 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 26px;">Enoch, and the Riddle in Stone</h3>
-
-    <div class="study-p">
-      There is a second thing Brother Branham taught about this same man, entirely apart from his translation, and it deserves its own space here rather than a passing mention: that Enoch, before the flood, built the Great Pyramid of Giza &mdash; not as a tomb, but as a memorial and a prophecy carved into stone, meant to survive the very judgment that was coming on the rest of the world he lived in.
-    </div>
-
-    <!-- Branham quote 3: Enoch built the pyramid as a memorial -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Enoch built it before the flood. It was a memorial, that's the reason it never destroyed during the time of the flood... Now if you notice, way down at the bottom it's wide, and then it shapes up a little more in the minority, and then a little more... That's the Lutheran age, justification in the Church; sanctification; then the baptism of the Holy Ghost. But as it shapes towards the top, it continues from Lutheran age, to Wesley age, into Pentecostal age.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The True Easter Seal&rdquo; (61-0402)</div>
+        <div class="quote-text">&ldquo;Enoch&hellip;was a type of the church ages. Now, all of the rest of the six men, before him, died, but Enoch was translated. Enoch was raptured, the seventh, showing that it's the seventh church age that takes the Rapture. Now, there's no doubt, we're in the seventh church age. We all know it.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Rapture&rdquo; (65-1204, para. 105)</div>
       </div>
     </div>
 
     <div class="study-p">
-      The detail Brother Branham kept returning to is the pyramid's missing capstone &mdash; still visible today, he'd point out, in the unfinished pyramid on the reverse of the U.S. one-dollar bill's Great Seal. In this reading, the structure itself is a kind of architecture of church history: wide at the base, narrowing upward through age after age, every stone honed and fitted with a precision that still puzzles engineers, waiting on a single stone that was never set.
+      Six men before him die exactly as the chapter's refrain promises. The seventh does not. That single break in an otherwise unbroken pattern is, in this doctrine, the whole point of where Enoch falls in the count.
     </div>
 
-    <!-- Branham quote 4: every stone measured, the missing Headstone -->
+    <!-- generations table -->
+    <table class="gen-table">
+      <tr><th>Name</th><th>Age at fatherhood</th><th>Total years</th><th>End</th></tr>
+      <tr><td>Adam</td><td>130</td><td>930</td><td>and he died</td></tr>
+      <tr><td>Seth</td><td>105</td><td>912</td><td>and he died</td></tr>
+      <tr><td>Enos</td><td>90</td><td>905</td><td>and he died</td></tr>
+      <tr><td>Cainan</td><td>70</td><td>910</td><td>and he died</td></tr>
+      <tr><td>Mahalaleel</td><td>65</td><td>895</td><td>and he died</td></tr>
+      <tr><td>Jared</td><td>162</td><td>962</td><td>and he died</td></tr>
+      <tr class="enoch-row"><td>Enoch (7th)</td><td>65</td><td>365</td><td>and he was not; for God took him</td></tr>
+      <tr><td>Methuselah</td><td>187</td><td>969</td><td>and he died</td></tr>
+      <tr><td>Lamech</td><td>182</td><td>777</td><td>and he died</td></tr>
+    </table>
+
+    <h3 class="sec-head">Enoch's Translation: A Type of the Rapture</h3>
+    <div class="study-p">
+      Verse 24 breaks the chapter's rhythm in the plainest way possible: no age at death, no burial, just &ldquo;he was not; for God took him.&rdquo; Brother Branham read this as the Old Testament's own picture of a people who leave the earth without passing through death at all.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;And notice in the pyramid when he built it, in time of Enoch, every stone was in there. They could measure them things just exactly and tell the wars and things. Everything is complete but the Headstone... It never was capped. Christ is the Headstone that was rejected, He was the rejected Headstone. He's coming back pretty soon.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Revelation, Chapter Four, Part III&rdquo; (61-0108)</div>
+        <div class="quote-text">&ldquo;Enoch was translated, without death, a type of the Church being caught up with those who are asleep, to meet the Lord in the air, and the rest of the church is carried over into the Tribulation period&hellip;Enoch, raptured, no death.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The First Seal&rdquo; (63-0318, para. 129)</div>
       </div>
     </div>
 
     <div class="study-p">
-      It's worth noting that even Brother Branham didn't always present this with the same certainty he gave to the plain text of Scripture. In at least one sermon he set it apart explicitly as something offered for understanding rather than settled doctrine &mdash; a distinction worth keeping in mind here, the same way we would for any teaching built more on typology than on a direct verse.
+      He set Enoch's translation and Noah's survival of the flood side by side as two different patterns &mdash; one taken out before the judgment, the other carried through it &mdash; and read the order between them as significant.
     </div>
 
-    <!-- Branham quote 5: offered as understanding, not doctrine -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Like Enoch, who built the pyramids, that we believe. And the capstone never was put on top of them, because the headstone was rejected. And we taken now, not as Doctrine, but as to understand, just for the church here.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Blasphemous Names&rdquo; (62-1104M)</div>
+        <div class="quote-text">&ldquo;Before the tribulation period struck, first, Enoch&hellip;was translated just before the tribulation struck. &lsquo;And Enoch was took up, and was found not, because God took him,&rsquo; the type of the going forth of the Church. And Noah watched him. When he seen Enoch go, he knew it was time to enter the ark, for to be carried through the tribulation.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Lamb's Book of Life&rdquo; (56-0603, para. 81)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Taken together, the two things this chapter's seventh name is remembered for aren't as separate as they first appear. A man who walked with God closely enough to be taken without dying is also, in this telling, a man entrusted with a warning in stone massive and precise enough to outlast a global flood &mdash; both pointing at the same event from two different directions: a Church being shaped, generation by generation, toward a Headstone still to come.
+      He described the five hundred years verse 22 gives to Enoch's walk with God as a life spent in the kind of closeness that made a final translation the natural end of it, not an interruption of it.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;There may be promises in there that I could not bring to pass, such as Enoch walked with God for five hundred years, and took an afternoon stroll, went Home with Him without dying. I wish that I had that kind of faith.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Sirs, We Would See Jesus&rdquo; (61-0519, para. 59)</div>
+      </div>
+    </div>
+
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; The Man Who Skipped the Refrain</div>
+        <div class="study-p" style="font-size: 17px;">
+          Every other name in this chapter closes the same way: a lifespan, then death. Enoch's entry closes with a walk that simply continues past the point where a grave should be. In a chapter built entirely around one repeated ending, the single exception is the ending the whole commentary is pointing toward &mdash; a people who will leave the earth the same way he did.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">No Man Reaches the Day</h3>
+    <div class="study-p">
+      Methuselah's 969 years in verse 27 make him the longest-lived man the chapter names, and Brother Branham used that exact figure to make a point about Genesis 2:17's warning that in the day Adam ate of the tree, he would die.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;God made the world in six thousand years, and the seventh thousand He rested. He said a man will never live that time out, a&mdash;a year, or&mdash;or, day: &lsquo;day you eat thereof, the day you die.&rsquo; Adam, or, Methuselah was the oldest man that ever lived in the Bible, and he was nine hundred and sixty-nine years old; and he never lived that thousand years.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Questions and Answers 1&rdquo; (64-0823M, para. 190)</div>
+      </div>
     </div>
 
     <div class="study-p">
-      Nine men in this chapter live, father children, and die, in that order, without exception. One man walks with God, leaves a monument that has outlasted every empire since, and is simply no longer found. Whatever else Genesis 5 is doing as a record, it is also making a quiet argument in its structure alone: death is the rule everywhere in this fallen line, except wherever a man actually walks with God.
+      On this reading, a &ldquo;day&rdquo; in God's warning to Adam is not a single sunrise and sunset but a thousand-year span, and Methuselah &mdash; for all his years, and for all the years everyone else in this chapter reached &mdash; still fell short of it. Not one name on this entire list closes that gap.
+    </div>
+
+    <h3 class="sec-head">Lamech's Comfort</h3>
+    <div class="study-p">
+      The chapter ends on a note of hope rather than another death notice. Lamech names his son Noah &mdash; &ldquo;rest&rdquo; or &ldquo;comfort&rdquo; &mdash; and says outright why, in verse 29: this one will bring relief from the toil of a ground the LORD Himself cursed back in Genesis 3:17. A father in the righteous line, generations removed from Eden, is still naming his children in direct reference to that curse, still waiting on the relief it promised.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Jude 1:14&ndash;15</span> &mdash; Enoch, the seventh from Adam, prophesied &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hebrews 11:5</span> &mdash; by faith Enoch was translated that he should not see death &nbsp;&bull;&nbsp;
+      <span class="xr-key">Luke 3:36&ndash;38</span> &mdash; the same line, run forward to Christ &nbsp;&bull;&nbsp;
+      <span class="xr-key">2 Peter 3:8</span> &mdash; one day is with the Lord as a thousand years &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 2:17</span> &mdash; in the day thou eatest thereof, thou shalt surely die &nbsp;&bull;&nbsp;
+      <span class="xr-key">1 Thessalonians 4:16&ndash;17</span> &mdash; caught up together, to meet the Lord in the air &nbsp;&bull;&nbsp;
+      <span class="xr-key">Romans 5:14</span> &mdash; death reigned from Adam to Moses
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 5</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Before the tribulation period struck, first, Enoch&hellip;was translated just before the tribulation struck. 'And Enoch was took up, and was found not, because God took him,' the type of the going forth of the Church. And Noah watched him.&rdquo;</div>
+      <div class="archive-cite">The Lamb's Book of Life &mdash; 56-0603, para. 81</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;The type, Enoch, before the translation, Enoch walked with God five hundred years, and had a testimony that he pleased God. And he was a type of the raptured Church.&rdquo;</div>
+      <div class="archive-cite">Hear Ye Him &mdash; 60-0313, para. 78</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;There may be promises in there that I could not bring to pass, such as Enoch walked with God for five hundred years, and took an afternoon stroll, went Home with Him without dying. I wish that I had that kind of faith.&rdquo;</div>
+      <div class="archive-cite">Sirs, We Would See Jesus &mdash; 61-0519, para. 59</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Enoch was translated, without death, a type of the Church being caught up with those who are asleep, to meet the Lord in the air, and the rest of the church is carried over into the Tribulation period&hellip;Enoch, raptured, no death.&rdquo;</div>
+      <div class="archive-cite">The First Seal &mdash; 63-0318, para. 129</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;There was Enoch&hellip;I see Moses come, and Elijah comes back, and they're killed, see, but now Enoch was translated before time.&rdquo;</div>
+      <div class="archive-cite">Questions and Answers on the Seals &mdash; 63-0324M, para. 96</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;God made the world in six thousand years, and the seventh thousand He rested. He said a man will never live that time out&hellip;Methuselah was the oldest man that ever lived in the Bible, and he was nine hundred and sixty-nine years old; and he never lived that thousand years.&rdquo;</div>
+      <div class="archive-cite">Questions and Answers 1 &mdash; 64-0823M, para. 190</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Enoch, one man, went in the Rapture before the flood came, showing that the Church does not go into the tribulation or anything around it&hellip;Enoch was translated, one man.&rdquo;</div>
+      <div class="archive-cite">The Future Home of the Heavenly Bridegroom and the Earthly Bride &mdash; 64-0802, para. 121</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Her first son was not the son of Adam. If it was, he had the birthrights. The Bible, in Jude, said that&hellip;'Enoch was the seventh from Adam.'&hellip;What about Cain, which had the birthrights? He wasn't Adam's son.&rdquo;</div>
+      <div class="archive-cite">The Harvest Time &mdash; 64-1212, para. 304</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Enoch was translated, from death, by God's transforming power. What did God do that for? For a type of the rapturing Church that's coming. Yeah. Elijah was the same.&rdquo;</div>
+      <div class="archive-cite">God's Power to Transform &mdash; 65-0911, para. 252</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;If we turn back in Genesis, about the&hellip;5th chapter, you can also turn to Luke and find out, that Enoch was the seventh&hellip;For, if Cain was Abel's son, then he was the eighth&hellip;nowhere in the Bible it said that Cain was&hellip;Adam's son.&rdquo;</div>
+      <div class="archive-cite">The Rapture &mdash; 65-1204, para. 104</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Enoch&hellip;was a type of the church ages. Now, all of the rest of the six men, before him, died, but Enoch was translated. Enoch was raptured, the seventh, showing that it's the seventh church age that takes the Rapture.&rdquo;</div>
+      <div class="archive-cite">The Rapture &mdash; 65-1204, para. 105</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;It's the seventh church age that takes the Rapture. All of the other six died. But Enoch was translated, because, 'He was not found. God took him.' But Enoch, raptured, was a type of all of the rest of them dying.&rdquo;</div>
+      <div class="archive-cite">The Rapture &mdash; 65-1204, para. 106</div>
     </div>
   </div>
 

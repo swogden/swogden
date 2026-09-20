@@ -25,9 +25,19 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -41,7 +51,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-7-hero.jpg" alt="Animals boarding the ark in an orderly procession as a distant storm gathers on the horizon">
+    <img src="images/genesis-7-hero.jpg" alt="The ark riding high on the flood waters under a dark, rain-filled sky, its single door already sealed shut">
   </div>
 
   <!-- Scripture -->
@@ -53,9 +63,9 @@
     </div>
 
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
-      <span class="dropcap">A</span>nd the LORD said unto Noah, Come thou and all thy house into the ark; for thee have I seen righteous before me in this generation. <span class="verse-num">2</span>Of every clean beast thou shalt take to thee by sevens, the male and his female: and of beasts that are not clean by two, the male and his female. <span class="verse-num">3</span>Of fowls also of the air by sevens, the male and the female; to keep seed alive upon the face of all the earth. <span class="verse-num">4</span>For yet seven days, and I will cause it to rain upon the earth forty days and forty nights; and every living substance that I have made will I destroy from off the face of the earth. <span class="verse-num">5</span>And Noah did according unto all that the LORD commanded him.
+      <span class="dropcap">A</span>nd the LORD said unto Noah, Come thou and all thy house into the ark; for thee have I seen righteous before me in this generation. <span class="verse-num">2</span>Of every clean beast thou shalt take to thee by sevens, the male and his female: and of beasts that are not clean by two, the male and his female. <span class="verse-num">3</span>Of fowls also of the air by sevens, the male and the female; to keep seed alive upon the face of all the earth. <span class="verse-num">4</span>For yet seven days, and I will cause it to rain upon the earth forty days and forty nights; and every living substance that I have made will I destroy from off the face of the earth.
       <br><br>
-      <span class="verse-num">6</span>And Noah was six hundred years old when the flood of waters was upon the earth. <span class="verse-num">7</span>And Noah went in, and his sons, and his wife, and his sons' wives with him, into the ark, because of the waters of the flood. <span class="verse-num">8</span>Of clean beasts, and of beasts that are not clean, and of fowls, and of every thing that creepeth upon the earth, <span class="verse-num">9</span>There went in two and two unto Noah into the ark, the male and the female, as God had commanded Noah. <span class="verse-num">10</span>And it came to pass after seven days, that the waters of the flood were upon the earth.
+      <span class="verse-num">5</span>And Noah did according unto all that the LORD commanded him. <span class="verse-num">6</span>And Noah was six hundred years old when the flood of waters was upon the earth. <span class="verse-num">7</span>And Noah went in, and his sons, and his wife, and his sons' wives with him, into the ark, because of the waters of the flood. <span class="verse-num">8</span>Of clean beasts, and of beasts that are not clean, and of fowls, and of every thing that creepeth upon the earth, <span class="verse-num">9</span>There went in two and two unto Noah into the ark, the male and the female, as God had commanded Noah. <span class="verse-num">10</span>And it came to pass after seven days, that the waters of the flood were upon the earth.
       <br><br>
       <span class="verse-num">11</span>In the six hundredth year of Noah's life, in the second month, the seventeenth day of the month, the same day were all the fountains of the great deep broken up, and the windows of heaven were opened. <span class="verse-num">12</span>And the rain was upon the earth forty days and forty nights.
       <br><br>
@@ -75,51 +85,198 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: The Door That God Shut</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: The Pitch, the Shut Door, and the Waters That Judged</h2>
 
-    <div class="study-p">
-      Genesis 6 was preparation; Genesis 7 is the countdown running out. Seven days' notice, then rain for forty. The pace of the writing itself changes here &mdash; short, exact sentences, precise dates ("the six hundredth year... the second month, the seventeenth day"), as though Moses is recording a legal document rather than telling a story. And in the middle of all that precision sits one detail easy to read past: verse 16 doesn't say Noah shut the door. It says the LORD shut him in.
+    <div class="tag-row">
+      <span class="tag">The Pitch That Atones</span>
+      <span class="tag">Nothing Left to Do But Walk In</span>
+      <span class="tag">The LORD Shut Him In</span>
+      <span class="tag">Life Went On Outside</span>
+      <span class="tag">Two Judgments: Water, Then Fire</span>
     </div>
 
-    <!-- Branham quote 1: God shut the door -->
+    <div class="study-p">
+      Chapter 6 gave the ark's blueprint; this chapter is where it is finally used. Everything Brother Branham said about the ark being a type of Christ gets tested here, in the one moment that matters &mdash; the door closing, the rain starting, and the difference between who is inside and who is not.
+    </div>
+
+    <h3 class="sec-head">The Pitch That Atones</h3>
+    <div class="study-p">
+      Genesis 6:14 had commanded Noah to pitch the ark within and without, and Brother Branham went back to that instruction to explain why the ark could ride out the very judgment this chapter describes falling on everyone left outside it.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;The only thing Noah had to do was get in the ark. He didn't even have to shut the door, God did that Himself. Walk in! That's all the believer does, is walk by faith in Christ. God takes care of the rest of it... God done the shutting; God done the opening.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Ark&rdquo; (55-0522)</div>
+        <div class="quote-text">&ldquo;The word &lsquo;pitch&rsquo; means &lsquo;to atone.&rsquo; Over in Leviticus, the same word that was used for pitch in Genesis, in Leviticus is used as an atone, to make an atonement&hellip;And the pitch that was in the gopher wood, in the ark, was to &lsquo;keep out,&rsquo; or to atone the believer from the wrath.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Ark&rdquo; (55-0522, para. 90)</div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Noah could not get into the wrath, the waters of judgment&hellip;He could not come into the judgment, because there was an atonement between him and the judgment. And the judgment was the water of the world.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Ark&rdquo; (55-0522, para. 91)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Once inside, what actually kept the water out was the pitch commanded back in chapter 6 &mdash; "pitch it within and without with pitch." Brother Branham drew out a detail from the original language here worth sitting with: that same Hebrew word, used elsewhere in the Old Testament, is translated "atonement."
+      As verses 17 through 20 describe the waters rising until every high hill was covered, the ark itself never has to fight the flood on its own strength. What stands between Noah and the water is not the thickness of the wood, but what the wood was coated with.
     </div>
 
-    <!-- Branham quote 2: pitch as atonement -->
+    <h3 class="sec-head">Nothing Left to Do But Walk In</h3>
+    <div class="study-p">
+      Verses 7 through 9 record the actual entering &mdash; Noah, his family, and the animals coming in two by two, exactly as commanded. Brother Branham pointed out how little Noah himself contributed to his own safety at this exact moment.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;The word 'pitch' means 'to atone'... the pitch that was in the gopher wood, in the ark, was to keep out, or to atone the believer from the wrath... Noah could not come into the judgment, because there was an atonement between him and the judgment. And the judgment was the water of the world.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Ark&rdquo; (55-0522)</div>
+        <div class="quote-text">&ldquo;The believer, in Christ, is safely secured&hellip;not upon the merits of himself, but on his obedience, obedience to walk into the ark. The only thing Noah had to do was get in the ark. He didn't even have to shut the door, God did that Himself. Walk in! That's all the believer does, is walk by faith in Christ. God takes care of the rest of it.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Ark&rdquo; (55-0522, para. 92)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">The LORD Shut Him In</h3>
+    <div class="study-p">
+      Verse 16 ends on a detail easy to read past: not that Noah shut the door, but that the LORD shut him in. Brother Branham treated the identity of who closes that door as the whole point of the verse.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Notice, Noah, when he came in. That's the only thing he had to do, was walk in. God shut the door, and he was safely until the judgments was passed. God done the shutting; God done the opening. That's the believer, today, in Christ.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Ark&rdquo; (55-0522, para. 102)</div>
+      </div>
+    </div>
+
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; A Door No Man Closes</div>
+        <div class="study-p" style="font-size: 17px;">
+          Verse 16 gives Noah no part in the shutting of the door, only in the walking through it. Security in the ark rests on whose hand closed it, not on Noah's ability to keep it closed himself. Once God shuts a door, the flood outside cannot reopen it, and nothing inside needs to hold it shut either.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Life Went On Outside</h3>
+    <div class="study-p">
+      Verse 10 notes seven days between the command and the rain, and even after the door was shut, the flood did not fall instantly. Brother Branham drew attention to how ordinary those final days must have looked to everyone still outside the ark.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Like Noah, he went in, the ark shut behind him, nothing happened for a while; but the world perished on the outside, and the world went right on living just the same.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The World Is Again Falling Apart&rdquo; (63-1127, para. 222)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Verses 17 through 20 describe the flood not as a single catastrophic wave but as a steady, relentless rise &mdash; the ark first lifted, then carried, then finally floating free above mountains. Inside it, by this account, the danger was real and constant, even for those already safe.
+      The door being shut and the judgment actually falling were, on this reading, two separate moments &mdash; and the gap between them was no evidence to the world outside that anything had changed, right up until it had.
     </div>
 
-    <!-- Branham quote 3: riding out the judgment -->
+    <h3 class="sec-head">Two Judgments: Water, Then Fire</h3>
+    <div class="study-p">
+      Verses 21 through 23 record total destruction &mdash; every living thing outside the ark, without exception. Brother Branham preached this flood as the first of two judgments Scripture points to, with a second, different judgment still to come on the present age.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;The ark riding back the waves, tested about, from place to place. Noah said, &lsquo;Hold still, children. God has made this ark. It's built according to His instructions. It'll stand everything that the devil can send against it.&rsquo;... There was an atonement made, between judgment and mercy.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Ark&rdquo; (55-0522)</div>
+        <div class="quote-text">&ldquo;As it was in the days of Noah, so will it be, only this time instead of water it'll be fire. The world will be rocked by atomic power.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Pool of Bethesda&rdquo; (50-0811, para. 2)</div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;As it was in the days of Noah, when that little group was just saved by water, so shall it be in the coming of the Son of man. The days of Lot, when&hellip;In Noah's time, &lsquo;They were eating, drinking, marrying, given in marriage.&rsquo; And look at it today.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Confirmation of the Commission&rdquo; (62-0122, para. 295)</div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Not in Noah's time, as the flood (He give the immorals of that day), but He said, &lsquo;As it was in the days of Sodom.&rsquo; Now that was a Gentile world that was destroyed with fire. God put a rainbow in the sky, no more &lsquo;water,&rsquo; but it's fire this time.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;When Their Eyes Were Opened They Knew Him&rdquo; (64-0312, para. 138)</div>
       </div>
     </div>
 
     <div class="study-p">
-      The chapter's final verses are almost unbearable in their plainness: "all flesh died... every living substance was destroyed... and Noah only remained alive, and they that were with him in the ark." No drama in the sentence structure at all, just a flat statement of totality. Everything outside one boxed, pitched, God-sealed structure is gone. And then the chapter simply ends &mdash; not on the destruction, but on a number: a hundred and fifty days of water still to come, before anything begins to turn.
+      On this reading, Genesis 7 is not a closed, one-time event so much as the first half of a pair: a world judged by water once, under God's own promise never to repeat that particular judgment, and a second world &mdash; this one &mdash; still standing under warning of a different judgment still ahead.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Matthew 24:38&ndash;39</span> &mdash; eating and drinking, marrying, until the flood came and took them all away &nbsp;&bull;&nbsp;
+      <span class="xr-key">Luke 17:26&ndash;30</span> &mdash; as it was in the days of Noah&hellip;likewise as it was in the days of Lot &nbsp;&bull;&nbsp;
+      <span class="xr-key">2 Peter 2:5</span> &mdash; spared not the old world, but saved Noah, the eighth person &nbsp;&bull;&nbsp;
+      <span class="xr-key">2 Peter 3:6&ndash;7</span> &mdash; the world that then was, being overflowed with water, perished&hellip;reserved unto fire &nbsp;&bull;&nbsp;
+      <span class="xr-key">1 Peter 3:20&ndash;21</span> &mdash; eight souls were saved by water; the like figure whereunto baptism &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hebrews 11:7</span> &mdash; by faith Noah&hellip;prepared an ark to the saving of his house &nbsp;&bull;&nbsp;
+      <span class="xr-key">Leviticus 17:11</span> &mdash; the life of the flesh is in the blood: I have given it to make an atonement
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 7</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;As it was in the days of Noah, so will it be, only this time instead of water it'll be fire. The world will be rocked by atomic power.&rdquo;</div>
+      <div class="archive-cite">The Pool of Bethesda &mdash; 50-0811, para. 2</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;The word &lsquo;pitch&rsquo; means &lsquo;to atone.&rsquo; Over in Leviticus, the same word that was used for pitch in Genesis, in Leviticus is used as an atone, to make an atonement&hellip;the pitch that was in the gopher wood, in the ark, was to 'keep out,' or to atone the believer from the wrath.&rdquo;</div>
+      <div class="archive-cite">The Ark &mdash; 55-0522, para. 90</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Noah could not get into the wrath, the waters of judgment&hellip;He could not come into the judgment, because there was an atonement between him and the judgment. And the judgment was the water of the world.&rdquo;</div>
+      <div class="archive-cite">The Ark &mdash; 55-0522, para. 91</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;The believer, in Christ, is safely secured&hellip;not upon the merits of himself, but on his obedience, obedience to walk into the ark. The only thing Noah had to do was get in the ark. He didn't even have to shut the door, God did that Himself.&rdquo;</div>
+      <div class="archive-cite">The Ark &mdash; 55-0522, para. 92</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Noah, when he came in. That's the only thing he had to do, was walk in. God shut the door, and he was safely until the judgments was passed. God done the shutting; God done the opening. That's the believer, today, in Christ.&rdquo;</div>
+      <div class="archive-cite">The Ark &mdash; 55-0522, para. 102</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;As it was in the days of Noah, when that little group was just saved by water, so shall it be in the coming of the Son of man. The days of Lot, when&hellip;In Noah's time, 'They were eating, drinking, marrying, given in marriage.'&rdquo;</div>
+      <div class="archive-cite">Confirmation of the Commission &mdash; 62-0122, para. 295</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Not in Noah's time, as the flood (He give the immorals of that day), but He said, 'As it was in the days of Sodom.' Now that was a Gentile world that was destroyed with fire. God put a rainbow in the sky, no more 'water,' but it's fire this time.&rdquo;</div>
+      <div class="archive-cite">When Their Eyes Were Opened They Knew Him &mdash; 64-0312, para. 138</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Like Noah, he went in, the ark shut behind him, nothing happened for a while; but the world perished on the outside, and the world went right on living just the same.&rdquo;</div>
+      <div class="archive-cite">The World Is Again Falling Apart &mdash; 63-1127, para. 222</div>
     </div>
   </div>
 

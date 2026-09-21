@@ -25,9 +25,19 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -41,7 +51,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-19-hero.jpg" alt="Lot's family fleeing Sodom as it burns, with a pillar of salt standing in the distance behind them">
+    <img src="images/genesis-19-hero.jpg" alt="A family fleeing a burning city at dawn across a barren plain, one woman turning to look back at the flames and smoke rising behind her">
   </div>
 
   <!-- Scripture -->
@@ -59,17 +69,15 @@
       <br><br>
       <span class="verse-num">12</span>And the men said unto Lot, Hast thou here any besides? son in law, and thy sons, and thy daughters, and whatsoever thou hast in the city, bring them out of this place: <span class="verse-num">13</span>For we will destroy this place, because the cry of them is waxen great before the face of the LORD; and the LORD hath sent us to destroy it. <span class="verse-num">14</span>And Lot went out, and spake unto his sons in law, which married his daughters, and said, Up, get you out of this place; for the LORD will destroy this city. But he seemed as one that mocked unto his sons in law.
       <br><br>
-      <span class="verse-num">15</span>And when the morning arose, then the angels hastened Lot, saying, Arise, take thy wife, and thy two daughters, which are here; lest thou be consumed in the iniquity of the city. <span class="verse-num">16</span>And while he lingered, the men laid hold upon his hand, and upon the hand of his wife, and upon the hand of his two daughters; the LORD being merciful unto him: and they brought him forth, and set him without the city. <span class="verse-num">17</span>And it came to pass, when they had brought them forth abroad, that he said, Escape for thy life; look not behind thee, neither stay thou in all the plain; escape to the mountain, lest thou be consumed.
-      <br><br>
-      <span class="verse-num">18</span>And Lot said unto them, Oh, not so, my LORD: <span class="verse-num">19</span>Behold now, thy servant hath found grace in thy sight, and thou hast magnified thy mercy, which thou hast shewed unto me in saving my life; and I cannot escape to the mountain, lest some evil take me, and I die: <span class="verse-num">20</span>Behold now, this city is near to flee unto, and it is a little one: Oh, let me escape thither, (is it not a little one?) and my soul shall live. <span class="verse-num">21</span>And he said unto him, See, I have accepted thee concerning this thing also, that I will not overthrow this city, for the which thou hast spoken. <span class="verse-num">22</span>Haste thee, escape thither; for I cannot do any thing till thou be come thither. Therefore the name of the city was called Zoar.
+      <span class="verse-num">15</span>And when the morning arose, then the angels hastened Lot, saying, Arise, take thy wife, and thy two daughters, which are here; lest thou be consumed in the iniquity of the city. <span class="verse-num">16</span>And while he lingered, the men laid hold upon his hand, and upon the hand of his wife, and upon the hand of his two daughters; the LORD being merciful unto him: and they brought him forth, and set him without the city. <span class="verse-num">17</span>And it came to pass, when they had brought them forth abroad, that he said, Escape for thy life; look not behind thee, neither stay thou in all the plain; escape to the mountain, lest thou be consumed. <span class="verse-num">18</span>And Lot said unto them, Oh, not so, my LORD: <span class="verse-num">19</span>Behold now, thy servant hath found grace in thy sight, and thou hast magnified thy mercy, which thou hast shewed unto me in saving my life; and I cannot escape to the mountain, lest some evil take me, and I die: <span class="verse-num">20</span>Behold now, this city is near to flee unto, and it is a little one: Oh, let me escape thither, (is it not a little one?) and my soul shall live. <span class="verse-num">21</span>And he said unto him, See, I have accepted thee concerning this thing also, that I will not overthrow this city, for the which thou hast spoken. <span class="verse-num">22</span>Haste thee, escape thither; for I cannot do any thing till thou be come thither. Therefore the name of the city was called Zoar.
       <br><br>
       <span class="verse-num">23</span>The sun was risen upon the earth when Lot entered into Zoar. <span class="verse-num">24</span>Then the LORD rained upon Sodom and upon Gomorrah brimstone and fire from the LORD out of heaven; <span class="verse-num">25</span>And he overthrew those cities, and all the plain, and all the inhabitants of the cities, and that which grew upon the ground. <span class="verse-num">26</span>But his wife looked back from behind him, and she became a pillar of salt.
       <br><br>
       <span class="verse-num">27</span>And Abraham gat up early in the morning to the place where he stood before the LORD: <span class="verse-num">28</span>And he looked toward Sodom and Gomorrah, and toward all the land of the plain, and beheld, and, lo, the smoke of the country went up as the smoke of a furnace. <span class="verse-num">29</span>And it came to pass, when God destroyed the cities of the plain, that God remembered Abraham, and sent Lot out of the midst of the overthrow, when he overthrew the cities in the which Lot dwelt.
       <br><br>
-      <span class="verse-num">30</span>And Lot went up out of Zoar, and dwelt in the mountain, and his two daughters with him; for he feared to dwell in Zoar: and he dwelt in a cave, he and his two daughters. <span class="verse-num">31</span>And the firstborn said unto the younger, Our father is old, and there is not a man in the earth to come in unto us after the manner of all the earth: <span class="verse-num">32</span>Come, let us make our father drink wine, and we will lie with him, that we may preserve seed of our father. <span class="verse-num">33</span>And they made their father drink wine that night: and the firstborn went in, and lay with her father; and he perceived not when she lay down, nor when she arose. <span class="verse-num">34</span>And it came to pass on the morrow, that the firstborn said unto the younger, Behold, I lay yesternight with my father: let us make him drink wine this night also; and go thou in, and lie with him, that we may preserve seed of our father. <span class="verse-num">35</span>And they made their father drink wine that night also: and the younger arose, and lay with him; and he perceived not when she lay down, nor when she arose.
+      <span class="verse-num">30</span>And Lot went up out of Zoar, and dwelt in the mountain, and his two daughters with him; for he feared to dwell in Zoar: and he dwelt in a cave, he and his two daughters. <span class="verse-num">31</span>And the firstborn said unto the younger, Our father is old, and there is not a man in the earth to come in unto us after the manner of all the earth: <span class="verse-num">32</span>Come, let us make our father drink wine, and we will lie with him, that we may preserve seed of our father. <span class="verse-num">33</span>And they made their father drink wine that night: and the firstborn went in, and lay with her father; and he perceived not when she lay down, nor when she arose. <span class="verse-num">34</span>And it came to pass on the morrow, that the firstborn said unto the younger, Behold, I lay yesternight with my father: let us make him drink wine this night also; and go thou in, and lie with him, that we may preserve seed of our father. <span class="verse-num">35</span>And they made their father drink wine that night also: and the younger arose, and lay with him; and he perceived not when she lay down, nor when she arose. <span class="verse-num">36</span>Thus were both the daughters of Lot with child by their father.
       <br><br>
-      <span class="verse-num">36</span>Thus were both the daughters of Lot with child by their father. <span class="verse-num">37</span>And the firstborn bare a son, and called his name Moab: the same is the father of the Moabites unto this day. <span class="verse-num">38</span>And the younger, she also bare a son, and called his name Benammi: the same is the father of the children of Ammon unto this day.
+      <span class="verse-num">37</span>And the firstborn bare a son, and called his name Moab: the same is the father of the Moabites unto this day. <span class="verse-num">38</span>And the younger, she also bare a son, and called his name Ben-ammi: the same is the father of the children of Ammon unto this day.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -81,54 +89,192 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: Not Even Ten</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: Judgment on Sodom, and a Warning Remembered</h2>
 
-    <div class="study-p">
-      Chapter 18 closed on an open question: would even ten righteous people be found in Sodom? Chapter 19 answers it almost immediately, and grimly. The two visitors barely make it inside Lot's door before the city's entire male population, "both old and young, all the people from every quarter," surrounds the house demanding to sexually violate them. Nothing in the text softens or excuses this. It's worth saying plainly, too, that Lot's counter-offer &mdash; handing over his own daughters instead &mdash; is not held up by the text as an acceptable alternative or a mark of hospitality done right. It's a desperate, morally indefensible bargain from a man in an impossible situation, and Scripture records it without endorsing it.
+    <div class="tag-row">
+      <span class="tag">Lot the Lukewarm Preacher</span>
+      <span class="tag">He Seemed as One That Mocked</span>
+      <span class="tag">Remember Lot's Wife</span>
+      <span class="tag">The Aftermath: Moab and Ammon</span>
     </div>
 
     <div class="study-p">
-      The angels themselves resolve what Lot's negotiating couldn't, striking the mob blind, and by morning the rescue becomes urgent. Even then, Lot hesitates &mdash; "while he lingered," the text says &mdash; and has to be physically pulled out of the city by the hand. And even mid-rescue, he's still bargaining, talking the angels into letting him flee to the small town of Zoar instead of the mountain they'd told him to run to.
+      Genesis 19 completes what chapter 18 began. The two messengers who left Abraham at Mamre arrive at Sodom's gate, and the chapter that follows is Brother Branham's most frequently cited Old Testament type for the condition of the world just before judgment falls.
     </div>
 
+    <h3 class="sec-head">Lot the Lukewarm Preacher</h3>
     <div class="study-p">
-      What happens next answers chapter 18's question in full, and directly continues the conversation this study already had about Abraham's bargaining.
+      Verses 1 through 11 show Lot sitting in the gate &mdash; a position of civic standing in an ancient city &mdash; extending hospitality to the visitors, and then standing between them and a mob at his own door. Brother Branham did not treat Lot as a wicked man; he insisted repeatedly that Lot was genuinely saved, but backslidden in position, a believer whose testimony had gone cold from long exposure to the sin around him.
     </div>
 
-    <!-- Branham quote 1: continuity from the bargaining scene -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;He asked for mercy for so-many people... finally he got from fifty down to ten, still couldn't find them in Sodom, or He would have spared the city... he only got three out, had four, and one of them turned around, looked back, his wife. She didn't want to leave her fine Hollywood things, and her nice place, you know. And she turned to a pillar of salt.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Abraham&rdquo; (61-0211)</div>
+        <div class="quote-text">&ldquo;Lot was down in Sodom, a lukewarm Christian, a nominal Christian, because it said, 'The sins of Sodom vexed his righteous soul.' But he did little about it, let them come into his church dressed any way they want to, act the way they want to, smoke, drink, gamble, and do anything, as long as they were professed-to-be-believers&hellip;it was all right, just a lukewarm Christian, lukewarm church member.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;It Is I&rdquo; (60-0720, para. 137)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Not even ten righteous people existed in the entire city. Four got out. One looked back anyway.
+      He read Lot's public position in the city &mdash; the pastor figure, still preaching, still troubled in conscience, but without the influence to turn anyone.
     </div>
 
-    <div class="study-p">
-      There's a longer arc worth tracing here, back to a choice made an entire chapter and many years earlier. This same tragedy gets read elsewhere as the delayed cost of a decision made purely by sight.
-    </div>
-
-    <!-- Branham quote 2: tracing the consequence back to Lot's original choice -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;When Lot looked up, begin to look over towards the Jordan plains, he seen they were well watered... he chose that... When he was looking at the well-watered plains, he didn't see his wife turning to a pillar of salt, he didn't see the Fire that was going to destroy the city and part of his children, he didn't see the disgrace that his daughters was going to do, because raising them up in a bunch of worldliness like they were raised in.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Faith of Abraham&rdquo; (59-0415E)</div>
+        <div class="quote-text">&ldquo;Just before the end time&hellip;they had had message after message, warning after warning by Lot preaching, that's the pastor, Lot. The Bible said that the sins of that nation vexed his righteous soul. And he preached to them, but it didn't do no good, they turned it away like idle tales, same as they do to the pastor today.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;What Is the Works of God&rdquo; (59-0404, para. 112)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">He Seemed as One That Mocked</h3>
+    <div class="study-p">
+      Verses 12 through 14 record the warning Lot carried to his sons-in-law &mdash; and its reception. The text is blunt: they thought he was joking. Brother Branham drew a direct line from that moment to every generation's response to a warning message it does not want to hear.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Most time, when we try to bring this message, our words seem to the world as like just Lot's did to his kinfolks. It seems to be that we were mocking to them, or they're idle words. Their pastors either bypassed this great message of deliverance, or tried to explain it out into another generation to come.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Called-Out&rdquo; (58-0109, para. 14)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Remember Lot's Wife</h3>
+    <div class="study-p">
+      Verses 15 through 26 hold the chapter's most solemn moment: Lot's hesitation as the angels hasten him out, and his wife's single backward glance that turns her to a pillar of salt. Brother Branham returned to this verse constantly, always tying it to Christ's own words in Luke 17:32, and always making the same point &mdash; the smallness of the act, set against the seriousness of the consequence, was itself the lesson.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Jesus said, Himself, 'Remember Lot's wife.' If the Word isn't so important, if reasoning is all right; when that Angel said to Lot and his family, 'Go to Zoar, but don't look back!' And Lot's wife, on a little insignificant thing as to turn and look back, but it was contrary to the Word, she turned to a pillar of salt.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Jehovah-Jireh #3&rdquo; (62-0707, para. 76)</div>
       </div>
     </div>
 
     <div class="study-p">
-      That reading connects the whole span of Lot's story into one line: a choice made by what looked good in Genesis 13 quietly working its cost all the way out to this chapter's end. And that end is difficult to read honestly. Afraid to stay even in the small town he'd bargained for, Lot retreats to a cave with his two daughters, now the only family he has left. What follows &mdash; his daughters getting him drunk and conceiving children by him, believing no other way remained to continue the family line &mdash; is recorded by Scripture without a word of approval. The two sons born from it, Moab and Ammon, become the ancestors of nations that recur throughout the rest of the Old Testament, often as Israel's adversaries.
+      He was careful to note that Lot's wife had, by any human measure, more reason to look back than most &mdash; a home, a life, married children left behind in the fire &mdash; and that this made her disobedience a warning rather than an easy target for judgment.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Jesus said, 'Remember Lot's wife.' She had a lot more to look back for than what we have; her children and grandchildren were burning up in the Fires of God's Judgment, and she, that mother, just turned to look back, only she was commanded not to do it by that Angel, and he turned back anyhow, and she stands, today, a pillar of salt, a disgrace, all through the years.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;We Would See Jesus&rdquo; (62-0727, para. 136)</div>
+      </div>
     </div>
 
     <div class="study-p">
-      The chapter that opened chapters ago with Lot lifting his eyes toward a lush, well-watered plain closes here: a city in ashes, a wife turned to salt for one glance backward, and two children born out of trauma and isolation in a mountain cave. Nothing about the plain delivered what it looked like it would.
+      And he pressed the underlying principle: it was disobedience to a plain word, not the magnitude of the act, that determined the outcome.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Jesus strictly said that, 'Remember Lot's wife.' She merely looked over her shoulder. Eve merely stopped for a moment. That's all she done. Lot's wife just looked back. And&hellip;God turned that righteous man, Lot, his wife, to a pillar of salt, by just a little bitty thing, just disobeying His Commandments enough to just look back and see what all that fire was about, and she turned to a pillar of salt, and stands there yet today as an example that God means what He says.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Jehovah-Jireh #3&rdquo; (62-0707, para. 82)</div>
+      </div>
+    </div>
+
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; Three Classes, One Judgment</div>
+        <div class="study-p" style="font-size: 17px;">
+          Brother Branham read Genesis 18&ndash;19 together as one scene laying out three classes present at every judgment: the Sodomites who never confessed at all, Lot's household who held a form of religion without real separation from the world, and Abraham's camp, the elect, set apart entirely and given the sign in advance. "In Sodom there was a bunch of sinners, Sodomites; then there was a bunch of Christians, lukewarm believers which represented the church living among them, Lot and his people, holiness people, sins of the city vexed his righteous soul; then there was an elected group which Abraham had, called-out, and each one of them received a sign" (61-0123, para. 52). He taught that Jesus' own words, "as it was in the days of Lot," pointed to this same three-way division recurring just before His return.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">The Aftermath: Moab and Ammon</h3>
+    <div class="study-p">
+      Verses 30 through 38 record a shameful sequel that Scripture states without excusing: Lot's own daughters, fearing they would never have children otherwise, made their father drunk and conceived by him. The two sons born, Moab and Ben-ammi, became the fathers of nations that would trouble Israel for centuries. Brother Branham treated the episode plainly, as fact and consequence, not as material for either scandal or sympathy beyond what the text itself carries.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;The Moabites, originated from a illegitimate child, which was Lot's daughters. After they had escaped the fires of Sodom, by the grace of God, then the daughters got the father drunk and lived with him, as a wife. They brought forth a child. And one of them was originated, and brought in the nation of Moab, supposingly to been Christians, but were mixed in paganism.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Kinsman Redeemer&rdquo; (60-1002, para. 54)</div>
+      </div>
+    </div>
+
+    <div class="study-p">
+      He drew forward from this the later trouble Moab caused Israel &mdash; the doctrine of Balaam and the compromise it invited &mdash; treating the entire episode as one more instance of how leaving God's appointed ground, even to escape real danger as Lot had done, sets a course that keeps producing trouble generations later. No sourced commentary specifically addressing verses 27 through 29, Abraham's own view of the smoke rising from the plain, turned up in the corpus searched for this study.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Luke 17:28&ndash;32</span> &mdash; "as it was in the days of Lot," and "remember Lot's wife" &nbsp;&bull;&nbsp;
+      <span class="xr-key">2 Peter 2:6&ndash;9</span> &mdash; Sodom and Gomorrah as an example, and Lot called righteous &nbsp;&bull;&nbsp;
+      <span class="xr-key">Jude 1:7</span> &mdash; Sodom and Gomorrah suffering the vengeance of eternal fire &nbsp;&bull;&nbsp;
+      <span class="xr-key">Deuteronomy 23:3&ndash;6</span> &mdash; the Moabites and Ammonites barred from the assembly of the LORD &nbsp;&bull;&nbsp;
+      <span class="xr-key">Ruth 1:1&ndash;4</span> &mdash; Moab centuries later, the land of Ruth's birth &nbsp;&bull;&nbsp;
+      <span class="xr-key">Numbers 22&ndash;25</span> &mdash; Moab, Balaam, and the compromise at Baal-peor
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 19</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. Abraham's own view of the smoke rising from the destroyed plain, verses 27 through 29, did not turn up additional direct commentary beyond what is covered above.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Most time, when we try to bring this message, our words seem to the world as like just Lot's did to his kinfolks. It seems to be that we were mocking to them, or they're idle words.&rdquo;</div>
+      <div class="archive-cite">The Called-Out &mdash; 58-0109, para. 14</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Just before the end time&hellip;they had had message after message, warning after warning by Lot preaching, that's the pastor, Lot. The Bible said that the sins of that nation vexed his righteous soul.&rdquo;</div>
+      <div class="archive-cite">What Is the Works of God &mdash; 59-0404, para. 112</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Lot was down in Sodom, a lukewarm Christian, a nominal Christian, because it said, 'The sins of Sodom vexed his righteous soul.' But he did little about it&hellip;just a lukewarm Christian, lukewarm church member.&rdquo;</div>
+      <div class="archive-cite">It Is I &mdash; 60-0720, para. 137</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;The Moabites, originated from a illegitimate child, which was Lot's daughters. After they had escaped the fires of Sodom, by the grace of God, then the daughters got the father drunk and lived with him, as a wife.&rdquo;</div>
+      <div class="archive-cite">The Kinsman Redeemer &mdash; 60-1002, para. 54</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;In Sodom there was a bunch of sinners, Sodomites; then there was a bunch of Christians, lukewarm believers&hellip;Lot and his people, holiness people, sins of the city vexed his righteous soul; then there was an elected group which Abraham had, called-out, and each one of them received a sign.&rdquo;</div>
+      <div class="archive-cite">Be Not Afraid, It Is I &mdash; 61-0123, para. 52</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Jesus said, Himself, 'Remember Lot's wife.'&hellip;when that Angel said to Lot and his family, 'Go to Zoar, but don't look back!' And Lot's wife, on a little insignificant thing as to turn and look back, but it was contrary to the Word, she turned to a pillar of salt.&rdquo;</div>
+      <div class="archive-cite">Jehovah-Jireh #3 &mdash; 62-0707, para. 76</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Jesus strictly said that, 'Remember Lot's wife.' She merely looked over her shoulder&hellip;God turned that righteous man, Lot, his wife, to a pillar of salt, by just a little bitty thing&hellip;an example that God means what He says.&rdquo;</div>
+      <div class="archive-cite">Jehovah-Jireh #3 &mdash; 62-0707, para. 82</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Jesus said, 'Remember Lot's wife.' She had a lot more to look back for than what we have; her children and grandchildren were burning up in the Fires of God's Judgment&hellip;she stands, today, a pillar of salt, a disgrace, all through the years.&rdquo;</div>
+      <div class="archive-cite">We Would See Jesus &mdash; 62-0727, para. 136</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;If God foreshadowed that to a dot; Lot's wife, don't you turn around and look back towards the things of the world. All those types and shadows are perfect&hellip;Remember Eve. Remember Lot's wife. Remember Lot himself, you man.&rdquo;</div>
+      <div class="archive-cite">Jehovah-Jireh #3 &mdash; 62-0707, para. 160</div>
     </div>
   </div>
 

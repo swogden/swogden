@@ -19,12 +19,26 @@
   .wrap { max-width: 1280px; margin: 0 auto; box-sizing: border-box; padding: 72px 60px 100px; display: flex; flex-direction: column; gap: 44px; }
   .center-col { display: flex; flex-direction: column; gap: 20px; max-width: 760px; align-self: center; width: 100%; }
   .study-p { font-size: 18px; line-height: 1.75; color: #2b1d10; }
-  .note-box { font-size: 16px; font-style: italic; line-height: 1.6; color: #5a4632; padding: 16px 22px; background: rgba(90,70,50,0.06); border-radius: 4px; }
+  .quote-box { display: flex; gap: 16px; padding: 22px 26px; background: #fbf6e9; border-left: 4px solid #6d2331; border-radius: 2px; }
+  .quote-mark { font-family: 'UnifrakturMaguntia', cursive; font-size: 40px; color: #6d2331; line-height: 1; flex-shrink: 0; }
+  .quote-text { font-style: italic; font-size: 17px; line-height: 1.6; color: #3b2a1a; }
+  .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -38,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-33-hero.jpg" alt="Esau running to embrace Jacob in tears, with Jacob's wives and children bowing in rank order before them">
+    <img src="images/genesis-33-hero.jpg" alt="Two brothers embracing on open ground at sunrise, flocks and tents in the distance, a company of four hundred men waiting at a respectful distance">
   </div>
 
   <!-- Scripture -->
@@ -58,11 +72,9 @@
       <br><br>
       <span class="verse-num">12</span>And he said, Let us take our journey, and let us go, and I will go before thee. <span class="verse-num">13</span>And he said unto him, My lord knoweth that the children are tender, and the flocks and herds with young are with me: and if men should overdrive them one day, all the flock will die. <span class="verse-num">14</span>Let my lord, I pray thee, pass over before his servant: and I will lead on softly, according as the cattle that goeth before me and the children be able to endure, until I come unto my lord unto Seir.
       <br><br>
-      <span class="verse-num">15</span>And Esau said, Let me now leave with thee some of the folk that are with me. And he said, What needeth it? let me find grace in the sight of my lord. <span class="verse-num">16</span>So Esau returned that day on his way unto Seir.
+      <span class="verse-num">15</span>And Esau said, Let me now leave with thee some of the folk that are with me. And he said, What needeth it? let me find grace in the sight of my lord. <span class="verse-num">16</span>So Esau returned that day on his way unto Seir. <span class="verse-num">17</span>And Jacob journeyed to Succoth, and built him an house, and made booths for his cattle: therefore the name of the place is called Succoth.
       <br><br>
-      <span class="verse-num">17</span>And Jacob journeyed to Succoth, and built him an house, and made booths for his cattle: therefore the name of the place is called Succoth.
-      <br><br>
-      <span class="verse-num">18</span>And Jacob came to Shalem, a city of Shechem, which is in the land of Canaan, when he came from Padanaram; and pitched his tent before the city. <span class="verse-num">19</span>And he bought a parcel of a field, where he had spread his tent, at the hand of the children of Hamor, Shechem's father, for an hundred pieces of money. <span class="verse-num">20</span>And he erected there an altar, and called it El-elohe-Israel.
+      <span class="verse-num">18</span>And Jacob came to Shalem, a city of Shechem, which is in the land of Canaan, when he came from Padanaram; and pitched his tent before the city. <span class="verse-num">19</span>And he bought a parcel of a field, where he had spread his tent, at the hand of the children of Hamor, Shechem's father, for an hundred pieces of money. <span class="verse-num">20</span>And he erected there an altar, and called it EleloheIsrael.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -74,32 +86,85 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: The Face of God in a Brother's Face</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: The Fruit of a Night's Wrestling</h2>
 
-    <div class="study-p">
-      After an entire chapter of dread, the actual reunion resolves almost instantly. Jacob is still managing the moment carefully &mdash; bowing seven times as he approaches, arranging his family by rank so the most vulnerable are furthest from any possible danger &mdash; but Esau doesn't manage anything at all. He runs. He embraces. He weeps. Twenty years of anger, real or imagined, simply isn't there anymore.
+    <div class="tag-row">
+      <span class="tag">He Didn't Need Any Guards</span>
+      <span class="tag">Desperation Until Assurance</span>
+      <span class="tag">Seeing Thy Face as the Face of God</span>
     </div>
 
     <div class="study-p">
-      It's worth noticing plainly, without reading too much into it, how the family gets presented once the danger has clearly passed: the handmaids and their children first, then Leah and hers, and finally Rachel and Joseph, kept back until last. The same order established back in chapters 29 and 30 &mdash; who was loved most, who came last, who stood closest to whatever risk this reunion might have carried &mdash; is still fully intact, even now that the risk is over.
+      Genesis 33 answers the fear that opened Genesis 32. The four hundred men Jacob dreaded meeting turn out to be an escort for a brother who runs to embrace him, and the elaborate seven-fold bow and staged procession of wives and children prove unnecessary against Esau's simple, tearful welcome. Brother Branham's most direct comment on this chapter reaches back to the previous night's wrestling match to explain exactly why Jacob could walk into this meeting differently than he had feared.
+    </div>
+
+    <h3 class="sec-head">He Didn't Need Any Guards</h3>
+    <div class="study-p">
+      Having preached at length on Jacob's desperate, all-night wrestling at Peniel, Brother Branham drew a direct line from that encounter to this one: the assurance Jacob received in the dark determined how he walked out to meet Esau in the daylight. The man who divided his household into two companies out of fear in chapter 32 needed no such precaution once the blessing had actually come.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Jacob stayed there until the blessing came, and changed his name from 'a deceiver' to 'a prince with God.' Even the nation was called by his name. Yes, sir! What was it? The results was because he got desperate about the thing. And the next day when he met Esau, he didn't need any guards. He walked right out and met him. See? Why? He had got in desperation till he got the assurance. And you get desperate until you get the assurance.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Desperations&rdquo; (63-0901E, para. 90)</div>
+      </div>
     </div>
 
     <div class="study-p">
-      Esau's response to Jacob's gift is genuinely generous &mdash; "I have enough, my brother; keep that thou hast unto thyself" &mdash; and Jacob's insistence on giving it anyway produces one of the most striking lines he's spoken in the entire story: "I have seen thy face, as though I had seen the face of God." Coming from the man who spent an entire chapter terrified of this exact meeting, that's a remarkable thing to say about the brother he wronged.
+      Read this way, the careful staging Jacob still goes through in verses 1 through 3 &mdash; the handmaids first, Leah next, Rachel and Joseph last, and Jacob himself bowing seven times as he approaches &mdash; is less an act of fear than a formality left over from the night before, a habit of caution not yet fully shed even after the assurance had come. It is Esau, not Jacob, who breaks the formality first, running to meet him before any of the careful arrangement has a chance to matter.
     </div>
 
-    <div class="note-box">
-      A note on sourcing: I searched specifically for commentary on this reunion &mdash; the embrace, the family's presentation, Jacob's line about seeing God's face, and the closing verses at Succoth and Shechem &mdash; and found nothing addressing this chapter directly. Every close match my searches turned up (people running to fall on someone's neck weeping) turned out to be about Joseph and Benjamin's reunion many chapters later, not this one. What follows traces the text itself.
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; A Face Like the Face of God</div>
+        <div class="study-p" style="font-size: 17px;">
+          Jacob's own words in verse 10 tie this chapter back to the one before it in Scripture's own language, not only in Brother Branham's reading of it: "I have seen thy face, as though I had seen the face of God." The same man who, hours earlier, named the place of his wrestling Peniel &mdash; "I have seen God face to face" &mdash; now uses nearly identical language for the brother he had wronged and feared. Reconciliation with the brother he had cheated becomes, in Jacob's own words, an echo of the reconciliation he had just been given with God.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Esau's Grace and Jacob's Own Caution</h3>
+    <div class="study-p">
+      Esau's response throughout this chapter &mdash; running to embrace his brother, weeping, refusing the elaborate gift at first, and offering to travel alongside Jacob or leave guards for his protection &mdash; stands in sharp contrast to the calculating, fearful brother pictured twenty years earlier in Genesis 27. No sourced Branham commentary specifically addressing Esau's own change of heart, or his generous conduct throughout this chapter, turned up in the corpus searched for this study.
     </div>
 
     <div class="study-p">
-      There's a small, unresolved detail worth sitting with honestly. Jacob tells Esau he'll follow along "unto my lord unto Seir," but the very next verse has him heading to Succoth instead, in the opposite direction. The text doesn't explain the discrepancy or call it out as another deception. It could simply be practical caution, given how slowly his flocks and children could travel. It could also be one last flicker of the old wariness, dressed up as politeness. Genesis leaves it standing without resolving it either way.
+      Jacob's insistence on a separate, slower pace in verses 12 through 17, and his declining of Esau's offered escort, is left by Scripture without stated motive, and no sourced Branham commentary addressing Jacob's reasons for parting ways with Esau rather than traveling on together turned up in the corpus searched for this study. The chapter's closing purchase of land at Shechem and the altar called El-elohe-Israel &mdash; "God, the God of Israel," the first time this new name is used of God Himself rather than only of Jacob &mdash; likewise did not turn up separate direct commentary in the corpus searched for this study.
     </div>
 
-    <div class="study-p">
-      What Jacob does once he's settled is consistent with the man this whole story has shaped him into by now. At Shechem, he buys land outright rather than simply claiming it &mdash; the same instinct Abraham showed insisting on paying full price for Machpelah back in chapter 23 &mdash; and builds an altar there. The name he gives it is worth pausing on: El-elohe-Israel, "God, the God of Israel." It's the first time his new name from the riverbank at Peniel becomes part of how he actually worships, folded permanently into the way he addresses God from here on.
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 32:6&ndash;8</span> &mdash; Jacob's fear and the division into two companies, now shown unnecessary &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 32:30</span> &mdash; "I have seen God face to face," echoed in Jacob's words to Esau in verse 10 &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 27:41</span> &mdash; Esau's earlier vow to kill Jacob, now resolved in embrace rather than violence &nbsp;&bull;&nbsp;
+      <span class="xr-key">Luke 15:20</span> &mdash; the father who "ran" to meet his returning son, the same verb used of Esau here &nbsp;&bull;&nbsp;
+      <span class="xr-key">Romans 12:19&ndash;21</span> &mdash; overcoming evil with good, the pattern Esau's own conduct displays &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 34:1&ndash;2</span> &mdash; the events at Shechem that follow directly from Jacob's settling near that city
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 33</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. Esau's own change of heart, the exchange over the gift, Jacob's declining of Esau's escort, and the purchase of land and altar at Shechem did not turn up separate direct commentary in the corpus searched for this study.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Jacob stayed there until the blessing came, and changed his name from 'a deceiver' to 'a prince with God.' Even the nation was called by his name. Yes, sir! What was it? The results was because he got desperate about the thing. And the next day when he met Esau, he didn't need any guards. He walked right out and met him. See? Why? He had got in desperation till he got the assurance. And you get desperate until you get the assurance.&rdquo;</div>
+      <div class="archive-cite">Desperations &mdash; 63-0901E, para. 90</div>
     </div>
   </div>
 

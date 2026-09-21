@@ -25,11 +25,20 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-  .inline-img { align-self: center; box-shadow: 0 14px 32px rgba(43,29,16,0.3); max-width: 100%; margin: 4px 0; }
-  .inline-img img { display: block; width: 760px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -43,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-27-hero.jpg" alt="Isaac blessing Jacob, disguised in goat skins, as Rebekah watches tensely and Esau approaches unaware in the distance">
+    <img src="images/genesis-27-hero.jpg" alt="An old blind man in a tent reaching out to feel the arm of a kneeling young man dressed in animal skins, a bowl of meat between them, dim evening light">
   </div>
 
   <!-- Scripture -->
@@ -59,16 +68,12 @@
       <br><br>
       <span class="verse-num">5</span>And Rebekah heard when Isaac spake to Esau his son. And Esau went to the field to hunt for venison, and to bring it. <span class="verse-num">6</span>And Rebekah spake unto Jacob her son, saying, Behold, I heard thy father speak unto Esau thy brother, saying, <span class="verse-num">7</span>Bring me venison, and make me savoury meat, that I may eat, and bless thee before the LORD before my death. <span class="verse-num">8</span>Now therefore, my son, obey my voice according to that which I command thee. <span class="verse-num">9</span>Go now to the flock, and fetch me from thence two good kids of the goats; and I will make them savoury meat for thy father, such as he loveth: <span class="verse-num">10</span>And thou shalt bring it to thy father, that he may eat, and that he may bless thee before his death.
       <br><br>
-      <span class="verse-num">11</span>And Jacob said to Rebekah his mother, Behold, Esau my brother is a hairy man, and I am a smooth man: <span class="verse-num">12</span>My father peradventure will feel me, and I shall seem to him as a deceiver; and I shall bring a curse upon me, and not a blessing. <span class="verse-num">13</span>And his mother said unto him, Upon me be thy curse, my son: only obey my voice, and go fetch me them.
-
-
-      <span class="verse-num">14</span>And he went, and fetched, and brought them to his mother: and his mother made savoury meat, such as his father loved. <span class="verse-num">15</span>And Rebekah took goodly raiment of her eldest son Esau, which were with her in the house, and put them upon Jacob her younger son: <span class="verse-num">16</span>And she put the skins of the kids of the goats upon his hands, and upon the smooth of his neck: <span class="verse-num">17</span>And she gave the savoury meat and the bread, which she had prepared, into the hand of her son Jacob.
+      <span class="verse-num">11</span>And Jacob said to Rebekah his mother, Behold, Esau my brother is a hairy man, and I am a smooth man: <span class="verse-num">12</span>My father peradventure will feel me, and I shall seem to him as a deceiver; and I shall bring a curse upon me, and not a blessing. <span class="verse-num">13</span>And his mother said unto him, Upon me be thy curse, my son: only obey my voice, and go fetch me them. <span class="verse-num">14</span>And he went, and fetched, and brought them to his mother: and his mother made savoury meat, such as his father loved. <span class="verse-num">15</span>And Rebekah took goodly raiment of her eldest son Esau, which were with her in the house, and put them upon Jacob her younger son: <span class="verse-num">16</span>And she put the skins of the kids of the goats upon his hands, and upon the smooth of his neck: <span class="verse-num">17</span>And she gave the savoury meat and the bread, which she had prepared, into the hand of her son Jacob.
       <br><br>
-      <span class="verse-num">18</span>And he came unto his father, and said, My father: and he said, Here am I; who art thou, my son? <span class="verse-num">19</span>And Jacob said unto his father, I am Esau thy firstborn; I have done according as thou badest me: arise, I pray thee, sit and eat of my venison, that thy soul may bless me. <span class="verse-num">20</span>And Isaac said unto his son, How is it that thou hast found it so quickly, my son? And he said, Because the LORD thy God brought it to me. <span class="verse-num">21</span>And Isaac said unto Jacob, Come near, I pray thee, that I may feel thee, my son, whether thou be my very son Esau or not. <span class="verse-num">22</span>And Jacob went near unto Isaac his father; and he felt him, and said, The voice is Jacob's voice, but the hands are the hands of Esau. <span class="verse-num">23</span>And he discerned him not, because his hands were hairy, as his brother Esau's hands: so he blessed him. <span class="verse-num">24</span>And he said, Art thou my very son Esau? And he said, I am.
+      <span class="verse-num">18</span>And he came unto his father, and said, My father: and he said, Here am I; who art thou, my son? <span class="verse-num">19</span>And Jacob said unto his father, I am Esau thy first born; I have done according as thou badest me: arise, I pray thee, sit and eat of my venison, that thy soul may bless me. <span class="verse-num">20</span>And Isaac said unto his son, How is it that thou hast found it so quickly, my son? And he said, Because the LORD thy God brought it to me. <span class="verse-num">21</span>And Isaac said unto Jacob, Come near, I pray thee, that I may feel thee, my son, whether thou be my very son Esau or not. <span class="verse-num">22</span>And Jacob went near unto Isaac his father; and he felt him, and said, The voice is Jacob's voice, but the hands are the hands of Esau. <span class="verse-num">23</span>And he discerned him not, because his hands were hairy, as his brother Esau's hands: so he blessed him.
       <br><br>
-      <span class="verse-num">25</span>And he said, Bring it near to me, and I will eat of my son's venison, that my soul may bless thee. And he brought it near to him, and he did eat: and he brought him wine, and he drank. <span class="verse-num">26</span>And his father Isaac said unto him, Come near now, and kiss me, my son. <span class="verse-num">27</span>And he came near, and kissed him: and he smelled the smell of his raiment, and blessed him, and said, See, the smell of my son is as the smell of a field which the LORD hath blessed: <span class="verse-num">28</span>Therefore God give thee of the dew of heaven, and the fatness of the earth, and plenty of corn and wine: <span class="verse-num">29</span>Let people serve thee, and nations bow down to thee: be lord over thy brethren, and let thy mother's sons bow down to thee: cursed be every one that curseth thee, and blessed be he that blesseth thee.
-
-
+      <span class="verse-num">24</span>And he said, Art thou my very son Esau? And he said, I am. <span class="verse-num">25</span>And he said, Bring it near to me, and I will eat of my son's venison, that my soul may bless thee. And he brought it near to him, and he did eat: and he brought him wine and he drank. <span class="verse-num">26</span>And his father Isaac said unto him, Come near now, and kiss me, my son. <span class="verse-num">27</span>And he came near, and kissed him: and he smelled the smell of his raiment, and blessed him, and said, See, the smell of my son is as the smell of a field which the LORD hath blessed: <span class="verse-num">28</span>Therefore God give thee of the dew of heaven, and the fatness of the earth, and plenty of corn and wine: <span class="verse-num">29</span>Let people serve thee, and nations bow down to thee: be lord over thy brethren, and let thy mother's sons bow down to thee: cursed be every one that curseth thee, and blessed be he that blesseth thee.
+      <br><br>
       <span class="verse-num">30</span>And it came to pass, as soon as Isaac had made an end of blessing Jacob, and Jacob was yet scarce gone out from the presence of Isaac his father, that Esau his brother came in from his hunting. <span class="verse-num">31</span>And he also had made savoury meat, and brought it unto his father, and said unto his father, Let my father arise, and eat of his son's venison, that thy soul may bless me. <span class="verse-num">32</span>And Isaac his father said unto him, Who art thou? And he said, I am thy son, thy firstborn Esau. <span class="verse-num">33</span>And Isaac trembled very exceedingly, and said, Who? where is he that hath taken venison, and brought it me, and I have eaten of all before thou camest, and have blessed him? yea, and he shall be blessed.
       <br><br>
       <span class="verse-num">34</span>And when Esau heard the words of his father, he cried with a great and exceeding bitter cry, and said unto his father, Bless me, even me also, O my father. <span class="verse-num">35</span>And he said, Thy brother came with subtilty, and hath taken away thy blessing. <span class="verse-num">36</span>And he said, Is not he rightly named Jacob? for he hath supplanted me these two times: he took away my birthright; and, behold, now he hath taken away my blessing. And he said, Hast thou not reserved a blessing for me? <span class="verse-num">37</span>And Isaac answered and said unto Esau, Behold, I have made him thy lord, and all his brethren have I given to him for servants; and with corn and wine have I sustained him: and what shall I do now unto thee, my son? <span class="verse-num">38</span>And Esau said unto his father, Hast thou but one blessing, my father? bless me, even me also, O my father. And Esau lifted up his voice, and wept.
@@ -89,67 +94,105 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: A Blessing That Could Not Be Called Back</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: A Blind Prophet, a Stolen Blessing</h2>
 
-    <div class="study-p">
-      Isaac, old and blind, wants to bless Esau before he dies &mdash; a formal, spoken transfer of authority and inheritance, sealed with food and wine, the kind of thing meant to be done once and never undone. Rebekah overhears, and acts immediately, recruiting Jacob into a plan built entirely on deception: goat skins for hairy arms, Esau's own clothes for his smell, a hastily prepared meal to imitate venison that hasn't even been hunted yet.
+    <div class="tag-row">
+      <span class="tag">A Prophet Deceived</span>
+      <span class="tag">God Does Not Tell His Prophets Everything</span>
+      <span class="tag">No Place for Repentance</span>
+      <span class="tag">The Impersonator</span>
     </div>
 
     <div class="study-p">
-      Jacob's own objection isn't moral &mdash; he worries about getting caught, not about doing wrong &mdash; and Rebekah's answer is chilling in its simplicity: "Upon me be thy curse, my son: only obey my voice."
+      Genesis 27 completes what Genesis 25 began. The birthright Esau despised in a moment of hunger is now joined by the blessing their father intended to speak over him &mdash; and Jacob, coached and covered by Rebekah, takes it by disguise rather than by right. Brother Branham's most direct comment on this chapter centers on a single, striking detail: that Isaac, a prophet of God, was deceived by his own blind eyes and did not know it was Jacob standing before him instead of Esau.
     </div>
 
+    <h3 class="sec-head">A Prophet Deceived, and God's Purpose Still Worked Out</h3>
     <div class="study-p">
-      What follows is genuinely tense to read. Isaac questions the suspiciously quick hunting trip, feels Jacob's disguised hands, and says the line that captures the whole scene's dramatic irony perfectly: "The voice is Jacob's voice, but the hands are the hands of Esau." He isn't fooled by accident. He's talked out of his own suspicion, verse by verse, until he finally accepts what his hands and nose tell him over what his ears are warning him.
+      Isaac calls himself a prophet in Brother Branham's reading of this scene &mdash; the man through whom the promised Seed, Christ, would come &mdash; and yet that same prophet, blind in his old age, was deceived by his own son. Brother Branham did not treat this as a contradiction to be explained away, but as proof of something else: that a prophet's office does not carry with it total knowledge of everything happening around him. God gives a prophet what He wants him to know, not everything there is to know, and He was, in this case, working out His own predetermined plan through the very deception that fooled Isaac.
     </div>
 
-    <div class="study-p">
-      One reading doesn't try to dress up how Jacob actually got what he wanted here.
-    </div>
-
-    <!-- Branham quote 1: Jacob's flawed character, God's promise regardless -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Look the way Jacob got it. But God had made a promise and had to keep it... He couldn't hook it on Jacob, the supplanter... a little shyster, lying.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Infallibility of God's Spoken Word&rdquo; (56-0404)</div>
+        <div class="quote-text">&ldquo;Look at Esau. Esau was a good man, moral, a good church member today. What did he do? He was a hunter&hellip;He'd taken care of the herds for his father. His daddy was blind. A prophet, a prophet of the Lord was blind and deceived by his own son, a prophet, Isaac; through him come Christ. You can call him prophet, Bible said he was. And was blind? Why didn't he heal himself? And why didn't he know that that was Esau&mdash;that that was Jacob instead of Esau? See? God don't tell His prophets everything. He just tells them what He wants them to know. See? God was working out a plan then, and he had to work in it. God&hellip;If you'll submit yourself to God, God will make you work right into His plan.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Questions and Answers&rdquo; (59-1223, paras. 59&ndash;60)</div>
       </div>
     </div>
 
     <div class="study-p">
-      That word &mdash; supplanter &mdash; is the meaning already buried in Jacob's own name since birth, back in chapter 25, when he came out of the womb gripping his brother's heel. Esau says it himself, out loud, the moment he understands what's happened.
+      Read this way, the deception scene in verses 18 through 27 &mdash; the goat skins on Jacob's hands and neck, the borrowed raiment, Isaac's own hand feeling for the hairiness that would confirm the wrong son, the voice that gave him pause but did not stop him &mdash; is not a moment where God's plan nearly failed and was rescued at the last second. It is the plan working itself out through ordinary human deceit, exactly as it had been spoken over the boys before they were even born.
     </div>
 
-    <!-- Branham quote 2: the naming confirmed -->
-    <div class="quote-box">
-      <div class="quote-mark">&ldquo;</div>
+    <h3 class="sec-head">Two Kinds of Sons, One Birthright</h3>
+    <div class="study-p">
+      Brother Branham had already drawn the contrast between Esau and Jacob in terms of two kinds of religion &mdash; the moral, dutiful, outwardly respectable son who nonetheless despised what mattered most, against the "little shyster" who wanted nothing else in the world but the birthright, however he had to get it. Genesis 27 puts that same contrast on display a second time, now over the blessing rather than the birthright: Esau goes out and does exactly what a good, dutiful son does, hunting venison for his father, while Jacob and his mother move by calculation and concealment. No sourced commentary in the corpus searched for this study addresses the ethics of Rebekah's plan or Jacob's disguise directly, but the doctrine already drawn from Genesis 25 &mdash; that the birthright, in Brother Branham's reading, pictures the Holy Spirit itself, prized above every outward appearance of goodness &mdash; carries forward into this chapter's blessing as well.
+    </div>
+
+    <!-- Types & Shadows -->
+    <div class="type-box">
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;He was called Jacob, no mistake... he was &lsquo;supplanter&rsquo; all right. So he was a cheater.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Perfect Strength by Perfect Weakness&rdquo; (61-1119)</div>
+        <div class="type-label">Type &amp; Shadow &mdash; Esau as the Impersonator, Made Greater for This Age</div>
+        <div class="study-p" style="font-size: 17px;">
+          In a later sermon, Brother Branham reached back to Esau to describe Judas &mdash; not Jacob's deception of Esau, but Esau's own sale of his birthright, applied forward as a type of a much larger betrayal. Judas, he said, was "the Esau, made greater for this age," a pretended brother who sold what was holy for a price, exactly as Esau sold his birthright for a meal. The type is drawn from Genesis 25's birthright sale rather than this chapter's blessing directly, but it belongs here as well, since Esau's tears and his cry &mdash; "Bless me, even me also, O my father" &mdash; are, in Hebrews' own commentary on this scene, the sound of a man who found no way back once the moment for decision had already passed.
+        </div>
       </div>
     </div>
 
-    <div class="study-p">
-      What happens next is one of the rawest scenes in the entire book. Esau returns, brings his own meal to his father, and the truth comes out in a single devastating question: "Who art thou?" Isaac's whole body trembles &mdash; the text says "very exceedingly" &mdash; not just at being deceived, but at realizing the blessing he spoke is already permanent. He can't take it back, even now that he knows.
-    </div>
-
-    <div class="study-p">
-      Esau's cry &mdash; "bless me, even me also, O my father" &mdash; and the weeping that follows are treated by one reading as a real, desperate search for something he could no longer reach.
-    </div>
-
-    <!-- Branham quote 3: Esau's grief and election -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;It's not him that wants to get saved, that's saved. It's him that's saved by God's choice. Esau wanted to get saved, too. He wept bitterly, and couldn't find no place to repent. He wanted to get saved. It ain't 'cause you want to get saved... 'Before Esau or Jacob, either, was born, not knowing right and wrong,' God said, &lsquo;I love Jacob and hate Esau.&rsquo;&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Divine Healing&rdquo; (54-1219M)</div>
+        <div class="quote-text">&ldquo;See where we're at? Jesus said, 'Be careful.' See how Judas was? He was right with them. He was the Esau, made greater for this age. He was the deceiver, the impersonator, made greater for this age. Here he come right up to, again, a brother of Jesus, a pretended brother. But in his heart, he was with the old carnal church all the time, because that's where he sold Jesus to. He sold Jesus, his birthrights, just as much as Esau did for a mess of pottage. He sold his birthrights for thirty pieces of silver.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Hearing, Recognizing, and Acting on the Word of God&rdquo; (60-0221, para. 126)</div>
       </div>
     </div>
 
+    <h3 class="sec-head">Esau's Fury and Jacob's Flight</h3>
     <div class="study-p">
-      Whatever a reader makes of that reading, the text itself is unsparing about the aftermath: real tears did not undo what had already been spoken, and Esau's grief curdles fast into a quiet, patient plan to kill his brother the moment their father dies. Rebekah, hearing of it, sends Jacob away for what she calls "a few days." It will be twenty years before he comes home again.
+      The chapter closes with Esau's grief hardening into a resolve to kill his brother once their father is gone, and with Rebekah sending Jacob away to her brother Laban in Haran until the anger passes. No sourced Branham commentary specifically addressing Esau's vow of vengeance in verse 41, or Rebekah's plan to send Jacob to Laban in verses 42 through 45, turned up in the corpus searched for this study. Verse 46, Rebekah's complaint about Esau's Hittite wives, gives her the pretext she uses with Isaac to send Jacob away for what will become a much longer exile than either parent expects.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 25:29&ndash;34</span> &mdash; Esau's earlier sale of his birthright for a meal &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hebrews 12:16&ndash;17</span> &mdash; Esau as the "profane person" who found no place of repentance, though he sought the blessing with tears &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hebrews 11:20</span> &mdash; "By faith Isaac blessed Jacob and Esau concerning things to come" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Romans 9:11&ndash;13</span> &mdash; the purpose of God according to election, already drawn into this study at Genesis 25 &nbsp;&bull;&nbsp;
+      <span class="xr-key">Matthew 26:14&ndash;16, 47&ndash;50</span> &mdash; Judas as a pretended brother who sold what was holy for a price &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 28:1&ndash;5</span> &mdash; Isaac's parting blessing and charge to Jacob before he departs for Haran
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 27</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. The mechanics of the deception itself &mdash; the goat skins, Isaac's trembling upon discovering the ruse, and Esau's vow of vengeance &mdash; did not turn up separate direct commentary beyond what is quoted below in the corpus searched for this study.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Look at Esau. Esau was a good man, moral, a good church member today. What did he do? He was a hunter&hellip;He'd taken care of the herds for his father. His daddy was blind. A prophet, a prophet of the Lord was blind and deceived by his own son, a prophet, Isaac; through him come Christ. You can call him prophet, Bible said he was. And was blind? Why didn't he heal himself? And why didn't he know that that was Esau&mdash;that that was Jacob instead of Esau? See? God don't tell His prophets everything. He just tells them what He wants them to know.&rdquo;</div>
+      <div class="archive-cite">Questions and Answers &mdash; 59-1223, para. 59</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;God was working out a plan then, and he had to work in it. God&hellip;If you'll submit yourself to God, God will make you work right into His plan.&rdquo;</div>
+      <div class="archive-cite">Questions and Answers &mdash; 59-1223, para. 60</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;See where we're at? Jesus said, 'Be careful.' See how Judas was? He was right with them. He was the Esau, made greater for this age. He was the deceiver, the impersonator, made greater for this age. Here he come right up to, again, a brother of Jesus, a pretended brother. But in his heart, he was with the old carnal church all the time, because that's where he sold Jesus to. He sold Jesus, his birthrights, just as much as Esau did for a mess of pottage. He sold his birthrights for thirty pieces of silver.&rdquo;</div>
+      <div class="archive-cite">Hearing, Recognizing, and Acting on the Word of God &mdash; 60-0221, para. 126</div>
     </div>
   </div>
 

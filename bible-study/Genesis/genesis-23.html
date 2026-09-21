@@ -25,9 +25,19 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -41,7 +51,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-23-hero.jpg" alt="Abraham mourning at the entrance to the cave of Machpelah, where Sarah is laid to rest in land he now owns outright">
+    <img src="images/genesis-23-hero.jpg" alt="An old man bowing before elders seated at a city gate, negotiating for a cave set into a hillside among trees, in the ancient land of Canaan">
   </div>
 
   <!-- Scripture -->
@@ -59,13 +69,9 @@
       <br><br>
       <span class="verse-num">7</span>And Abraham stood up, and bowed himself to the people of the land, even to the children of Heth. <span class="verse-num">8</span>And he communed with them, saying, If it be your mind that I should bury my dead out of my sight; hear me, and intreat for me to Ephron the son of Zohar, <span class="verse-num">9</span>That he may give me the cave of Machpelah, which he hath, which is in the end of his field; for as much money as it is worth he shall give it me for a possession of a buryingplace amongst you.
       <br><br>
-      <span class="verse-num">10</span>And Ephron dwelt among the children of Heth: and Ephron the Hittite answered Abraham in the audience of the children of Heth, even of all that went in at the gate of his city, saying, <span class="verse-num">11</span>Nay, my lord, hear me: the field give I thee, and the cave that is therein, I give it thee; in the presence of the sons of my people give I it thee: bury thy dead. <span class="verse-num">12</span>And Abraham bowed down himself before the people of the land. <span class="verse-num">13</span>And he spake unto Ephron in the audience of the people of the land, saying, But if thou wilt give it, I pray thee, hear me: I will give thee money for the field; take it of me, and I will bury my dead there.
+      <span class="verse-num">10</span>And Ephron dwelt among the children of Heth: and Ephron the Hittite answered Abraham in the audience of the children of Heth, even of all that went in at the gate of his city, saying, <span class="verse-num">11</span>Nay, my lord, hear me: the field give I thee, and the cave that is therein, I give it thee; in the presence of the sons of my people give I it thee: bury thy dead. <span class="verse-num">12</span>And Abraham bowed down himself before the people of the land. <span class="verse-num">13</span>And he spake unto Ephron in the audience of the people of the land, saying, But if thou wilt give it, I pray thee, hear me: I will give thee money for the field; take it of me, and I will bury my dead there. <span class="verse-num">14</span>And Ephron answered Abraham, saying unto him, <span class="verse-num">15</span>My lord, hearken unto me: the land is worth four hundred shekels of silver; what is that betwixt me and thee? bury therefore thy dead. <span class="verse-num">16</span>And Abraham hearkened unto Ephron; and Abraham weighed to Ephron the silver, which he had named in the audience of the sons of Heth, four hundred shekels of silver, current money with the merchant.
       <br><br>
-      <span class="verse-num">14</span>And Ephron answered Abraham, saying unto him, <span class="verse-num">15</span>My lord, hearken unto me: the land is worth four hundred shekels of silver; what is that betwixt me and thee? bury therefore thy dead. <span class="verse-num">16</span>And Abraham hearkened unto Ephron; and Abraham weighed to Ephron the silver, which he had named in the audience of the sons of Heth, four hundred shekels of silver, current money with the merchant.
-      <br><br>
-      <span class="verse-num">17</span>And the field of Ephron, which was in Machpelah, which was before Mamre, the field, and the cave which was therein, and all the trees that were in the field, that were in all the borders round about, were made sure <span class="verse-num">18</span>Unto Abraham for a possession in the presence of the children of Heth, before all that went in at the gate of his city. <span class="verse-num">19</span>And after this, Abraham buried Sarah his wife in the cave of the field of Machpelah before Mamre: the same is Hebron in the land of Canaan.
-      <br><br>
-      <span class="verse-num">20</span>And the field, and the cave that is therein, were made sure unto Abraham for a possession of a buryingplace by the sons of Heth.
+      <span class="verse-num">17</span>And the field of Ephron, which was in Machpelah, which was before Mamre, the field, and the cave which was therein, and all the trees that were in the field, that were in all the borders round about, were made sure <span class="verse-num">18</span>Unto Abraham for a possession in the presence of the children of Heth, before all that went in at the gate of his city. <span class="verse-num">19</span>And after this, Abraham buried Sarah his wife in the cave of the field of Machpelah before Mamre: the same is Hebron in the land of Canaan. <span class="verse-num">20</span>And the field, and the cave that is therein, were made sure unto Abraham for a possession of a buryingplace by the sons of Heth.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -77,45 +83,140 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: The First Ground He Ever Owned</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: A Grave Bought in Hope</h2>
 
-    <div class="study-p">
-      After the cosmic intensity of Moriah, this chapter turns entirely personal and quiet. Sarah dies at a hundred and twenty-seven, at Hebron, and Abraham's grief is stated in the plainest possible terms: he "came to mourn for Sarah, and to weep for her." No vision, no covenant, no test &mdash; just an old man burying his wife.
+    <div class="tag-row">
+      <span class="tag">Sarah, Sweetheart of the Bible</span>
+      <span class="tag">A Spiritual Revelation, Not a Convenience</span>
+      <span class="tag">Buried Near Job</span>
     </div>
 
     <div class="study-p">
-      What follows is unusually detailed for Genesis, which normally moves fast and summarizes conversations in a line or two. Here, an entire real-estate negotiation is recorded almost word for word: Abraham's request, the Hittites' generous offer of any tomb he likes, his insistence on dealing directly with Ephron, Ephron's offer of the field and cave as an outright gift, and Abraham's refusal to accept it for free. He wants to pay full price, named publicly, weighed out in front of witnesses at the city gate.
+      Genesis 23 is a quiet chapter on its surface &mdash; a death, a negotiation, a burial. Brother Branham read it as something considerably larger: the first recorded instance of a pattern of deliberate burial choices running through the patriarchs, one he believed testified to their settled hope in a coming resurrection.
     </div>
 
+    <h3 class="sec-head">Sarah, Sweetheart of the Bible</h3>
     <div class="study-p">
-      That insistence matters more than it might first appear. A field given as a favor could always be disputed or reclaimed later by someone else's descendants. A field bought at full price, weighed out in named currency, in the hearing of everyone who passed through the city gate, becomes something no one can credibly take back. Abraham isn't just being polite &mdash; he's making sure this transaction can never be undone.
+      Verses 1 and 2 record Sarah's death at a hundred and twenty-seven, and Abraham's open grief. Brother Branham spoke of Abraham and Sarah with unusual warmth among the patriarchal couples he preached on, calling them, more than once, the Bible's own picture of enduring devotion.
     </div>
 
-    <div class="study-p">
-      It's worth pausing on what this moment actually represents in the larger story. Genesis 12 promised Abraham this entire land. Genesis 15 and 17 renewed that promise formally, twice, with covenant and oath. Genesis 22 confirmed it again after the hardest test imaginable. And through all of it, Abraham has owned, legally and permanently, not one square foot of Canaan &mdash; until this chapter, over a grave.
-    </div>
-
-    <div class="study-p">
-      One reading ties that choice of burial ground to something much larger than sentiment, following the same insistence forward through the rest of the patriarchs.
-    </div>
-
-    <!-- Branham quote: burial in the promised land tied to resurrection -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;When Abraham died, he slept with Sarah, the same place... And when Isaac begot Jacob, and Jacob died down in Egypt. But before he died, he made his prophet son, Joseph... swore by God that he'd not bury him down in Egypt... 'Take me back up into Canaan. Bury me up there with my father Abraham, with Isaac.' ...God hadn't promised a resurrection down there in Egypt, but they knew that the resurrection was going to be in the promised land.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Redeemer, Redemption&rdquo; (55-1119)</div>
+        <div class="quote-text">&ldquo;Along came many other of the prophets. We'll take, for instance, Abraham, Sarah, the sweethearts of the Bible. And when Abraham come along, loving Sarah, when she died he just didn't bury her anywhere. He had a spiritual revelation of something.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Glorified Jesus&rdquo; (55-0225, para. 36)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">A Spiritual Revelation, Not a Convenience</h3>
+    <div class="study-p">
+      Verses 3 through 16 record the careful, public negotiation for the cave of Machpelah &mdash; Abraham insisting on paying full price rather than accepting the field as a gift, so the ground would be unquestionably his own. No sourced commentary on the specific back-and-forth with Ephron, the sons of Heth, or the exact sum paid turned up in the corpus searched for this study. What Brother Branham did preach on repeatedly was Abraham's motive: this was not a practical decision about where land happened to be available, but a deliberate choice tied to something he had come to understand the same way the patriarch Job had understood it generations earlier.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Job, when he died, he specified his burying place. Along come Abraham. Watch between the lines now, you readers. This is not written right in the Word; you have to read it in between&hellip;And when Sarah died, he bought a parcel of ground: bought it. You know how he did with a shekels of silver, near Job. And he bury her.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Demonology&rdquo; (53-1112, para. 33)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Buried Near Job</h3>
+    <div class="study-p">
+      Verses 17 through 20 close the chapter with the transaction confirmed and Sarah buried in the cave before Mamre. Brother Branham traced this same deliberate pattern forward through the rest of Genesis &mdash; Isaac buried with Abraham, Jacob buried in the same ground, and Joseph, centuries later in Egypt, making Israel swear to carry his own bones back to that same land rather than leave them behind.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;When Job died, he specified where to be buried. Wonder why? They buried Job. Along come Abraham years later. When Abraham died, or Sarah died, Abraham went right straight into the same land where Job was buried, and bought a piece of ground, and buried Sarah&hellip;Abraham begot Isaac. When Isaac died, he was buried with Abraham&hellip;When Joseph died, he said, 'Don't bury me here&hellip;Someday, God will visit you, then take my bones up in the promised land and bury them.'&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;God Perfecting His Church&rdquo; (54-1204, paras. 60&ndash;61)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Whatever a reader makes of that reasoning, the pattern in the text itself is real: Sarah, Abraham, Isaac, Rebekah, Leah, and Jacob are all eventually buried in this same cave at Machpelah, generations of a family insisting on the same small plot of ground rather than wherever they happened to die. What began as one grieving man's stubborn refusal to accept a favor becomes, over the rest of Genesis, the family's one fixed, undeniable claim to the land they were promised but wouldn't live to see given to their descendants.
+      He read the choice of that particular ground as an act of resurrection faith rather than sentiment &mdash; a conviction, shared across generations of the same family, that Palestine specifically, not Egypt or anywhere else, was where the promised Redeemer would one day stand and where the dead in that hope would rise.
     </div>
 
-    <div class="study-p">
-      The chapter closes with something close to a legal seal: "the field, and the cave that is therein, were made sure unto Abraham... by the sons of Heth." Not a word from heaven. Not a sign in the sky. Just a deed, witnessed and final &mdash; the first piece of ground in the whole story that actually, legally belongs to the man it was promised to.
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Those prophets knew that the firstfruits of the resurrection would come out of Palestine, not out of Egypt, Palestine! The resurrection wasn't coming to Egypt; it was coming to Palestine. That's the reason they wanted to be buried in Palestine.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Glorified Jesus&rdquo; (55-0225, para. 42)</div>
+      </div>
+    </div>
+
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; A Grave Chosen in Hope</div>
+        <div class="study-p" style="font-size: 17px;">
+          Brother Branham read the unbroken chain of burials in the cave of Machpelah &mdash; Sarah, then Abraham, then Isaac, Rebekah, Leah, and finally Jacob himself, brought back from Egypt for it &mdash; as a quiet but deliberate testimony running underneath the entire patriarchal narrative. None of them left instructions to be buried wherever convenient; each one insisted on that particular ground, in Job's country, in the land the promise was given over. In his reading, this was the "reading between the lines" evidence that Job's own confession, "I know that my Redeemer liveth, and he shall stand at the latter day upon the earth," was shared and acted upon by the patriarchs who came after him, generations before that resurrection hope was ever explained in doctrine.
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Job 19:25&ndash;27</span> &mdash; "I know that my redeemer liveth&hellip;in my flesh shall I see God" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 25:9&ndash;10</span> &mdash; Abraham buried in the same cave by Isaac and Ishmael &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 49:29&ndash;32</span> &mdash; Jacob's own instruction to be buried in the cave of Machpelah &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 50:24&ndash;25</span> &mdash; Joseph's oath concerning his own bones &nbsp;&bull;&nbsp;
+      <span class="xr-key">Exodus 13:19</span> &mdash; Moses carrying Joseph's bones out of Egypt &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hebrews 11:13&ndash;16</span> &mdash; the patriarchs confessing themselves strangers, seeking a better, heavenly country
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 23</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. The specific negotiation with Ephron and the sons of Heth, verses 3 through 16, did not turn up direct commentary beyond what is covered above regarding Abraham's underlying motive.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Job, when he died, he specified his burying place. Along come Abraham. Watch between the lines now, you readers. This is not written right in the Word; you have to read it in between&hellip;And when Sarah died, he bought a parcel of ground: bought it&hellip;near Job. And he bury her.&rdquo;</div>
+      <div class="archive-cite">Demonology &mdash; 53-1112, para. 33</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Job when he died, he specified his burying place there in Palestine. Along come Abraham, and when Sarah died, his sweetheart&hellip;Them sweethearts of the Bible, see how loyal and loving&hellip;when Sarah died, Abraham bought a parcel of ground near the grave where Job was buried.&rdquo;</div>
+      <div class="archive-cite">The Angel of the Covenant &mdash; 54-0301, para. 27</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;When Job died, he specified where to be buried. Wonder why? They buried Job. Along come Abraham years later. When Abraham died, or Sarah died, Abraham went right straight into the same land where Job was buried, and bought a piece of ground, and buried Sarah.&rdquo;</div>
+      <div class="archive-cite">God Perfecting His Church &mdash; 54-1204, para. 60</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;When Joseph died, he said, 'Don't bury me here&hellip;Someday, God will visit you, then take my bones up in the promised land and bury them.'&hellip;They knowed that Jesus was coming. They knowed that He'd stand, and there'd be a Resurrection in the last days, not in Egypt but in Palestine.&rdquo;</div>
+      <div class="archive-cite">God Perfecting His Church &mdash; 54-1204, para. 61</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Job, watch how he specified where his burying place was. Along came many other of the prophets. We'll take, for instance, Abraham, Sarah, the sweethearts of the Bible&hellip;when she died he just didn't bury her anywhere. He had a spiritual revelation of something, the same thing Job had.&rdquo;</div>
+      <div class="archive-cite">Glorified Jesus &mdash; 55-0225, para. 36</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Those prophets knew that the firstfruits of the resurrection would come out of Palestine, not out of Egypt, Palestine! The resurrection wasn't coming to Egypt; it was coming to Palestine. That's the reason they wanted to be buried in Palestine.&rdquo;</div>
+      <div class="archive-cite">Glorified Jesus &mdash; 55-0225, para. 42</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And then when along came the prophets of old, Abraham. The sweethearts of the Bible, Abraham and Sarah. When Sarah died, Abraham purchased a piece of ground right near where Job was buried, and buried Sarah. He said, 'I am a joint heir with you over yonder.'&rdquo;</div>
+      <div class="archive-cite">My Redeemer Liveth &mdash; 55-0410S, para. 83</div>
     </div>
   </div>
 

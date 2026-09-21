@@ -19,14 +19,29 @@
   .wrap { max-width: 1280px; margin: 0 auto; box-sizing: border-box; padding: 72px 60px 100px; display: flex; flex-direction: column; gap: 44px; }
   .center-col { display: flex; flex-direction: column; gap: 20px; max-width: 760px; align-self: center; width: 100%; }
   .study-p { font-size: 18px; line-height: 1.75; color: #2b1d10; }
-  .note-box { font-size: 16px; font-style: italic; line-height: 1.6; color: #5a4632; padding: 16px 22px; background: rgba(90,70,50,0.06); border-radius: 4px; }
-
+  .quote-box { display: flex; gap: 16px; padding: 22px 26px; background: #fbf6e9; border-left: 4px solid #6d2331; border-radius: 2px; }
+  .quote-mark { font-family: 'UnifrakturMaguntia', cursive; font-size: 40px; color: #6d2331; line-height: 1; flex-shrink: 0; }
+  .quote-text { font-style: italic; font-size: 17px; line-height: 1.6; color: #3b2a1a; }
+  .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
+  .gen-table { width: 100%; border-collapse: collapse; font-size: 16px; margin: 6px 0; }
+  .gen-table td, .gen-table th { padding: 8px 12px; border-bottom: 1px solid rgba(43,29,16,0.15); text-align: left; }
+  .gen-table th { color: var(--accent); text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -40,7 +55,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-36-hero.jpg" alt="An illuminated family tree of the house of Esau, showing his wives, sons, the nation of Edom settled in Mount Seir, and the kings of Edom">
+    <img src="images/genesis-36-hero.jpg" alt="A rugged mountain range at dusk, a settled encampment of tents and herds in a red-rock valley, a caravan trail winding into the distance">
   </div>
 
   <!-- Scripture -->
@@ -60,11 +75,13 @@
       <br><br>
       <span class="verse-num">15</span>These were dukes of the sons of Esau: the sons of Eliphaz the firstborn son of Esau; duke Teman, duke Omar, duke Zepho, duke Kenaz, <span class="verse-num">16</span>Duke Korah, duke Gatam, and duke Amalek: these are the dukes that came of Eliphaz in the land of Edom; these were the sons of Adah. <span class="verse-num">17</span>And these are the sons of Reuel Esau's son; duke Nahath, duke Zerah, duke Shammah, duke Mizzah: these are the dukes that came of Reuel in the land of Edom; these are the sons of Bashemath Esau's wife. <span class="verse-num">18</span>And these are the sons of Aholibamah Esau's wife; duke Jeush, duke Jaalam, duke Korah: these were the dukes that came of Aholibamah the daughter of Anah, Esau's wife. <span class="verse-num">19</span>These are the sons of Esau, who is Edom, and these are their dukes.
       <br><br>
-      <span class="verse-num">20</span>These are the sons of Seir the Horite, who inhabited the land; Lotan, and Shobal, and Zibeon, and Anah, <span class="verse-num">21</span>And Dishon, and Ezer, and Dishan: these are the dukes of the Horites, the children of Seir in the land of Edom. <span class="verse-num">22</span>And the children of Lotan were Hori and Hemam; and Lotan's sister was Timna. <span class="verse-num">23</span>And the children of Shobal were these; Alvan, and Manahath, and Ebal, Shepho, and Onam. <span class="verse-num">24</span>And these are the children of Zibeon; both Ajah, and Anah: this was that Anah that found the mules in the wilderness, as he fed the asses of Zibeon his father. <span class="verse-num">25</span>And the children of Anah were these; Dishon, and Aholibamah the daughter of Anah. <span class="verse-num">26</span>And these are the children of Dishon; Hemdan, and Eshban, and Ithran, and Cheran. <span class="verse-num">27</span>The children of Ezer are these; Bilhan, and Zaavan, and Akan. <span class="verse-num">28</span>The children of Dishan are these; Uz, and Aran. <span class="verse-num">29</span>These are the dukes that came of the Horites; duke Lotan, duke Shobal, duke Zibeon, duke Anah, <span class="verse-num">30</span>Duke Dishon, duke Ezer, duke Dishan: these are the dukes that came of Hori, among their dukes in the land of Seir.
+      <span class="verse-num">20</span>These are the sons of Seir the Horite, who inhabited the land; Lotan, and Shobal, and Zibeon, and Anah, <span class="verse-num">21</span>And Dishon, and Ezer, and Dishan: these are the dukes of the Horites, the children of Seir in the land of Edom. <span class="verse-num">22</span>And the children of Lotan were Hori and Hemam; and Lotan's sister was Timna. <span class="verse-num">23</span>And the children of Shobal were these; Alvan, and Manahath, and Ebal, Shepho, and Onam. <span class="verse-num">24</span>And these are the children of Zibeon; both Ajah, and Anah: this was that Anah that found the mules in the wilderness, as he fed the asses of Zibeon his father. <span class="verse-num">25</span>And the children of Anah were these; Dishon, and Aholibamah the daughter of Anah. <span class="verse-num">26</span>And these are the children of Dishon; Hemdan, and Eshban, and Ithran, and Cheran. <span class="verse-num">27</span>The children of Ezer are these; Bilhan, and Zaavan, and Akan. <span class="verse-num">28</span>The children of Dishan are these; Uz, and Aran.
+      <br><br>
+      <span class="verse-num">29</span>These are the dukes that came of the Horites; duke Lotan, duke Shobal, duke Zibeon, duke Anah, <span class="verse-num">30</span>Duke Dishon, duke Ezer, duke Dishan: these are the dukes that came of Hori, among their dukes in the land of Seir.
       <br><br>
       <span class="verse-num">31</span>And these are the kings that reigned in the land of Edom, before there reigned any king over the children of Israel. <span class="verse-num">32</span>And Bela the son of Beor reigned in Edom: and the name of his city was Dinhabah. <span class="verse-num">33</span>And Bela died, and Jobab the son of Zerah of Bozrah reigned in his stead. <span class="verse-num">34</span>And Jobab died, and Husham of the land of Temani reigned in his stead. <span class="verse-num">35</span>And Husham died, and Hadad the son of Bedad, who smote Midian in the field of Moab, reigned in his stead: and the name of his city was Avith. <span class="verse-num">36</span>And Hadad died, and Samlah of Masrekah reigned in his stead. <span class="verse-num">37</span>And Samlah died, and Saul of Rehoboth by the river reigned in his stead. <span class="verse-num">38</span>And Saul died, and Baalhanan the son of Achbor reigned in his stead. <span class="verse-num">39</span>And Baalhanan the son of Achbor died, and Hadar reigned in his stead: and the name of his city was Pau; and his wife's name was Mehetabel, the daughter of Matred, the daughter of Mezahab.
       <br><br>
-      <span class="verse-num">40</span>And these are the names of the dukes that came of Esau, according to their families, after their places, by their names; duke Timnah, duke Alvah, duke Jetheth, <span class="verse-num">41</span>Duke Aholibamah, duke Elah, duke Pinon, <span class="verse-num">42</span>Duke Kenaz, duke Teman, duke Mibzar, <span class="verse-num">43</span>Duke Magdiel, duke Iram: these be the dukes of Edom, according to their habitations in the land of their habitation: he is Esau the father of Edom.
+      <span class="verse-num">40</span>And these are the names of the dukes that came of Esau, according to their families, after their places, by their names; duke Timnah, duke Alvah, duke Jetheth, <span class="verse-num">41</span>Duke Aholibamah, duke Elah, duke Pinon, <span class="verse-num">42</span>Duke Kenaz, duke Teman, duke Mibzar, <span class="verse-num">43</span>Duke Magdiel, duke Iram: these be the dukes of Edom, according to their habitations in the land of their possession: he is Esau the father of the Edomites.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -76,32 +93,86 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: The Brother Who Prospered Elsewhere</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: Esau's Nation, Settled Short of the Promise</h2>
 
-    <div class="study-p">
-      This chapter is almost entirely a list &mdash; wives, sons, grandsons, tribal chiefs, and finally a sequence of kings &mdash; and it's tempting to skim past a chapter like this looking for a story. But the list itself is telling a quiet story of its own, if you sit with what it actually records.
+    <div class="tag-row">
+      <span class="tag">Esau Is Edom</span>
+      <span class="tag">Your Denominational Brother</span>
+      <span class="tag">A Nation That Prospered Without the Promise</span>
     </div>
 
     <div class="study-p">
-      Esau doesn't fade out of Genesis a failure. He becomes the father of an entire nation, settled permanently in the hill country of Seir, with tribal structure, named leaders, and eventually kings of its own &mdash; "before there reigned any king over the children of Israel," the text specifically notes. Whatever this family's larger story says about who carried the promise forward, it isn't a story where Esau's line withers away in obscurity. Edom becomes a real, established, functioning nation, and one that Israel will deal with for centuries afterward, all the way through the accounts of Saul, David, and beyond.
+      Genesis 36 is a genealogical record of Esau's descendants and their settlement in Mount Seir, the region that becomes the nation of Edom &mdash; a chapter of names and territories rather than narrative. Brother Branham's preaching did not walk through this genealogy directly, but he did return more than once to the picture of Esau permanently settled at Mount Seir, and read it as a type still relevant to the church of his own day.
+    </div>
+
+    <h3 class="sec-head">Esau Is Edom: A Nation Built on Its Own Substance</h3>
+    <div class="study-p">
+      Verses 6 and 7 give Scripture's own explanation for the permanent separation between the brothers: not renewed hostility, but simple abundance &mdash; "their riches were more than that they might dwell together." Esau does not leave the land grudgingly; he leaves prosperous, well-supplied, entirely capable of founding a nation of his own with kings, dukes, and cities of its own before Israel ever has a king at all, as verse 31 notes almost in passing. No sourced Branham commentary specifically addressing this economic explanation for the separation, or the genealogy's details verse by verse, turned up in the corpus searched for this study.
+    </div>
+
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; Your Denominational Brother, Settled at Mount Seir</div>
+        <div class="study-p" style="font-size: 17px;">
+          Brother Branham returned to Mount Seir generations later in the story, when Israel is instructed in Deuteronomy to pass by Esau's descendants peaceably on the way to the promised land, and read the whole scene as a picture of two kinds of Christianity settled at two different distances from the promise. Esau's people, comfortable and prosperous exactly where Genesis 36 leaves them, become a figure for organized, denominational religion &mdash; sincere, capable of great success by its own measure, but stopped short of the further land God had for the one who kept moving.
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;And notice, He said, 'Now, as you go by Mount Seir&hellip;Now, there's your denominational brother Esau's setting up there (a good Presbyterian, Methodist or Baptist). Now, don't bother him. Don't fuss at him. Just pass by, and say, &ldquo;How do you do, brother?&rdquo;' Walk right on&hellip;He's told Joshua, 'See that you don't go over on Mount Seir, now, 'cause I've give that to Esau.' That's all the farther he's supposed to go. That's all he knows about. That's the only thing he knows, is his denomination&hellip;'Just pass on by now. Don't go to fussing and fighting with him. Just pass by quietly. But looky here, Jacob, you Pentecostal Jacob&mdash;you really born again, that's got the experience, and led by the Holy Ghost&mdash;don't go to fussing with him.' But the Pentecostal Jacob has the full promise down in the land.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Turning Northward&rdquo; (61-0129, paras. 37&ndash;38)</div>
+      </div>
     </div>
 
     <div class="study-p">
-      The move itself, back at the start of the chapter, echoes something this family has done once before. Esau and Jacob separate for the same practical reason Abraham and Lot separated back in chapter 13: too much wealth, too many flocks, not enough land to sustain both households in the same place. It isn't recorded as a rupture or a lingering grudge. It reads as two prosperous men who simply needed more room than one territory could give them both.
+      Read against Genesis 36 itself, this comment gives the genealogy's long list of names and dukedoms a purpose beyond record-keeping: Esau's settlement is not condemned outright, and Brother Branham's counsel is to pass by peaceably rather than to fight or belittle it, but it is nonetheless a settlement short of the full inheritance &mdash; success and permanence purchased at the price of staying on this side of the promised land.
     </div>
 
-    <div class="note-box">
-      A note on sourcing: this is a pure genealogical chapter, and as expected, nothing in the sermon library addresses it directly &mdash; every reference to "Edom" I found belonged to much later biblical history, centuries after this list was compiled. What's presented above is drawn entirely from the text itself.
-    </div>
-
+    <h3 class="sec-head">The Dukes and Kings of Edom</h3>
     <div class="study-p">
-      A few details are worth noticing on a close reading. Esau's people don't simply displace the Horites who already lived in Seir &mdash; the chapter takes real care to record that native population's own family lines (verses 20 through 30) before folding them into the story, suggesting intermarriage and absorption rather than replacement. And the list of Edom's kings is genuinely unusual for an ancient monarchy: each king comes from a different city, with no father-to-son succession recorded at all. Whatever the actual mechanism was, this was a kingship passed by some means other than simple inheritance &mdash; something closer to being chosen than being born into the role.
+      The bulk of the chapter, verses 9 through 43, is taken up with lists of Esau's sons, their dukedoms, the earlier Horite inhabitants of Seir whom Esau's line displaced, and a line of Edomite kings who reigned "before there reigned any king over the children of Israel." No sourced Branham commentary specifically addressing these names, the Horites, or the significance of Edom having kings before Israel did turned up in the corpus searched for this study. Scripture elsewhere returns to several of these names &mdash; Amalek, born in verse 12, becomes the ancestor of Israel's persistent enemy the Amalekites; Eliphaz, Esau's firstborn, shares a name with the Temanite friend of Job, though Job's own Eliphaz is a separate figure from a later era.
     </div>
 
-    <div class="study-p">
-      Genesis will return to Jacob's family in the very next chapter and stay there for the rest of the book. This is the last real look the text gives to Esau's own descendants &mdash; a brief, respectful accounting of a nation that grew up successfully in its own right, right alongside the one that inherited the promise.
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 25:23</span> &mdash; "the elder shall serve the younger," the original word over Esau and Jacob, now shown playing out in two separate nations &nbsp;&bull;&nbsp;
+      <span class="xr-key">Deuteronomy 2:1&ndash;5</span> &mdash; Israel instructed to pass peaceably by Esau's descendants at Mount Seir &nbsp;&bull;&nbsp;
+      <span class="xr-key">Numbers 24:18&ndash;20</span> &mdash; Balaam's later oracle on Edom and Amalek &nbsp;&bull;&nbsp;
+      <span class="xr-key">Obadiah 1:1&ndash;21</span> &mdash; an entire prophetic book addressed to Edom's later pride and downfall &nbsp;&bull;&nbsp;
+      <span class="xr-key">Malachi 1:2&ndash;3</span> &mdash; "Jacob have I loved, but Esau have I hated," already studied at Genesis 25 &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hebrews 12:16&ndash;17</span> &mdash; Esau remembered as the profane person who sold his birthright, the New Testament's own final word on him
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 36</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter or its central figure, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. The genealogy's individual names, the Horites, and the line of Edomite kings did not turn up separate direct commentary in the corpus searched for this study; the located material concerns Esau's settlement at Mount Seir read typologically, drawn from a sermon addressing the later Deuteronomy account of the same location.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And notice, He said, 'Now, as you go by Mount Seir&hellip;Now, there's your denominational brother Esau's setting up there (a good Presbyterian, Methodist or Baptist). Now, don't bother him. Don't fuss at him. Just pass by, and say, &ldquo;How do you do, brother?&rdquo;' Walk right on.&rdquo;</div>
+      <div class="archive-cite">Turning Northward &mdash; 61-0129, para. 37</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;He's told Joshua, 'See that you don't go over on Mount Seir, now, 'cause I've give that to Esau.' That's all the farther he's supposed to go. That's all he knows about. That's the only thing he knows, is his denomination&hellip;Just pass on by now. Don't go to fussing and fighting with him. Just pass by quietly. But looky here, Jacob, you Pentecostal Jacob&mdash;you really born again, that's got the experience, and led by the Holy Ghost&mdash;don't go to fussing with him. But the Pentecostal Jacob has the full promise down in the land.&rdquo;</div>
+      <div class="archive-cite">Turning Northward &mdash; 61-0129, para. 38</div>
     </div>
   </div>
 

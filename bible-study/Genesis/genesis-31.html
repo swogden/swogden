@@ -19,14 +19,26 @@
   .wrap { max-width: 1280px; margin: 0 auto; box-sizing: border-box; padding: 72px 60px 100px; display: flex; flex-direction: column; gap: 44px; }
   .center-col { display: flex; flex-direction: column; gap: 20px; max-width: 760px; align-self: center; width: 100%; }
   .study-p { font-size: 18px; line-height: 1.75; color: #2b1d10; }
-  .note-box { font-size: 16px; font-style: italic; line-height: 1.6; color: #5a4632; padding: 16px 22px; background: rgba(90,70,50,0.06); border-radius: 4px; }
+  .quote-box { display: flex; gap: 16px; padding: 22px 26px; background: #fbf6e9; border-left: 4px solid #6d2331; border-radius: 2px; }
+  .quote-mark { font-family: 'UnifrakturMaguntia', cursive; font-size: 40px; color: #6d2331; line-height: 1; flex-shrink: 0; }
+  .quote-text { font-style: italic; font-size: 17px; line-height: 1.6; color: #3b2a1a; }
+  .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-  .inline-img { align-self: center; box-shadow: 0 14px 32px rgba(43,29,16,0.3); max-width: 100%; margin: 4px 0; }
-  .inline-img img { display: block; width: 760px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -40,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-31-hero.jpg" alt="Laban searching the camp for his stolen household idols while Rachel sits calmly on the camel saddle concealing them">
+    <img src="images/genesis-31-hero.jpg" alt="A caravan of camels, flocks, and tents moving across open hill country at dawn, two groups of men facing each other beside a heap of stones">
   </div>
 
   <!-- Scripture -->
@@ -52,11 +64,9 @@
     </div>
 
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
-      <span class="dropcap">A</span>nd he heard the words of Laban's sons, saying, Jacob hath taken away all that was our father's; and of that which was our father's hath he gotten all this glory. <span class="verse-num">2</span>And Jacob beheld the countenance of Laban, and, behold, it was not toward him as before. <span class="verse-num">3</span>And the LORD said unto Jacob, Return unto the land of thy fathers, and to thy kindred; and I will be with thee.
+      <span class="dropcap">A</span>nd he heard the words of Laban's sons, saying, Jacob hath taken away all that was our father's; and of that which was our father's hath he gotten all this glory. <span class="verse-num">2</span>And Jacob beheld the countenance of Laban, and, behold, it was not toward him as before. <span class="verse-num">3</span>And the LORD said unto Jacob, Return unto the land of thy fathers, and to thy kindred; and I will be with thee. <span class="verse-num">4</span>And Jacob sent and called Rachel and Leah to the field unto his flock, <span class="verse-num">5</span>And said unto them, I see your father's countenance, that it is not toward me as before; but the God of my father hath been with me. <span class="verse-num">6</span>And ye know that with all my power I have served your father. <span class="verse-num">7</span>And your father hath deceived me, and changed my wages ten times; but God suffered him not to hurt me.
       <br><br>
-      <span class="verse-num">4</span>And Jacob sent and called Rachel and Leah to the field unto his flock, <span class="verse-num">5</span>And said unto them, I see your father's countenance, that it is not toward me as before; but the God of my father hath been with me. <span class="verse-num">6</span>And ye know that with all my power I have served your father. <span class="verse-num">7</span>And your father hath deceived me, and changed my wages ten times; but God suffered him not to hurt me. <span class="verse-num">8</span>If he said thus, The speckled shall be thy wages; then all the cattle bare speckled: and if he said thus, The ringstraked shall be thy hire; then bare all the cattle ringstraked. <span class="verse-num">9</span>Thus God hath taken away the cattle of your father, and given them to me.
-      <br><br>
-      <span class="verse-num">10</span>And it came to pass at the time that the cattle conceived, that I lifted up mine eyes, and saw in a dream, and, behold, the rams which leaped upon the cattle were ringstraked, speckled, and grisled. <span class="verse-num">11</span>And the angel of God spake unto me in a dream, saying, Jacob: And I said, Here am I. <span class="verse-num">12</span>And he said, Lift up now thine eyes, and see, all the rams which leap upon the cattle are ringstraked, speckled, and grisled: for I have seen all that Laban doeth unto thee. <span class="verse-num">13</span>I am the God of Bethel, where thou anointedst the pillar, and where thou vowedst a vow unto me: now arise, get thee out from this land, and return unto the land of thy kindred.
+      <span class="verse-num">8</span>If he said thus, The speckled shall be thy wages; then all the cattle bare speckled: and if he said thus, The ringstraked shall be thy hire; then bare all the cattle ringstraked. <span class="verse-num">9</span>Thus God hath taken away the cattle of your father, and given them to me. <span class="verse-num">10</span>And it came to pass at the time that the cattle conceived, that I lifted up mine eyes, and saw in a dream, and, behold, the rams which leaped upon the cattle were ringstraked, speckled, and grisled. <span class="verse-num">11</span>And the angel of God spake unto me in a dream, saying, Jacob: And I said, Here am I. <span class="verse-num">12</span>And he said, Lift up now thine eyes, and see, all the rams which leap upon the cattle are ringstraked, speckled, and grisled: for I have seen all that Laban doeth unto thee. <span class="verse-num">13</span>I am the God of Bethel, where thou anointedst the pillar, and where thou vowedst a vow unto me: now arise, get thee out from this land, and return unto the land of thy kindred.
       <br><br>
       <span class="verse-num">14</span>And Rachel and Leah answered and said unto him, Is there yet any portion or inheritance for us in our father's house? <span class="verse-num">15</span>Are we not counted of him strangers? for he hath sold us, and hath quite devoured also our money. <span class="verse-num">16</span>For all the riches which God hath taken from our father, that is ours, and our children's: now then, whatsoever God hath said unto thee, do.
       <br><br>
@@ -66,19 +76,19 @@
       <br><br>
       <span class="verse-num">25</span>Then Laban overtook Jacob. Now Jacob had pitched his tent in the mount: and Laban with his brethren pitched in the mount of Gilead. <span class="verse-num">26</span>And Laban said to Jacob, What hast thou done, that thou hast stolen away unawares to me, and carried away my daughters, as captives taken with the sword? <span class="verse-num">27</span>Wherefore didst thou flee away secretly, and steal away from me; and didst not tell me, that I might have sent thee away with mirth, and with songs, with tabret, and with harp? <span class="verse-num">28</span>And hast not suffered me to kiss my sons and my daughters? thou hast now done foolishly in so doing. <span class="verse-num">29</span>It is in the power of my hand to do you hurt: but the God of your father spake unto me yesternight, saying, Take thou heed that thou speak not to Jacob either good or bad. <span class="verse-num">30</span>And now, though thou wouldest needs be gone, because thou sore longedst after thy father's house, yet wherefore hast thou stolen my gods?
       <br><br>
-      <span class="verse-num">31</span>And Jacob answered and said to Laban, Because I was afraid: for I said, Peradventure thou wouldest take by force thy daughters from me. <span class="verse-num">32</span>With whomsoever thou findest thy gods, let him not live: before our brethren discern thou what is thine with me, and take it to thee. For Jacob knew not that Rachel had stolen them. <span class="verse-num">33</span>And Laban went into Jacob's tent, and into Leah's tent, and into the two maidservants' tents; but he found them not. Then went he out of Leah's tent, and entered into Rachel's tent. <span class="verse-num">34</span>Now Rachel had taken the images, and put them in the camel's furniture, and sat upon them. And Laban searched all the tent, but found them not. <span class="verse-num">35</span>And she said to her father, Let it not displease my lord that I cannot rise up before thee; for the custom of women is upon me. And he searched, but found not the images.
+      <span class="verse-num">31</span>And Jacob answered and said to Laban, Because I was afraid: for I said, Peradventure thou wouldest take by force thy daughters from me. <span class="verse-num">32</span>With whomsoever thou findest thy gods, let him not live: before our brethren discern thou what is thine with me, and take it to thee. For Jacob knew not that Rachel had stolen them.
       <br><br>
-      <span class="verse-num">36</span>And Jacob was wroth, and chode with Laban: and Jacob answered and said to Laban, What is my trespass? what is my sin, that thou hast so hotly pursued after me? <span class="verse-num">37</span>Whereas thou hast searched all my stuff, what hast thou found of all thy household stuff? set it here before my brethren and thy brethren, that they may judge betwixt us both. <span class="verse-num">38</span>This twenty years have I been with thee; thy ewes and thy she goats have not cast their young, and the rams of thy flock have I not eaten. <span class="verse-num">39</span>That which was torn of beasts I brought not unto thee; I bare the loss of it; of my hand didst thou require it, whether stolen by day, or stolen by night. <span class="verse-num">40</span>Thus I was; in the day the drought consumed me, and the frost by night; and my sleep departed from mine eyes. <span class="verse-num">41</span>Thus have I been twenty years in thy house; I served thee fourteen years for thy two daughters, and six years for thy cattle: and thou hast changed my wages ten times. <span class="verse-num">42</span>Except the God of my father, the God of Abraham, and the fear of Isaac, had been with me, surely thou hadst sent me away now empty. God hath seen mine affliction and the labour of my hands, and rebuked thee yesternight.
+      <span class="verse-num">33</span>And Laban went into Jacob's tent, and into Leah's tent, and into the two maidservants' tents; but he found them not. Then went he out of Leah's tent, and entered into Rachel's tent. <span class="verse-num">34</span>Now Rachel had taken the images, and put them in the camel's furniture, and sat upon them. And Laban searched all the tent, but found them not. <span class="verse-num">35</span>And she said to her father, Let it not displease my lord that I cannot rise up before thee; for the custom of women is upon me. And he searched, but found not the images.
       <br><br>
-      <span class="verse-num">43</span>And Laban answered and said unto Jacob, These daughters are my daughters, and these children are my children, and these cattle are my cattle, and all that thou seest is mine: and what can I do this day unto these my daughters, or unto their children which they have born? <span class="verse-num">44</span>Now therefore come thou, let us make a covenant, I and thou; and let it be for a witness between me and thee.
-
-      <div class="inline-img"><img src="images/genesis-31-covenant.jpg" alt="Jacob and Laban standing on either side of a heap of stones, swearing a wary covenant of separation"></div>
-
-      <span class="verse-num">45</span>And Jacob took a stone, and set it up for a pillar. <span class="verse-num">46</span>And Jacob said unto his brethren, Gather stones; and they took stones, and made an heap: and they did eat there upon the heap. <span class="verse-num">47</span>And Laban called it Jegarsahadutha: but Jacob called it Galeed. <span class="verse-num">48</span>And Laban said, This heap is a witness between me and thee this day. Therefore was the name of it called Galeed; <span class="verse-num">49</span>And Mizpah; for he said, The LORD watch between me and thee, when we are absent one from another. <span class="verse-num">50</span>If thou shalt afflict my daughters, or if thou shalt take other wives beside my daughters, no man is with us; see, God is witness betwixt me and thee.
+      <span class="verse-num">36</span>And Jacob was wroth, and chode with Laban: and Jacob answered and said to Laban, What is my trespass? what is my sin, that thou hast so hotly pursued after me? <span class="verse-num">37</span>Whereas thou hast searched all my stuff, what hast thou found of all thy household stuff? set it here before my brethren and thy brethren, that they may judge betwixt us both. <span class="verse-num">38</span>This twenty years have I been with thee; thy ewes and thy she goats have not cast their young, and the rams of thy flock have I not eaten. <span class="verse-num">39</span>That which was torn of beasts I brought not unto thee; I bare the loss of it; of my hand didst thou require it, whether stolen by day, or stolen by night. <span class="verse-num">40</span>Thus I was; in the day the drought consumed me, and the frost by night; and my sleep departed from mine eyes.
       <br><br>
-      <span class="verse-num">51</span>And Laban said to Jacob, Behold this heap, and behold this pillar, which I have cast betwixt me and thee; <span class="verse-num">52</span>This heap be witness, and this pillar be witness, that I will not pass over this heap to thee, and that I will not pass over this heap and this pillar unto me, for harm. <span class="verse-num">53</span>The God of Abraham, and the God of Nahor, the God of their father, judge betwixt us. And Jacob sware by the fear of his father Isaac. <span class="verse-num">54</span>Then Jacob offered sacrifice upon the mount, and called his brethren to eat bread: and they did eat bread, and tarried all night in the mount, and abode with him and this mount.
+      <span class="verse-num">41</span>Thus have I been twenty years in thy house; I served thee fourteen years for thy two daughters, and six years for thy cattle: and thou hast changed my wages ten times. <span class="verse-num">42</span>Except the God of my father, the God of Abraham, and the fear of Isaac, had been with me, surely thou hadst sent me away now empty. God hath seen mine affliction and the labour of my hands, and rebuked thee yesternight.
       <br><br>
-      <span class="verse-num">55</span>And early in the morning Laban rose up, and kissed his sons and his daughters, and blessed them: and Laban departed, and returned into his place.
+      <span class="verse-num">43</span>And Laban answered and said unto Jacob, These daughters are my daughters, and these children are my children, and these cattle are my cattle, and all that thou seest is mine: and what can I do this day unto these my daughters, or unto their children which they have born? <span class="verse-num">44</span>Now therefore come thou, let us make a covenant, I and thou; and let it be for a witness between me and thee. <span class="verse-num">45</span>And Jacob took a stone, and set it up for a pillar. <span class="verse-num">46</span>And Jacob said unto his brethren, Gather stones; and they took stones, and made an heap: and they did eat there upon the heap. <span class="verse-num">47</span>And Laban called it Jegarsahadutha: but Jacob called it Galeed. <span class="verse-num">48</span>And Laban said, This heap is a witness between me and thee this day. Therefore was the name of it called Galeed; <span class="verse-num">49</span>And Mizpah; for he said, The LORD watch between me and thee, when we are absent one from another.
+      <br><br>
+      <span class="verse-num">50</span>If thou shalt afflict my daughters, or if thou shalt take other wives beside my daughters, no man is with us; see, God is witness betwixt me and thee. <span class="verse-num">51</span>And Laban said to Jacob, Behold this heap, and behold this pillar, which I have cast betwixt me and thee. <span class="verse-num">52</span>This heap be witness, and this pillar be witness, that I will not pass over this heap to thee, and that thou shalt not pass over this heap and this pillar unto me, for harm. <span class="verse-num">53</span>The God of Abraham, and the God of Nahor, the God of their father, judge betwixt us. And Jacob sware by the fear of his father Isaac.
+      <br><br>
+      <span class="verse-num">54</span>Then Jacob offered sacrifice upon the mount, and called his brethren to eat bread: and they did eat bread, and tarried all night in the mount. <span class="verse-num">55</span>And early in the morning Laban rose up, and kissed his sons and his daughters, and blessed them: and Laban departed, and returned unto his place.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -90,36 +100,81 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: Twenty Years, Counted Up</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: A House Still Carrying Its Idols</h2>
 
-    <div class="study-p">
-      Twenty years after fleeing his brother, Jacob finds himself needing to flee again. Laban's sons are grumbling about his wealth, Laban's own attitude toward him has visibly cooled, and God gives Jacob the instruction he's presumably been waiting years to hear: go home. It's the same promise made at Bethel in chapter 28, "I will be with thee," now being called due.
+    <div class="tag-row">
+      <span class="tag">God Suffered Him Not to Hurt Me</span>
+      <span class="tag">Rachel's Stolen Gods</span>
+      <span class="tag">The Covenant at Galeed</span>
     </div>
 
     <div class="study-p">
-      Jacob's case to Rachel and Leah is thorough and pointed &mdash; Laban changed his wages ten times, and God protected him through every change. What's notable is how completely both wives agree with him. They call their own father someone who has "sold" them and "devoured" their money, and side entirely with Jacob's decision to leave without warning. Whatever else has fractured in this household over the years, on this point the whole family is united.
+      Genesis 31 closes out Jacob's twenty years with Laban &mdash; a departure taken in secret, a pursuit, a search for stolen household idols that comes up empty only because Rachel sits on them and lies to her father's face, and finally a covenant of separation marked by a heap of stones. Brother Branham's preaching on this household comes from earlier in the Jacob narrative rather than a direct reading of this chapter's own events, but it bears directly on what happens here.
+    </div>
+
+    <h3 class="sec-head">A House Still Carrying Its Idols</h3>
+    <div class="study-p">
+      Verse 19's brief note &mdash; "Rachel had stolen the images that were her father's" &mdash; confirms what Brother Branham, commenting on Laban's background elsewhere, had already identified: that this branch of Abraham's own family, the Syrian household Isaac and Jacob both married into, had never fully left behind the idol-worship of Ur and the tower of Babel. Rachel's theft in this chapter is not a stray detail; it is evidence of exactly the household spiritual condition Brother Branham traced back to Laban's Chaldean ancestry.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;He was just a Chaldean down there in the city of Ur, come down in the valleys of Shinar, from the tower of Babel, from idol-worship. I think his daddy was an idol-worshipper. And I think Laban, after he got down there, proved it, he had them idols. Where could he have got them, if he didn't come out of the tower of Babel?&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Israel and the Church 2&rdquo; (53-0326, para. 39)</div>
+      </div>
     </div>
 
     <div class="study-p">
-      One detail slips into the departure without any explanation at all: Rachel steals her father's household idols on the way out. The text doesn't say why, and it's genuinely one of the more ambiguous moments in Genesis &mdash; readers have long debated whether it was theft for its own sake, a claim on family inheritance rights tied to the images in that culture, or something more personal that the text simply declines to explain.
+      Read this way, Rachel's action &mdash; taking her father's household gods and hiding them beneath her, even lying about her condition to keep them concealed &mdash; is a small, sobering picture of how deeply the old idolatry could sit even inside a family that also worshipped, in its own way, the God of Abraham. No sourced Branham commentary specifically addressing Rachel's motive for taking the images, or the reason she risked so much to keep them, turned up in the corpus searched for this study; Scripture itself gives no explanation beyond the bare fact.
     </div>
 
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; A Departure God Himself Timed</div>
+        <div class="study-p" style="font-size: 17px;">
+          The chapter opens with the LORD directly instructing Jacob to leave Laban's household at the very moment Laban's own sons had turned against him and Laban's countenance had changed &mdash; the same pattern seen already in this study, of God acting at the point of greatest human pressure rather than before it. Jacob's own recounting to his wives, that God had "suffered him not to hurt me" through ten changes of wages, extends the unconditional-provision doctrine drawn earlier from Genesis 20, 26, and 28: God's care for the one carrying His covenant did not depend on Laban's fairness, only on God's own resolve to keep him.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">The Covenant at Galeed and Mizpah</h3>
     <div class="study-p">
-      Laban's pursuit and search play out almost like dark comedy, except for how much is actually at stake. Jacob, having no idea what Rachel did, rashly pronounces a curse on whoever is found with the missing idols &mdash; "let him not live" &mdash; while Rachel sits on the very saddle concealing them, telling her own father she can't rise out of modesty. It's worth noting, without overstating it, that Rachel does die relatively young not long after this in the story yet to come; the text never explicitly connects the two, but the juxtaposition of Jacob's unwitting curse with what follows is hard not to notice.
+      The chapter's closing scene &mdash; two men who could no longer trust one another, raising a heap of stones as a formal boundary and calling on each one's God to enforce it &mdash; is a covenant built on separation rather than reconciliation, its most famous line, "The LORD watch between me and thee, when we are absent one from another," now commonly used as a blessing between friends though it was first spoken as a warning between two men who intended never to cross that boundary again. No sourced Branham commentary specifically addressing the covenant at Galeed and Mizpah, Laban's pursuit and confrontation, or the meaning of the two differently named pillars turned up in the corpus searched for this study.
     </div>
 
-    <div class="note-box">
-      A note on sourcing: this chapter continues the pattern of the last several &mdash; I searched specifically for anything on Jacob's flight, the stolen idols, Rachel's deception, and the Mizpah covenant (including the exact phrase "the LORD watch between me and thee," which shows up constantly as a blessing in later Christian usage) and found nothing in this library addressing any of it directly.
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 20:6</span> &mdash; God restraining Abimelech from sin, the same pattern of restraint now applied to Laban &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 28:13&ndash;15</span> &mdash; the original vision and vow at Bethel, referenced directly in verse 13 &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 35:1&ndash;4</span> &mdash; Jacob later commanding his household to put away their foreign gods before returning to Bethel &nbsp;&bull;&nbsp;
+      <span class="xr-key">Joshua 24:2</span> &mdash; Joshua's own statement that the fathers of Abraham "served other gods" beyond the river &nbsp;&bull;&nbsp;
+      <span class="xr-key">1 Samuel 19:13&ndash;16</span> &mdash; household teraphim appearing again generations later in Michal's deception of Saul's men &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 32:1&ndash;2</span> &mdash; Jacob's onward journey, met immediately by the angels of God
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 31</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter or its immediate background, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. The flight itself, Laban's pursuit and confrontation, and the covenant at Galeed and Mizpah did not turn up separate direct commentary in the corpus searched for this study; the single relevant quotation located concerns the idolatry in Laban's household background rather than this chapter's events directly.
     </div>
 
-    <div class="study-p">
-      Once the idols aren't found, Jacob finally lets out twenty years of accumulated grievance in one of his most personally revealing speeches in the whole book: "In the day the drought consumed me, and the frost by night; and my sleep departed from mine eyes." Whatever else is true of Jacob's character across this story, this speech reads as entirely earned. He served fourteen years for two wives and six more for wages Laban changed repeatedly, and he says so, plainly, to the man's face.
-    </div>
-
-    <div class="study-p">
-      What ends the standoff isn't warmth or reconciliation &mdash; it's a boundary line. The two men raise a heap of stones between them and swear an oath neither will cross it to harm the other. The name given to that heap, Mizpah, and the words spoken over it &mdash; "The LORD watch between me and thee, when we are absent one from another" &mdash; have become a common blessing in later usage, often exchanged warmly between friends or loved ones parting ways. It's worth sitting with what the phrase actually meant here: not affection, but mutual distrust, formalized into a treaty because these two men will never fully trust each other again. Laban kisses his daughters and grandchildren goodbye the next morning, and goes home. Jacob turns the other direction, toward a brother he hasn't seen in twenty years and who once swore to kill him.
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;He was just a Chaldean down there in the city of Ur, come down in the valleys of Shinar, from the tower of Babel, from idol-worship. I think his daddy was an idol-worshipper. And I think Laban, after he got down there, proved it, he had them idols. Where could he have got them, if he didn't come out of the tower of Babel? And out of Ham's people come Nimrod. Nimrod set up the tower of Babel, which was idol-worship, the first idol-worship on the earth.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 2 &mdash; 53-0326, para. 39</div>
     </div>
   </div>
 

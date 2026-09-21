@@ -25,9 +25,19 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -41,7 +51,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-21-hero.jpg" alt="Hagar unable to watch as Ishmael lies near death in the wilderness, a well of water becoming visible nearby">
+    <img src="images/genesis-21-hero.jpg" alt="A woman kneeling beside a young boy in a desert wilderness, discovering a well of water beneath a shaft of light breaking through the clouds">
   </div>
 
   <!-- Scripture -->
@@ -53,17 +63,13 @@
     </div>
 
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
-      <span class="dropcap">A</span>nd the LORD visited Sarah as he had said, and the LORD did unto Sarah as he had spoken. <span class="verse-num">2</span>For Sarah conceived, and bare Abraham a son in his old age, at the set time of which God had spoken to him. <span class="verse-num">3</span>And Abraham called the name of his son that was born unto him, whom Sarah bare to him, Isaac. <span class="verse-num">4</span>And Abraham circumcised his son Isaac being eight days old, as God had commanded him. <span class="verse-num">5</span>And Abraham was an hundred years old, when his son Isaac was born unto him. <span class="verse-num">6</span>And Sarah said, God hath made me to laugh, so that all that hear will laugh with me. <span class="verse-num">7</span>And she said, Who would have said unto Abraham, that Sarah should have given children suck? for I have born him a son in his old age.
+      <span class="dropcap">A</span>nd the LORD visited Sarah as he had said, and the LORD did unto Sarah as he had spoken. <span class="verse-num">2</span>For Sarah conceived, and bare Abraham a son in his old age, at the set time of which God had spoken to him. <span class="verse-num">3</span>And Abraham called the name of his son that was born unto him, whom Sarah bare to him, Isaac. <span class="verse-num">4</span>And Abraham circumcised his son Isaac being eight days old, as God had commanded him. <span class="verse-num">5</span>And Abraham was an hundred years old, when his son Isaac was born unto him. <span class="verse-num">6</span>And Sarah said, God hath made me to laugh, so that all that hear will laugh with me. <span class="verse-num">7</span>And she said, Who would have said unto Abraham, that Sarah should have given children suck? for I have born him a son in his old age. <span class="verse-num">8</span>And the child grew, and was weaned: and Abraham made a great feast the same day that Isaac was weaned.
       <br><br>
-      <span class="verse-num">8</span>And the child grew, and was weaned: and Abraham made a great feast the same day that Isaac was weaned. <span class="verse-num">9</span>And Sarah saw the son of Hagar the Egyptian, which she had born unto Abraham, mocking. <span class="verse-num">10</span>Wherefore she said unto Abraham, Cast out this bondwoman and her son: for the son of this bondwoman shall not be heir with my son, even with Isaac. <span class="verse-num">11</span>And the thing was very grievous in Abraham's sight because of his son.
-      <br><br>
-      <span class="verse-num">12</span>And God said unto Abraham, Let it not be grievous in thy sight because of the lad, and because of thy bondwoman; in all that Sarah hath said unto thee, hearken unto her voice; for in Isaac shall thy seed be called. <span class="verse-num">13</span>And also of the son of the bondwoman will I make a nation, because he is thy seed.
+      <span class="verse-num">9</span>And Sarah saw the son of Hagar the Egyptian, which she had born unto Abraham, mocking. <span class="verse-num">10</span>Wherefore she said unto Abraham, Cast out this bondwoman and her son: for the son of this bondwoman shall not be heir with my son, even with Isaac. <span class="verse-num">11</span>And the thing was very grievous in Abraham's sight because of his son. <span class="verse-num">12</span>And God said unto Abraham, Let it not be grievous in thy sight because of the lad, and because of thy bondwoman; in all that Sarah hath said unto thee, hearken unto her voice; for in Isaac shall thy seed be called. <span class="verse-num">13</span>And also of the son of the bondwoman will I make a nation, because he is thy seed.
       <br><br>
       <span class="verse-num">14</span>And Abraham rose up early in the morning, and took bread, and a bottle of water, and gave it unto Hagar, putting it on her shoulder, and the child, and sent her away: and she departed, and wandered in the wilderness of Beersheba. <span class="verse-num">15</span>And the water was spent in the bottle, and she cast the child under one of the shrubs. <span class="verse-num">16</span>And she went, and sat her down over against him a good way off, as it were a bowshot: for she said, Let me not see the death of the child. And she sat over against him, and lift up her voice, and wept.
       <br><br>
-      <span class="verse-num">17</span>And God heard the voice of the lad; and the angel of God called to Hagar out of heaven, and said unto her, What aileth thee, Hagar? fear not; for God hath heard the voice of the lad where he is. <span class="verse-num">18</span>Arise, lift up the lad, and hold him in thine hand; for I will make him a great nation. <span class="verse-num">19</span>And God opened her eyes, and she saw a well of water; and she went, and filled the bottle with water, and gave the lad drink.
-      <br><br>
-      <span class="verse-num">20</span>And God was with the lad; and he grew, and dwelt in the wilderness, and became an archer. <span class="verse-num">21</span>And he dwelt in the wilderness of Paran: and his mother took him a wife out of the land of Egypt.
+      <span class="verse-num">17</span>And God heard the voice of the lad; and the angel of God called to Hagar out of heaven, and said unto her, What aileth thee, Hagar? fear not; for God hath heard the voice of the lad where he is. <span class="verse-num">18</span>Arise, lift up the lad, and hold him in thine hand; for I will make him a great nation. <span class="verse-num">19</span>And God opened her eyes, and she saw a well of water; and she went, and filled the bottle with water, and gave the lad drink. <span class="verse-num">20</span>And God was with the lad; and he grew, and dwelt in the wilderness, and became an archer. <span class="verse-num">21</span>And he dwelt in the wilderness of Paran: and his mother took him a wife out of the land of Egypt.
       <br><br>
       <span class="verse-num">22</span>And it came to pass at that time, that Abimelech and Phichol the chief captain of his host spake unto Abraham, saying, God is with thee in all that thou doest: <span class="verse-num">23</span>Now therefore swear unto me here by God that thou wilt not deal falsely with me, nor with my son, nor with my son's son: but according to the kindness that I have done unto thee, thou shalt do unto me, and to the land wherein thou hast sojourned. <span class="verse-num">24</span>And Abraham said, I will swear.
       <br><br>
@@ -81,41 +87,101 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: The Well She Hadn't Seen</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: The Promise Kept, and a Household Divided</h2>
 
-    <div class="study-p">
-      After chapters of waiting, Isaac finally arrives "at the set time of which God had spoken" &mdash; and Sarah's own words echo directly back to her private laugh in chapter 18: "God hath made me to laugh, so that all that hear will laugh with me." The same reaction that once came from disbelief now comes from joy, and this time she says it out loud, to everyone.
+    <div class="tag-row">
+      <span class="tag">The Promise Made Good</span>
+      <span class="tag">Cast Out This Bondwoman</span>
+      <span class="tag">Hagar's Well in the Wilderness</span>
+      <span class="tag">The Covenant at Beersheba</span>
     </div>
 
     <div class="study-p">
-      The feast held at Isaac's weaning is where the chapter turns hard. Sarah sees Ishmael, now a teenager, "mocking," and demands Abraham send Hagar and her son away permanently. The text doesn't pretend this is easy for Abraham &mdash; "the thing was very grievous in Abraham's sight because of his son" is about as plain a statement of a father's pain as Scripture offers. God's instruction to go along with it anyway comes paired with the same promise given back in chapter 17: Ishmael will become a nation in his own right, not abandoned by God even while being sent away by his father.
+      After twenty-five years of waiting since the promise was first given, Genesis 21 records its plain fulfillment &mdash; and, within the same chapter, the painful separation the promise required.
     </div>
 
+    <h3 class="sec-head">The Promise Made Good</h3>
     <div class="study-p">
-      What follows is the scene this study set aside material for, several chapters back. Sent into the wilderness with only bread and a skin of water, Hagar and Ishmael run out, and a mother watches her only child weakening toward death, unable to bear staying close enough to see it happen.
+      Verses 1 through 8 record the birth itself, the eighth-day circumcision required by chapter 17's covenant, and a family feast at Isaac's weaning. Brother Branham read the sequence as simple confirmation that God does exactly what He says, on His own timetable rather than a hurried one, and noted the milestones the text itself marks along the way.
     </div>
 
-    <!-- Branham quote 1: the wilderness crisis -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Hagar, misunderstood, yet in the line of duty... cast out, with no place to go, with a perishing child, and the water was spent in the bottle. And the little fellow was crying... She had done without, herself, till she squeezed the last drop over his little parching lips. And then the bottle was dry... she couldn't stand to see the child die in her arms, so she laid him under a bush... and there she begin to weep.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Remembering the Lord&rdquo; (62-1209)</div>
+        <div class="quote-text">&ldquo;Here little Isaac was, when he was born, after Abraham was a hundred, and Sarah was nearly a hundred, about ninety years old. And God brought little Isaac into existence. And little Isaac was born. And when he was born, well, how happy the family was! They made a feast the day he was weaned. Abraham circumcised him after eight days.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;God Hath a Provided Way&rdquo; (56-0108, para. 143)</div>
       </div>
     </div>
 
+    <h3 class="sec-head">Cast Out This Bondwoman</h3>
     <div class="study-p">
-      Worth noting: Brother Branham names this well "Beerlahairoi" in that same retelling &mdash; identifying it as the same well from chapter 16, during Hagar's first flight while still pregnant. Genesis 21 itself doesn't name the well at all; it simply says God opened her eyes and she saw one. Whether the two wells are the same place or not, the detail Scripture does give stands on its own regardless: the water wasn't created out of nothing in that moment. It seems to have already been there. She just hadn't seen it until her eyes were opened to look.
+      Verses 9 through 14 record the conflict the weaning feast brought into the open: Ishmael mocking, Sarah's demand that Hagar and her son be sent away entirely, and Abraham's genuine grief at being asked to do it. God's own instruction settles the matter decisively &mdash; Sarah's request is upheld, because the covenant line runs through Isaac alone. As established in the study of Genesis 16 and 17, Brother Branham read Hagar and Sarah as successive types of the bondwoman and the freewoman in Galatians 4, and this chapter is where that separation is finally carried out in the narrative itself. No sourced commentary on Abraham's own grief in verse 11, specifically, turned up in the corpus searched for this study beyond what was already covered in the Genesis 16 study of the wider Hagar-and-Sarah typology.
     </div>
 
+    <h3 class="sec-head">Hagar's Well in the Wilderness</h3>
     <div class="study-p">
-      Ishmael grows up in the wilderness of Paran, becomes an archer, and his mother finds him a wife from her own homeland of Egypt &mdash; a small, easy-to-miss detail that quietly closes the loop on Hagar's own story: an Egyptian servant, cast out twice, still shaping her son's future family from within her own culture.
+      Verses 15 through 21 follow Hagar and Ishmael into the wilderness of Beersheba, where their water runs out and Hagar, unable to watch her son die, sits at a distance and weeps. God hears the boy's voice, opens Hagar's eyes to a well already there, and preserves both their lives. Brother Branham identified the source of that provision the same way he identified the Rock Moses struck in the wilderness &mdash; as Christ Himself, present and providing before His own incarnation.
     </div>
 
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;He is that Rock, that was&hellip;Hagar's Rock, in the time of trouble; when her baby was about to die, when she had been put out of the camp, and was out there with little Ishmael. Her water, in her cistern that she was packing with her, had give out. And she laid little Ishmael down; and walked over, a bow shot, and cried&hellip;And all at once, the Angel of the Lord spoke, and she found Beersheba, the well there that was flowing, and still flowing to this day. He was Hagar's Beersheba, Rock out there in the wilderness.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Broken Cisterns&rdquo; (64-0726E, para. 111)</div>
+      </div>
+    </div>
+
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; The Rock in the Wilderness</div>
+        <div class="study-p" style="font-size: 17px;">
+          Brother Branham read the same identification of Christ as "the Rock" across multiple wilderness-water scenes in Scripture &mdash; Hagar's well at Beersheba here, and the rock Moses struck in Exodus and Numbers, both providing water where none existed and both, in his reading, pointing to the pre-incarnate Christ meeting desperate need before the incarnation itself. The pattern he drew was consistent: a cast-off or exhausted people, cut off from every human resource, provided for directly by the same Person who would later be struck for the sins of the world.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">The Covenant at Beersheba</h3>
     <div class="study-p">
-      The chapter's final third shifts entirely in tone, from personal crisis to formal diplomacy. Abimelech, the same king from chapter 20, comes to Abraham seeking a mutual, sworn peace, and a dispute over a stolen well gets settled with an unusual, deliberately memorable gesture: seven ewe lambs, set apart and handed over specifically as a witness &mdash; a kind of physical receipt in a culture that ran on spoken oaths and living memory rather than written contracts. The place takes its name from that oath, Beersheba, and the chapter closes quietly with Abraham planting a tree there and calling on God by yet another new title: "the everlasting God."
+      Verses 22 through 34 close the chapter with Abimelech and his captain Phichol seeking a formal covenant with Abraham, a dispute over a stolen well resolved, and Abraham planting a grove and calling on the LORD as "the everlasting God" at Beersheba. No sourced Branham commentary on this specific covenant scene &mdash; the treaty terms, the seven ewe lambs, or the naming of Beersheba in this context &mdash; turned up in the corpus searched for this study; the text is left to stand as Scripture presents it.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Galatians 4:22&ndash;31</span> &mdash; the bondwoman and the freewoman, and the command to "cast out" applied allegorically &nbsp;&bull;&nbsp;
+      <span class="xr-key">Romans 9:7&ndash;9</span> &mdash; "in Isaac shall thy seed be called" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hebrews 11:11&ndash;12</span> &mdash; Sarah's faith to conceive, "as good as dead" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Exodus 17:5&ndash;6</span> &mdash; the Rock struck at Horeb, water for a perishing people &nbsp;&bull;&nbsp;
+      <span class="xr-key">1 Corinthians 10:4</span> &mdash; "that Rock was Christ" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 26:26&ndash;33</span> &mdash; Isaac's own later covenant with Abimelech at the same wells
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 21</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. The covenant scene at Beersheba, verses 22 through 34, did not turn up direct commentary in the corpus searched for this study.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Here little Isaac was, when he was born, after Abraham was a hundred, and Sarah was nearly a hundred, about ninety years old&hellip;They made a feast the day he was weaned. Abraham circumcised him after eight days.&rdquo;</div>
+      <div class="archive-cite">God Hath a Provided Way &mdash; 56-0108, para. 143</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;He is that Rock, that was&hellip;Hagar's Rock, in the time of trouble; when her baby was about to die, when she had been put out of the camp, and was out there with little Ishmael&hellip;the Angel of the Lord spoke, and she found Beersheba, the well there that was flowing, and still flowing to this day. He was Hagar's Beersheba, Rock out there in the wilderness.&rdquo;</div>
+      <div class="archive-cite">Broken Cisterns &mdash; 64-0726E, para. 111</div>
     </div>
   </div>
 

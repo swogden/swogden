@@ -25,11 +25,20 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-  .inline-img { align-self: center; box-shadow: 0 14px 32px rgba(43,29,16,0.3); max-width: 100%; margin: 4px 0; }
-  .inline-img img { display: block; width: 760px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -43,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-37-hero.jpg" alt="Jacob presenting Joseph with the coat of many colors while his brothers watch with resentment">
+    <img src="images/genesis-37-hero.jpg" alt="A young man's brightly colored coat lying torn beside a dry cistern, a caravan of traders with camels departing toward Egypt in the distance">
   </div>
 
   <!-- Scripture -->
@@ -56,31 +65,24 @@
 
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
       <span class="dropcap">A</span>nd Jacob dwelt in the land wherein his father was a stranger, in the land of Canaan. <span class="verse-num">2</span>These are the generations of Jacob. Joseph, being seventeen years old, was feeding the flock with his brethren; and the lad was with the sons of Bilhah, and with the sons of Zilpah, his father's wives: and Joseph brought unto his father their evil report. <span class="verse-num">3</span>Now Israel loved Joseph more than all his children, because he was the son of his old age: and he made him a coat of many colours. <span class="verse-num">4</span>And when his brethren saw that their father loved him more than all his brethren, they hated him, and could not speak peaceably unto him.
-
-
+      <br><br>
       <span class="verse-num">5</span>And Joseph dreamed a dream, and he told it his brethren: and they hated him yet the more. <span class="verse-num">6</span>And he said unto them, Hear, I pray you, this dream which I have dreamed: <span class="verse-num">7</span>For, behold, we were binding sheaves in the field, and, lo, my sheaf arose, and also stood upright; and, behold, your sheaves stood round about, and made obeisance to my sheaf. <span class="verse-num">8</span>And his brethren said to him, Shalt thou indeed reign over us? or shalt thou indeed have dominion over us? And they hated him yet the more for his dreams, and for his words.
       <br><br>
       <span class="verse-num">9</span>And he dreamed yet another dream, and told it his brethren, and said, Behold, I have dreamed a dream more; and, behold, the sun and the moon and the eleven stars made obeisance to me. <span class="verse-num">10</span>And he told it to his father, and to his brethren: and his father rebuked him, and said unto him, What is this dream that thou hast dreamed? Shall I and thy mother and thy brethren indeed come to bow down ourselves to thee to the earth? <span class="verse-num">11</span>And his brethren envied him; but his father observed the saying.
-
-      <div class="inline-img"><img src="images/genesis-37-dreams.jpg" alt="Joseph recounting his dream of the sun, moon, and stars bowing to him, to his furious brothers"></div>
-
-      <span class="verse-num">12</span>And his brethren went to feed their father's flock in Shechem. <span class="verse-num">13</span>And Israel said unto Joseph, Do not thy brethren feed the flock in Shechem? come, and I will send thee unto them. And he said to him, Here am I. <span class="verse-num">14</span>And he said to him, Go, I pray thee, see whether it be well with thy brethren, and well with the flocks; and bring me word again. So he sent him out of the vale of Hebron, and he came to Shechem. <span class="verse-num">15</span>And a certain man found him, and, behold, he was wandering in the field: and the man asked him, saying, What seekest thou? <span class="verse-num">16</span>And he said, I seek my brethren: tell me, I pray thee, where they feed their flocks. <span class="verse-num">17</span>And the man said, They are departed hence; for I heard them say, Let us go to Dothan. And Joseph went after his brethren, and found them in Dothan.
       <br><br>
-      <span class="verse-num">18</span>And when they saw him afar off, even before he came near unto them, they conspired against him to slay him. <span class="verse-num">19</span>And they said one to another, Behold, this dreamer cometh. <span class="verse-num">20</span>Come now therefore, and let us slay him, and cast him into some pit, and we will say, Some evil beast hath devoured him: and we shall see what will become of his dreams.
+      <span class="verse-num">12</span>And his brethren went to feed their father's flock in Shechem. <span class="verse-num">13</span>And Israel said unto Joseph, Do not thy brethren feed the flock in Shechem? come, and I will send thee unto them. And he said to him, Here am I. <span class="verse-num">14</span>And he said to him, Go, I pray thee, see whether it be well with thy brethren, and well with the flocks; and bring me word again. So he sent him out of the vale of Hebron, and he came to Shechem.
       <br><br>
-      <span class="verse-num">21</span>And Reuben heard it, and he delivered him out of their hands; and said, Let us not kill him. <span class="verse-num">22</span>And Reuben said unto them, Shed no blood, but cast him into this pit that is in the wilderness, and lay no hand upon him; that he might rid him out of their hands, to deliver him to his father again. <span class="verse-num">23</span>And it came to pass, when Joseph was come unto his brethren, that they stript Joseph out of his coat, his coat of many colours, that was on him; <span class="verse-num">24</span>And they took him, and cast him into a pit: and the pit was empty, there was no water in it.
-
-      <div class="inline-img"><img src="images/genesis-37-pit.jpg" alt="Joseph's brothers lowering him into a pit and selling him to Ishmaelite traders for twenty pieces of silver"></div>
+      <span class="verse-num">15</span>And a certain man found him, and, behold, he was wandering in the field: and the man asked him, saying, What seekest thou? <span class="verse-num">16</span>And he said, I seek my brethren: tell me, I pray thee, where they feed their flocks. <span class="verse-num">17</span>And the man said, They are departed hence; for I heard them say, Let us go to Dothan. And Joseph went after his brethren, and found them in Dothan.
+      <br><br>
+      <span class="verse-num">18</span>And when they saw him afar off, even before he came near unto them, they conspired against him to slay him. <span class="verse-num">19</span>And they said one to another, Behold, this dreamer cometh. <span class="verse-num">20</span>Come now therefore, and let us slay him, and cast him into some pit, and we will say, Some evil beast hath devoured him: and we shall see what will become of his dreams. <span class="verse-num">21</span>And Reuben heard it, and he delivered him out of their hands; and said, Let us not kill him. <span class="verse-num">22</span>And Reuben said unto them, Shed no blood, but cast him into this pit that is in the wilderness, and lay no hand upon him; that he might rid him out of their hands, to deliver him to his father again.
+      <br><br>
+      <span class="verse-num">23</span>And it came to pass, when Joseph was come unto his brethren, that they stript Joseph out of his coat, his coat of many colours that was on him; <span class="verse-num">24</span>And they took him, and cast him into a pit: and the pit was empty, there was no water in it.
       <br><br>
       <span class="verse-num">25</span>And they sat down to eat bread: and they lifted up their eyes and looked, and, behold, a company of Ishmeelites came from Gilead with their camels bearing spicery and balm and myrrh, going to carry it down to Egypt. <span class="verse-num">26</span>And Judah said unto his brethren, What profit is it if we slay our brother, and conceal his blood? <span class="verse-num">27</span>Come, and let us sell him to the Ishmeelites, and let not our hand be upon him; for he is our brother and our flesh. And his brethren were content. <span class="verse-num">28</span>Then there passed by Midianites merchantmen; and they drew and lifted up Joseph out of the pit, and sold Joseph to the Ishmeelites for twenty pieces of silver: and they brought Joseph into Egypt.
       <br><br>
-      <span class="verse-num">29</span>And Reuben returned unto the pit; and, behold, Joseph was not in the pit; and he rent his clothes. <span class="verse-num">30</span>And he returned unto his brethren, and said, The child is not; and I, whither shall I go?
+      <span class="verse-num">29</span>And Reuben returned unto the pit; and, behold, Joseph was not in the pit; and he rent his clothes. <span class="verse-num">30</span>And he returned unto his brethren, and said, The child is not; and I, whither shall I go? <span class="verse-num">31</span>And they took Joseph's coat, and killed a kid of the goats, and dipped the coat in the blood; <span class="verse-num">32</span>And they sent the coat of many colours, and they brought it to their father; and said, This have we found: know now whether it be thy son's coat or no. <span class="verse-num">33</span>And he knew it, and said, It is my son's coat; an evil beast hath devoured him; Joseph is without doubt rent in pieces.
       <br><br>
-      <span class="verse-num">31</span>And they took Joseph's coat, and killed a kid of the goats, and dipped the coat in the blood; <span class="verse-num">32</span>And they sent the coat of many colours, and they brought it to their father; and said, This have we found: know now whether it be thy son's coat or no. <span class="verse-num">33</span>And he knew it, and said, It is my son's coat; an evil beast hath devoured him; Joseph is without doubt rent in pieces. <span class="verse-num">34</span>And Jacob rent his clothes, and put sackcloth upon his loins, and mourned for his son many days. <span class="verse-num">35</span>And all his sons and all his daughters rose up to comfort him; but he refused to be comforted; and he said, For I will go down into the grave unto my son mourning. Thus his father wept for him.
-
-      <div class="inline-img"><img src="images/genesis-37-grief.jpg" alt="Jacob collapsing in grief, clutching Joseph's bloodstained coat, believing his son torn apart by wild animals"></div>
-
-      <span class="verse-num">36</span>And the Midianites sold him into Egypt unto Potiphar, an officer of Pharaoh's, and captain of the guard.
+      <span class="verse-num">34</span>And Jacob rent his clothes, and put sackcloth upon his loins, and mourned for his son many days. <span class="verse-num">35</span>And all his sons and all his daughters rose up to comfort him; but he refused to be comforted; and he said, For I will go down into the grave unto my son mourning. Thus his father wept for him. <span class="verse-num">36</span>And the Midianites sold him into Egypt unto Potiphar, an officer of Pharaoh's, and captain of the guard.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -92,76 +94,151 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: The Coat, the Dreams, and the Pit</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: Rejected of His Brethren</h2>
 
-    <div class="study-p">
-      Joseph's story opens the same way his father Jacob's own story once did &mdash; a parent's open, unhidden favoritism setting the stage for everything that follows. The coat of many colors marks him out visibly, and his own dreams, which he seems to share with no tact or hesitation at all, do the rest. By the time his brothers plot against him, the text has already told us plainly why: "they hated him, and could not speak peaceably unto him."
+    <div class="tag-row">
+      <span class="tag">A Coat of Seven Colors</span>
+      <span class="tag">The Dreamer and the Prophet</span>
+      <span class="tag">Thrown in the Pit, Sold for Silver</span>
+      <span class="tag">A Perfect Type</span>
     </div>
 
     <div class="study-p">
-      One long-running reading treats Joseph as far more than simply the favored son of a favored family &mdash; it reads his whole life as the clearest single foreshadowing of Christ anywhere in the Old Testament.
+      Genesis 37 opens the Joseph narrative, and of every figure in Genesis, Brother Branham returned to Joseph as a type of Christ more directly and more often than almost any other. This chapter alone supplied him with the coat, the dreams, the pit, and the sale for silver &mdash; each one read as a deliberate foreshadowing of Christ's own rejection, death, and exaltation.
     </div>
 
-    <!-- Branham quote 1: Joseph as type of Christ, the fourfold pattern completed -->
+    <h3 class="sec-head">A Coat of Seven Colors, and a Beloved Son Rejected</h3>
+    <div class="study-p">
+      Verse 3's "coat of many colours" was read by Brother Branham as a coat of seven colors specifically &mdash; the colors of the rainbow, itself the sign of God's covenant with Noah &mdash; making Joseph, from his very introduction, a marked and covenanted son among brothers who were not marked the same way. That distinction, rather than any wrongdoing of Joseph's, is what Brother Branham identified as the root of the hatred that follows.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Joseph was born of his father, and was loved of his father, and hated of his brethren. Now notice, perfect picture of the Lord Jesus... Joseph, being a type of Christ... Abraham was election, and Isaac was justification, and Israel was grace, and Joseph was perfection.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Joseph Meeting His Brethren&rdquo; (56-1230)</div>
+        <div class="quote-text">&ldquo;How Joseph, the younger son, rejected of his brethren: Christ, rejected of His brethren. He wore a coat of seven colors, Joseph. And the seven colors, of course, represented seven colors in the rainbow, which was a covenant. And God always has His covenant people. And then, this one young Joseph was killed, supposingly, by his brethren, and his coat was to be returned to his father.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Children of Israel&rdquo; (47-1123, para. 31)</div>
       </div>
     </div>
 
+    <h3 class="sec-head">The Dreamer and the Prophet</h3>
     <div class="study-p">
-      That completes a pattern this study has been tracing since chapter 12, back when Abraham's own call was first described as a picture of election. Four generations, four different stages of the same reading: a call, a promise fulfilled, a struggle that produces grace, and now a life that reads, in this framing, as complete and finished &mdash; perfection.
+      Verses 5 through 11 record the two dreams that provoke his brothers' deepest hatred &mdash; not because the dreams were false, but because they were true, and because Joseph told them plainly rather than concealing them. Brother Branham identified Joseph specifically as a prophet, one whose dreams were not ordinary but were, once interpreted, prophecy in the fullest sense.
     </div>
 
-    <div class="study-p">
-      The coat itself gets a striking reading of its own, tied back to a sign this study has already covered once before.
-    </div>
-
-    <!-- Branham quote 2: the coat as rainbow, as covenant -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;He gave him a coat of many colors. Now, there's only seven perfect colors. And those perfect colors are seven colors that are in the rainbow. And perhaps, was the rainbow, a type of Christ... A 'rainbow' means 'covenant.' God gave the rainbow sign to Noah as a covenant.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Angel of the Covenant&rdquo; (54-0301)</div>
+        <div class="quote-text">&ldquo;We find Joseph early, Jacob's son, that how he was a prophet. And a prophet understood dreams. Now, if a dream is interpreted, then it becomes a vision, it's a prophecy&hellip;Now we find out that Joseph, the son of Jacob, was that type of a man. That, they'd dream dreams, and then he'd interpret it. He could interpret dreams, and he saw visions. It's all an act of the Spirit.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;We Have Seen His Star and Have Come to Worship Him&rdquo; (63-1216, paras. 51, 55)</div>
       </div>
     </div>
 
+    <h3 class="sec-head">Thrown in the Pit, Sold for Silver</h3>
     <div class="study-p">
-      Whatever a reader makes of that connection, the pit itself is where this reading finds its sharpest parallel &mdash; not simply an unfortunate accident of the plot, but a rehearsal of something much larger.
+      Verses 18 through 28 record the conspiracy at Dothan, Reuben's partial rescue, and Judah's proposal to sell Joseph rather than kill him outright. Brother Branham read the empty, waterless pit as a picture of the grave itself &mdash; Joseph "supposingly to be dead," yet taken back up out of it and sent on to the very exaltation his brothers thought they were preventing.
     </div>
 
-    <!-- Branham quote 3: the pit as death, the exaltation as type of Christ's exclusivity -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Was supposingly to be killed and throwed into a ditch, by his own, his brothers, as Jesus was killed by His own, throwed into a ditch. But was taken up, Joseph was, and was set at the right hand of Pharaoh, the greatest commercial and military country of the world. And no man could come to Pharaoh except by Joseph... Jesus was taken up out of the ditch of the grave and set at the right hand of the Majesty on high, and 'No man cometh to the Father except by the Son.'&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Angel of the Covenant&rdquo; (54-0301)</div>
+        <div class="quote-text">&ldquo;And I want you to see another thing, that he was throwed into a ditch, and was supposingly to be dead. But he was taken up from the ditch, and was take&hellip;&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Children of Israel&rdquo; (47-1123, para. 31)</div>
       </div>
     </div>
 
-    <div class="study-p">
-      Even the dreams themselves, in this reading, aren't just plot devices dropped in for later payoff &mdash; they're something closer to a young man watching his own future unfold and gradually coming to terms with what he's being shown.
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; Sold by His Own, Exalted Among Strangers</div>
+        <div class="study-p" style="font-size: 17px;">
+          Brother Branham treated the sale itself, and its aftermath, as one of the most complete Christ-types in the Old Testament: a beloved son betrayed by his own brothers for a price, given up for dead, and afterward found seated in the place of highest honor in a foreign land, so that no one could come before the king except through him &mdash; a picture he carried forward across several sermons in almost the same words each time.
+        </div>
+      </div>
     </div>
 
-    <!-- Branham quote 4: Joseph the seer, watching his own life -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Joseph saw it by his own life. He seen that he was born a peculiar boy, that he was a seer... he seen the sheaves all bowing to his. He couldn't understand it. But then, next thing, he found out that he was betrayed by his brethren. He said, 'What am I portraying here? What is this foreknowledge that I'm receiving?' He watched his own life.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;My Redeemer Liveth&rdquo; (55-0410S)</div>
+        <div class="quote-text">&ldquo;Then Joseph was sold for almost thirty pieces of silver, by his brother. The Jewish church betrayed Joseph&hellip;Then they sold Joseph, thirty pieces of silver. Throwed him into a ditch, for him to be dead. He was taken up, sent in then. And while he was in his prisonment in there, he&hellip;There was two men, a butler and a&mdash;and a&mdash;and a baker. And one of them was lost and the other one was saved, by Joseph who gave the dream and interpreted&hellip;And the same thing when Jesus was hanging on the cross, there was a thief on one side and a thief on the other, and one was lost and the other one saved. Just exactly. Then he was taken in before Pharaoh and interpret the dream, and he was made the right-hand man of Pharaoh, no man could see Pharaoh without coming to Joseph. And a perfect type of Jesus, sitting at the right hand of God, and no man comes to God except by Christ.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Israel and the Church 1&rdquo; (53-0325, paras. 166, 168&ndash;171)</div>
       </div>
     </div>
 
-    <div class="study-p">
-      Judah's role deserves a second look too, easy as it is to miss beside Reuben's more obvious attempt at rescue. It's Judah who proposes selling Joseph rather than killing him outright &mdash; not out of any stated compassion, but because there's no profit in murder when a sale accomplishes the same removal. It's a small, telling detail about the man whose own line this story is quietly building toward.
+    <div class="note-box">
+      A transparency note on this quote: Genesis 37:28 states plainly that Joseph was sold "for twenty pieces of silver," not thirty. Brother Branham's figure of "almost thirty," and then simply "thirty," appears to draw the amount from Judas's own thirty pieces of silver in Matthew 26:15 rather than from the Joseph account itself &mdash; understandable given how closely he was drawing the two betrayals together, and he does hedge the first mention with "almost." The typological point he is making &mdash; a beloved son sold by his own for a price, then exalted to the right hand of a ruler no one could otherwise approach &mdash; stands on its own regardless of the exact figure, and is preserved here exactly as spoken.
     </div>
 
+    <h3 class="sec-head">A Father Who Refused to Be Comforted</h3>
     <div class="study-p">
-      The chapter closes on Jacob utterly undone by grief, refusing every attempt at comfort from the very sons who caused it. The last line is almost unbearable in its plainness: "Joseph is without doubt rent in pieces." He isn't. But nobody in that tent besides his brothers knows that yet &mdash; and they aren't telling.
+      The chapter closes on Jacob's grief, deceived by his own sons with a blood-stained coat exactly as he himself had once deceived his own father with a disguise. No sourced Branham commentary specifically addressing Jacob's mourning in verses 34 and 35, or the irony of a deceiver deceived by this same method a second time in his life, turned up in the corpus searched for this study.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 9:12&ndash;17</span> &mdash; the rainbow as covenant sign, read into the coat's seven colors &nbsp;&bull;&nbsp;
+      <span class="xr-key">Matthew 26:14&ndash;16</span> &mdash; Judas's own thirty pieces of silver, the source of the figure noted above &nbsp;&bull;&nbsp;
+      <span class="xr-key">Acts 7:9&ndash;10</span> &mdash; Stephen's own summary, "the patriarchs, moved with envy, sold Joseph into Egypt: but God was with him" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Psalm 105:17&ndash;19</span> &mdash; "he was sold for a servant," and the word of the LORD that tried him &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 40:1&ndash;23</span> &mdash; the butler and the baker, already previewed above &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 45:4&ndash;8</span> &mdash; Joseph's own later explanation, "it was not you that sent me hither, but God"
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 37</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. As noted above, two of Brother Branham's retellings give the price of Joseph's sale as "thirty pieces of silver" rather than Scripture's own figure of twenty; the quotations are given exactly as spoken. Jacob's mourning in verses 34&ndash;35 did not turn up separate direct commentary in the corpus searched for this study.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Notice. They're going down in there, how perfect it was with the Scriptures. How Joseph, the younger son, rejected of his brethren: Christ, rejected of His brethren. He wore a coat of seven colors, Joseph. And the seven colors, of course, represented seven colors in the rainbow, which was a covenant. And God always has His covenant people. And then, this one young Joseph was killed, supposingly, by his brethren, and his coat was to be returned to his father. And I want you to see another thing, that he was throwed into a ditch, and was supposingly to be dead. But he was taken up from the ditch, and was take&hellip;&rdquo;</div>
+      <div class="archive-cite">The Children of Israel &mdash; 47-1123, para. 31</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Notice in the butcher and the baker, one was refused and one rejected, like the two thieves at the cross: a perfect type.&rdquo;</div>
+      <div class="archive-cite">The Children of Israel &mdash; 47-1123, para. 32</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Then Joseph was sold for almost thirty pieces of silver, by his brother. The Jewish church betrayed Joseph.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 1 &mdash; 53-0325, para. 166</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Then they sold Joseph, thirty pieces of silver. Throwed him into a ditch, for him to be dead. He was taken up, sent in then. And while he was in his prisonment in there, he&hellip;There was two men, a butler and a&mdash;and a&mdash;and a baker. And one of them was lost and the other one was saved, by Joseph who gave the dream and interpreted.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 1 &mdash; 53-0325, para. 168</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And the same thing when Jesus was hanging on the cross, there was a thief on one side and a thief on the other, and one was lost and the other one saved. Just exactly.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 1 &mdash; 53-0325, para. 169</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Then he was taken in before Pharaoh and interpret the dream, and he was made the right-hand man of Pharaoh, no man could see Pharaoh without coming to Joseph. And a perfect type of Jesus, sitting at the right hand of God, and no man comes to God except by Christ. Just exactly the perfect type there.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 1 &mdash; 53-0325, paras. 170&ndash;171</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;We find Joseph early, Jacob's son, that how he was a prophet. And a prophet understood dreams. Now, if a dream is interpreted, then it becomes a vision, it's a prophecy.&rdquo;</div>
+      <div class="archive-cite">We Have Seen His Star and Have Come to Worship Him &mdash; 63-1216, para. 51</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Now we find out that Joseph, the son of Jacob, was that type of a man. That, they'd dream dreams, and then he'd interpret it. He could interpret dreams, and he saw visions. It's all an act of the Spirit.&rdquo;</div>
+      <div class="archive-cite">We Have Seen His Star and Have Come to Worship Him &mdash; 63-1216, para. 55</div>
     </div>
   </div>
 

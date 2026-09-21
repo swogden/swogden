@@ -23,14 +23,22 @@
   .quote-mark { font-family: 'UnifrakturMaguntia', cursive; font-size: 40px; color: #6d2331; line-height: 1; flex-shrink: 0; }
   .quote-text { font-style: italic; font-size: 17px; line-height: 1.6; color: #3b2a1a; }
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
-  .note-box { font-size: 16px; font-style: italic; line-height: 1.6; color: #5a4632; padding: 16px 22px; background: rgba(90,70,50,0.06); border-radius: 4px; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-  .inline-img { align-self: center; box-shadow: 0 14px 32px rgba(43,29,16,0.3); max-width: 100%; margin: 4px 0; }
-  .inline-img img { display: block; width: 760px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -44,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-30-hero.jpg" alt="Rachel finally holding her newborn son Joseph after years of waiting, overcome with quiet joy">
+    <img src="images/genesis-30-hero.jpg" alt="A shepherd standing among speckled and spotted flocks at watering troughs, striped peeled rods set in the water, tents in the background">
   </div>
 
   <!-- Scripture -->
@@ -60,23 +68,15 @@
       <br><br>
       <span class="verse-num">9</span>When Leah saw that she had left bearing, she took Zilpah her maid, and gave her Jacob to wife. <span class="verse-num">10</span>And Zilpah Leah's maid bare Jacob a son. <span class="verse-num">11</span>And Leah said, A troop cometh: and she called his name Gad. <span class="verse-num">12</span>And Zilpah Leah's maid bare Jacob a second son. <span class="verse-num">13</span>And Leah said, Happy am I, for the daughters will call me blessed: and she called his name Asher.
       <br><br>
-      <span class="verse-num">14</span>And Reuben went in the days of wheat harvest, and found mandrakes in the field, and brought them unto his mother Leah. Then Rachel said to Leah, Give me, I pray thee, of thy son's mandrakes. <span class="verse-num">15</span>And she said unto her, Is it a small matter that thou hast taken my husband? and wouldest thou take away my son's mandrakes also? And Rachel said, Therefore he shall lie with thee to night for thy son's mandrakes. <span class="verse-num">16</span>And Jacob came out of the field in the evening, and Leah went out to meet him, and said, Thou must come in unto me; for surely I have hired thee with my son's mandrakes. And he lay with her that night.
-      <br><br>
-      <span class="verse-num">17</span>And God hearkened unto Leah, and she conceived, and bare Jacob the fifth son. <span class="verse-num">18</span>And Leah said, God hath given me my hire, because I have given my maiden to my husband: and she called his name Issachar. <span class="verse-num">19</span>And Leah conceived again, and bare Jacob the sixth son. <span class="verse-num">20</span>And Leah said, God hath endued me with a good dowry; now will my husband dwell with me, because I have born him six sons: and she called his name Zebulun. <span class="verse-num">21</span>And afterwards she bare a daughter, and called her name Dinah.
+      <span class="verse-num">14</span>And Reuben went in the days of wheat harvest, and found mandrakes in the field, and brought them unto his mother Leah. Then Rachel said to Leah, Give me, I pray thee, of thy son's mandrakes. <span class="verse-num">15</span>And she said unto her, Is it a small matter that thou hast taken my husband? and wouldest thou take away my son's mandrakes also? And Rachel said, Therefore he shall lie with thee to night for thy son's mandrakes. <span class="verse-num">16</span>And Jacob came out of the field in the evening, and Leah went out to meet him, and said, Thou must come in unto me; for surely I have hired thee with my son's mandrakes. And he lay with her that night. <span class="verse-num">17</span>And God hearkened unto Leah, and she conceived, and bare Jacob the fifth son. <span class="verse-num">18</span>And Leah said, God hath given me my hire, because I have given my maiden to my husband: and she called his name Issachar. <span class="verse-num">19</span>And Leah conceived again, and bare Jacob the sixth son. <span class="verse-num">20</span>And Leah said, God hath endued me with a good dowry; now will my husband dwell with me, because I have born him six sons: and she called his name Zebulun. <span class="verse-num">21</span>And afterwards she bare a daughter, and called her name Dinah.
       <br><br>
       <span class="verse-num">22</span>And God remembered Rachel, and God hearkened to her, and opened her womb. <span class="verse-num">23</span>And she conceived, and bare a son; and said, God hath taken away my reproach: <span class="verse-num">24</span>And she called his name Joseph; and said, The LORD shall add to me another son.
       <br><br>
-      <span class="verse-num">25</span>And it came to pass, when Rachel had born Joseph, that Jacob said unto Laban, Send me away, that I may go unto mine own place, and to my country. <span class="verse-num">26</span>Give me my wives and my children, for whom I have served thee, and let me go: for thou knowest my service which I have done thee. <span class="verse-num">27</span>And Laban said unto him, I pray thee, if I have found favour in thine eyes, tarry: for I have learned by experience that the LORD hath blessed me for thy sake. <span class="verse-num">28</span>And he said, Appoint me thy wages, and I will give it.
+      <span class="verse-num">25</span>And it came to pass, when Rachel had born Joseph, that Jacob said unto Laban, Send me away, that I may go unto mine own place, and to my country. <span class="verse-num">26</span>Give me my wives and my children, for whom I have served thee, and let me go: for thou knowest my service which I have done thee. <span class="verse-num">27</span>And Laban said unto him, I pray thee, if I have found favour in thine eyes, tarry: for I have learned by experience that the LORD hath blessed me for thy sake. <span class="verse-num">28</span>And he said, Appoint me thy wages, and I will give it. <span class="verse-num">29</span>And he said unto him, Thou knowest how I have served thee, and how thy cattle was with me. <span class="verse-num">30</span>For it was little which thou hadst before I came, and it is now increased unto a multitude; and the LORD hath blessed thee since my coming: and now when shall I provide for mine own house also?
       <br><br>
-      <span class="verse-num">29</span>And he said unto him, Thou knowest how I have served thee, and how thy cattle was with me. <span class="verse-num">30</span>For it was little which thou hadst before I came, and it is now increased unto a multitude; and the LORD hath blessed thee since my coming: and now when shall I provide for mine own house also? <span class="verse-num">31</span>And he said, What shall I give thee? And Jacob said, Thou shalt not give me any thing: if thou wilt do this thing for me, I will again feed and keep thy flock: <span class="verse-num">32</span>I will pass through all thy flock to day, removing from thence all the speckled and spotted cattle, and all the brown cattle among the sheep, and the spotted and speckled among the goats: and of such shall be my hire. <span class="verse-num">33</span>So shall my righteousness answer for me in time to come, when it shall come before thy face for my hire; every one that is not speckled and spotted among the goats, and brown among the sheep, that shall be counted stolen with me. <span class="verse-num">34</span>And Laban said, Behold, I would it might be according to thy word.
+      <span class="verse-num">31</span>And he said, What shall I give thee? And Jacob said, Thou shalt not give me any thing: if thou wilt do this thing for me, I will again feed and keep thy flock: <span class="verse-num">32</span>I will pass through all thy flock to day, removing from thence all the speckled and spotted cattle, and all the brown cattle among the sheep, and the spotted and speckled among the goats: and of such shall be my hire. <span class="verse-num">33</span>So shall my righteousness answer for me in time to come, when it shall come before thy face for my hire; every one that is not speckled and spotted among the goats, and brown among the sheep, that shall be counted stolen with me. <span class="verse-num">34</span>And Laban said, Behold, I would it might be according to thy word. <span class="verse-num">35</span>And he removed that day the he goats that were ringstraked and spotted, and all the she goats that were speckled and spotted, and every one that had some white in it, and all the brown among the sheep, and gave them into the hand of his sons. <span class="verse-num">36</span>And he set three days' journey betwixt himself and Jacob: and Jacob fed the rest of Laban's flocks.
       <br><br>
-      <span class="verse-num">35</span>And he removed that day the he goats that were ringstraked and spotted, and all the she goats that were speckled and spotted, and every one that had some white in it, and all the brown among the sheep, and gave them into the hand of his sons. <span class="verse-num">36</span>And he set three days' journey betwixt himself and Jacob: and Jacob fed the rest of Laban's flocks.
-
-      <div class="inline-img"><img src="images/genesis-30-flocks.jpg" alt="Jacob's peeled rods set up at the watering troughs, producing speckled and spotted flocks"></div>
-
-      <span class="verse-num">37</span>And Jacob took him rods of green poplar, and of the hazel and chesnut tree; and pilled white strakes in them, and made the white appear which was in the rods. <span class="verse-num">38</span>And he set the rods which he had pilled before the flocks in the gutters in the watering troughs when the flocks came to drink, that they should conceive when they came to drink. <span class="verse-num">39</span>And the flocks conceived before the rods, and brought forth cattle ringstraked, speckled, and spotted. <span class="verse-num">40</span>And Jacob did separate the lambs, and set the faces of the flocks toward the ringstraked, and all the brown in the flock of Laban; and he put his own flocks by themselves, and put them not unto Laban's cattle.
-      <br><br>
-      <span class="verse-num">41</span>And it came to pass, whensoever the stronger cattle did conceive, that Jacob laid the rods before the eyes of the cattle in the gutters, that they might conceive among the rods. <span class="verse-num">42</span>But when the cattle were feeble, he put them not in: so the feebler were Laban's, and the stronger Jacob's. <span class="verse-num">43</span>And the man increased exceedingly, and had much cattle, and maidservants, and menservants, and camels, and asses.
+      <span class="verse-num">37</span>And Jacob took him rods of green poplar, and of the hazel and chestnut tree; and pilled white strakes in them, and made the white appear which was in the rods. <span class="verse-num">38</span>And he set the rods which he had pilled before the flocks in the gutters in the watering troughs when the flocks came to drink, that they should conceive when they came to drink. <span class="verse-num">39</span>And the flocks conceived before the rods, and brought forth cattle ringstraked, speckled, and spotted. <span class="verse-num">40</span>And Jacob did separate the lambs, and set the faces of the flocks toward the ringstraked, and all the brown in the flock of Laban; and he put his own flocks by themselves, and put them not unto Laban's cattle. <span class="verse-num">41</span>And it came to pass, whensoever the stronger cattle did conceive, that Jacob laid the rods before the eyes of the cattle in the gutters, that they might conceive among the rods. <span class="verse-num">42</span>But when the cattle were feeble, he put them not in: so the feebler were Laban's, and the stronger Jacob's. <span class="verse-num">43</span>And the man increased exceedingly, and had much cattle, and maidservants, and menservants, and camels, and asses.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -88,45 +88,105 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: A House Divided, A Flock Multiplied</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: A Rivalry of Wombs, a Prosperity of Flocks</h2>
 
-    <div class="study-p">
-      This chapter opens where chapter 29 left off, except the sisters' positions have flipped. Leah has four sons; Rachel, the beloved wife, has none, and her desperation is raw enough to say it plainly to Jacob's face: "Give me children, or else I die." Jacob's answer is sharp and unsympathetic &mdash; "Am I in God's stead?" &mdash; the first real crack of tension the text lets us see between them.
+    <div class="tag-row">
+      <span class="tag">Named by Their Mothers, Placed by God</span>
+      <span class="tag">Rachel's Reproach Taken Away</span>
+      <span class="tag">The Speckled and the Spotted</span>
     </div>
 
     <div class="study-p">
-      What follows is a strange, escalating competition. Rachel gives her servant Bilhah to Jacob as a substitute womb, naming the resulting sons after her own sense of vindication ("God hath judged me," "with great wrestlings have I wrestled with my sister, and I have prevailed"). Leah, no longer bearing children herself, answers by handing over her own servant Zilpah, and two more sons arrive. Even the strange mandrakes episode &mdash; Reuben's field find becoming currency in a bargain over who gets to sleep with their shared husband that night &mdash; reads less like romance and more like two sisters keeping score.
+      Genesis 30 completes the birth of Jacob's sons &mdash; eight more here, joining the four already born to Leah in the previous chapter &mdash; and then turns to Jacob's long, calculated negotiation with Laban over wages, ending in Jacob's own considerable prosperity. Brother Branham's most substantial comment touching this chapter is not about any single verse but about the pattern running across both birth narratives together: the belief that the very words these mothers spoke in labor, naming their sons, were themselves prophetic of where each tribe would later be placed in the land.
     </div>
 
-    <div class="note-box">
-      A note on sourcing: as with several of Jacob's middle chapters, I searched specifically for commentary on Rachel's demand, the surrogate sons, the mandrakes, and Rachel's own naming of Joseph, and found nothing usable. What follows on those sections is a plain reading of the text itself.
-    </div>
-
+    <h3 class="sec-head">Named by Their Mothers, Placed by God</h3>
     <div class="study-p">
-      After years of that rivalry, the chapter finally turns tender. Rachel conceives at last, and her words carry real weight after everything that came before: "God hath taken away my reproach." She names her son Joseph, and even the name itself looks forward &mdash; "the LORD shall add to me another son," a hope that won't be fulfilled until much later in the story.
+      Of the twelve sons of Jacob, eight receive their names in this chapter alone &mdash; Dan and Naphtali through Bilhah, Gad and Asher through Zilpah, Issachar and Zebulun through Leah, and finally Joseph through Rachel. Brother Branham read the naming of the patriarchs generally, not this chapter's names one by one, as more than a record of family rivalry: he saw in it a hidden inspiration, the mothers' own words in the moment of birth matching, centuries later, the very tribal allotments Joshua would assign in Canaan.
     </div>
 
-    <div class="study-p">
-      With Joseph finally born, Jacob asks to leave for home, and Laban, unwilling to lose the source of his own prosperity, offers him whatever wages he names. What Jacob proposes sounds almost too generous to Laban &mdash; take only the speckled, spotted, and unusually colored animals, a small minority of any normal flock &mdash; and Laban agrees immediately, then quietly moves all the existing speckled animals three days away to make sure Jacob starts with nothing.
-    </div>
-
-    <div class="study-p">
-      Jacob's response is the same kind of resourceful scheming this study has traced back through his whole life, dating to his very name.
-    </div>
-
-    <!-- Branham quote: the breeding trick, and Jacob's established character -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Jacob thought he was a great guy once, you know, he could just cheat and get by with anything. Went and put some poplar sticks in where his father-in-law's sheep and cattle when they were pregnant, and turned them into speckled sheep... the first thing you know, Jacob become a great man.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Perfect Strength by Perfect Weakness&rdquo; (61-1119)</div>
+        <div class="quote-text">&ldquo;If we had the time&hellip;to go back and take the birth of those patriarchs (When they were born by those women, and, each one when the baby was being borned, and the mother in labor uttered the voice of this patriarch, positionally placed him, in his place, in Palestine hundreds of years later.) how we can put our confidence in this written Word of God because It's so inspired, that every phase of It hangs together, and It's drawing a picture for us of what God was, and what God is, and always will be! Now, we find that when Joshua divided the inheritance to the people, each person was placed positionally, exactly the way these Hebrew mothers named those children, how they were placed in Palestine just at their place: Asher, Gad, and&mdash;and Naphtali, and each one, Judah; every one just placed in their position.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Return and Jubilee&rdquo; (62-1122, paras. 27&ndash;28)</div>
       </div>
     </div>
 
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; Every Stone in Its Place</div>
+        <div class="study-p" style="font-size: 17px;">
+          Brother Branham carried the same picture forward into the church: just as every patriarch's name, spoken by a mother who had no way of knowing Canaan's future geography, matched his son's eventual inheritance to the exact place, so every believer has a place cut out for them in the body of Christ, fitted precisely, with no substitute able to take it. He likened it to the stones of Solomon's temple, cut to their exact shape before ever reaching Jerusalem, each one useless anywhere but its own appointed place.
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;What a&mdash;a wonderful picture it gets us, because it's a type of God placing in the Church, Himself, every member, every stone, every place, every Christian, to itself. Each one of us in our peculiar way has a place in the House of God, like Solomon's temple when it was cut out all over the world, but when it was brought in by&hellip;to Joppa by, floated in, and took from there by ox-cart, and all these odd rocks had their place when the temple went together.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Return and Jubilee&rdquo; (62-1122, para. 29)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Rachel's Reproach Taken Away</h3>
     <div class="study-p">
-      Whatever the actual biology behind peeled rods and speckled offspring, the text is clear that Jacob applied the trick selectively &mdash; using it only on the stronger animals, leaving Laban with the weaker half of the flock by default. It's the same pattern that's marked every major turn in his life so far: a man who gets what he wants less through direct confrontation than through carefully engineered circumstances, working quietly in the background while everyone else is looking somewhere else.
+      Verses 22 through 24 record Joseph's birth to Rachel at last, after years of barrenness that had driven her, earlier in the chapter, to demand children from Jacob "or else I die," and to contend with her own maid and her sister over mandrakes. No sourced Branham commentary specifically addressing Rachel's envy, the Bilhah and Zilpah arrangement, or the mandrake episode in verses 14 through 16 turned up in the corpus searched for this study. The plain narrative itself &mdash; two sisters bargaining over their husband's nights, servants pressed into motherhood as proxies &mdash; is left to stand as Scripture records it, without invented moral commentary supplied where the corpus is silent.
+    </div>
+
+    <h3 class="sec-head">The Speckled and the Spotted</h3>
+    <div class="study-p">
+      The chapter's final third turns to Jacob's arrangement with Laban over wages, and his method of breeding striped rods before the flocks at the watering troughs to increase his own share of speckled and spotted cattle. No sourced Branham commentary specifically addressing Jacob's breeding method, or the wage negotiation with Laban in verses 25 through 43, turned up in the corpus searched for this study.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 29:31&ndash;35</span> &mdash; the birth of Leah's first four sons, already studied in the previous chapter &nbsp;&bull;&nbsp;
+      <span class="xr-key">Joshua 13&ndash;19</span> &mdash; the tribal allotments in Canaan, matching the birth order and naming of Jacob's sons &nbsp;&bull;&nbsp;
+      <span class="xr-key">1 Kings 6:7</span> &mdash; the temple stones prepared before they were brought to the building site &nbsp;&bull;&nbsp;
+      <span class="xr-key">1 Corinthians 12:18</span> &mdash; "God hath set the members every one of them in the body, as it hath pleased him" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 37:3</span> &mdash; Joseph as the son of Jacob's old age, born here to Rachel &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 31:1&ndash;9</span> &mdash; the continuation of Jacob's dealings with Laban over the flocks
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 30</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. Rachel's rivalry with Leah, the mandrake episode, and the wage negotiation with the striped rods did not turn up separate direct commentary in the corpus searched for this study.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;If we had the time&hellip;to go back and take the birth of those patriarchs (When they were born by those women, and, each one when the baby was being borned, and the mother in labor uttered the voice of this patriarch, positionally placed him, in his place, in Palestine hundreds of years later.) how we can put our confidence in this written Word of God because It's so inspired, that every phase of It hangs together, and It's drawing a picture for us of what God was, and what God is, and always will be!&rdquo;</div>
+      <div class="archive-cite">Return and Jubilee &mdash; 62-1122, para. 27</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;We find that when Joshua divided the inheritance to the people, each person was placed positionally, exactly the way these Hebrew mothers named those children, how they were placed in Palestine just at their place: Asher, Gad, and&mdash;and Naphtali, and each one, Judah; every one just placed in their position.&rdquo;</div>
+      <div class="archive-cite">Return and Jubilee &mdash; 62-1122, para. 28</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;What a&mdash;a wonderful picture it gets us, because it's a type of God placing in the Church, Himself, every member, every stone, every place, every Christian, to itself. Each one of us in our peculiar way has a place in the House of God, like Solomon's temple when it was cut out all over the world&hellip;and all these odd rocks had their place when the temple went together.&rdquo;</div>
+      <div class="archive-cite">Return and Jubilee &mdash; 62-1122, para. 29</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;I think that God, down through this time has cut out some very odd stones that we might not have understood, but they have their place exactly in the temple, in the building of God. And Joshua, by inspiration, not by just mathematics, he&mdash;he by&hellip;inspired by God he lotted each one of those patriarchs in their position, just exactly the way their name belongs.&rdquo;</div>
+      <div class="archive-cite">Return and Jubilee &mdash; 62-1122, para. 30</div>
     </div>
   </div>
 

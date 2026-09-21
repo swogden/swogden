@@ -25,9 +25,19 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -41,7 +51,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-20-hero.jpg" alt="Abimelech confronting Abraham over Sarah, with Abraham explaining himself and Sarah standing apart">
+    <img src="images/genesis-20-hero.jpg" alt="A king startled awake in the night by a radiant, unseen presence speaking to him, an ornate chamber lit by a single lamp">
   </div>
 
   <!-- Scripture -->
@@ -57,11 +67,9 @@
       <br><br>
       <span class="verse-num">3</span>But God came to Abimelech in a dream by night, and said to him, Behold, thou art but a dead man, for the woman which thou hast taken; for she is a man's wife. <span class="verse-num">4</span>But Abimelech had not come near her: and he said, LORD, wilt thou slay also a righteous nation? <span class="verse-num">5</span>Said he not unto me, She is my sister? and she, even she herself said, He is my brother: in the integrity of my heart and innocency of my hands have I done this. <span class="verse-num">6</span>And God said unto him in a dream, Yea, I know that thou didst this in the integrity of thy heart; for I also withheld thee from sinning against me: therefore suffered I thee not to touch her. <span class="verse-num">7</span>Now therefore restore the man his wife; for he is a prophet, and he shall pray for thee, and thou shalt live: and if thou restore her not, know thou that thou shalt surely die, thou, and all that are thine.
       <br><br>
-      <span class="verse-num">8</span>Therefore Abimelech rose early in the morning, and called all his servants, and told all these things in their ears: and the men were sore afraid. <span class="verse-num">9</span>Then Abimelech called Abraham, and said unto him, What hast thou done unto us? and what have I offended thee, that thou hast brought on me and on my kingdom a great sin? thou hast done deeds unto me that ought not to be done. <span class="verse-num">10</span>And Abimelech said unto Abraham, What sawest thou, that thou hast done this thing?
+      <span class="verse-num">8</span>Therefore Abimelech rose early in the morning, and called all his servants, and told all these things in their ears: and the men were sore afraid. <span class="verse-num">9</span>Then Abimelech called Abraham, and said unto him, What hast thou done unto us? and what have I offended thee, that thou hast brought on me and on my kingdom a great sin? thou hast done deeds unto me that ought not to be done. <span class="verse-num">10</span>And Abimelech said unto Abraham, What sawest thou, that thou hast done this thing? <span class="verse-num">11</span>And Abraham said, Because I thought, Surely the fear of God is not in this place; and they will slay me for my wife's sake. <span class="verse-num">12</span>And yet indeed she is my sister; she is the daughter of my father, but not the daughter of my mother; and she became my wife. <span class="verse-num">13</span>And it came to pass, when God caused me to wander from my father's house, that I said unto her, This is thy kindness which thou shalt shew unto me; at every place whither we shall come, say of me, He is my brother.
       <br><br>
-      <span class="verse-num">11</span>And Abraham said, Because I thought, Surely the fear of God is not in this place; and they will slay me for my wife's sake. <span class="verse-num">12</span>And yet indeed she is my sister; she is the daughter of my father, but not the daughter of my mother; and she became my wife. <span class="verse-num">13</span>And it came to pass, when God caused me to wander from my father's house, that I said unto her, This is thy kindness which thou shalt shew unto me; at every place whither we shall come, say of me, He is my brother.
-      <br><br>
-      <span class="verse-num">14</span>And Abimelech took sheep, and oxen, and menservants, and womenservants, and gave them unto Abraham, and restored him Sarah his wife. <span class="verse-num">15</span>And Abimelech said, Behold, my land is before thee: dwell where it pleaseth thee. <span class="verse-num">16</span>And unto Sarah he said, Behold, I have given thy brother a thousand pieces of silver: behold, he is to thee a covering of the eyes, unto all that are with thee, and with all: thou art rightly reproved.
+      <span class="verse-num">14</span>And Abimelech took sheep, and oxen, and menservants, and womenservants, and gave them unto Abraham, and restored him Sarah his wife. <span class="verse-num">15</span>And Abimelech said, Behold, my land is before thee: dwell where it pleaseth thee. <span class="verse-num">16</span>And unto Sarah he said, Behold, I have given thy brother a thousand pieces of silver: behold, he is to thee a covering of the eyes, unto all that are with thee, and with all other: thus she was reproved.
       <br><br>
       <span class="verse-num">17</span>So Abraham prayed unto God: and God healed Abimelech, and his wife, and his maidservants; and they bare children. <span class="verse-num">18</span>For the LORD had fast closed up all the wombs of the house of Abimelech, because of Sarah Abraham's wife.
       <div style="clear: both;"></div>
@@ -75,63 +83,164 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: A Sin Prevented, Not Just Forgiven</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: A Backslidden Prophet, and an Unconditional Word</h2>
 
-    <div class="study-p">
-      This is the same fear playing out a second time &mdash; the same half-truth, the same request of Sarah, even the same basic setup as Egypt back in chapter 12. And verse 13 reveals something the earlier account never mentioned: this wasn't a one-time panic. "At every place whither we shall come, say of me, He is my brother" was a standing policy between them from the very start of their travels, not something Abraham improvised under pressure this one time.
+    <div class="tag-row">
+      <span class="tag">The Same Old Lie</span>
+      <span class="tag">He Is My Prophet</span>
+      <span class="tag">The Prophet's Office, Not the Man's Failure</span>
+      <span class="tag">Abraham Prays, and the House Is Healed</span>
     </div>
 
     <div class="study-p">
-      What's genuinely different here is how God handles it. In Egypt, the wrong was already underway before anything was said &mdash; plagues fell on Pharaoh's house after the fact. This time, God intervenes first, in a dream, before Abimelech has touched her at all.
+      Genesis 20 repeats, almost word for word, the deception of Genesis 12 &mdash; the same lie, told to a different king, years after Abraham had walked with God through the covenant of chapter 15 and the new name and the sign of chapter 17. Brother Branham did not soften this repetition; he used it as his clearest text for a doctrine he preached often: that God's unconditional promise to His prophet does not rest on the prophet's own consistency.
     </div>
 
-    <!-- Branham quote 1: the dream, and Abimelech's credited integrity -->
+    <h3 class="sec-head">The Same Old Lie</h3>
+    <div class="study-p">
+      Verses 1 and 2 show Abraham, sojourning in Gerar, telling Abimelech the same half-truth about Sarah that had already brought trouble in Egypt. No sourced commentary in the corpus searched for this study addressed the specific detail Abraham later gives in verse 12 &mdash; that Sarah was in fact his half-sister, his father's daughter by another mother &mdash; so this study leaves that detail to stand as the text states it. What Brother Branham did return to often was the plain fact that this was the identical failure repeated, and he named it for what it was.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;He dozed off to sleep and God appeared to him, said, &lsquo;You're just as good as a dead man.&rsquo;... He said, &lsquo;Well, Lord, You know the integrity of my heart.&rsquo; ...Said, &lsquo;I know the integrity of your heart, that's the reason I kept you from sinning against Me. But if you don't restore her back, you're a dead man.&rsquo; ...Said, &lsquo;Her husband is My prophet.&rsquo;&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Abraham&rdquo; (55-0608)</div>
+        <div class="quote-text">&ldquo;There, Abraham (God told him not to leave Palestine; he did, anyhow.), backslidden; any man does what God tells him not to do, is backslider. Not only that, but he was setting out there, lying. And any man would do his wife that way, turn her over to some other man, to take, to save his own neck.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Unconditional Covenant That God Made With His People&rdquo; (54-0814, para. 76)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">He Is My Prophet</h3>
+    <div class="study-p">
+      Verses 3 through 7 turn to Abimelech, a man Brother Branham described as genuinely upright, warned in a dream that the woman he intended to marry belonged to another man. Abimelech pleads his own innocence &mdash; he acted on what he was told &mdash; and God concedes the point, but the resolution still runs entirely through Abraham.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Why, he said, 'Lord, You know the integrity of my heart,' a righteous, holy man. 'You know the integrity of my heart. That man told me that was his sister. And didn't she tell me, herself, that that was my brother?' He said, God said, 'I knowed the integrity of your heart, and that's the reason I kept you from sinning against Me. But that's My prophet!'&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Demonology, Religious Realm&rdquo; (53-0609A, paras. 87&ndash;88)</div>
       </div>
     </div>
 
     <div class="study-p">
-      That's a remarkable exchange to notice closely: God doesn't just forgive Abimelech after the fact, He states plainly that his heart really was innocent, and that the reason nothing happened is that God Himself held him back. And this is the first time in the entire Bible the word "prophet" is used of anyone &mdash; applied here to Abraham, in the very chapter where he's caught in a repeated, deliberate deception.
+      He drew out the contrast as sharply as the text allows: a righteous, God-fearing king who had done nothing wrong, set beside a lying, backslidden man &mdash; and God's answer favors neither on the basis of behavior, but on the basis of calling.
     </div>
 
-    <div class="study-p">
-      There's a stranger detail folded into this same telling: Abimelech's attraction to Sarah at what the text elsewhere calls her advanced age is explained as a real, visible renewal &mdash; tied to the same promise of Isaac's coming birth that chapters 17 and 18 already put in motion.
-    </div>
-
-    <!-- Branham quote 2: Sarah's renewed youth, tied to the coming birth -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;He turned Abraham and Sarah, both, back to about twenty-five years old, like He's going to do everybody one of these days that's His children... God had turned her back to a beautiful young woman again, like He is going to do all the seed of Abraham someday.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Abraham&rdquo; (55-0608)</div>
+        <div class="quote-text">&ldquo;But I'll not hear your prayer, Abimelech, but take him&hellip;take her back and let him pray for you. He's My prophet; I'll hear him.' Yeah, a backslider, liar, but, 'That's My prophet.' That Truth? That's the Bible.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Demonology, Religious Realm&rdquo; (53-0609A, para. 91)</div>
       </div>
     </div>
 
+    <h3 class="sec-head">The Prophet's Office, Not the Man's Failure</h3>
     <div class="study-p">
-      Whatever a reader makes of that detail, Abimelech's confrontation of Abraham the next morning is entirely justified, and Abraham, for once, actually answers rather than staying silent the way he did in Egypt. His explanation reveals the deception was never a flat lie to begin with &mdash; just never the whole truth, either.
+      Verses 8 through 13 record Abimelech's confrontation of Abraham and Abraham's own explanation, admitting he feared for his life. Brother Branham used this whole scene to teach that Abraham's calling and God's promise to him stood independent of his conduct in a given moment &mdash; a distinction he was careful to draw without turning it into an excuse for sin.
     </div>
 
-    <!-- Branham quote 3: Abraham's own half-truth explained -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Said, &lsquo;Abraham, why did you do this?&rsquo; Said, &lsquo;Why, she is my sister, as I told you she was. But,&rsquo; said, &lsquo;she become my wife.&rsquo;&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Uncertain Sound&rdquo; (60-1218)</div>
+        <div class="quote-text">&ldquo;Now, a righteous man, done nothing, but he wasn't the seed of Abraham, he had no promise, he didn't. Good man, God fearing man, laying there on his bed, and God refused to hear his prayer&hellip;God said, 'I won't hear your prayer, but that's My prophet, I'll hear him; go, let him pray for you. If you don't, everything's going to die.' Why? God made His promise unconditional to Abraham.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Unconditional Covenant That God Made With His People&rdquo; (54-0814, paras. 75&ndash;76)</div>
       </div>
     </div>
 
-    <div class="study-p">
-      Sarah, it turns out, really was Abraham's half-sister &mdash; his father's daughter by another mother &mdash; which makes the whole arrangement technically true and genuinely misleading at the same time. Abimelech pays Abraham handsomely, restores Sarah, and offers him the run of the land, and the chapter closes on an oddly gracious note: Abraham prays for the very household his own fear had put at risk, and God heals them.
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; The Word Standing Over the Man</div>
+        <div class="study-p" style="font-size: 17px;">
+          Genesis 15 established Abraham's covenant as unconditional, resting on God's own oath rather than on Abraham's performance. Genesis 20 supplies the test case: the very man carrying that covenant lies out of fear, and God still moves heaven and a foreign king's household to protect him and preserve his standing as intercessor. Brother Branham was careful not to read this as permission to sin &mdash; he insisted a true child of God does not want to keep failing &mdash; but he read it as proof that the promise was fastened to God's own word and calling, not to the fluctuating record of the man who carried it.
+        </div>
+      </div>
     </div>
 
+    <h3 class="sec-head">Abraham Prays, and the House Is Healed</h3>
     <div class="study-p">
-      It's worth flagging plainly, without dwelling on it yet, that this exact pattern doesn't end with Abraham. His son will do something remarkably similar with his own wife, in almost identical circumstances, a few chapters from now &mdash; whatever this fear is, it apparently isn't cured in one generation.
+      Verses 14 through 18 close the chapter with restitution and restoration: Abimelech returns Sarah with gifts and an open invitation to the land, and Abraham, the very man who caused the trouble, becomes the one whose prayer reopens the wombs the LORD had closed throughout Abimelech's household.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;And I can see Abimelech, then, go out, a good man, go to Abraham, take him some offerings. And Abraham prayed, and God opened the womb of everything Abimelech had. God blessed him.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Unconditional Covenant That God Made With His People&rdquo; (54-0814, para. 80)</div>
+      </div>
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 12:10&ndash;20</span> &mdash; the earlier, nearly identical deception in Egypt &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 15:1&ndash;21</span> &mdash; the unconditional covenant this chapter puts to the test &nbsp;&bull;&nbsp;
+      <span class="xr-key">Psalm 105:14&ndash;15</span> &mdash; "touch not mine anointed, and do my prophets no harm" &nbsp;&bull;&nbsp;
+      <span class="xr-key">1 Samuel 12:23</span> &mdash; Samuel's own commitment to pray for the people he served &nbsp;&bull;&nbsp;
+      <span class="xr-key">James 5:16&ndash;18</span> &mdash; the effectual, fervent prayer of a righteous man, illustrated by Elijah &nbsp;&bull;&nbsp;
+      <span class="xr-key">Romans 11:29</span> &mdash; the gifts and calling of God are without repentance
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 20</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. Abraham's specific explanation in verse 12, that Sarah was his father's daughter by another mother, did not turn up additional direct commentary beyond what is covered above.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And when he got down there, and then he got this great king down there, Abimelech. He was a young fellow and he was looking for a sweetheart, so he found Abraham's wife, Sarah, and fell in love with her. And Abraham said, 'Now, you tell him that you are my sister and I'm your brother.'&rdquo;</div>
+      <div class="archive-cite">Demonology, Religious Realm &mdash; 53-0609A, para. 84</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And Abimelech was a good man, a righteous man. And that night, while he was sleeping, the Lord appeared to him and said, 'You're as good as a dead man&hellip;The woman that you got out there to marry, is another man's wife.'&rdquo;</div>
+      <div class="archive-cite">Demonology, Religious Realm &mdash; 53-0609A, para. 86</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Why, he said, 'Lord, You know the integrity of my heart,' a righteous, holy man&hellip;He said, God said, 'I knowed the integrity of your heart, and that's the reason I kept you from sinning against Me. But that's My prophet!'&rdquo;</div>
+      <div class="archive-cite">Demonology, Religious Realm &mdash; 53-0609A, paras. 87&ndash;88</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;What was he? Backslid, and a little, lying shyster. Is that right? Oh, no, there ain't no little white lies. They're either black lies or they're not lies at all.&rdquo;</div>
+      <div class="archive-cite">Demonology, Religious Realm &mdash; 53-0609A, para. 89</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;But I'll not hear your prayer, Abimelech, but take him&hellip;take her back and let him pray for you. He's My prophet; I'll hear him.' Yeah, a backslider, liar, but, 'That's My prophet.' That Truth? That's the Bible.&rdquo;</div>
+      <div class="archive-cite">Demonology, Religious Realm &mdash; 53-0609A, para. 91</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Now, a righteous man, done nothing, but he wasn't the seed of Abraham, he had no promise, he didn't. Good man, God fearing man, laying there on his bed, and God refused to hear his prayer.&rdquo;</div>
+      <div class="archive-cite">The Unconditional Covenant That God Made With His People &mdash; 54-0814, para. 75</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;There, Abraham&hellip;backslidden; any man does what God tells him not to do, is backslider&hellip;God said, 'I won't hear your prayer, but that's My prophet, I'll hear him; go, let him pray for you. If you don't, everything's going to die.' Why? God made His promise unconditional to Abraham.&rdquo;</div>
+      <div class="archive-cite">The Unconditional Covenant That God Made With His People &mdash; 54-0814, para. 76</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And I can see Abimelech, then, go out, a good man, go to Abraham, take him some offerings. And Abraham prayed, and God opened the womb of everything Abimelech had. God blessed him.&rdquo;</div>
+      <div class="archive-cite">The Unconditional Covenant That God Made With His People &mdash; 54-0814, para. 80</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And God said unto him in a dream, Yea, I know that thou did this in the integrity of thy heart; for I also withheld thee from sinning against me: therefore suffered I thee not to touch her. Now therefore restore the man his wife; for he is a prophet, and he shall pray for thee, and thou shall live.&rdquo;</div>
+      <div class="archive-cite">The Restoration of the Bride Tree &mdash; 62-0422, para. 79 (scripture reading)</div>
     </div>
   </div>
 

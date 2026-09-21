@@ -25,11 +25,20 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-  .inline-img { align-self: center; box-shadow: 0 14px 32px rgba(43,29,16,0.3); max-width: 100%; margin: 4px 0; }
-  .inline-img img { display: block; width: 760px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -43,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-44-hero.jpg" alt="Judah pleading before Joseph to take Benjamin's place as a slave, his brothers standing silent behind him">
+    <img src="images/genesis-44-hero.jpg" alt="A man kneeling before an Egyptian official, pleading with outstretched hands, a silver cup held up by a steward beside a young man's opened grain sack">
   </div>
 
   <!-- Scripture -->
@@ -57,19 +66,19 @@
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
       <span class="dropcap">A</span>nd he commanded the steward of his house, saying, Fill the men's sacks with food, as much as they can carry, and put every man's money in his sack's mouth. <span class="verse-num">2</span>And put my cup, the silver cup, in the sack's mouth of the youngest, and his corn money. And he did according to the word that Joseph had spoken. <span class="verse-num">3</span>As soon as the morning was light, the men were sent away, they and their asses.
       <br><br>
-      <span class="verse-num">4</span>And when they were gone out of the city, and not yet far off, Joseph said unto his steward, Up, follow after the men; and when thou dost overtake them, say unto them, Wherefore have ye rewarded evil for good? <span class="verse-num">5</span>Is not this it in which my lord drinketh, and whereby indeed he divineth? ye have done evil in so doing. <span class="verse-num">6</span>And he overtook them, and he spake unto them these same words.
+      <span class="verse-num">4</span>And when they were gone out of the city, and not yet far off, Joseph said unto his steward, Up, follow after the men; and when thou dost overtake them, say unto them, Wherefore have ye rewarded evil for good? <span class="verse-num">5</span>Is not this it in which my lord drinketh, and whereby indeed he divineth? ye have done evil in so doing.
       <br><br>
-      <span class="verse-num">7</span>And they said unto him, Wherefore saith my lord these words? God forbid that thy servants should do according to this thing: <span class="verse-num">8</span>Behold, the money, which we found in our sacks' mouths, we brought again unto thee out of the land of Canaan: how then should we steal out of thy lord's house silver or gold? <span class="verse-num">9</span>With whomsoever of thy servants it be found, both let him die, and we also will be my lord's bondmen. <span class="verse-num">10</span>And he said, Now also let it be according unto your words: he with whom it is found shall be my servant; and ye shall be blameless.
-
-      <div class="inline-img"><img src="images/genesis-44-cup.jpg" alt="Joseph's steward discovering the silver cup in Benjamin's sack, the brothers reacting with horror"></div>
-
-      <span class="verse-num">11</span>Then they speedily took down every man his sack to the ground, and opened every man his sack. <span class="verse-num">12</span>And he searched, and began at the eldest, and left at the youngest: and the cup was found in Benjamin's sack. <span class="verse-num">13</span>Then they rent their clothes, and laded every man his ass, and returned to the city.
+      <span class="verse-num">6</span>And he overtook them, and he spake unto them these same words. <span class="verse-num">7</span>And they said unto him, Wherefore saith my lord these words? God forbid that thy servants should do according to this thing: <span class="verse-num">8</span>Behold, the money, which we found in our sacks' mouths, we brought again unto thee out of the land of Canaan: how then should we steal out of thy lord's house silver or gold? <span class="verse-num">9</span>With whomsoever of thy servants it be found, both let him die, and we also will be my lord's bondmen.
+      <br><br>
+      <span class="verse-num">10</span>And he said, Now also let it be according unto your words: he with whom it is found shall be my servant; and ye shall be blameless. <span class="verse-num">11</span>Then they speedily took down every man his sack to the ground, and opened every man his sack. <span class="verse-num">12</span>And he searched, and began at the eldest, and left at the youngest: and the cup was found in Benjamin's sack. <span class="verse-num">13</span>Then they rent their clothes, and laded every man his ass, and returned to the city.
       <br><br>
       <span class="verse-num">14</span>And Judah and his brethren came to Joseph's house; for he was yet there: and they fell before him on the ground. <span class="verse-num">15</span>And Joseph said unto them, What deed is this that ye have done? wot ye not that such a man as I can certainly divine? <span class="verse-num">16</span>And Judah said, What shall we say unto my lord? what shall we speak? or how shall we clear ourselves? God hath found out the iniquity of thy servants: behold, we are my lord's servants, both we, and he also with whom the cup is found. <span class="verse-num">17</span>And he said, God forbid that I should do so: but the man in whose hand the cup is found, he shall be my servant; and as for you, get you up in peace unto your father.
       <br><br>
-      <span class="verse-num">18</span>Then Judah came near unto him, and said, Oh my lord, let thy servant, I pray thee, speak a word in my lord's ears, and let not thine anger burn against thy servant: for thou art even as Pharaoh. <span class="verse-num">19</span>My lord asked his servants, saying, Have ye a father, or a brother? <span class="verse-num">20</span>And we said unto my lord, We have a father, an old man, and a child of his old age, a little one; and his brother is dead, and he alone is left of his mother, and his father loveth him. <span class="verse-num">21</span>And thou saidst unto thy servants, Bring him down unto me, that I may set mine eyes upon him. <span class="verse-num">22</span>And we said unto my lord, The lad cannot leave his father: for if he should leave his father, his father would die. <span class="verse-num">23</span>And thou saidst unto thy servants, Except your youngest brother come down with you, ye shall see my face no more.
+      <span class="verse-num">18</span>Then Judah came near unto him, and said, Oh my lord, let thy servant, I pray thee, speak a word in my lord's ears, and let not thine anger burn against thy servant: for thou art even as Pharaoh. <span class="verse-num">19</span>My lord asked his servants, saying, Have ye a father, or a brother? <span class="verse-num">20</span>And we said unto my lord, We have a father, an old man, and a child of his old age, a little one; and his brother is dead, and he alone is left of his mother, and his father loveth him.
       <br><br>
-      <span class="verse-num">24</span>And it came to pass when we came up unto thy servant my father, we told him the words of my lord. <span class="verse-num">25</span>And our father said, Go again, and buy us a little food. <span class="verse-num">26</span>And we said, We cannot go down: if our youngest brother be with us, then will we go down: for we may not see the man's face, except our youngest brother be with us. <span class="verse-num">27</span>And thy servant my father said unto us, Ye know that my wife bare me two sons: <span class="verse-num">28</span>And the one went out from me, and I said, Surely he is torn in pieces; and I saw him not since: <span class="verse-num">29</span>And if ye take this also from me, and mischief befall him, ye shall bring down my gray hairs with sorrow to the grave.
+      <span class="verse-num">21</span>And thou saidst unto thy servants, Bring him down unto me, that I may set mine eyes upon him. <span class="verse-num">22</span>And we said unto my lord, The lad cannot leave his father: for if he should leave his father, his father would die. <span class="verse-num">23</span>And thou saidst unto thy servants, Except your youngest brother come down with you, ye shall see my face no more. <span class="verse-num">24</span>And it came to pass when we came up unto thy servant my father, we told him the words of my lord.
+      <br><br>
+      <span class="verse-num">25</span>And our father said, Go again, and buy us a little food. <span class="verse-num">26</span>And we said, We cannot go down: if our youngest brother be with us, then will we go down: for we may not see the man's face, except our youngest brother be with us. <span class="verse-num">27</span>And thy servant my father said unto us, Ye know that my wife bare me two sons: <span class="verse-num">28</span>And the one went out from me, and I said, Surely he is torn in pieces; and I saw him not since: <span class="verse-num">29</span>And if ye take this also from me, and mischief befall him, ye shall bring down my gray hairs with sorrow to the grave.
       <br><br>
       <span class="verse-num">30</span>Now therefore when I come to thy servant my father, and the lad be not with us; seeing that his life is bound up in the lad's life; <span class="verse-num">31</span>It shall come to pass, when he seeth that the lad is not with us, that he will die: and thy servants shall bring down the gray hairs of thy servant our father with sorrow to the grave. <span class="verse-num">32</span>For thy servant became surety for the lad unto my father, saying, If I bring him not unto thee, then I shall bear the blame to my father for ever.
       <br><br>
@@ -85,41 +94,102 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: Let Thy Servant Abide Instead of the Lad</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: Let Thy Servant Abide Instead of the Lad</h2>
 
-    <div class="study-p">
-      The planted cup is clearly a deliberate test rather than an actual accusation &mdash; Joseph already knows exactly where it is. What he's really testing is how these particular brothers respond when a favored younger son is suddenly, unfairly, in danger of being taken from the family. It's the exact situation they created once before. This time, they don't flee, and they don't offer him up to save themselves. They tear their own clothes and go back together, proposing an even harsher penalty than the one offered them: "both let him die, and we also will be my lord's bondmen."
+    <div class="tag-row">
+      <span class="tag">Judah's Plea</span>
+      <span class="tag">Surety Fulfilled</span>
+      <span class="tag">Type &amp; Shadow</span>
+      <span class="tag">A Transparency Note</span>
     </div>
 
     <div class="study-p">
-      Judah steps forward as spokesman, and his opening line carries more weight than a simple confession about a cup: "God hath found out the iniquity of thy servants." Whether he means only this staged crime or something older and heavier is left for the reader to decide.
+      Genesis 44 supplied Brother Branham with one of the longest sustained passages of direct Scripture reading found anywhere in the corpus searched for this study &mdash; he read Judah's plea from verse 27 through verse 34 nearly in full, pausing to comment as he went, and applying the whole scene to Christ's own future meeting with Israel.
     </div>
 
+    <h3 class="sec-head">Judah's Plea, Read in Full</h3>
     <div class="study-p">
-      What follows is the longest continuous speech any character gives in the whole book of Genesis &mdash; Judah recounting the entire family's history in careful, aching detail to a man who already lived every bit of it, with no idea he's speaking directly to the brother he once helped sell. He walks through Jacob's fear, the loss of "the one" who "went out from me... torn in pieces," and the specific promise he made his father with his own mouth back in chapter 43.
+      Preaching in 1961, Brother Branham read through nearly the entirety of Judah's speech to the still-unrecognized Joseph, treating it as a rehearsal for what he believed would happen when Christ meets the Jewish people again in the future &mdash; a moment he read as still ahead, just as Joseph's brothers here still do not know who stands before them.
     </div>
-
-    <div class="study-p">
-      All of that builds to the offer itself, and one reading treats this exact moment as the emotional peak of everything Judah has become since chapter 37.
-    </div>
-
-    <!-- Branham quote: Judah's plea -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;'Now therefore, I pray thee, let thy servant abide instead of the lad&hellip; now instead of the lad a bondsman to my lord;&hellip; and let the lad go up with his brethren. For how shall I go up to my father, and the lad be not with me? lest peradventure I see the evil that shall become on my father.' Pleading, giving his own life! See, he is standing right before Joseph, his brother. This is Joseph, and he don't know him.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Sixfold Purpose of Gabriel's Visit to Daniel&rdquo; (61-0730E)</div>
+      <div>
+        <div class="quote-text">Then, one day, his brethren come to visit him&hellip;And act like he couldn't even speak their language; had an interpreter, for the Hebrew, when he was a Hebrew himself. And their brother had come down. They didn't know him. He was a mighty prince. And right now, Christ visits the Jews, heals their sick and stuff, and they still don't know Who He is, that Messiah.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The Sixfold Purpose of Gabriel's Visit to Daniel&rdquo; (61-0730E, para. 73)</div>
       </div>
     </div>
 
-    <div class="study-p">
-      Judah asks for nothing back. He isn't negotiating, and he isn't trying to spare himself anything &mdash; he's volunteering for permanent slavery in a foreign country, in place of a brother who did nothing wrong, purely so an old man he loves won't die of grief. It's worth remembering exactly who's making this offer: the same man who once looked at Joseph in a pit and suggested selling him rather than simply leaving him to die, reasoning that at least there'd be some profit in it. Whatever twenty years and a hungry, humbled family have done to Judah, they've done something real.
+    <div class="type-box">
+      <div>
+        <div class="type-label">Type &amp; Shadow &mdash; His Life Bound Up in the Lad's Life</div>
+        <div class="study-p" style="margin: 0;">
+          Reading verse 30 &mdash; Jacob's "life is bound up in the lad's life" &mdash; Brother Branham turned the phrase toward God's own bond to Israel, comparing it to the bond between husband and wife. He read Benjamin himself as a picture of a future generation of Jews who would come to Christ apart from the corrupted leadership he associated with the phrase "Wall Street crooks."
+        </div>
+      </div>
+    </div>
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div>
+        <div class="quote-text">They had a little Benjamin down there, his little brother. You know who Benjamin represents? This new bunch of real, genuine Jews that's gathering there now to make that hundred and forty-four thousand, this&mdash;this race that's coming up&hellip;God's Own Life is bound with Israel. He is married to her&hellip;Just as I'm bound to Mrs. Branham back there, my wife, and you're bound to your wife. Your life is wrapped in it. And God is married to Israel.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The Sixfold Purpose of Gabriel's Visit to Daniel&rdquo; (61-0730E, paras. 74&ndash;75)</div>
+      </div>
     </div>
 
+    <h3 class="sec-head">Surety Fulfilled</h3>
     <div class="study-p">
-      The chapter ends right there, mid-plea, with Joseph still playing the stranger. But this is the speech that finally breaks him. Whatever composure held through the tears in chapter 43, it doesn't survive this.
+      Verse 33 &mdash; Judah's offer to remain as a bondman in Benjamin's place &mdash; is the fulfillment of the pledge he made to his father in Genesis 43:9, already studied in this commentary. Brother Branham read the moment as Judah standing "right before Joseph, his brother," still not knowing it, and marveled at the picture: a man confessing "lord" to the very brother he had once helped sell into slavery, and offering his own freedom in exchange for another's.
+    </div>
+
+    <div class="note-box">
+      A transparency note on this passage: in reading through this section, Brother Branham introduces the plea by saying, "Listen to that plea that Reuben is giving now," and again, "Listen at him, confessing him, 'lord.'" The speaker of this entire plea, however, is Judah, not Reuben &mdash; Genesis 44:18 states plainly, "Then Judah came near unto him, and said&hellip;" Reuben does speak earlier in this narrative, in Genesis 42:37, but the surety pledge and the plea for Benjamin in this chapter belong to Judah alone, consistent with his own earlier pledge in Genesis 43:9. The quotation is preserved here exactly as spoken, and the misattribution does not affect the substance of the point Brother Branham was making about the plea itself.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 43:8&ndash;9</span> &mdash; Judah's earlier pledge of surety for Benjamin, fulfilled here &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 42:37</span> &mdash; Reuben's separate, earlier offer to his father, correctly attributed &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 49:8&ndash;10</span> &mdash; Jacob's later blessing on Judah as the one from whom the scepter would not depart &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hosea 2:19&ndash;20</span> &mdash; God's own betrothal of Israel, the marriage bond Brother Branham drew on here &nbsp;&bull;&nbsp;
+      <span class="xr-key">Romans 11:25&ndash;26</span> &mdash; a future turning of Israel toward Christ, the fuller doctrine behind this reading &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 45:1&ndash;4</span> &mdash; the very next scene, when Joseph finally does make himself known
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 44</h2>
+    <div class="study-p" style="font-size: 16px; color: #4a2f14;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. As noted above, Brother Branham's introduction to this plea names Reuben rather than Judah; the quotations are given exactly as spoken.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Then, one day, his brethren come to visit him. Watch. We know the story, how he put the little thing in there, to send back. And act like he couldn't even speak their language; had an interpreter, for the Hebrew, when he was a Hebrew himself. And their brother had come down. They didn't know him. He was a mighty prince. And right now, Christ visits the Jews, heals their sick and stuff, and they still don't know Who He is, that Messiah.&rdquo;</div>
+      <div class="archive-cite">The Sixfold Purpose of Gabriel's Visit to Daniel &mdash; 61-0730E, Para. 73</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;They had a little Benjamin down there, his little brother. You know who Benjamin represents? This new bunch of real, genuine Jews that's gathering there now to make that hundred and forty-four thousand, this&mdash;this race that's coming up. Not these Wall Street crooks, no, no; that's more cannon fodder. Them ain't Jews. Them ain't Jews. The real Jews are these little Benjamins coming up from down in here, and never even heard the Word of Jesus Christ.&rdquo;</div>
+      <div class="archive-cite">The Sixfold Purpose of Gabriel's Visit to Daniel &mdash; 61-0730E, Para. 74</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;God's Own Life is bound with Israel. He is married to her&hellip;Just as I'm bound to Mrs. Branham back there, my wife, and you're bound to your wife. Your life is wrapped in it. And God is married to Israel. And what was it? Jacob said, &lsquo;My life is wrapped and bound in this child.&rsquo;&rdquo;</div>
+      <div class="archive-cite">The Sixfold Purpose of Gabriel's Visit to Daniel &mdash; 61-0730E, Para. 75</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Oh, my! See, he is standing right before Joseph, his brother. This is Joseph, and he don't know him. Oh, wait till that Millennium starts, brother!&hellip;Listen at him, confessing him, &lsquo;lord.&rsquo;&rdquo;</div>
+      <div class="archive-cite">The Sixfold Purpose of Gabriel's Visit to Daniel &mdash; 61-0730E, Para. 75</div>
     </div>
   </div>
 

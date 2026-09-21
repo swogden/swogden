@@ -25,9 +25,20 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -41,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-48-hero.jpg" alt="Jacob, nearly blind, deliberately crossing his arms to bless Ephraim the younger with his right hand instead of Manasseh the firstborn">
+    <img src="images/genesis-48-hero.jpg" alt="A blind, aged patriarch lying propped up in bed, his crossed arms stretched out over two young boys kneeling before him, their father standing anxiously behind them">
   </div>
 
   <!-- Scripture -->
@@ -63,11 +74,9 @@
       <br><br>
       <span class="verse-num">15</span>And he blessed Joseph, and said, God, before whom my fathers Abraham and Isaac did walk, the God which fed me all my life long unto this day, <span class="verse-num">16</span>The Angel which redeemed me from all evil, bless the lads; and let my name be named on them, and the name of my fathers Abraham and Isaac; and let them grow into a multitude in the midst of the earth.
       <br><br>
-      <span class="verse-num">17</span>And when Joseph saw that his father laid his right hand upon the head of Ephraim, it displeased him: and he held up his father's hand, to remove it from Manasseh's head unto Ephraim's head. <span class="verse-num">18</span>And Joseph said unto his father, Not so, my father: for this is the firstborn; put thy right hand upon his head. <span class="verse-num">19</span>And his father refused, and said, I know it, my son, I know it: he also shall become a people, and he also shall be great: but truly his younger brother shall be greater than he, and his seed shall become a multitude of nations.
+      <span class="verse-num">17</span>And when Joseph saw that his father laid his right hand upon the head of Ephraim, it displeased him: and he held up his father's hand, to remove it from Ephraim's head unto Manasseh's head. <span class="verse-num">18</span>And Joseph said unto his father, Not so, my father: for this is the firstborn; put thy right hand upon his head. <span class="verse-num">19</span>And his father refused, and said, I know it, my son, I know it: he also shall become a people, and he also shall be great: but truly his younger brother shall be greater than he, and his seed shall become a multitude of nations. <span class="verse-num">20</span>And he blessed them that day, saying, In thee shall Israel bless, saying, God make thee as Ephraim and as Manasseh: and he set Ephraim before Manasseh.
       <br><br>
-      <span class="verse-num">20</span>And he blessed them that day, saying, In thee shall Israel bless, saying, God make thee as Ephraim and as Manasseh: and he set Ephraim before Manasseh.
-      <br><br>
-      <span class="verse-num">21</span>And Israel said unto Joseph, Behold, I die: but God shall be with you, and bring you again unto the land of Canaan. <span class="verse-num">22</span>Moreover I have given to thee one portion above thy brethren, which I took out of the hand of the Amorite with my sword and with my bow.
+      <span class="verse-num">21</span>And Israel said unto Joseph, Behold, I die: but God shall be with you, and bring you again unto the land of your fathers. <span class="verse-num">22</span>Moreover I have given to thee one portion above thy brethren, which I took out of the hand of the Amorite with my sword and with my bow.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -79,54 +88,99 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: God Has Crossed My Hands</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: The Crossed Hands</h2>
 
-    <div class="study-p">
-      Hearing his father is failing, Joseph brings his two sons to receive whatever blessing the old man has left to give. Before he blesses them, though, Jacob does something else first: he formally adopts Ephraim and Manasseh as his own sons, equal in standing to Reuben and Simeon. It's a quiet but significant move &mdash; the practical mechanism by which Joseph, though never Jacob's firstborn, ends up with two full tribal shares in Israel instead of one.
+    <div class="tag-row">
+      <span class="tag">God Almighty Appeared unto Me at Luz</span>
+      <span class="tag">Adopted as Reuben and Simeon</span>
+      <span class="tag">The Crossed Hands</span>
+      <span class="tag">A Transparency Note</span>
+      <span class="tag">One Portion Above Thy Brethren</span>
     </div>
 
+    <h3 class="sec-head">God Almighty Appeared unto Me at Luz</h3>
     <div class="study-p">
-      In the middle of settling his grandsons' inheritance, Jacob's mind drifts somewhere else entirely &mdash; to Rachel, and exactly where he buried her on the road to Ephrath. It's a small, human detail from a dying man whose thoughts move by association rather than order. Talking about the future of his family apparently still leads him back to its oldest, deepest loss.
+      No sourced Branham commentary on verses 3&ndash;7 turned up in the corpus searched for this study. Jacob opens by recalling the vision at Luz &mdash; the same place, renamed Bethel, where he first fled his brother's anger with only a stone for a pillow (Genesis 28:10&ndash;19), and where he returned decades later and received the name Israel a second time (Genesis 35:9&ndash;15). His mention of Rachel's death "in the way to Ephrath" recalls that same return journey, when the one loss of his homecoming was the wife for whom he had labored fourteen years (Genesis 35:16&ndash;20). Jacob is, in effect, handing Joseph the whole of his own life's central promise and central grief in a single breath before he does anything else in this chapter.
     </div>
 
+    <h3 class="sec-head">Adopted as Reuben and Simeon</h3>
     <div class="study-p">
-      The blessing scene itself is the chapter's real center. Jacob's eyes are "dim for age" &mdash; he can't actually see which boy is which &mdash; and Joseph, following proper custom, positions the firstborn Manasseh toward his father's stronger right hand. Jacob then does something Joseph immediately recognizes as wrong and tries to correct: he deliberately crosses his arms, placing his right hand on Ephraim's head instead.
+      No sourced Branham commentary on verses 5&ndash;6 turned up in the corpus searched for this study. Jacob's declaration that Ephraim and Manasseh "shall be mine, as Reuben and Simeon" is a formal adoption: Joseph's two Egyptian-born sons are elevated to full tribal status alongside their uncles, while any further sons Joseph might have would be counted under Ephraim's or Manasseh's name rather than receiving tribes of their own. This is the reason twelve tribes of Israel can be counted in more than one way in later Scripture &mdash; sometimes with Levi included and Joseph counted once, and sometimes with Levi set apart and Ephraim and Manasseh counted as two separate tribes in his place (compare Numbers 1:32&ndash;35, where both appear individually).
     </div>
 
-    <div class="study-p">
-      One reading treats this exact gesture &mdash; a blind old man crossing his own arms to reverse the expected order &mdash; as one of the clearest pictures in the whole book of something much larger playing out.
-    </div>
-
-    <!-- Branham quote 1: the crossed hands and the passing of the blessing -->
-    <div class="quote-box">
-      <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;When Jacob was blessing them, Ephraim on one side and Manasseh on the other, he crossed his hands and give the younger child the blessing... And Joseph, his prophet son, standing there, said, 'Father, you've done wrong... You put your right hand blessing on the young child, where it ought to have went on the old.' And he said, 'I know my hands is crossed, but God has crossed them.' Why? Israel, having the rights to be a Bride, rejected and sold their birthrights, and the blessing went from the old son, Israel, to the new, Gentile... through the cross.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The First Seal&rdquo; (63-0318)</div>
+    <div class="type-box">
+      <div>
+        <div class="type-label">Type &amp; Shadow: The Crossed Hands</div>
+        <div class="study-p" style="font-size: 17px;">
+          The one scene in this chapter that drew sustained attention in the corpus searched for this study is the blessing itself &mdash; Jacob's hands crossing so that the right-hand blessing, by custom due the firstborn, falls instead on the younger son. Brother Branham returned to this scene independently in at least two sermons, three years apart, reading it as a picture of the blessing and birthright passing from natural Israel, the elder, to the Gentile church, the younger &mdash; a transfer he ties to the cross itself, since Jacob's own hands were physically crossed in the act of blessing.
+        </div>
+        <div class="quote-box" style="margin-top: 14px;">
+          <div class="quote-mark">&ldquo;</div>
+          <div>
+            <div class="quote-text">And when Joseph, rejected by his brethren, he was given a Gentile wife&hellip;and he bore Gentile children, half Gentile and Jew. They give a great symbol. When Jacob was blessing them, Ephraim on one side and Manasseh on the other, he crossed his hands and give the younger child the blessing&hellip;And Joseph, his prophet son, standing there, said, &ldquo;Father, you've done wrong.&rdquo; Said, &ldquo;You put your right hand blessing on the young child, where it ought to have went on the old.&rdquo; And he said, &ldquo;I know my hands is crossed, but God has crossed them.&rdquo; Why? Israel, having the rights to be a Bride, rejected and sold their birthrights, and the&hellip;went from the old son, Israel, to the new, Gentile. And the blessings went from there, through the cross, to the Gentile.</div>
+            <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The First Seal&rdquo; (63-0318, paras. 239&ndash;240)</div>
+          </div>
+        </div>
+        <div class="study-p" style="font-size: 17px; margin-top: 14px;">
+          Three years earlier, the same scene had already appeared in a different sermon, with the same typology of blessing crossing over "through the Cross" from Jew to Gentile:
+        </div>
+        <div class="quote-box" style="margin-top: 14px;">
+          <div class="quote-mark">&ldquo;</div>
+          <div>
+            <div class="quote-text">When Joseph then&hellip;after he married a Gentile and received a family, Ephraim and Manasseh, his sons&hellip;Jacob started to bless Ephraim and Manasseh. When he started to put his hands, he put Ephraim on the right, Manasseh on the left, to get the right hand blessing the oldest. But when he started to pray, his hands crossed, and he gave the youngest one the right-hand blessing instead of the one that was on the right hand. And Joseph said, &ldquo;Not so, Father.&rdquo; Said, &ldquo;You have put the blessing on Manasseh instead of on Ephraim.&rdquo; And he said, &ldquo;God has crossed my hand.&rdquo; What? From the Jews, the oldest, the first-chosen of God, through the Cross come the blessing back to the Gentiles, to get the Bride.</div>
+            <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The Revelation of Jesus Christ&rdquo; (60-1204M, paras. 327&ndash;329)</div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="study-p">
-      Whatever a reader makes of that typology, the plain textual pattern is undeniable on its own: this is the third time in this family's story that the expected birth order gets overturned. Isaac was blessed ahead of Ishmael. Jacob was blessed ahead of Esau, by trickery the first time and by God's own word the second. Now Ephraim is blessed ahead of Manasseh, deliberately, by a father who insists he knows exactly what he's doing despite his failing eyes: "I know it, my son, I know it... his younger brother shall be greater than he."
+    <div class="note-box">
+      A transparency note: these two accounts of Joseph's objection do not agree on which son's name belongs where, and one of them is internally inconsistent with itself. Genesis 48:17&ndash;18 states plainly that the right-hand blessing landed on Ephraim, the younger, and that Joseph asked his father to move it onto Manasseh, the firstborn. The 1963 sermon above states it exactly this way: the right hand went on "the young child," and Joseph said it "ought to have went on the old." The 1960 sermon's own narration (paragraph 327) also gets this right, describing Manasseh as the one positioned "on the right" who was passed over. But the quotation attributed to Joseph in the very next paragraph reverses the two names, having him say, "You have put the blessing on Manasseh instead of on Ephraim" &mdash; the opposite of both Genesis 48 and Brother Branham's own preceding sentence. Both quotations are preserved here exactly as spoken. The discrepancy affects only which name is attached to which role in that one recollected sentence; it does not touch the typological point being made in either sermon, which concerns the crossing of the hands itself and rests equally whichever way the names fall.
     </div>
 
+    <h3 class="sec-head">One Portion Above Thy Brethren</h3>
     <div class="study-p">
-      For at least one reading, this passage carries weight well beyond its own moment in Genesis &mdash; personal enough to reach for at the most intimate turning points in a life.
+      No sourced Branham commentary on verses 20&ndash;22 turned up in the corpus searched for this study. Jacob's closing words to Joseph include a claim the rest of Genesis does not otherwise record: "one portion above thy brethren, which I took out of the hand of the Amorite with my sword and with my bow." The only Amorite land Genesis has previously connected to Jacob's family at Shechem was purchased with money, not won by force (Genesis 33:18&ndash;19), and the one act of violence at Shechem was carried out by Simeon and Levi against Jacob's own wishes, drawing his rebuke rather than his participation (Genesis 34:25&ndash;30). Interpreters have long read verse 22 as Jacob speaking prophetically of a future conquest his descendants would carry out in his name, or as referring to an otherwise unrecorded skirmish; either way, the plot in question is generally identified with the field at Shechem, which does become Joseph's own burial place generations later (Joshua 24:32).
     </div>
 
-    <!-- Branham quote 2: the personal, devotional application -->
-    <div class="quote-box">
-      <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;I'm thinking of Jacob, when he brought his grandchildren between his knees, when he was an old man, Ephraim and Manasseh; blessed those children, and imparted to them the spiritual blessings that lasted even to this day. How he crossed his hands from one, to the other, taking the blessing from the Jews to the Gentile, in the cross.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Paradox&rdquo; (61-1210)</div>
-      </div>
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 28:10&ndash;19</span> &mdash; Jacob's first vision at Luz/Bethel &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 35:9&ndash;15</span> &mdash; Jacob's return to Bethel and second naming as Israel &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 35:16&ndash;20</span> &mdash; Rachel's death and burial near Ephrath &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 41:50&ndash;52</span> &mdash; the birth of Ephraim and Manasseh in Egypt &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 33:18&ndash;19</span> &mdash; Jacob's purchase of ground at Shechem &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 34:25&ndash;30</span> &mdash; Simeon and Levi's attack on Shechem, against Jacob's wishes &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 49:22&ndash;26</span> &mdash; Jacob's further blessing on Joseph in the following chapter &nbsp;&bull;&nbsp;
+      <span class="xr-key">Numbers 1:32&ndash;35</span> &mdash; Ephraim and Manasseh counted as separate tribes &nbsp;&bull;&nbsp;
+      <span class="xr-key">Joshua 24:32</span> &mdash; Joseph's bones buried in the parcel of ground at Shechem
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 48</h2>
+    <div class="study-p" style="font-size: 16px; color: #4a2f14;">
+      Two passages from sermons three years apart speak to this chapter, given below in chronological order of preaching. Both treat the crossing of Jacob's hands in verses 13&ndash;20, applying it to the transfer of blessing from Israel to the Gentile church; as noted above, the two accounts disagree on which son's name belongs in Joseph's objection, and the 1960 sermon is inconsistent even within itself on this point. Both quotations are given exactly as spoken. Beyond these, searches were run against the chapter's other principal events and phrases &mdash; the vision at Luz, Rachel's death near Ephrath, the adoption of Ephraim and Manasseh, and the "sword and bow" of verse 22 &mdash; and none returned further relevant commentary.
     </div>
 
-    <div class="study-p">
-      The chapter closes on a detail the rest of Genesis never explains: Jacob mentions "one portion above thy brethren, which I took out of the hand of the Amorite with my sword and with my bow" &mdash; an event nowhere else recorded in the entire book. Even this late, after forty-eight chapters spent with this family, there are still pieces of their history the text simply assumes and never shows.
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;When Joseph then&hellip;after he married a Gentile and received a family, Ephraim and Manasseh, his sons&hellip;Jacob started to bless Ephraim and Manasseh. When he started to put his hands, he put Ephraim on the right, Manasseh on the left, to get the right hand blessing the oldest. But when he started to pray, his hands crossed, and he gave the youngest one the right-hand blessing instead of the one that was on the right hand. And Joseph said, &lsquo;Not so, Father.&rsquo; Said, &lsquo;You have put the blessing on Manasseh instead of on Ephraim.&rsquo; And he said, &lsquo;God has crossed my hand.&rsquo; What? From the Jews, the oldest, the first-chosen of God, through the Cross come the blessing back to the Gentiles, to get the Bride. Blessing come through the Cross, from the Jew to the Gentile. Rejected, they rejected the Cross, therefore He got the Gentile Bride.&rdquo;</div>
+      <div class="archive-cite">The Revelation of Jesus Christ &mdash; 60-1204M, Paras. 327&ndash;329</div>
+    </div>
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And when Joseph, rejected by his brethren, he was given a Gentile wife&hellip;and he bore Gentile children, half Gentile and Jew. They give a great symbol. When Jacob was blessing them, Ephraim on one side and Manasseh on the other, he crossed his hands and give the younger child the blessing. And the two kids was added unto the twelve tribes, which was only ten at that time, and he blessed them in Jacob himself. And Joseph, his prophet son, standing there, said, &lsquo;Father, you've done wrong.&rsquo; Said, &lsquo;You put your right hand blessing on the young child, where it ought to have went on the old.&rsquo; And he said, &lsquo;I know my hands is crossed, but God has crossed them.&rsquo; Why? Israel, having the rights to be a Bride, rejected and sold their birthrights, and the&hellip;went from the old son, Israel, to the new, Gentile. And the blessings went from there, through the cross, to the Gentile.&rdquo;</div>
+      <div class="archive-cite">The First Seal &mdash; 63-0318, Paras. 239&ndash;240</div>
     </div>
   </div>
 

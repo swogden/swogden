@@ -25,9 +25,19 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -41,7 +51,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-22-hero.jpg" alt="The angel's hand stopping Abraham's raised knife above Isaac on the altar, with the ram caught in the thicket nearby">
+    <img src="images/genesis-22-hero.jpg" alt="An old man on a mountaintop altar, knife raised, a bound boy lying on the wood, and a ram caught by its horns in a thicket nearby beneath a dramatic sky">
   </div>
 
   <!-- Scripture -->
@@ -55,17 +65,13 @@
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
       <span class="dropcap">A</span>nd it came to pass after these things, that God did tempt Abraham, and said unto him, Abraham: and he said, Behold, here I am. <span class="verse-num">2</span>And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of.
       <br><br>
-      <span class="verse-num">3</span>And Abraham rose up early in the morning, and saddled his ass, and took two of his young men with him, and Isaac his son, and clave the wood for the burnt offering, and rose up, and went unto the place of which God had told him. <span class="verse-num">4</span>Then on the third day Abraham lifted up his eyes, and saw the place afar off. <span class="verse-num">5</span>And Abraham said unto his young men, Abide ye here with the ass; and I and the lad will go yonder and worship, and come again to you.
-      <br><br>
-      <span class="verse-num">6</span>And Abraham took the wood of the burnt offering, and laid it upon Isaac his son; and he took the fire in his hand, and a knife; and they went both of them together. <span class="verse-num">7</span>And Isaac spake unto Abraham his father, and said, My father: and he said, Here am I, my son. And he said, Behold the fire and the wood: but where is the lamb for a burnt offering? <span class="verse-num">8</span>And Abraham said, My son, God will provide himself a lamb for a burnt offering: so they went both of them together.
+      <span class="verse-num">3</span>And Abraham rose up early in the morning, and saddled his ass, and took two of his young men with him, and Isaac his son, and clave the wood for the burnt offering, and rose up, and went unto the place of which God had told him. <span class="verse-num">4</span>Then on the third day Abraham lifted up his eyes, and saw the place afar off. <span class="verse-num">5</span>And Abraham said unto his young men, Abide ye here with the ass; and I and the lad will go yonder and worship, and come again to you. <span class="verse-num">6</span>And Abraham took the wood of the burnt offering, and laid it upon Isaac his son; and he took the fire in his hand, and a knife; and they went both of them together. <span class="verse-num">7</span>And Isaac spake unto Abraham his father, and said, My father: and he said, Here am I, my son. And he said, Behold the fire and the wood: but where is the lamb for a burnt offering? <span class="verse-num">8</span>And Abraham said, My son, God will provide himself a lamb for a burnt offering: so they went both of them together.
       <br><br>
       <span class="verse-num">9</span>And they came to the place which God had told him of; and Abraham built an altar there, and laid the wood in order, and bound Isaac his son, and laid him on the altar upon the wood. <span class="verse-num">10</span>And Abraham stretched forth his hand, and took the knife to slay his son. <span class="verse-num">11</span>And the angel of the LORD called unto him out of heaven, and said, Abraham, Abraham: and he said, Here am I. <span class="verse-num">12</span>And he said, Lay not thine hand upon the lad, neither do thou any thing unto him: for now I know that thou fearest God, seeing thou hast not withheld thy son, thine only son from me.
       <br><br>
       <span class="verse-num">13</span>And Abraham lifted up his eyes, and looked, and behold behind him a ram caught in a thicket by his horns: and Abraham went and took the ram, and offered him up for a burnt offering in the stead of his son. <span class="verse-num">14</span>And Abraham called the name of that place Jehovahjireh: as it is said to this day, In the mount of the LORD it shall be seen.
       <br><br>
-      <span class="verse-num">15</span>And the angel of the LORD called unto Abraham out of heaven the second time, <span class="verse-num">16</span>And said, By myself have I sworn, saith the LORD, for because thou hast done this thing, and hast not withheld thy son, thine only son: <span class="verse-num">17</span>That in blessing I will bless thee, and in multiplying I will multiply thy seed as the stars of the heaven, and as the sand which is upon the sea shore; and thy seed shall possess the gate of his enemies; <span class="verse-num">18</span>And in thy seed shall all the nations of the earth be blessed; because thou hast obeyed my voice.
-      <br><br>
-      <span class="verse-num">19</span>So Abraham returned unto his young men, and they rose up and went together to Beersheba; and Abraham dwelt at Beersheba.
+      <span class="verse-num">15</span>And the angel of the LORD called unto Abraham out of heaven the second time, <span class="verse-num">16</span>And said, By myself have I sworn, saith the LORD, for because thou hast done this thing, and hast not withheld thy son, thine only son: <span class="verse-num">17</span>That in blessing I will bless thee, and in multiplying I will multiply thy seed as the stars of the heaven, and as the sand which is upon the sea shore; and thy seed shall possess the gate of his enemies; <span class="verse-num">18</span>And in thy seed shall all the nations of the earth be blessed; because thou hast obeyed my voice. <span class="verse-num">19</span>So Abraham returned unto his young men, and they rose up and went together to Beersheba; and Abraham dwelt at Beersheba.
       <br><br>
       <span class="verse-num">20</span>And it came to pass after these things, that it was told Abraham, saying, Behold, Milcah, she hath also born children unto thy brother Nahor; <span class="verse-num">21</span>Huz his firstborn, and Buz his brother, and Kemuel the father of Aram, <span class="verse-num">22</span>And Chesed, and Hazo, and Pildash, and Jidlaph, and Bethuel. <span class="verse-num">23</span>And Bethuel begat Rebekah: these eight Milcah did bear to Nahor, Abraham's brother. <span class="verse-num">24</span>And his concubine, whose name was Reumah, she bare also Tebah, and Gaham, and Thahash, and Maachah.
       <div style="clear: both;"></div>
@@ -79,98 +85,233 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: The Lad and I Will Return</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: Jehovah-Jireh, the Lord Will Provide</h2>
 
-    <div class="study-p">
-      The chapter opens with no preamble at all: "God did tempt Abraham" &mdash; tested, in the older sense of the word &mdash; and the test itself is almost unbearable to read plainly. Take your son, your only son, whom you love, and offer him as a burnt offering. No explanation is given to Abraham for why. None is given to the reader either.
+    <div class="tag-row">
+      <span class="tag">Take Now Thy Son</span>
+      <span class="tag">The Wood Upon Isaac's Shoulder</span>
+      <span class="tag">Obedience Unto the Knife</span>
+      <span class="tag">Jehovah-Jireh: The Ram in the Thicket</span>
+      <span class="tag">Sworn by Himself, the Second Time</span>
     </div>
 
     <div class="study-p">
-      What Abraham does next, and says, is where this chapter's real weight sits. Before going up the mountain, he tells his servants something remarkable: not "I will go," but "I and the lad will go yonder and worship, and come again to you." Both of them, coming back.
+      Of every chapter studied so far in Genesis, none drew more return visits from Brother Branham than this one. He preached entire sermons titled simply "Jehovah-Jireh," and this scene &mdash; the son, the wood, the knife, the ram &mdash; supplied him one of his most frequently repeated pictures of Christ's own sacrifice.
     </div>
 
-    <!-- Branham quote 1: resurrection faith and the type of Christ -->
+    <h3 class="sec-head">Take Now Thy Son</h3>
+    <div class="study-p">
+      Verses 1 and 2 open with the test itself, coming years after Isaac's birth and long after Abraham had staked his whole testimony, publicly, on this one promised son. Brother Branham read Abraham's willingness to obey as resting entirely on a settled conviction: if God required Isaac's death, God could also raise him back to life, because the promise still stood.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;He said to these servants, &lsquo;You wait here. The lad and I will go yonder to worship, and the lad and I shall return.&rsquo;... He had received him as one from the dead, he was persuaded that God could raise him up from the dead. See that Abraham faith?... And he took [the wood] off of his own back and placed it on Isaac, a beautiful type of Christ packing that wooden cross up the hill.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Jehovah-Jireh&rdquo; (59-0417)</div>
+        <div class="quote-text">&ldquo;Abraham said, 'Lord, if You get&hellip;Back yonder when I was barren, I had nothing. I was a sinner, and You made me something. You made me a promise. And here it is, You give me this boy&hellip;Now You told me to offer him up, to kill him. And You told me, that, through me, I would be the father of many nations.'&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Uncertain Sound&rdquo; (60-1218, para. 332)</div>
       </div>
     </div>
 
     <div class="study-p">
-      That confidence wasn't blind hope pasted over an impossible situation &mdash; in this reading, it was reasoned directly from what God had already promised.
+      He pointed directly to the New Testament's own explanation of Abraham's reasoning, reading the account through the lens of Hebrews 11.
     </div>
 
-    <!-- Branham quote on the resurrection-faith reasoning -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Abraham knew this, that, &lsquo;He had received him in a figure, as one from the dead, and God was able to raise him up from the dead.&rsquo; God would make a way of escape, some way. How, he didn't know... That's the reason Abraham knew that God was going to deliver him, somehow, because He had promised that through Isaac, all the nations in the world would be blessed.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;God Has a Provided Way&rdquo; (54-0404E)</div>
+        <div class="quote-text">&ldquo;By faith Abraham, when he was tried, offered up Isaac&hellip;of whom it was said, that in Isaac shall thy seed be called: accounting that God was able to raise him up, even from the dead; from whence also he received him in a figure.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, quoting Hebrews 11:17&ndash;19, &ldquo;The Uncertain Sound&rdquo; (60-1218, para. 331)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">The Wood Upon Isaac's Shoulder</h3>
+    <div class="study-p">
+      Verses 3 through 8 follow the three-day journey and the moment Isaac himself asks the obvious question: the fire and the wood are ready, but where is the lamb? Brother Branham read the boy carrying the wood up the mountain as a direct picture of Christ carrying His own cross to Golgotha.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;He put the wood upon Isaac's shoulder, a type of the true Seed, Jesus, to make us Abraham's Seed, took the wood for the sacrifice to lay on, upon His Own shoulders, when He climbed up Golgotha.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Jehovah-Jireh&rdquo; (61-0312, para. 222)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Isaac's very first recorded words in the entire Bible come on that walk up the mountain, and they land with real weight given what the reader already knows and he doesn't: "Behold the fire and the wood: but where is the lamb for a burnt offering?"
+      He treated Abraham's answer to Isaac's question &mdash; "God will provide Himself a lamb" &mdash; as the whole of Abraham's faith compressed into a single sentence: no explanation, only trust that obedience to the instruction was his part, and provision was God's.
     </div>
 
-    <!-- Branham quote 2: Isaac's question and Abraham's answer -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;'My father... here is the altar, here is the fire, here is the wood, but where is the lamb for a burnt offering?' And the trembling, old father... turned to him, and he said, &lsquo;My son, God will provide a lamb.&rsquo;&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Jehovah-Jireh&rdquo; (59-0417)</div>
+        <div class="quote-text">&ldquo;He said, 'My son, God will provide for Himself a lamb for this sacrifice.' There you are. 'Only thing I'm doing is just following instructions, it's up to God to provide the lamb.'&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Abraham's Covenant Confirmed&rdquo; (61-0318, para. 153)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Obedience Unto the Knife</h3>
+    <div class="study-p">
+      Verses 9 and 10 bring the scene to its point of no return: the altar built, Isaac bound and laid upon the wood, the knife raised. Brother Branham dwelt on Isaac's own willingness once he understood what was happening, reading the son's submission as itself a type of Christ's obedience even to death.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Then he said, 'Isaac, put your hands behind you.' He took a string and begin to tie his hands, Isaac knew then. Watch his obedience, like Jesus the true Son of God, obedience unto death, took the cross. Tied his hands and his feet, Abraham lifted up the little boy and laid him up on the rock.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Abraham's Covenant Confirmed&rdquo; (61-0318, para. 155)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Jehovah-Jireh: The Ram in the Thicket</h3>
+    <div class="study-p">
+      Verses 11 through 14 turn the entire scene: the Angel stops Abraham's hand at the last possible moment, and a ram appears, caught by its horns, to die in Isaac's place. Brother Branham returned again and again to one detail as proof this was no coincidence &mdash; the location itself made the ram's presence impossible by any natural explanation.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;About that time, he heard something behind him. Looked, and there was a ram hooked in the bushes. Where did that ram come from? He was a hundred miles from civilization, back in the wilderness where there's lions, wolves, jackals, and all those things like that, that kills sheep. And then he was way up on top the mountain, where there's no water or nothing else up there for the sheep to live on. And it wasn't there, a minute before that. Looked back, and there it was, the next minute, there. Jehovah-jireh!&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Uncertain Sound&rdquo; (60-1218, paras. 335&ndash;336)</div>
       </div>
     </div>
 
     <div class="study-p">
-      What happens at the altar itself is worth slowing down on, because the text never suggests Isaac was overpowered. By most reckonings he was a teenager by this point, old enough to have carried a full load of wood up a mountain &mdash; entirely capable of resisting an old man well past ninety. He isn't described fighting, and one retelling reads that stillness as its own kind of faith, offered up in the same spirit as the sacrifice it foreshadows.
+      He named this as the first of God's seven compound redemptive names revealed in Scripture, and read the ram's substitution as the earliest full picture of the atonement in the Bible.
     </div>
 
-    <!-- Branham quote: Isaac's willing submission -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;'Isaac, turn your back, Honey,' tied his hands. And watch Isaac, not kicking and hollering, but submitted himself to death as God, the true Seed of Abraham did, willing to take our place, had his hands tied by his own father, tied his feet, laid him up on the altar.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Jehovah-Jireh&rdquo; (61-0226)</div>
+        <div class="quote-text">&ldquo;You know Who that ram was? That was Christ; offered Him up, instead. And Abraham called the name of the place Jehovah-jireh: as it is said to this day, In the mount of the LORD it shall be seen. Jehovah-jireh, which was God's first redemptive Name. Jehovah-jireh means, 'the Lord will provide a sacrifice.'&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Believing God&rdquo; (52-0224, paras. 122&ndash;123)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Abraham's answer turns out to be more literally true than he could have known while saying it. Isaac is bound, laid on the altar, and the knife is actually raised &mdash; the text doesn't soften that moment or rush past it &mdash; before anything stops it.
+      He was careful, too, to distinguish what happened from a mere vision, insisting the text records a real, physical death in Isaac's place.
     </div>
 
-    <!-- Branham quote 3: the interruption and the ram -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;As he started to bring the knife down, the Holy Spirit caught his hand, said, &lsquo;Abraham, Abraham! Stay your hand. I know now that you trust Me... you haven't even would spare your own son.&rsquo; And about that time, a lamb bleated behind him... Where did that ram come from? He was three-days' journey from civilization... The Lord spoke that ram into existence.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Jehovah-Jireh&rdquo; (59-0417)</div>
+        <div class="quote-text">&ldquo;Now, that wasn't a vision Abraham saw, because the ram bled, and a vision don't bleed. See? He killed the ram. God spoke it into existence, and Abraham took it out of existence in less than a minute's time&hellip;because He had brought somebody to that place, testing him. The Bible said Abraham was tested, and the Seed of Abraham is tested.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Abraham's Covenant Confirmed&rdquo; (61-0318, para. 163)</div>
       </div>
     </div>
 
-    <!-- Branham quote: the ram as type of Christ -->
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; The Father, the Son, and the Provided Lamb</div>
+        <div class="study-p" style="font-size: 17px;">
+          Brother Branham read this entire chapter as a single, continuous picture of Calvary set two thousand years in advance: a father willing to give his only, long-promised son; the son himself carrying the wood for his own sacrifice up the mountain, submitting without resistance once he understood; and, at the last moment, a substitute provided by God Himself so that the son who carried the wood would not be the one who died. The location's later name, Jehovah-Jireh, and its identification elsewhere in Scripture with the region of Jerusalem, only deepened the type in his preaching &mdash; the same ground where, centuries later, the greater Substitute would actually die.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Sworn by Himself, the Second Time</h3>
+    <div class="study-p">
+      Verses 15 through 19 record the Angel's second call from heaven and God's oath, sworn on Himself since there was nothing greater to swear by, renewing and expanding the covenant blessing because Abraham had not withheld his son. Brother Branham read this second oath as the permanent seal on Abraham's testing &mdash; proof that when God brings a believer to that same final point of testing, standing alone with nothing left to lean on but the Word itself, it is never arbitrary, but always leads to a confirmed and expanded promise.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Watch, &lsquo;a ram.&rsquo; It had to be a sheep, a male, a ram. Type of Christ, Who would take the place of death. There is God's provided Sacrifice. And Abraham offered up the sacrifice in Isaac's stead.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;God Has a Provided Way&rdquo; (54-0404E)</div>
+        <div class="quote-text">&ldquo;God looked down and said, 'His Seed shall possess the gates. I've sworn by Myself that I'll do these things.' There's no one greater He could swear by, but He swore by Himself. Then, if He let Abraham be tested to that final point, He's got to test you and me for that final moment, that time of decision when everything is away from you. You have to stand alone there.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Possessing the Enemy's Gates&rdquo; (59-1108, para. 33)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Whatever a reader makes of the claim that the ram was spoken into existence on the spot, the text itself does leave the question open &mdash; a ram, alone, caught by its horns on a barren mountaintop days from any pasture, appearing at the exact moment one was needed. Abraham names the place Jehovah-Jireh, "the LORD will provide," a name the text says was still in use "to this day" at the time of writing.
+      Verses 20 through 24 close the chapter with a brief report of Nahor's family back in Mesopotamia, naming Bethuel and, through him, Rebekah &mdash; the woman who will become Isaac's wife in chapter 24. No sourced commentary on this genealogical notice itself turned up in the corpus searched for this study; its purpose becomes clear only once Rebekah enters the narrative directly.
     </div>
 
-    <div class="study-p">
-      What follows is the strongest oath language given anywhere to Abraham: God swearing "by myself," since there is nothing greater to swear by, and repeating the covenant promise in full &mdash; descendants beyond counting, and every nation on earth blessed through his line. Father and son walk back down the mountain together, exactly as Abraham had told the servants they would.
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Hebrews 11:17&ndash;19</span> &mdash; Abraham accounting God able to raise Isaac from the dead &nbsp;&bull;&nbsp;
+      <span class="xr-key">John 3:16</span> &mdash; God's own only, beloved Son, given &nbsp;&bull;&nbsp;
+      <span class="xr-key">John 19:17</span> &mdash; Christ bearing His own cross &nbsp;&bull;&nbsp;
+      <span class="xr-key">2 Chronicles 3:1</span> &mdash; Solomon's temple built on Mount Moriah &nbsp;&bull;&nbsp;
+      <span class="xr-key">James 2:21&ndash;23</span> &mdash; Abraham justified by works, offering Isaac upon the altar &nbsp;&bull;&nbsp;
+      <span class="xr-key">Romans 8:32</span> &mdash; "He that spared not his own Son, but delivered him up for us all"
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 22</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. The closing genealogical notice, verses 20 through 24, did not turn up direct commentary in the corpus searched for this study.
     </div>
 
-    <div class="study-p">
-      The chapter's quiet final verses are easy to skim past, a short genealogy of Abraham's brother Nahor's family back in Mesopotamia. Buried in that list is a single name that means nothing yet: Rebekah. The next chapter in this family's story is already being set in motion in the very same breath as its hardest test.
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;You know Who that ram was? That was Christ; offered Him up, instead. And Abraham called the name of the place Jehovah-jireh&hellip;Jehovah-jireh, which was God's first redemptive Name. Jehovah-jireh means, 'the Lord will provide a sacrifice.'&rdquo;</div>
+      <div class="archive-cite">Believing God &mdash; 52-0224, paras. 122&ndash;123</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And when he did this, and never withheld his only son, but was about to plunge the knife into Isaac's bosom, to destroy his testimony&hellip;God looked out of the heavens and He said, 'I've sworn by Myself that I'll bless you and multiply you, and your seed shall possess the gate of his enemy.'&rdquo;</div>
+      <div class="archive-cite">Possessing the Enemy's Gates &mdash; 59-1108, para. 11</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;God looked down and said, 'His Seed shall possess the gates. I've sworn by Myself that I'll do these things.' There's no one greater He could swear by, but He swore by Himself&hellip;that time of decision when everything is away from you. You have to stand alone there.&rdquo;</div>
+      <div class="archive-cite">Possessing the Enemy's Gates &mdash; 59-1108, para. 33</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Abraham said, 'Lord&hellip;You give me this boy. And I waited twenty-five years for him to come&hellip;Now You told me to offer him up, to kill him. And You told me, that, through me, I would be the father of many nations.'&rdquo;</div>
+      <div class="archive-cite">The Uncertain Sound &mdash; 60-1218, para. 332</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;By faith Abraham, when he was tried, offered up Isaac&hellip;accounting that God was able to raise him up, even from the dead; from whence also he received him in a figure.&rdquo;</div>
+      <div class="archive-cite">The Uncertain Sound &mdash; 60-1218, para. 331 (Hebrews 11:17&ndash;19)</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;About that time, he heard something behind him. Looked, and there was a ram hooked in the bushes. Where did that ram come from? He was a hundred miles from civilization&hellip;And it wasn't there, a minute before that. Looked back, and there it was, the next minute, there. Jehovah-jireh!&rdquo;</div>
+      <div class="archive-cite">The Uncertain Sound &mdash; 60-1218, paras. 335&ndash;336</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Took little Isaac, they went three-days' journey&hellip;He put the wood upon Isaac's shoulder, a type of the true Seed, Jesus, to make us Abraham's Seed, took the wood for the sacrifice to lay on, upon His Own shoulders, when He climbed up Golgotha.&rdquo;</div>
+      <div class="archive-cite">Jehovah-Jireh &mdash; 61-0312, paras. 220, 222</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;What do you think that ol' daddy thought? He said, 'My son, God will provide a lamb.' Amen. That's why he called Him Jehovah-Jireh. 'The Lord will provide Himself a lamb for the sacrifice.'&rdquo;</div>
+      <div class="archive-cite">Jehovah-Jireh &mdash; 61-0312, para. 224</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;He said, 'My son, God will provide for Himself a lamb for this sacrifice.' There you are. 'Only thing I'm doing is just following instructions, it's up to God to provide the lamb.'&rdquo;</div>
+      <div class="archive-cite">Abraham's Covenant Confirmed &mdash; 61-0318, para. 153</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Then he said, 'Isaac, put your hands behind you.' He took a string and begin to tie his hands, Isaac knew then. Watch his obedience, like Jesus the true Son of God, obedience unto death, took the cross.&rdquo;</div>
+      <div class="archive-cite">Abraham's Covenant Confirmed &mdash; 61-0318, para. 155</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;That wasn't a vision Abraham saw, because the ram bled, and a vision don't bleed. See? He killed the ram. God spoke it into existence, and Abraham took it out of existence in less than a minute's time&hellip;The Bible said Abraham was tested, and the Seed of Abraham is tested.&rdquo;</div>
+      <div class="archive-cite">Abraham's Covenant Confirmed &mdash; 61-0318, para. 163</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And that, when he got ready to take his life, there was an Angel caught his hand and stayed the knife. And there was a ram hooked by his horns, in the wilderness behind him. Where did that ram come from?&hellip;No wonder he called the place Jehovah-jireh, 'the Lord will provide for Himself.'&rdquo;</div>
+      <div class="archive-cite">Perseverance &mdash; 62-0218, para. 68</div>
     </div>
   </div>
 

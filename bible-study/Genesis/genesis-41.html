@@ -25,11 +25,20 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-  .inline-img { align-self: center; box-shadow: 0 14px 32px rgba(43,29,16,0.3); max-width: 100%; margin: 4px 0; }
-  .inline-img img { display: block; width: 760px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -43,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-41-hero.jpg" alt="Pharaoh placing his signet ring on Joseph's hand, robing him in fine linen and gold, elevating him over all Egypt">
+    <img src="images/genesis-41-hero.jpg" alt="A young man in fine linen robes riding in a royal chariot through an Egyptian city, crowds bowing on either side, granaries visible in the distance">
   </div>
 
   <!-- Scripture -->
@@ -56,8 +65,7 @@
 
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
       <span class="dropcap">A</span>nd it came to pass at the end of two full years, that Pharaoh dreamed: and, behold, he stood by the river. <span class="verse-num">2</span>And, behold, there came up out of the river seven well favoured kine and fatfleshed; and they fed in a meadow. <span class="verse-num">3</span>And, behold, seven other kine came up after them out of the river, ill favoured and leanfleshed; and stood by the other kine upon the brink of the river. <span class="verse-num">4</span>And the ill favoured and leanfleshed kine did eat up the seven well favoured and fat kine. So Pharaoh awoke.
-
-
+      <br><br>
       <span class="verse-num">5</span>And he slept and dreamed the second time: and, behold, seven ears of corn came up upon one stalk, rank and good. <span class="verse-num">6</span>And, behold, seven thin ears and blasted with the east wind sprung up after them. <span class="verse-num">7</span>And the seven thin ears devoured the seven rank and full ears. And Pharaoh awoke, and, behold, it was a dream. <span class="verse-num">8</span>And it came to pass in the morning that his spirit was troubled; and he sent and called for all the magicians of Egypt, and all the wise men thereof: and Pharaoh told them his dream; but there was none that could interpret them unto Pharaoh.
       <br><br>
       <span class="verse-num">9</span>Then spake the chief butler unto Pharaoh, saying, I do remember my faults this day: <span class="verse-num">10</span>Pharaoh was wroth with his servants, and put me in ward in the captain of the guard's house, both me and the chief baker: <span class="verse-num">11</span>And we dreamed a dream in one night, I and he; we dreamed each man according to the interpretation of his dream. <span class="verse-num">12</span>And there was there with us a young man, an Hebrew, servant to the captain of the guard; and we told him, and he interpreted to us our dreams; to each man according to his dream he did interpret. <span class="verse-num">13</span>And it came to pass, as he interpreted to us, so it was; me he restored unto mine office, and him he hanged.
@@ -66,15 +74,19 @@
       <br><br>
       <span class="verse-num">17</span>And Pharaoh said unto Joseph, In my dream, behold, I stood upon the bank of the river: <span class="verse-num">18</span>And, behold, there came up out of the river seven kine, fatfleshed and well favoured; and they fed in a meadow: <span class="verse-num">19</span>And, behold, seven other kine came up after them, poor and very ill favoured and leanfleshed, such as I never saw in all the land of Egypt for badness: <span class="verse-num">20</span>And the lean and the ill favoured kine did eat up the first seven fat kine: <span class="verse-num">21</span>And when they had eaten them up, it could not be known that they had eaten them; but they were still ill favoured, as at the beginning. So I awoke. <span class="verse-num">22</span>And I saw in my dream, and, behold, seven ears came up in one stalk, full and good: <span class="verse-num">23</span>And, behold, seven ears, withered, thin, and blasted with the east wind, sprung up after them: <span class="verse-num">24</span>And the thin ears devoured the seven good ears: and I told this unto the magicians; but there was none that could declare it to me.
       <br><br>
-      <span class="verse-num">25</span>And Joseph said unto Pharaoh, The dream of Pharaoh is one: God hath shewed Pharaoh what he is about to do. <span class="verse-num">26</span>The seven good kine are seven years; and the seven good ears are seven years: the dream is one. <span class="verse-num">27</span>And the seven thin and ill favoured kine that came up after them are seven years; and the seven empty ears blasted with the east wind shall be seven years of famine. <span class="verse-num">28</span>This is the thing which I have spoken unto Pharaoh: What God is about to do he sheweth unto Pharaoh. <span class="verse-num">29</span>Behold, there come seven years of great plenty throughout all the land of Egypt: <span class="verse-num">30</span>And there shall arise after them seven years of famine; and all the plenty shall be forgotten in the land of Egypt; and the famine shall consume the land; <span class="verse-num">31</span>And the plenty shall not be known in the land by reason of that famine following; for it shall be very grievous. <span class="verse-num">32</span>And for that the dream was doubled unto Pharaoh twice; it is because the thing is established by God, and God will shortly bring it to pass.
+      <span class="verse-num">25</span>And Joseph said unto Pharaoh, The dream of Pharaoh is one: God hath shewed Pharaoh what he is about to do. <span class="verse-num">26</span>The seven good kine are seven years; and the seven good ears are seven years: the dream is one. <span class="verse-num">27</span>And the seven thin and ill favoured kine that came up after them are seven years; and the seven empty ears blasted with the east wind shall be seven years of famine. <span class="verse-num">28</span>This is the thing which I have spoken unto Pharaoh: What God is about to do he sheweth unto Pharaoh. <span class="verse-num">29</span>Behold, there come seven years of great plenty throughout all the land of Egypt: <span class="verse-num">30</span>And there shall arise after them seven years of famine; and all the plenty shall be forgotten in the land of Egypt; and the famine shall consume the land.
+      <br><br>
+      <span class="verse-num">31</span>And the plenty shall not be known in the land by reason of that famine following; for it shall be very grievous. <span class="verse-num">32</span>And for that the dream was doubled unto Pharaoh twice; it is because the thing is established by God, and God will shortly bring it to pass.
       <br><br>
       <span class="verse-num">33</span>Now therefore let Pharaoh look out a man discreet and wise, and set him over the land of Egypt. <span class="verse-num">34</span>Let Pharaoh do this, and let him appoint officers over the land, and take up the fifth part of the land of Egypt in the seven plenteous years. <span class="verse-num">35</span>And let them gather all the food of those good years that come, and lay up corn under the hand of Pharaoh, and let them keep food in the cities. <span class="verse-num">36</span>And that food shall be for store to the land against the seven years of famine, which shall be in the land of Egypt; that the land perish not through the famine.
       <br><br>
       <span class="verse-num">37</span>And the thing was good in the eyes of Pharaoh, and in the eyes of all his servants. <span class="verse-num">38</span>And Pharaoh said unto his servants, Can we find such a one as this is, a man in whom the Spirit of God is? <span class="verse-num">39</span>And Pharaoh said unto Joseph, Forasmuch as God hath shewed thee all this, there is none so discreet and wise as thou art: <span class="verse-num">40</span>Thou shalt be over my house, and according unto thy word shall all my people be ruled: only in the throne will I be greater than thou.
       <br><br>
-      <span class="verse-num">41</span>And Pharaoh said unto Joseph, See, I have set thee over all the land of Egypt. <span class="verse-num">42</span>And Pharaoh took off his ring from his hand, and put it upon Joseph's hand, and arrayed him in vestures of fine linen, and put a gold chain about his neck; <span class="verse-num">43</span>And he made him to ride in the second chariot which he had; and they cried before him, Bow the knee: and he made him ruler over all the land of Egypt. <span class="verse-num">44</span>And Pharaoh said unto Joseph, I am Pharaoh, and without thee shall no man lift up his hand or foot in all the land of Egypt. <span class="verse-num">45</span>And Pharaoh called Joseph's name Zaphnathpaaneah; and he gave him to wife Asenath the daughter of Potipherah priest of On. And Joseph went out over all the land of Egypt.
+      <span class="verse-num">41</span>And Pharaoh said unto Joseph, See, I have set thee over all the land of Egypt. <span class="verse-num">42</span>And Pharaoh took off his ring from his hand, and put it upon Joseph's hand, and arrayed him in vestures of fine linen, and put a gold chain about his neck; <span class="verse-num">43</span>And he made him to ride in the second chariot which he had; and they cried before him, Bow the knee: and he made him ruler over all the land of Egypt. <span class="verse-num">44</span>And Pharaoh said unto Joseph, I am Pharaoh, and without thee shall no man lift up his hand or foot in all the land of Egypt.
       <br><br>
-      <span class="verse-num">46</span>And Joseph was thirty years old when he stood before Pharaoh king of Egypt. And Joseph went out from the presence of Pharaoh, and went throughout all the land of Egypt. <span class="verse-num">47</span>And in the seven plenteous years the earth brought forth by handfuls. <span class="verse-num">48</span>And he gathered up all the food of the seven years, which were in the land of Egypt, and laid up the food in the cities: the food of the field, which was round about every city, laid he up in the same. <span class="verse-num">49</span>And Joseph gathered corn as the sand of the sea, very much, until he left numbering; for it was without number.
+      <span class="verse-num">45</span>And Pharaoh called Joseph's name Zaphnathpaaneah; and he gave him to wife Asenath the daughter of Potipherah priest of On. And Joseph went out over all the land of Egypt. <span class="verse-num">46</span>And Joseph was thirty years old when he stood before Pharaoh king of Egypt. And Joseph went out from the presence of Pharaoh, and went throughout all the land of Egypt.
+      <br><br>
+      <span class="verse-num">47</span>And in the seven plenteous years the earth brought forth by handfuls. <span class="verse-num">48</span>And he gathered up all the food of the seven years, which were in the land of Egypt, and laid up the food in the cities: the food of the field, which was round about every city, laid he up in the same. <span class="verse-num">49</span>And Joseph gathered corn as the sand of the sea, very much, until he left numbering; for it was without number.
       <br><br>
       <span class="verse-num">50</span>And unto Joseph were born two sons before the years of famine came, which Asenath the daughter of Potipherah priest of On bare unto him. <span class="verse-num">51</span>And Joseph called the name of the firstborn Manasseh: For God, said he, hath made me forget all my toil, and all my father's house. <span class="verse-num">52</span>And the name of the second called he Ephraim: For God hath caused me to be fruitful in the land of my affliction.
       <br><br>
@@ -90,58 +102,130 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: Thirty Years in the Making</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: Next to Pharaoh, and a Gentile Bride</h2>
 
-    <div class="study-p">
-      Two full years pass after the butler is restored to his position &mdash; the exact detail chapter 40 closed on, Joseph forgotten while life in the palace went on without him. It takes Pharaoh's own trouble, a double dream that no magician or wise man in Egypt can explain, to shake that memory loose. Even then, the butler's confession opens strangely: "I do remember my faults this day," as though the memory only becomes convenient once it serves him.
+    <div class="tag-row">
+      <span class="tag">It Is Not in Me</span>
+      <span class="tag">Bow the Knee</span>
+      <span class="tag">Type &amp; Shadow</span>
+      <span class="tag">Ephraim and Manasseh</span>
     </div>
 
     <div class="study-p">
-      What happens next is a small, human detail worth sitting with before the drama of the rest of the chapter takes over.
+      Genesis 41 is where the exaltation this commentary has been building toward since Genesis 37 actually happens, and it is the single most quoted chapter of the Joseph narrative in the corpus searched for this study. Brother Branham returned to Joseph's rise from the dungeon to the right hand of Pharaoh across at least three separate sermons, spanning 1953 to 1961, consistently reading it as one of the clearest full-length types of Christ anywhere in the Old Testament.
     </div>
 
-    <!-- Branham quote 1: the shaving detail -->
+    <h3 class="sec-head">It Is Not in Me</h3>
+    <div class="study-p">
+      Joseph's first words to Pharaoh in verse 16 &mdash; "It is not in me: God shall give Pharaoh an answer of peace" &mdash; repeat exactly the posture already noted in Genesis 40: whatever gift he carried, he pointed immediately past himself to its source. No sourced Branham commentary addressing this specific verse turned up in the corpus, but it is the same pattern the rest of the chapter's material builds on &mdash; a man exalted who never claimed the credit for what exalted him.
+    </div>
+
+    <h3 class="sec-head">Bow the Knee</h3>
+    <div class="study-p">
+      Brother Branham described Joseph's procession through Egypt &mdash; the trumpet sounding ahead of him, the whole city required to stop and bow &mdash; as a picture of Christ's own coming exaltation, when "every knee shall bow, and every tongue shall confess."
+    </div>
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;And he was condemned, and laid in prison for years, until his whiskers and hair had growed out, till he didn't&hellip; Even had to shave him, to take him before Pharaoh.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Sudden Secret Going Away of the Church&rdquo; (58-1012)</div>
+      <div>
+        <div class="quote-text">Now notice, then, Joseph. Before Joseph went forth, they had to sound the trumpet, first. And people screamed, &ldquo;Bow the knee for Joseph.&rdquo; No matter what a man was doing, he was selling a product on the street, when that trumpet sound, he bowed his knee&hellip;And when Jesus leaves the right hand of the Majesty above, the trumpets will sound. And every knee shall bow, and every tongue shall confess, &ldquo;Jesus is Coming!&rdquo;</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The Revelation of Jesus Christ&rdquo; (60-1204M, paras. 325&ndash;326) and &ldquo;The Sixfold Purpose of Gabriel's Visit to Daniel&rdquo; (61-0730E, para. 71)</div>
       </div>
     </div>
 
-    <div class="study-p">
-      The text itself confirms it plainly: "they brought him hastily out of the dungeon: and he shaved himself, and changed his raiment." Years of prison have visibly marked him, and he's transformed into presentable condition in the space of a single verse before ever setting foot in Pharaoh's presence.
+    <div class="type-box">
+      <div>
+        <div class="type-label">Type &amp; Shadow &mdash; No Man Comes to God Except by Christ</div>
+        <div class="study-p" style="margin: 0;">
+          Preaching in 1953, Brother Branham drew the same connection first quoted in this commentary's study of Genesis 37: Joseph's position as the sole gatekeeper to Pharaoh, "no man could see Pharaoh without coming to Joseph," read directly against Christ as the sole way to the Father.
+        </div>
+      </div>
     </div>
-
-    <div class="study-p">
-      His humility carries straight through into that meeting. Asked directly whether he can interpret the dream, his answer deflects credit exactly the way it did with the butler and baker back in prison: "It is not in me: God shall give Pharaoh an answer of peace." Only after that does he actually listen to the dream and explain it &mdash; two dreams, really, built on the same message, which he reads as a deliberate sign of certainty rather than coincidence: "for that the dream was doubled unto Pharaoh twice... the thing is established by God."
-    </div>
-
-    <div class="study-p">
-      What Joseph does next goes well beyond simply answering the question he was asked. Nobody requested a plan, and he offers one anyway &mdash; a fully worked administrative strategy for surviving fourteen years of extreme weather swings, complete with taxation rates and storage logistics. Whatever gift let him read dreams, it's paired here with genuine competence Pharaoh recognizes immediately.
-    </div>
-
-    <div class="study-p">
-      The elevation that follows is about as complete a reversal of fortune as this story ever offers, and one reading treats the scene almost cinematically.
-    </div>
-
-    <!-- Branham quote 2: the trumpet and the bowed knee -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;No man could come to Pharaoh, who controlled the world at that day, no one could come to Pharaoh, only through Joseph... when Joseph left the palace, before he left, there was a trumpet sounded, and runners run before him, holler, 'Bow the knee! Joseph is coming!' No matter where you was, or what you were doing, how important your job was; you had to fall on your knees until Joseph got there.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Stature of a Perfect Man&rdquo; (62-1014M)</div>
+      <div>
+        <div class="quote-text">Then he was taken in before Pharaoh and interpret the dream, and he was made the right-hand man of Pharaoh, no man could see Pharaoh without coming to Joseph. And a perfect type of Jesus, sitting at the right hand of God, and no man comes to God except by Christ. Just exactly the perfect type there.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;Israel and the Church 1&rdquo; (53-0325, paras. 170&ndash;171)</div>
       </div>
     </div>
 
+    <h3 class="sec-head">Ephraim and Manasseh: A Gentile Bride</h3>
     <div class="study-p">
-      The text notes Joseph's age at this moment almost in passing &mdash; thirty years old. He was seventeen when his own dreams first set this whole story in motion back in chapter 37, and thirteen years of slavery, false accusation, and imprisonment separate that boy from this man standing in Pharaoh's court wearing his ring.
+      Immediately after that same statement, Brother Branham turned to verse 45 &mdash; Joseph's marriage to Asenath, an Egyptian, a Gentile outside the covenant line &mdash; and to the two sons born of that marriage in verses 50&ndash;52, reading the whole sequence as a picture of Christ, rejected by His own brethren the Jews, receiving a Gentile Bride in the time between His rejection and His return.
+    </div>
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div>
+        <div class="quote-text">And notice, here's another thing, you Gentile people now according to the Seed of the Elect, Joseph was given a Gentile bride. He was rejected of his brother, and turned and took a Gentile bride. Is that right? He gave him, Pharaoh gave him the priest of Or, daughter, for a bride. And he married a Gentile woman, that produced Ephraim and Manasses, which was joint heirs into the kingdom, into the patriarchic promise.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;Israel and the Church 1&rdquo; (53-0325, para. 172)</div>
+      </div>
+    </div>
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div>
+        <div class="quote-text">And, remember, when he was rejected of his brethren, what did he do? He got a Gentile wife; he got an Egyptian wife. When Jesus was cut off from His brethren back there, the Jews, He married a Gentile Bride. But now, after years, after children had been born, Ephraim and Manasseh, he had a family.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The Sixfold Purpose of Gabriel's Visit to Daniel&rdquo; (61-0730E, para. 72)</div>
+      </div>
+    </div>
+    <div class="study-p">
+      Brother Branham noted elsewhere, in a separate 1960 sermon, that the very naming of these two sons would later be reversed at Jacob's deathbed &mdash; the younger, Ephraim, receiving the greater blessing "instead of the one that was on the right hand" &mdash; and read that reversal as its own picture of the blessing passing from the Jew, the natural firstborn, to the Gentile. That reversal itself belongs to Genesis 48, further ahead in this study, and is only noted here as the reason these two names matter beyond this chapter.
     </div>
 
-    <div class="study-p">
-      What's striking is how honestly Joseph names that history even at the height of his triumph. His firstborn's name, Manasseh, means "God hath made me forget" &mdash; not that the pain never happened, but that it no longer controls him. His second son, Ephraim, carries an even more direct admission: "God hath caused me to be fruitful in the land of my affliction." He doesn't pretend the affliction wasn't real. He simply refuses to let it be the last word.
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">John 14:6</span> &mdash; "no man cometh unto the Father, but by me" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Philippians 2:9&ndash;11</span> &mdash; every knee shall bow, every tongue confess &nbsp;&bull;&nbsp;
+      <span class="xr-key">Acts 15:14</span> &mdash; God visiting the Gentiles, to take out of them a people for his name &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 48:13&ndash;20</span> &mdash; Jacob's crossed-hand blessing on Ephraim over Manasseh, studied ahead in this commentary &nbsp;&bull;&nbsp;
+      <span class="xr-key">Romans 11:11&ndash;12</span> &mdash; Israel's rejection becoming riches for the Gentiles &nbsp;&bull;&nbsp;
+      <span class="xr-key">Daniel 2:47</span> &mdash; a Gentile king acknowledging that God alone reveals secrets, as Pharaoh does in verse 39
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 41</h2>
+    <div class="study-p" style="font-size: 16px; color: #4a2f14;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Then he was taken in before Pharaoh and interpret the dream, and he was made the right-hand man of Pharaoh, no man could see Pharaoh without coming to Joseph. And a perfect type of Jesus, sitting at the right hand of God, and no man comes to God except by Christ. Just exactly the perfect type there.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 1 &mdash; 53-0325, Paras. 170&ndash;171</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And notice, here's another thing, you Gentile people now according to the Seed of the Elect, Joseph was given a Gentile bride. He was rejected of his brother, and turned and took a Gentile bride. Is that right? He gave him, Pharaoh gave him the priest of Or, daughter, for a bride. And he married a Gentile woman, that produced Ephraim and Manasses, which was joint heirs into the kingdom, into the patriarchic promise.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 1 &mdash; 53-0325, Para. 172</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Now notice, then, Joseph. Before Joseph went forth, they had to sound the trumpet, first. And people screamed, &lsquo;Bow the knee for Joseph.&rsquo; No matter what a man was doing, he was selling a product on the street, when that trumpet sound, he bowed his knee, Joseph was coming.&rdquo;</div>
+      <div class="archive-cite">The Revelation of Jesus Christ &mdash; 60-1204M, Para. 325</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;But now notice what taken place. How glorious! When Joseph then&hellip;after he married a Gentile and received a family, Ephraim and Manasseh, his sons.&rdquo;</div>
+      <div class="archive-cite">The Revelation of Jesus Christ &mdash; 60-1204M, Para. 327</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;When He was exalted, He went to the right hand of God. When Joseph was exalted, he went to the right hand of Pharaoh, and no man could speak to Pharaoh without speaking to Joseph first and getting permission. And when Joseph left the palace&hellip;trumpets sounded, and men run ahead of him, saying, &lsquo;Bow the knee! Joseph is coming!&rsquo;&rdquo;</div>
+      <div class="archive-cite">The Sixfold Purpose of Gabriel's Visit to Daniel &mdash; 61-0730E, Para. 71</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And, remember, when he was rejected of his brethren, what did he do? He got a Gentile wife; he got an Egyptian wife. When Jesus was cut off from His brethren back there, the Jews, He married a Gentile Bride. But now, after years, after children had been born, Ephraim and Manasseh, he had a family.&rdquo;</div>
+      <div class="archive-cite">The Sixfold Purpose of Gabriel's Visit to Daniel &mdash; 61-0730E, Para. 72</div>
     </div>
   </div>
 

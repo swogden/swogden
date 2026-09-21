@@ -23,12 +23,22 @@
   .quote-mark { font-family: 'UnifrakturMaguntia', cursive; font-size: 40px; color: #6d2331; line-height: 1; flex-shrink: 0; }
   .quote-text { font-style: italic; font-size: 17px; line-height: 1.6; color: #3b2a1a; }
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
-  .note-box { font-size: 16px; font-style: italic; line-height: 1.6; color: #5a4632; padding: 16px 22px; background: rgba(90,70,50,0.06); border-radius: 4px; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -42,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-50-hero.jpg" alt="The vast funeral procession of Egyptians and Hebrews carrying Jacob's body back to Canaan for burial at Machpelah">
+    <img src="images/genesis-50-hero.jpg" alt="A long funeral procession of chariots and mourners crossing a desert landscape toward distant hills, an Egyptian official leading the way">
   </div>
 
   <!-- Scripture -->
@@ -64,15 +74,15 @@
       <br><br>
       <span class="verse-num">12</span>And his sons did unto him according as he commanded them: <span class="verse-num">13</span>For his sons carried him into the land of Canaan, and buried him in the cave of the field of Machpelah, which Abraham bought with the field for a possession of a buryingplace of Ephron the Hittite, before Mamre. <span class="verse-num">14</span>And Joseph returned into Egypt, he, and his brethren, and all that went up with him to bury his father, after he had buried his father.
       <br><br>
-      <span class="verse-num">15</span>And when Joseph's brethren saw that their father was dead, they said, Joseph will peradventure hate us, and will certainly requite us all the evil which we did unto him. <span class="verse-num">16</span>And they sent a messenger unto Joseph, saying, Thy father did command before he died, saying, <span class="verse-num">17</span>So shall ye say unto Joseph, Forgive, I pray thee now, the trespass of thy brethren, and their sin; for they did unto thee evil: and now, we pray thee, forgive the trespass of the servants of the God of thy father. And Joseph wept when they spake unto him.
+      <span class="verse-num">15</span>And when Joseph's brethren saw that their father was dead, they said, Joseph will peradventure hate us, and will certainly requite us all the evil which we did unto him. <span class="verse-num">16</span>And they sent a messenger unto Joseph, saying, Thy father did command before he died, saying, <span class="verse-num">17</span>So shall ye say unto Joseph, Forgive, I pray thee now, the trespass of thy brethren, and their sin; for they did unto thee evil: and now, we pray thee, forgive the trespass of the servants of the God of thy father. And Joseph wept when they spake unto him. <span class="verse-num">18</span>And his brethren also went and fell down before his face; and they said, Behold, we be thy servants.
       <br><br>
-      <span class="verse-num">18</span>And his brethren also went and fell down before his face; and they said, Behold, we be thy servants. <span class="verse-num">19</span>And Joseph said unto them, Fear not: for am I in the place of God? <span class="verse-num">20</span>But as for you, ye thought evil against me; but God meant it unto good, to bring to pass, as it is this day, to save much people alive. <span class="verse-num">21</span>Now therefore fear ye not: I will nourish you, and your little ones. And he comforted them, and spake kindly unto them.
+      <span class="verse-num">19</span>And Joseph said unto them, Fear not: for am I in the place of God? <span class="verse-num">20</span>But as for you, ye thought evil against me; but God meant it unto good, to bring to pass, as it is this day, to save much people alive. <span class="verse-num">21</span>Now therefore fear ye not: I will nourish you, and your little ones. And he comforted them, and spake kindly unto them.
       <br><br>
       <span class="verse-num">22</span>And Joseph dwelt in Egypt, he, and his father's house: and Joseph lived an hundred and ten years. <span class="verse-num">23</span>And Joseph saw Ephraim's children of the third generation: the children also of Machir the son of Manasseh were brought up upon Joseph's knees.
       <br><br>
-      <span class="verse-num">24</span>And Joseph said unto his brethren, I die: and God will visit you, and bring you out of this land unto the land which he sware to Abraham, to Isaac, and to Jacob. <span class="verse-num">25</span>And Joseph took an oath of the children of Israel, saying, God will surely visit you, and ye shall carry up my bones from hence.
+      <span class="verse-num">24</span>And Joseph said unto his brethren, I die: and God will surely visit you, and bring you out of this land unto the land which he sware to Abraham, to Isaac, and to Jacob. <span class="verse-num">25</span>And Joseph took an oath of the children of Israel, saying, God will surely visit you, and ye shall carry up my bones from hence.
       <br><br>
-      <span class="verse-num">26</span>So Joseph died, being an hundred and ten years old: and they embalmed him, and put him in a coffin in Egypt.
+      <span class="verse-num">26</span>So Joseph died, being an hundred and ten years old: and they embalmed him, and he was put in a coffin in Egypt.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -84,81 +94,113 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: God Meant It Unto Good</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: A Coffin in Egypt</h2>
 
-    <div class="study-p">
-      Joseph's grief this time is immediate and entirely physical &mdash; falling on his father's face, weeping, kissing him. There's no need to leave the room to compose himself, the way there was back in chapters 43 and 45. What follows is practical and enormous in scale: forty days of Egyptian embalming, seventy full days of national mourning for a foreign shepherd's father &mdash; an honor that says as much about how Egypt regards Joseph as it does about Jacob himself.
+    <div class="tag-row">
+      <span class="tag">The Mourning of Egypt</span>
+      <span class="tag">Am I in the Place of God?</span>
+      <span class="tag">The Bones That Waited</span>
     </div>
 
+    <h3 class="sec-head">The Mourning of Egypt</h3>
     <div class="study-p">
-      The funeral procession that carries Jacob home is described almost as a small army &mdash; "chariots and horsemen... a very great company," Egyptian officials and elders traveling alongside Joseph's own family. It's large and visibly grief-stricken enough that the Canaanite locals watching from a distance rename the place entirely: Abelmizraim, "the mourning of Egypt." A foreign nation's sorrow becomes a permanent mark on the map of Canaan.
+      No sourced Branham commentary on verses 1&ndash;14 turned up in the corpus searched for this study. This is the Bible's first detailed description of embalming, and the text reports it as an Egyptian medical procedure &mdash; "his servants the physicians" &mdash; rather than an Israelite custom; nothing elsewhere in Genesis suggests the patriarchs' bodies were treated this way in Canaan. The seventy days of mourning matched the length reserved in Egyptian custom for royalty, an honor Joseph's position secured for his father. The procession itself is notable for its size: Pharaoh sends "all the servants of Pharaoh, the elders of his house, and all the elders of the land of Egypt" along with Joseph's own household, leaving only the children and livestock behind in Goshen (verse 8) &mdash; a precaution that also, incidentally, guaranteed the family's return, since no one leaves an entire nation's flocks and herds behind for good. The mourning at the threshingfloor of Atad was conspicuous enough that the Canaanite residents renamed the site for it, "Abelmizraim," meaning "the mourning of Egypt" &mdash; the last place-name Genesis records being coined, and coined by outsiders watching a foreign nation grieve.
     </div>
 
+    <h3 class="sec-head">Am I in the Place of God?</h3>
     <div class="study-p">
-      Jacob's burial fulfills, for the third time across three chapters now, the same insistence this family has carried since Abraham first bought that plot of ground outright in chapter 23: Machpelah, with his fathers, nowhere else.
+      No sourced Branham commentary on verses 15&ndash;21 turned up in the corpus searched for this study, despite searches run against its most familiar language, including "ye thought evil against me, but God meant it unto good." This is one of the most quoted verses in Genesis, and its absence from the corpus searched for this study is worth noting plainly rather than passing over. The brothers' fear here reveals that Joseph's earlier forgiveness in Genesis 45, however genuine, had not fully settled their own conscience; they still expect, seventeen years later and only after their father's protective presence is gone, that the reckoning might finally come. Joseph's answer refuses the role they are afraid he will take: "Am I in the place of God?" He will not withhold from them what only God has the right to withhold, and his theology of the whole preceding ordeal is stated here in its plainest form &mdash; not that the evil done to him was somehow not evil, but that God's purpose ran underneath it and beyond it the entire time.
     </div>
 
-    <div class="study-p">
-      One reading treats that coffin as something far more than a burial detail &mdash; a physical object that shaped four hundred years of Israel's life in slavery.
-    </div>
-
-    <!-- Branham quote 1: the coffin as a 400-year memorial -->
-    <div class="quote-box">
-      <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Think of the beaten backs of those poor old Hebrews, so tormented by the Egyptian persecutors. But every time they'd look over and see that little casket there, the bones of Joseph, they'd say, 'Some glorious day we're going out of here. For the prophet has promised us that those bones, before they are deteriorated, we'll go to Palestine and we'll go home.' What a perfect type Joseph was there, of Jesus.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Angel of the Covenant&rdquo; (54-0301)</div>
+    <div class="type-box">
+      <div>
+        <div class="type-label">Type &amp; Shadow: The Bones That Waited</div>
+        <div class="study-p" style="font-size: 17px;">
+          Joseph's closing instruction &mdash; that his own bones be carried out of Egypt whenever God visited his people &mdash; drew commentary in the corpus searched for this study, read as an act of resurrection faith rather than sentimental attachment to homeland. Brother Branham treated the patriarchs' insistence on burial in the land of promise, rather than in Egypt, as evidence that each of them died resting on a specific, spoken word from God they expected to see fulfilled even after death.
+        </div>
+        <div class="quote-box" style="margin-top: 14px;">
+          <div class="quote-mark">&ldquo;</div>
+          <div>
+            <div class="quote-text">Then, Joseph, being a prophet. He prospered down in Egypt. He knew God. God had revealed Himself to him. And when he died, said, &ldquo;Don't you bury my bones down here, but put&hellip;when&hellip;Someday God will surely visit you!&rdquo; Why? He rested solemnly upon the Word of God to Moses, &ldquo;Four hundred years they'll serve this nation, but I'll bring them out.&rdquo; He rested solemnly upon the Word.</div>
+            <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The Entombment&rdquo; (57-0420, para. 36)</div>
+          </div>
+        </div>
+        <div class="study-p" style="font-size: 17px; margin-top: 14px;">
+          Eight years later, preaching on the resurrection, he returned to the same scene at greater length, tracing it back through Jacob's earlier oath to Joseph (Genesis 47:29&ndash;31) before arriving at Joseph's own instruction concerning his bones:
+        </div>
+        <div class="quote-box" style="margin-top: 14px;">
+          <div class="quote-mark">&ldquo;</div>
+          <div>
+            <div class="quote-text">Jacob died, way down in Egypt. But being a prophet, now, with this potential, this quickening power, he said, &ldquo;Don't you bury me down here, Joseph&hellip;Swear to the God of Heaven you'll not bury me down here.&rdquo;&hellip;Joseph, being a prophet, also, laid his hands upon his crippled daddy. Said, &ldquo;I swear by the God of Abraham, Isaac, of Jacob, I'll not bury you here.&rdquo; They took him up and buried him up in that land&hellip;When Joseph died, he said, &ldquo;Don't you bury me down here. Don't bury me down here.&rdquo; Why? God is God everywhere, but He has a plan. Joseph was a prophet. He said, &ldquo;Someday,&rdquo; listen, his words, &ldquo;the Lord God will vis-it you, and will take you out of this land. And when you go, you take my bones.&rdquo; That quickening power was in them bones.</div>
+            <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The Easter Seal&rdquo; (65-0410, paras. 203&ndash;207)</div>
+          </div>
+        </div>
+        <div class="study-p" style="font-size: 17px; margin-top: 14px;">
+          Both sermons read Joseph's request in light of what actually happened centuries later: his bones were carried up out of Egypt at the Exodus (Exodus 13:19) and finally buried at Shechem (Joshua 24:32), a promise kept across a longer span of time than any other recorded in the patriarchal narratives.
+        </div>
       </div>
     </div>
 
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 45:1&ndash;15</span> &mdash; Joseph's earlier, first forgiveness of his brothers &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 47:29&ndash;31</span> &mdash; Jacob's oath binding Joseph not to bury him in Egypt &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 23:1&ndash;20</span> &mdash; Abraham's purchase of the cave of Machpelah &nbsp;&bull;&nbsp;
+      <span class="xr-key">Romans 8:28</span> &mdash; "all things work together for good," the New Testament's echo of verse 20 &nbsp;&bull;&nbsp;
+      <span class="xr-key">Exodus 1:6&ndash;8</span> &mdash; the death of Joseph and "a new king&hellip;which knew not Joseph" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Exodus 13:19</span> &mdash; Moses carrying Joseph's bones out of Egypt at the Exodus &nbsp;&bull;&nbsp;
+      <span class="xr-key">Joshua 24:32</span> &mdash; Joseph's bones finally buried at Shechem &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hebrews 11:22</span> &mdash; Joseph's dying instruction named as an act of faith &nbsp;&bull;&nbsp;
+      <span class="xr-key">Matthew 27:52&ndash;53</span> &mdash; saints raised from the dead at Christ's resurrection, the "quickening power" Brother Branham ties this scene to
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 50</h2>
+    <div class="study-p" style="font-size: 16px; color: #4a2f14;">
+      Two passages from sermons eight years apart speak to this chapter, given below in chronological order of preaching. Both treat Joseph's dying instruction in verses 24&ndash;25 concerning his bones, reading it as an act of resurrection faith; the second sermon narrates it as the conclusion of a longer sequence beginning with Jacob's earlier oath in Genesis 47:29&ndash;31, and both quotations are given in full and exactly as spoken. Beyond these, searches were run against the chapter's other principal events and phrases &mdash; the embalming and seventy days of mourning, the procession to Atad and the naming of Abelmizraim, the brothers' fear after Jacob's death, and, notably, Joseph's own words in verse 20, "ye thought evil against me, but God meant it unto good" &mdash; and none returned further relevant commentary.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Then, Joseph, being a prophet. He prospered down in Egypt. He knew God. God had revealed Himself to him. And when he died, said, &lsquo;Don't you bury my bones down here, but put&hellip;when&hellip;Someday God will surely visit you!&rsquo; Why? He rested solemnly upon the Word of God to Moses, &lsquo;Four hundred years they'll serve this nation, but I'll bring them out.&rsquo; He rested solemnly upon the Word.&rdquo;</div>
+      <div class="archive-cite">The Entombment &mdash; 57-0420, Para. 36</div>
+    </div>
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Jacob died, way down in Egypt. But being a prophet, now, with this potential, this quickening power, he said, &lsquo;Don't you bury me down here, Joseph. Come here, my prophet son. Put your hand upon this hip that God crippled. Swear to the God of Heaven you'll not bury me down here.&rsquo; What was in that man? Why wasn't Egypt just as good as any place? He was a prophet. He know where that resurrection was going to be. Wasn't going to be in Egypt; would be in Palestine. Said, &lsquo;Put your hands upon my crippled hip, and you swear by the God that I've served. You're my prophet son, that, you'll not bury my bones down here. Take me up yonder and bury me.&rsquo; Joseph, being a prophet, also, laid his hands upon his crippled daddy. Said, &lsquo;I swear by the God of Abraham, Isaac, of Jacob, I'll not bury you here.&rsquo; They took him up and buried him up in that land. Why? Why? When Joseph died, he said, &lsquo;Don't you bury me down here. Don't bury me down here.&rsquo; Why? God is God everywhere, but He has a plan. Joseph was a prophet. He said, &lsquo;Someday,&rsquo; listen, his words, &lsquo;the Lord God will vis-it you, and will take you out of this land. And when you go, you take my bones.&rsquo; That quickening power was in them bones.&rdquo;</div>
+      <div class="archive-cite">The Easter Seal &mdash; 65-0410, Paras. 203&ndash;207</div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Closing note -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">The Close of Genesis</h2>
     <div class="study-p">
-      That same reading recurs elsewhere in strikingly consistent terms &mdash; a coffin serving as a standing memorial, carried by an enslaved people who had no other visible reason left to hope, until Moses himself finally gathered those bones and carried them home to be buried in the same ground as Abraham, Isaac, and Jacob.
-    </div>
-
-    <div class="study-p">
-      A second reading connects Joseph's specific insistence on Canaan &mdash; refusing even the honor of a permanent Egyptian burial &mdash; to something shared by every patriarch in this book.
-    </div>
-
-    <!-- Branham quote 2: Something in him -->
-    <div class="quote-box">
-      <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;'Take my bones up there, and bury them... up in the promised land, up in Canaan land, out of Egypt.' So when Moses come in, another inspired prophet, he taken the bones of Joseph, and took them up and buried them in the same field... There was Something in him. No matter what the rest of the world thought, what they done, that had nothing to do with Joseph; that had nothing to do with Abraham, with Isaac, with Jacob, with all the rest of them. Something pressed to that promised land.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;My Redeemer Liveth&rdquo; (55-0410S)</div>
-      </div>
-    </div>
-
-    <div class="study-p">
-      Whatever a reader makes of that framing, the plain fact remains striking on its own: every single patriarch in this book, given every reason and every honor Egypt could offer to stay, insists instead on a burial plot back in Canaan &mdash; the same one Abraham first bought outright in chapter 23, still holding the whole family's confidence more than a hundred and fifty years later.
-    </div>
-
-    <div class="study-p">
-      Once Jacob is gone, the brothers' fear surfaces immediately and tells its own story: they assume Joseph's kindness over the last seventeen years was only ever extended for their father's sake, and that nothing now stands between them and the reckoning they still believe they deserve. They send word claiming Jacob commanded, before he died, that Joseph forgive them. The text never confirms whether that message is genuine or something the brothers invented out of desperation &mdash; a small, telling detail of how little they still trust the reconciliation, even after nearly two decades of peace.
-    </div>
-
-    <div class="study-p">
-      Joseph's answer is the chapter's real center, and arguably the theological center of the entire book of Genesis. "Am I in the place of God?" isn't a dodge &mdash; it's a genuine refusal to sit in judgment over them, a role he's careful not to claim for himself. What he says next is worth reading exactly as written, because it holds two things together without collapsing either one: "ye thought evil against me; but God meant it unto good, to bring to pass, as it is this day, to save much people alive." He doesn't deny what they intended. He names it plainly &mdash; real evil, real intent. But he refuses to let their intent be the only thing that determined the outcome. Both truths stand at once: what they meant, and what God did with it.
-    </div>
-
-    <div class="note-box">
-      A note on sourcing: despite how often verse 20 gets quoted as one of the most important lines in Genesis, I searched hard and found nothing addressing it directly in the library. The bones of Joseph, further down in this chapter, turned out to be a different story entirely &mdash; well covered, once I widened the search terms.
-    </div>
-
-    <div class="study-p">
-      Joseph lives long enough to see his own great-great-grandchildren, and when death finally comes at a hundred and ten, his last instructions look entirely forward rather than back. Unlike his father, he doesn't ask to be carried to Canaan immediately. He makes his brothers swear something stranger and more patient: that when God eventually visits them &mdash; not now, but someday &mdash; they will carry his bones up out of Egypt with them. It's a statement of faith in an exodus he will never live to see, one that Scripture confirms actually happened, centuries later, in Exodus 13:19 and Joshua 24:32.
-    </div>
-
-    <div class="study-p">
-      Genesis ends there: not with a resolved ending, but with a promise still in motion, a coffin in Egypt waiting on a future none of the people burying him will live to witness. Fifty chapters, one long family's whole beginning, closing on nothing more or less than an old man's confidence that God's word doesn't end where the story does.
+      Genesis ends where it must: not in the land God promised Abraham, but in Egypt, with a coffin. Every major figure introduced across fifty chapters &mdash; Adam, Noah, Abraham, Isaac, Jacob, and now Joseph &mdash; has died by this final verse, and the family that began as one man called out of Ur has become, by the book's own count in Exodus 1:5, seventy persons settled in a foreign land under a Pharaoh who still remembers Joseph's name. The book closes on that unresolved tension deliberately: a people in possession of a promise they do not yet possess, and a set of bones in Egypt waiting, on Joseph's own recorded expectation, to be carried home.
     </div>
   </div>
 
   <!-- Footer nav -->
   <div style="display: flex; justify-content: space-between; align-items: center; max-width: 760px; align-self: center; width: 100%; margin-top: 12px; padding-top: 24px; border-top: 1px solid rgba(43,29,16,0.15); gap: 12px; flex-wrap: wrap;">
     <a href="genesis-49.html" style="font-size: 15px; color: #8a765d;">&larr; Genesis 49</a>
-    <a href="genesis.html" style="font-size: 15px; color: #8a765d;">Genesis &rarr;</a>
+    <a href="../index.html" style="font-size: 15px; color: #8a765d;">Bible Study Home &rarr;</a>
   </div>
 
 </div>

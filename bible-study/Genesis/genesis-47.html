@@ -23,14 +23,22 @@
   .quote-mark { font-family: 'UnifrakturMaguntia', cursive; font-size: 40px; color: #6d2331; line-height: 1; flex-shrink: 0; }
   .quote-text { font-style: italic; font-size: 17px; line-height: 1.6; color: #3b2a1a; }
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
-  .note-box { font-size: 16px; font-style: italic; line-height: 1.6; color: #5a4632; padding: 16px 22px; background: rgba(90,70,50,0.06); border-radius: 4px; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-  .inline-img { align-self: center; box-shadow: 0 14px 32px rgba(43,29,16,0.3); max-width: 100%; margin: 4px 0; }
-  .inline-img img { display: block; width: 760px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -44,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-47-hero.jpg" alt="Jacob, an aged shepherd, blessing Pharaoh, the most powerful ruler in the world">
+    <img src="images/genesis-47-hero.jpg" alt="An aged patriarch standing before an enthroned Pharaoh in an Egyptian court, his sons standing behind him with shepherd's staffs">
   </div>
 
   <!-- Scripture -->
@@ -56,7 +64,9 @@
     </div>
 
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
-      <span class="dropcap">T</span>hen Joseph came and told Pharaoh, and said, My father and my brethren, and their flocks, and their herds, and all that they have, are come out of the land of Canaan; and, behold, they are in the land of Goshen. <span class="verse-num">2</span>And he took some of his brethren, even five men, and presented them unto Pharaoh. <span class="verse-num">3</span>And Pharaoh said unto his brethren, What is your occupation? And they said unto Pharaoh, Thy servants are shepherds, both we, and also our fathers. <span class="verse-num">4</span>They said moreover unto Pharaoh, For to sojourn in the land are we come; for thy servants have no pasture for their flocks; for the famine is sore in the land of Canaan: now therefore, we pray thee, let thy servants dwell in the land of Goshen. <span class="verse-num">5</span>And Pharaoh spake unto Joseph, saying, Thy father and thy brethren are come unto thee: <span class="verse-num">6</span>The land of Egypt is before thee; in the best of the land make thy father and brethren to dwell; in the land of Goshen let them dwell: and if thou knowest any men of activity among them, then make them rulers over my cattle.
+      <span class="dropcap">T</span>hen Joseph came and told Pharaoh, and said, My father and my brethren, and their flocks, and their herds, and all that they have, are come out of the land of Canaan; and, behold, they are in the land of Goshen. <span class="verse-num">2</span>And he took some of his brethren, even five men, and presented them unto Pharaoh. <span class="verse-num">3</span>And Pharaoh said unto his brethren, What is your occupation? And they said unto Pharaoh, Thy servants are shepherds, both we, and also our fathers. <span class="verse-num">4</span>They said moreover unto Pharaoh, For to sojourn in the land are we come; for thy servants have no pasture for their flocks; for the famine is sore in the land of Canaan: now therefore, we pray thee, let thy servants dwell in the land of Goshen.
+      <br><br>
+      <span class="verse-num">5</span>And Pharaoh spake unto Joseph, saying, Thy father and thy brethren are come unto thee: <span class="verse-num">6</span>The land of Egypt is before thee; in the best of the land make thy father and brethren to dwell; in the land of Goshen let them dwell: and if thou knowest any men of activity among them, then make them rulers over my cattle.
       <br><br>
       <span class="verse-num">7</span>And Joseph brought in Jacob his father, and set him before Pharaoh: and Jacob blessed Pharaoh. <span class="verse-num">8</span>And Pharaoh said unto Jacob, How old art thou? <span class="verse-num">9</span>And Jacob said unto Pharaoh, The days of the years of my pilgrimage are an hundred and thirty years: few and evil have the days of the years of my life been, and have not attained unto the days of the years of the life of my fathers in the days of their pilgrimage. <span class="verse-num">10</span>And Jacob blessed Pharaoh, and went out from before Pharaoh.
       <br><br>
@@ -70,11 +80,7 @@
       <br><br>
       <span class="verse-num">27</span>And Israel dwelt in the land of Egypt, in the country of Goshen; and they had possessions therein, and grew, and multiplied exceedingly. <span class="verse-num">28</span>And Jacob lived in the land of Egypt seventeen years: so the whole age of Jacob was an hundred forty and seven years.
       <br><br>
-      <span class="verse-num">29</span>And the time drew nigh that Israel must die: and he called his son Joseph, and said unto him, If now I have found grace in thy sight, put, I pray thee, thy hand under my thigh, and deal kindly and truly with me; bury me not, I pray thee, in Egypt: <span class="verse-num">30</span>But I will lie with my fathers, and thou shalt carry me out of Egypt, and bury me in their burying place. And he said, I will do as thou hast said.
-
-      <div class="inline-img"><img src="images/genesis-47-oath.jpg" alt="Jacob, near death, making Joseph swear to carry him out of Egypt and bury him with his fathers in Canaan"></div>
-
-      <span class="verse-num">31</span>And he said, Swear unto me. And he sware unto him. And Israel bowed himself upon the bed's head.
+      <span class="verse-num">29</span>And the time drew nigh that Israel must die: and he called his son Joseph, and said unto him, If now I have found grace in thy sight, put, I pray thee, thy hand under my thigh, and deal kindly and truly with me; bury me not, I pray thee, in Egypt: <span class="verse-num">30</span>But I will lie with my fathers, and thou shalt carry me out of Egypt, and bury me in their buryingplace. And he said, I will do as thou hast said. <span class="verse-num">31</span>And he said, Swear unto me. And he sware unto him. And Israel bowed himself upon the bed's head.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -86,41 +92,113 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: A Pilgrim Before a King</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: The Days of My Pilgrimage</h2>
 
-    <div class="study-p">
-      The brothers' interview with Pharaoh plays out exactly as Joseph coached them back in chapter 46, and Goshen is secured without incident. What happens next is a genuine reversal worth sitting with: Jacob himself is brought before Pharaoh, and it's the old shepherd who blesses the king &mdash; not the other way around. An aged herdsman, entirely without political power, standing in the most important court in the world, and it's his hand raised over Pharaoh's head.
+    <div class="tag-row">
+      <span class="tag">A Pilgrim Before Pharaoh</span>
+      <span class="tag">Election, Justification, Grace, Perfection</span>
+      <span class="tag">Settled in the Best of the Land</span>
+      <span class="tag">The Famine Economy</span>
+      <span class="tag">The Deathbed Oath</span>
     </div>
 
+    <h3 class="sec-head">A Pilgrim Before Pharaoh</h3>
     <div class="study-p">
-      Pharaoh's question is simple &mdash; "How old art thou?" &mdash; and Jacob's answer is startlingly honest for a man standing at the height of his family's fortunes. "The days of the years of my pilgrimage are an hundred and thirty years: few and evil have the days of the years of my life been." One reading catches something real in that self-assessment.
+      Jacob's answer to Pharaoh in verse 9 is the one moment in this chapter that drew sustained attention in the corpus searched for this study, and it did so independently in sermons preached on two consecutive nights of the same 1953 series. Standing before the most powerful man in the world he had ever known, Jacob does not speak of the years he had schemed, fled, wrestled, or mourned; he speaks only of pilgrimage &mdash; "few and evil," by his own reckoning, and short of his fathers' years besides. It is a strikingly humble self-assessment from a man who has just watched God rescue his entire household from a famine, and Brother Branham read it as the mark of someone who had, at last, come fully to himself.
     </div>
-
-    <!-- Branham quote: Jacob's pilgrimage -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Old Jacob, in dying, standing before Pharaoh, he said, 'I have been so-many years in my pilgrimage.' What was he? He begin to come to himself. The little fellow had done so bad. He knew that he was only a pilgrim here.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Israel and the Church 1&rdquo; (53-0325)</div>
+      <div>
+        <div class="quote-text">Old Jacob, in dying, standing before Pharaoh, he said, &ldquo;I have been so-many years in my pilgrimage.&rdquo; Amen. What was he? He begin to come to himself. The little fellow had done so bad. He knew that he was only a pilgrim here.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;Israel and the Church 1&rdquo; (53-0325, para. 74)</div>
+      </div>
+    </div>
+    <div class="study-p">
+      The following night, preaching from the same platform, he returned to the same verse to make substantially the same point, tying it directly to the doctrine of grace:
+    </div>
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div>
+        <div class="quote-text">You'd have to believe in grace if you read Jacob's life. You'd have to see it was election and calling, 'cause, oh, the things that fellow did! But, yet, God had blessed him. God had told him what was going to happen, so He called him. But you notice after he wrestled with this Angel, things begin to look different. Then when he got before Pharaoh, he said, &ldquo;My pilgrimage has been so-many years.&rdquo; God had let him know that he was only a pilgrim.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;Israel and the Church 2&rdquo; (53-0326, para. 23)</div>
+      </div>
+    </div>
+    <div class="study-p">
+      Neither sermon quotes Genesis 47:9 word for word; both compress Jacob's speech into a paraphrase, "I have been so-many years in my pilgrimage." The substance is faithful to the verse, which does root Jacob's self-description in the length and hardship of his years, even where the exact wording is Brother Branham's own summary rather than a direct citation.
+    </div>
+
+    <div class="type-box">
+      <div>
+        <div class="type-label">Type &amp; Shadow: Election, Justification, Grace, Perfection</div>
+        <div class="study-p" style="font-size: 17px;">
+          Jacob's confession before Pharaoh sits inside a larger fourfold pattern Brother Branham drew from the same four patriarchs across both of these 1953 sermons: Abraham as a type of election, Isaac as a type of justification, Jacob as a type of grace, and Joseph as a type of perfection. Jacob's placement is the hinge of the pattern &mdash; a man whose own record, by his telling, was "few and evil," yet who was nonetheless blessed, called, and brought all the way down into Egypt to be preserved. On this reading, Jacob's life is not held up as a model of consistency but precisely the opposite: proof that the promise to Abraham's seed rested on God's calling, not on the patriarchs' own merit.
+        </div>
+        <div class="quote-box" style="margin-top: 14px;">
+          <div class="quote-mark">&ldquo;</div>
+          <div>
+            <div class="quote-text">Election, in Abraham; justification, in Isaac; grace, in Jacob; and perfection, in Joseph. There's not one thing recorded against Joseph. That's the perfection. The three earthly stages of the pilgrimage of the children of Israel, and the fourth was when they went into the promised land, which was the Millennium.</div>
+            <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;Israel and the Church 1&rdquo; (53-0325, para. 153)</div>
+          </div>
+        </div>
       </div>
     </div>
 
+    <h3 class="sec-head">Settled in the Best of the Land</h3>
     <div class="study-p">
-      This is the same man who just experienced the most joyful reunion of his life, secured in the best land in Egypt, surrounded by grandchildren he thought he'd never meet. And still, when asked to sum up his life, he doesn't reach for triumph. He names it honestly &mdash; hard, and shorter than his fathers'. Rachel, the lost years mourning Joseph, Dinah, Simeon's imprisonment, Reuben's failure, all of it apparently still real to him even now.
+      Verses 1&ndash;12 receive no separate sourced commentary beyond what has already been drawn from this chapter, but they carry out, point by point, the strategy Joseph laid for his brothers at the close of Genesis 46: he presents five of them to Pharaoh, they identify themselves as shepherds exactly as coached, and Pharaoh grants Goshen &mdash; specifically named here as "the land of Rameses" &mdash; without a single objection recorded. Jacob's own audience with Pharaoh, sandwiched between his sons' request and Joseph's provision for the family, is brief but formal: he blesses Pharaoh both entering and leaving the king's presence, the elder pronouncing benediction on the greater ruler, a detail Scripture leaves to stand without comment.
     </div>
 
+    <h3 class="sec-head">The Famine Economy</h3>
     <div class="study-p">
-      The chapter then shifts entirely into something colder and more administrative. As the famine grinds on, the Egyptians surrender everything they have in stages just to survive &mdash; their money first, then their livestock, and finally, with nothing left, their land and their own freedom, becoming Pharaoh's permanent servants under a standing twenty percent tax. It's worth reading this plainly rather than rushing past it: whatever a modern reader makes of that outcome, the text doesn't record it as coerced or resented. The Egyptians themselves say, "Thou hast saved our lives... we will be Pharaoh's servants," and the one group specifically spared this fate is the priesthood, whose land Joseph never touches at all.
+      No sourced Branham commentary on verses 13&ndash;26 turned up in the corpus searched for this study, despite searches run against the chapter's principal terms and phrases &mdash; the failing of money, the exchange of cattle for bread, the selling of land, and the fifth part fixed as tax. The text is read here plainly, on its own terms. Joseph's administration during the famine's worst years is thorough and, by ancient standards, orderly: as the Egyptians' money is exhausted, then their livestock, and finally their land itself, Joseph systematically brings the whole of Egypt's private wealth under Pharaoh's control, resettles the population into cities, and institutes a permanent twenty-percent tax on all future harvests &mdash; sparing only the priesthood, whose land was never sold because their portion came directly from Pharaoh. The narrator's aside in verse 26, "unto this day," signals that the arrangement Joseph established was still Egypt's law of the land at the time Genesis was written.
     </div>
 
-    <div class="note-box">
-      A note on sourcing: beyond the pilgrimage quote above, I found nothing addressing this chapter's economic section or its closing scene directly. What's written here traces the text on its own terms.
+    <h3 class="sec-head">The Deathbed Oath</h3>
+    <div class="study-p">
+      No sourced Branham commentary on verses 28&ndash;31 turned up in the corpus searched for this study. Jacob's request that Joseph swear to carry his body out of Egypt for burial is the first explicit statement in the text of what has been implicit since chapter 46: however long Israel's household stays in Egypt, and however well it prospers there, Egypt is not its home. The gesture &mdash; a hand placed under the thigh in the making of a solemn oath &mdash; recurs from Genesis 24:2, where Abraham required the same pledge of his servant regarding Isaac's bride; both are oaths meant to secure, beyond the oath-taker's own lifetime, that God's purpose for the family stays tied to the land of promise rather than the land of sojourning.
     </div>
 
-    <div class="study-p">
-      Seventeen comfortable years pass in Egypt before the chapter's final scene, and even after all that time, Jacob's conviction hasn't shifted at all. Dying, he requires the same solemn oath-gesture Abraham's own servant once used back in chapter 24 &mdash; a hand placed under the thigh &mdash; to bind Joseph to a single, non-negotiable request: not to be buried in Egypt, whatever comfort and honor it's given his family, but carried back to Canaan, to lie with his fathers. Seventeen years of prosperity in the best land Egypt has to offer never once became home.
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 46:31&ndash;34</span> &mdash; Joseph's coaching of his brothers, carried out here without objection &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 24:2&ndash;9</span> &mdash; Abraham's earlier oath sworn the same way, hand under the thigh &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 12:10</span> &mdash; Abraham's own earlier descent into Egypt because of famine &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 26:1&ndash;2</span> &mdash; Isaac forbidden to make the same journey during his famine &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 50:24&ndash;25</span> &mdash; Joseph's own later oath concerning his bones, made on the same pattern &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hebrews 11:9, 13</span> &mdash; the patriarchs confessing themselves "strangers and pilgrims on the earth" &nbsp;&bull;&nbsp;
+      <span class="xr-key">1 Peter 2:11</span> &mdash; believers likewise addressed as "strangers and pilgrims" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Exodus 1:6&ndash;7</span> &mdash; the multiplication in Goshen foretold in verse 27 coming to pass
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 47</h2>
+    <div class="study-p" style="font-size: 16px; color: #4a2f14;">
+      Three passages from a single 1953 series speak to this chapter, given below in chronological order of preaching. All three treat Jacob's answer to Pharaoh in verse 9, two of them independently, and the third places that answer inside a larger fourfold typology of the patriarchs. None of the three quotes Genesis 47:9 word for word; each paraphrases Jacob's speech as "I have been so-many years in my pilgrimage" or "my pilgrimage has been so-many years." Beyond these, searches were run against the chapter's other principal events and terms &mdash; the presentation to Pharaoh, the settlement in Rameses, the sale of land and cattle for bread, the fifth-part tax, and the deathbed oath &mdash; and none returned further relevant commentary.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Old Jacob, in dying, standing before Pharaoh, he said, &lsquo;I have been so-many years in my pilgrimage.&rsquo; Amen. What was he? He begin to come to himself. The little fellow had done so bad. He knew that he was only a pilgrim here. Now notice.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 1 &mdash; 53-0325, Para. 74</div>
+    </div>
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Now, the patriarchs, we left last night, in Genesis, where that the last of the four that God gave His promise, was Abraham, Isaac, Jacob, Joseph&hellip;In Abraham we found, last night, to the Christian church today, election, election. And in Isaac, justification. And in Jacob, grace&hellip;Election, in Abraham; justification, in Isaac; grace, in Jacob; and perfection, in Joseph. There's not one thing recorded against Joseph. That's the perfection. The three earthly stages of the pilgrimage of the children of Israel, and the fourth was when they went into the promised land, which was the Millennium.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 1 &mdash; 53-0325, Paras. 152&ndash;153</div>
+    </div>
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;You'd have to believe in grace if you read Jacob's life. You'd have to see it was election and calling, 'cause, oh, the things that fellow did! But, yet, God had blessed him. God had told him what was going to happen, so He called him. But you notice after he wrestled with this Angel, things begin to look different. Then when he got before Pharaoh, he said, &lsquo;My pilgrimage has been so-many years.&rsquo; God had let him know that he was only a pilgrim.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 2 &mdash; 53-0326, Para. 23</div>
     </div>
   </div>
 

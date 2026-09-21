@@ -23,14 +23,22 @@
   .quote-mark { font-family: 'UnifrakturMaguntia', cursive; font-size: 40px; color: #6d2331; line-height: 1; flex-shrink: 0; }
   .quote-text { font-style: italic; font-size: 17px; line-height: 1.6; color: #3b2a1a; }
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
-  .note-box { font-size: 16px; font-style: italic; line-height: 1.6; color: #5a4632; padding: 16px 22px; background: rgba(90,70,50,0.06); border-radius: 4px; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-  .inline-img { align-self: center; box-shadow: 0 14px 32px rgba(43,29,16,0.3); max-width: 100%; margin: 4px 0; }
-  .inline-img img { display: block; width: 760px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -44,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-38-hero.jpg" alt="Tamar publicly holding up Judah's signet, bracelets, and staff, proving him the father of her child">
+    <img src="images/genesis-38-hero.jpg" alt="A lone woman veiled and seated by the roadside gate of an ancient town, a shepherd approaching with his flock in the distance at dusk">
   </div>
 
   <!-- Scripture -->
@@ -69,9 +77,7 @@
       <span class="verse-num">20</span>And Judah sent the kid by the hand of his friend the Adullamite, to receive his pledge from the woman's hand: but he found her not. <span class="verse-num">21</span>Then he asked the men of that place, saying, Where is the harlot, that was openly by the way side? And they said, There was no harlot in this place. <span class="verse-num">22</span>And he returned to Judah, and said, I cannot find her; and also the men of the place said, that there was no harlot in this place. <span class="verse-num">23</span>And Judah said, Let her take it to her, lest we be shamed: behold, I sent this kid, and thou hast not found her.
       <br><br>
       <span class="verse-num">24</span>And it came to pass about three months after, that it was told Judah, saying, Tamar thy daughter in law hath played the harlot; and also, behold, she is with child by whoredom. And Judah said, Bring her forth, and let her be burnt. <span class="verse-num">25</span>When she was brought forth, she sent to her father in law, saying, By the man, whose these are, am I with child: and she said, Discern, I pray thee, whose are these, the signet, and bracelets, and staff. <span class="verse-num">26</span>And Judah acknowledged them, and said, She hath been more righteous than I; because that I gave her not to Shelah my son. And he knew her again no more.
-
-      <div class="inline-img"><img src="images/genesis-38-birth.jpg" alt="The midwife tying a scarlet thread on the hand of the twin who emerged first, before his brother Pharez was born"></div>
-
+      <br><br>
       <span class="verse-num">27</span>And it came to pass in the time of her travail, that, behold, twins were in her womb. <span class="verse-num">28</span>And it came to pass, when she travailed, that the one put out his hand: and the midwife took and bound upon his hand a scarlet thread, saying, This came out first. <span class="verse-num">29</span>And it came to pass, as he drew back his hand, that, behold, his brother came out: and she said, How hast thou broken forth? this breach be upon thee: therefore his name was called Pharez. <span class="verse-num">30</span>And afterward came out his brother, that had the scarlet thread upon his hand: and his name was called Zarah.
       <div style="clear: both;"></div>
     </div>
@@ -84,51 +90,66 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: More Righteous Than I</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: A Chapter Interrupting Its Own Story</h2>
 
-    <div class="study-p">
-      This chapter interrupts Joseph's story so abruptly that most readers assume it must belong somewhere else entirely. It doesn't. Genesis places it exactly here, in the middle of the family's grief over Joseph, and the contrast is likely deliberate: while Jacob mourns a son he believes dead, Judah is off building an entirely separate, troubled family of his own.
+    <div class="tag-row">
+      <span class="tag">Judah's Descent</span>
+      <span class="tag">Two Sons the Lord Slew</span>
+      <span class="tag">Tamar's Righteousness</span>
+      <span class="tag">The Scarlet Thread</span>
     </div>
 
     <div class="study-p">
-      Two of Judah's sons die under God's judgment in quick succession &mdash; Er for an unspecified wickedness, and Onan for deliberately refusing to fulfill his duty to his brother's widow under the custom that required a surviving brother to raise up an heir in the dead man's name. Judah's response to losing two sons in a row is to quietly abandon his obligation to Tamar altogether, promising his youngest son to her "when he's grown" and then simply never following through, leaving her stranded as a childless widow in her father's house with no real path forward.
+      Genesis 38 breaks into the Joseph narrative &mdash; sandwiched between Joseph's sale into Egypt in chapter 37 and his arrival at Potiphar's house in chapter 39 &mdash; to tell an entirely separate story about the brother who proposed selling him. No sourced Branham commentary specifically addressing this chapter's events turned up anywhere in the corpus searched for this study: not Judah's departure from his brothers, not the deaths of Er and Onan, not Tamar's deception at the gate of Enaim, and not the birth of the twins Pharez and Zarah. As with Genesis 34, this study presents the chapter plainly, on Scripture's own terms, rather than supply commentary that was not found.
     </div>
 
+    <h3 class="sec-head">Judah's Descent</h3>
     <div class="study-p">
-      What Tamar does about that is audacious by any measure. She disguises herself, waits by the road she knows Judah will travel, and lets him mistake her for a prostitute rather than recognize her as his own daughter-in-law. Before anything happens, she has the presence of mind to demand a pledge substantial enough to prove his identity later: his personal seal, his bracelets, and his own staff &mdash; items a man wouldn't easily part with and couldn't credibly deny were his.
+      The chapter opens by noting, without comment, that Judah "went down from his brethren" to live among Canaanites, married a Canaanite woman, and fathered three sons by her. Coming immediately after Judah's proposal in the previous chapter to sell Joseph rather than kill him outright, the placement itself is suggestive: Scripture moves directly from Judah's role in that betrayal to an account of his own household unraveling among people outside the covenant line. The text draws no explicit moral connection between the two chapters, and this study does not supply one where Scripture itself is silent; the sequence is simply left to stand as Genesis arranges it.
     </div>
 
+    <h3 class="sec-head">Two Sons the Lord Slew</h3>
     <div class="study-p">
-      When Tamar's pregnancy becomes known, Judah's own moral blindness is on full display &mdash; he orders her burned for the very thing he himself did, with no apparent awareness of the irony until she produces the pledge items and asks him, without accusation, simply to identify them. His response is the chapter's real turning point: "She hath been more righteous than I." Not an excuse. Not a defense. A flat admission that the woman he was ready to execute had acted with more integrity than he had, in a situation he himself created by failing her.
+      Er and Onan's deaths are recorded in nearly identical language &mdash; each "wicked in the sight of the LORD," each one the LORD Himself "slew." Er's specific offense is never named; Onan's is stated plainly as his refusal to give his brother's widow an heir while still taking the position of husband, a practice later codified in the Mosaic law of levirate marriage (Deuteronomy 25:5&ndash;6). Judah's own instruction to Onan in verse 8, and his withholding of Shelah from Tamar afterward in verse 11, frame the family's failure to honor that obligation to Tamar as the real hinge of the chapter, well before her own actions in verses 13 and following.
     </div>
 
+    <h3 class="sec-head">Tamar's Righteousness</h3>
     <div class="study-p">
-      The birth that closes the chapter carries its own strange detail worth noticing. The twin who reaches out first gets marked with a scarlet thread by the attending midwife, confidently declared the firstborn &mdash; and then pulls his hand back, and his brother is the one who actually emerges first instead. The reversal is even built into the name given him: Pharez means "breach" or "breaking through," a birth order upended at the very last second.
+      Tamar's deception of Judah at the roadside is recorded without editorial praise or condemnation from the narrator; Scripture simply states what she did and lets Judah's own verdict in verse 26 stand as the chapter's judgment on it: "She hath been more righteous than I; because that I gave her not to Shelah my son." Judah's admission is directed at his own failure to fulfill a duty owed to her under the family's own custom, not at the particulars of how she exposed that failure. The signet, bracelets, and staff Tamar demanded as a pledge were not incidental objects; a signet in particular functioned as a personal seal, identifying its owner as surely as a name, which is precisely how it serves as evidence in verse 25.
     </div>
 
+    <h3 class="sec-head">The Scarlet Thread</h3>
     <div class="study-p">
-      That reversal matters far beyond this one chapter. It's Pharez's line, not the one anyone would have expected by rank or by the story's own tangled beginnings, that Scripture traces forward through Boaz and Ruth, through David, and all the way into Matthew's genealogy of Jesus Himself. A chapter most readers skip past turns out to be quietly load-bearing for everything that follows.
+      The midwife's mark on the first hand to emerge, and the reversal that follows when Pharez is born ahead of his brother after all, closes the chapter on the same note the whole book of Genesis has repeated since Cain and Abel: the firstborn's natural claim does not settle who carries the promise forward. No sourced Branham commentary was found tying this particular reversal to that larger pattern, but the pattern itself is Scripture's own, and Pharez's line is the one Ruth 4:18&ndash;22 and Matthew 1:3 trace forward to David and to Christ &mdash; meaning this chapter, for all its silence in the corpus searched for this study, sits directly in the genealogical line the New Testament itself draws from Judah to the Messiah.
     </div>
 
-    <div class="study-p">
-      One reading takes that scarlet thread further still, tying it to a pattern that runs through the entire Bible: every firstborn, under the law, belonged to God and had to be redeemed.
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Deuteronomy 25:5&ndash;6</span> &mdash; the law of levirate marriage, the obligation Onan refused &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 25:22&ndash;26</span> &mdash; Jacob and Esau, an earlier reversal of the firstborn's natural claim &nbsp;&bull;&nbsp;
+      <span class="xr-key">Ruth 4:18&ndash;22</span> &mdash; the genealogy from Pharez down to David &nbsp;&bull;&nbsp;
+      <span class="xr-key">Matthew 1:3</span> &mdash; Pharez (Phares) named in Christ's own genealogy, with Tamar named alongside him &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 37:26&ndash;27</span> &mdash; Judah's proposal to sell Joseph, immediately preceding this chapter &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 49:8&ndash;10</span> &mdash; Jacob's later blessing on Judah, naming the scepter and lawgiver that would not depart from his line
     </div>
+  </div>
 
-    <!-- Branham quote: the scarlet thread and the redemption of the firstborn -->
-    <div class="quote-box">
-      <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;When her first child broke forth, it was just a hand. And the midwife put a scarlet streak around it, because a scarlet streak spake of redemption... The scarlet streak has, all the way through the Bible, meant redemption; which was pointing forward to the first child coming. The first horse borned, the first cow borned, ever what it was, everything that was borned first, was under redemption, had to be redeemed... And when Jesus Christ was borned, He redeemed the whole world.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Questions and Answers on Hebrews, Part III&rdquo; (57-1006)</div>
-      </div>
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 38</h2>
+    <div class="note-box">
+      No paragraphs speaking directly to this chapter were located anywhere in the sermon archive searched for this study. Searches were run against the chapter's principal names, events, and phrases &mdash; Judah, Tamar, Er, Onan, Shelah, the deception at the gate, the signet and bracelets and staff, and the birth of Pharez and Zarah with the scarlet thread &mdash; and none returned relevant commentary. This chapter's study above is presented as a plain, honest reading of the Genesis text itself, without invented or borrowed commentary supplied where none exists in the corpus.
     </div>
-
-    <div class="study-p">
-      Read that way, the small hand that reached out first, was marked, and then withdrew &mdash; only for its brother to be born ahead of it after all &mdash; becomes a real-life echo of that same law, one this reading ultimately traces forward to Christ's own redemption of "every creature that was ever created on the earth."
-    </div>
-
   </div>
 
   <!-- Footer nav -->

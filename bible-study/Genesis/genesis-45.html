@@ -25,11 +25,20 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-  .inline-img { align-self: center; box-shadow: 0 14px 32px rgba(43,29,16,0.3); max-width: 100%; margin: 4px 0; }
-  .inline-img img { display: block; width: 760px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -43,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-45-hero.jpg" alt="Jacob's grief transformed into overwhelming joy at the sight of the wagons Joseph sent, proof that his son is alive">
+    <img src="images/genesis-45-hero.jpg" alt="An Egyptian ruler weeping openly as he embraces a group of astonished brothers, servants having been sent from the room, light streaming through tall columns">
   </div>
 
   <!-- Scripture -->
@@ -57,22 +66,23 @@
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
       <span class="dropcap">T</span>hen Joseph could not refrain himself before all them that stood by him; and he cried, Cause every man to go out from me. And there stood no man with him, while Joseph made himself known unto his brethren. <span class="verse-num">2</span>And he wept aloud: and the Egyptians and the house of Pharaoh heard.
       <br><br>
-      <span class="verse-num">3</span>And Joseph said unto his brethren, I am Joseph; doth my father yet live? And his brethren could not answer him; for they were troubled at his presence. <span class="verse-num">4</span>And Joseph said unto his brethren, Come near to me, I pray you. And they came near. And he said, I am Joseph your brother, whom ye sold into Egypt.
+      <span class="verse-num">3</span>And Joseph said unto his brethren, I am Joseph; doth my father yet live? And his brethren could not answer him; for they were troubled at his presence. <span class="verse-num">4</span>And Joseph said unto his brethren, Come near to me, I pray you. And they came near. And he said, I am Joseph your brother, whom ye sold into Egypt. <span class="verse-num">5</span>Now therefore be not grieved, nor angry with yourselves, that ye sold me hither: for God did send me before you to preserve life.
       <br><br>
-      <span class="verse-num">5</span>Now therefore be not grieved, nor angry with yourselves, that ye sold me hither: for God did send me before you to preserve life. <span class="verse-num">6</span>For these two years hath the famine been in the land: and yet there are five years, in the which there shall neither be earing nor harvest. <span class="verse-num">7</span>And God sent me before you to preserve you a posterity in the earth, and to save your lives by a great deliverance. <span class="verse-num">8</span>So now it was not you that sent me hither, but God: and he hath made me a father to Pharaoh, and lord of all his house, and a ruler throughout all the land of Egypt.
+      <span class="verse-num">6</span>For these two years hath the famine been in the land: and yet there are five years, in the which there shall neither be earing nor harvest. <span class="verse-num">7</span>And God sent me before you to preserve you a posterity in the earth, and to save your lives by a great deliverance. <span class="verse-num">8</span>So now it was not you that sent me hither, but God: and he hath made me a father to Pharaoh, and lord of all his house, and a ruler throughout all the land of Egypt.
       <br><br>
-      <span class="verse-num">9</span>Haste ye, and go up to my father, and say unto him, Thus saith thy son Joseph, God hath made me lord of all Egypt: come down unto me, tarry not: <span class="verse-num">10</span>And thou shalt dwell in the land of Goshen, and thou shalt be near unto me, thou, and thy children, and thy children's children, and thy flocks, and thy herds, and all that thou hast: <span class="verse-num">11</span>And there will I nourish thee; for yet there are five years of famine; lest thou, and thy household, and all that thou hast, come to poverty. <span class="verse-num">12</span>And, behold, your eyes see, and the eyes of my brother Benjamin, that it is my mouth that speaketh unto you. <span class="verse-num">13</span>And ye shall tell my father of all my glory in Egypt, and of all that ye have seen; and ye shall haste and bring down my father hither.
+      <span class="verse-num">9</span>Haste ye, and go up to my father, and say unto him, Thus saith thy son Joseph, God hath made me lord of all Egypt: come down unto me, tarry not: <span class="verse-num">10</span>And thou shalt dwell in the land of Goshen, and thou shalt be near unto me, thou, and thy children, and thy children's children, and thy flocks, and thy herds, and all that thou hast: <span class="verse-num">11</span>And there will I nourish thee; for yet there are five years of famine; lest thou, and thy household, and all that thou hast, come to poverty.
       <br><br>
-      <span class="verse-num">14</span>And he fell upon his brother Benjamin's neck, and wept; and Benjamin wept upon his neck. <span class="verse-num">15</span>Moreover he kissed all his brethren, and wept upon them: and after that his brethren talked with him.
+      <span class="verse-num">12</span>And, behold, your eyes see, and the eyes of my brother Benjamin, that it is my mouth that speaketh unto you. <span class="verse-num">13</span>And ye shall tell my father of all my glory in Egypt, and of all that ye have seen; and ye shall haste and bring down my father hither. <span class="verse-num">14</span>And he fell upon his brother Benjamin's neck, and wept; and Benjamin wept upon his neck. <span class="verse-num">15</span>Moreover he kissed all his brethren, and wept upon them: and after that his brethren talked with him.
       <br><br>
-      <span class="verse-num">16</span>And the fame thereof was heard in Pharaoh's house, saying, Joseph's brethren are come: and it pleased Pharaoh well, and his servants. <span class="verse-num">17</span>And Pharaoh said unto Joseph, Say unto thy brethren, This do ye; lade your beasts, and go, get you unto the land of Canaan; <span class="verse-num">18</span>And take your father and your households, and come unto me: and I will give you the good of the land of Egypt, and ye shall eat the fat of the land. <span class="verse-num">19</span>Now thou art commanded, this do ye; take you wagons out of the land of Egypt for your little ones, and for your wives, and bring your father, and come. <span class="verse-num">20</span>Also regard not your stuff; for the good of all the land of Egypt is yours.
+      <span class="verse-num">16</span>And the fame thereof was heard in Pharaoh's house, saying, Joseph's brethren are come: and it pleased Pharaoh well, and his servants. <span class="verse-num">17</span>And Pharaoh said unto Joseph, Say unto thy brethren, This do ye; lade your beasts, and go, get you unto the land of Canaan; <span class="verse-num">18</span>And take your father and your households, and come unto me: and I will give you the good of the land of Egypt, and ye shall eat the fat of the land.
       <br><br>
-      <span class="verse-num">21</span>And the children of Israel did so: and Joseph gave them wagons, according to the commandment of Pharaoh, and gave them provision for the way. <span class="verse-num">22</span>To all of them he gave each man changes of raiment; but to Benjamin he gave three hundred pieces of silver, and five changes of raiment. <span class="verse-num">23</span>And to his father he sent after this manner; ten asses laden with the good things of Egypt, and ten she asses laden with corn and bread and meat for his father by the way. <span class="verse-num">24</span>So he sent his brethren away, and they departed: and he said unto them, See that ye fall not out by the way.
+      <span class="verse-num">19</span>Now thou art commanded, this do ye; take you wagons out of the land of Egypt for your little ones, and for your wives, and bring your father, and come. <span class="verse-num">20</span>Also regard not your stuff; for the good of all the land of Egypt is your's.
       <br><br>
-      <span class="verse-num">25</span>And they went up out of Egypt, and came into the land of Canaan unto Jacob their father, <span class="verse-num">26</span>And told him, saying, Joseph is yet alive, and he is governor over all the land of Egypt. And Jacob's heart fainted, for he believed them not. <span class="verse-num">27</span>And they told him all the words of Joseph, which he had said unto them: and when he saw the wagons which Joseph had sent to carry him, the spirit of Jacob their father revived:
-
-
-      <span class="verse-num">28</span>And Israel said, It is enough; Joseph my son is yet alive: I will go and see him before I die.
+      <span class="verse-num">21</span>And the children of Israel did so: and Joseph gave them wagons, according to the commandment of Pharaoh, and gave them provision for the way. <span class="verse-num">22</span>To all of them he gave each man changes of raiment; but to Benjamin he gave three hundred pieces of silver, and five changes of raiment. <span class="verse-num">23</span>And to his father he sent after this manner; ten asses laden with the good things of Egypt, and ten she asses laden with corn and bread and meat for his father by the way.
+      <br><br>
+      <span class="verse-num">24</span>So he sent his brethren away, and they departed: and he said unto them, See that ye fall not out by the way. <span class="verse-num">25</span>And they went up out of Egypt, and came into the land of Canaan unto Jacob their father, <span class="verse-num">26</span>And told him, saying, Joseph is yet alive, and he is governor over all the land of Egypt. And Jacob's heart fainted, for he believed them not.
+      <br><br>
+      <span class="verse-num">27</span>And they told him all the words of Joseph, which he had said unto them: and when he saw the wagons which Joseph had sent to carry him, the spirit of Jacob their father revived: <span class="verse-num">28</span>And Israel said, It is enough; Joseph my son is yet alive: I will go and see him before I die.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -84,50 +94,125 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: I Am Joseph</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: I Am Joseph, Your Brother</h2>
 
-    <div class="study-p">
-      Judah's speech is what finally breaks him. Before Joseph says a single word to his brothers, he does something worth noticing on its own: he clears the room entirely, sending out every Egyptian attendant so that what happens next belongs only to his own family. Whatever he's about to say, he doesn't want it witnessed by anyone outside it.
+    <div class="tag-row">
+      <span class="tag">Every Man Go From Me</span>
+      <span class="tag">God Sent Me Before You</span>
+      <span class="tag">Type &amp; Shadow</span>
+      <span class="tag">The Spirit of Jacob Revived</span>
     </div>
 
     <div class="study-p">
-      One long-running reading treats this exact moment &mdash; the weeping, the private disclosure, the brothers' stunned inability to answer &mdash; as one of the clearest pictures in the entire Old Testament of something still to come.
+      Genesis 45 is the moment the whole Joseph narrative has been building toward since Genesis 37, and three separate sermons, spanning 1953 to 1961, all converge on it. Brother Branham read this chapter as the clearest picture in all of Genesis of what he believed still lay ahead: Christ making Himself known to the Jewish people who had rejected Him.
     </div>
 
-    <!-- Branham quote 1: the reveal and its typology -->
+    <h3 class="sec-head">Every Man Go From Me</h3>
+    <div class="study-p">
+      Preaching in 1960, Brother Branham read most of verses 1 through 7 directly, pausing only to underline how completely Joseph's self-control finally broke &mdash; he had to clear the room of every Egyptian witness before he could speak, and even then his weeping was loud enough to be heard back in Pharaoh's own house.
+    </div>
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Then Joseph could not refrain himself before all them that stood with him... and he cried, Cause every man to go from me. And there stood no man with him, while Joseph made himself known to his brethren... And Joseph said unto his brethren, I am Joseph... What do you think Jesus will say? 'I am your Messiah. I am the One that you crucified.'&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Sixfold Purpose of Gabriel's Visit to Daniel&rdquo; (61-0730E)</div>
+      <div>
+        <div class="quote-text">Now remember, Joseph, making hisself known, he cried, &ldquo;Every man go from before me.&rdquo; And there stood no man with him, while Joseph made himself known to his brethren. And he wept aloud: and the Egyptians and the house of Pharaoh heard him. (He must have screamed out.) And Joseph said unto his brethren, I am Joseph; does my father yet live? And his brethren could not answer him; for they were troubled at his presence.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The Revelation of Jesus Christ&rdquo; (60-1204M, paras. 307&ndash;308)</div>
+      </div>
+    </div>
+    <div class="study-p">
+      Brother Branham read the same scene again the following year, giving special attention to Joseph's wife &mdash; absent from the moment of revealing, as he understood it &mdash; and to the brothers' terror once they realized who stood before them.
+    </div>
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div>
+        <div class="quote-text">Watch now the 45th, verse&hellip;Listen close, don't miss it. Then Joseph could not refrain himself before all them that stood with him;&hellip;and he cried&mdash;and he&hellip;, Cause every man to go from me. And there stood no man with him, while Joseph made himself known to his brethren. What is it? Even his own wife went back to the palace&hellip;And he wept aloud:&hellip;Joseph just couldn't hold it any longer, and he screamed out&hellip;and the Egyptians and the house of Pharaoh heard it.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The Sixfold Purpose of Gabriel's Visit to Daniel&rdquo; (61-0730E, paras. 76&ndash;77)</div>
       </div>
     </div>
 
-    <div class="study-p">
-      That same reading ties the scene directly to Zechariah's prophecy that Israel would one day "look upon me whom they have pierced" &mdash; a recognition scene centuries early, acted out in miniature between one man and his own family.
+    <div class="type-box">
+      <div>
+        <div class="type-label">Type &amp; Shadow &mdash; Hated Without a Cause</div>
+        <div class="study-p" style="margin: 0;">
+          Brother Branham read Joseph's whole life &mdash; hated by his own brothers for the very gift that set him apart, yet loved by his father &mdash; as a direct picture of Christ, hated by the religious leaders of His day for the same kind of gift: the ability to see, to foretell, to heal.
+        </div>
+      </div>
     </div>
-
-    <div class="study-p">
-      Whatever a reader makes of that typology, the brothers' actual reaction in the text is plain and human: not relief, but terror. They have every reason to expect retribution from a man who now holds absolute power over their lives and knows exactly what they did to him. What Joseph says instead reframes the entire story rather than simply forgiving it.
-    </div>
-
-    <!-- Branham quote 2: Joseph's gracious reframing -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Now therefore do not be grieved, nor angry with yourselves, that you have sold me hither: for God did send me before you to preserve life... And God sent me before you to preserve you a posterity in the earth, and to save your lives by a great deliverance.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Revelation of Jesus Christ&rdquo; (60-1204M)</div>
+      <div>
+        <div class="quote-text">Now, Joseph, when he was born, he was hated by his brethren. Is that right? Now I want to show you, Joseph represents the Spirit-filled Church. Joseph was hated of his brethren. Why? Because he was spiritual. Joseph could not help because he could see vision. He could not help because he dreamed dreams, see, and could interpret dreams. He, that was what was in him. He could not display anything else but what that was in him. Well, then, his brothers hated him, without a cause. But his father loved him, because his father was a prophet.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The Revelation of Jesus Christ&rdquo; (60-1204M, para. 310)</div>
       </div>
     </div>
 
+    <h3 class="sec-head">God Sent Me Before You</h3>
     <div class="study-p">
-      That's a genuinely striking thing to say to the men who sold him. He doesn't minimize what they did &mdash; he simply refuses to let their intent be the final word on it, crediting God with using their worst decision toward an end they never could have seen coming. Whatever theological weight a reader gives that reasoning, the embrace that follows is unmistakably real: falling on Benjamin's neck, kissing each brother in turn, weeping openly after years of careful composure.
+      Verse 5 &mdash; "be not grieved, nor angry with yourselves, that ye sold me hither: for God did send me before you to preserve life" &mdash; is Joseph's own theological reading of everything that happened to him, offered to the very men responsible for it. He does not deny what they did or minimize it; he reframes it underneath a larger purpose he can now see because he is standing on the other side of it. Preaching in 1953, Brother Branham returned to this same scene, narrating Joseph's revealing of himself and his embrace of Benjamin in his own words rather than by direct quotation, but landing on the same point: a man overcome with relief that his father was still alive, more than with any grievance against his brothers.
+    </div>
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div>
+        <div class="quote-text">And he&mdash;he made them all leave, then he revealed himself, he said, &ldquo;I am Joseph, your brother.&rdquo; And they were scared, the patriarch. They was afraid. He said, &ldquo;Don't be afraid.&rdquo; And he begin to scream so loud till even over in Pharaoh's palace they heard him screaming, heard his screams and cry. He run down and throwed his arms around little Benjamin, and hugged him and kissed him, and fell on his neck and begin crying, said, &ldquo;You mean to say that my poor old daddy's still alive up in Canaan?&rdquo; What a feeling! What, the love of God that's shed abroad! &ldquo;My daddy's still alive and I'm giving him some corn.&rdquo; Said, &ldquo;Oh!&rdquo; And he screamed to the top of his voice.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;Israel and the Church 1&rdquo; (53-0325, para. 190)</div>
+      </div>
     </div>
 
+    <h3 class="sec-head">The Spirit of Jacob Revived</h3>
     <div class="study-p">
-      Pharaoh's own response is immediate and generous without reservation &mdash; wagons, provisions, an open invitation to "eat the fat of the land." But the chapter's quietest, most human detail belongs to Jacob back in Canaan. He doesn't believe his own sons at first; the text says plainly his "heart fainted." It isn't their words that finally convince him. It's seeing the wagons with his own eyes. Only then does he speak the line that closes the chapter: "It is enough; Joseph my son is yet alive: I will go and see him before I die."
+      No sourced Branham commentary was found addressing the chapter's closing verses specifically &mdash; Jacob's initial disbelief, and his spirit reviving only once he sees the wagons Joseph sent. The report alone, "Joseph is yet alive," was not enough; it was the sight of tangible proof, wagon after wagon loaded with Egypt's abundance, that finally convinced a father who had mourned his son as dead for over twenty years.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Zechariah 12:10</span> &mdash; "they shall look upon me whom they have pierced," Brother Branham's own point of comparison for this scene &nbsp;&bull;&nbsp;
+      <span class="xr-key">Acts 7:13</span> &mdash; Stephen's summary, "at the second time Joseph was made known to his brethren" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Romans 11:25&ndash;27</span> &mdash; a future turning of Israel, the doctrine this chapter is read to support &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 37:4</span> &mdash; "they hated him, and could not speak peaceably unto him," the enmity now dissolved &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 50:20</span> &mdash; Joseph's own later restatement of verse 5, "ye thought evil against me; but God meant it unto good" &nbsp;&bull;&nbsp;
+      <span class="xr-key">John 20:20</span> &mdash; the disciples' own mixture of joy and fear at recognizing the risen Christ
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 45</h2>
+    <div class="study-p" style="font-size: 16px; color: #4a2f14;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And he&mdash;he made them all leave, then he revealed himself, he said, &lsquo;I am Joseph, your brother.&rsquo; And they were scared, the patriarch. They was afraid. He said, &lsquo;Don't be afraid.&rsquo; And he begin to scream so loud till even over in Pharaoh's palace they heard him screaming, heard his screams and cry. He run down and throwed his arms around little Benjamin, and hugged him and kissed him, and fell on his neck and begin crying, said, &lsquo;You mean to say that my poor old daddy's still alive up in Canaan?&rsquo;&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 1 &mdash; 53-0325, Para. 190</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Now remember, Joseph, making hisself known, he cried, &lsquo;Every man go from before me.&rsquo; And there stood no man with him, while Joseph made himself known to his brethren. And he wept aloud: and the Egyptians and the house of Pharaoh heard him. (He must have screamed out.) And Joseph said unto his brethren, I am Joseph; does my father yet live? And his brethren could not answer him; for they were troubled at his presence.&rdquo;</div>
+      <div class="archive-cite">The Revelation of Jesus Christ &mdash; 60-1204M, Paras. 307&ndash;308</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Now, Joseph, when he was born, he was hated by his brethren. Is that right? Now I want to show you, Joseph represents the Spirit-filled Church. Joseph was hated of his brethren. Why? Because he was spiritual&hellip;his brothers hated him, without a cause. But his father loved him, because his father was a prophet.&rdquo;</div>
+      <div class="archive-cite">The Revelation of Jesus Christ &mdash; 60-1204M, Para. 310</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Watch now the 45th, verse&hellip;Listen close, don't miss it&hellip;Then Joseph could not refrain himself before all them that stood with him;&hellip;and he cried&mdash;and he&hellip;, Cause every man to go from me. And there stood no man with him, while Joseph made himself known to his brethren. What is it? Even his own wife went back to the palace&hellip;And he wept aloud:&hellip;Joseph just couldn't hold it any longer, and he screamed out&hellip;and the Egyptians and the house of Pharaoh heard it.&rdquo;</div>
+      <div class="archive-cite">The Sixfold Purpose of Gabriel's Visit to Daniel &mdash; 61-0730E, Paras. 76&ndash;77</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Plumb back over into the palace, they heard Joseph screaming. Now, that was a type of Christ meeting the Jews, that, He knows He blinded them so that we could have a chance. But when He comes to them again, sin of Israel will be over. And Joseph said unto his brethren, I am Joseph;&hellip;What do you think Jesus will say? &lsquo;I am your Messiah. I am the One that you crucified.&rsquo;&hellip;does my father yet live? And his brothers could not answer him; for they were troubled at his presence.&rdquo;</div>
+      <div class="archive-cite">The Sixfold Purpose of Gabriel's Visit to Daniel &mdash; 61-0730E, Para. 78</div>
     </div>
   </div>
 

@@ -25,11 +25,20 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
-  .inline-img { align-self: center; box-shadow: 0 14px 32px rgba(43,29,16,0.3); max-width: 100%; margin: 4px 0; }
-  .inline-img img { display: block; width: 760px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .note-box { padding: 16px 22px; background: rgba(109,35,49,0.06); border: 1px dashed #6d2331; border-radius: 4px; font-size: 15px; line-height: 1.6; color: #4a2f14; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -43,7 +52,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-40-hero.jpg" alt="Joseph interpreting the dreams of Pharaoh's butler and baker in prison, one hopeful and one stricken">
+    <img src="images/genesis-40-hero.jpg" alt="A young man in a dim prison cell listening intently to two royal officers, one holding a cup, the other with a basket of bread on his head">
   </div>
 
   <!-- Scripture -->
@@ -59,17 +68,15 @@
       <br><br>
       <span class="verse-num">5</span>And they dreamed a dream both of them, each man his dream in one night, each man according to the interpretation of his dream, the butler and the baker of the king of Egypt, which were bound in the prison. <span class="verse-num">6</span>And Joseph came in unto them in the morning, and looked upon them, and, behold, they were sad. <span class="verse-num">7</span>And he asked Pharaoh's officers that were with him in the ward of his lord's house, saying, Wherefore look ye so sadly to day? <span class="verse-num">8</span>And they said unto him, We have dreamed a dream, and there is no interpreter of it. And Joseph said unto them, Do not interpretations belong to God? tell me them, I pray you.
       <br><br>
-      <span class="verse-num">9</span>And the chief butler told his dream to Joseph, and said to him, In my dream, behold, a vine was before me; <span class="verse-num">10</span>And in the vine were three branches: and it was as though it budded, and her blossoms shot forth; and the clusters thereof brought forth ripe grapes: <span class="verse-num">11</span>And Pharaoh's cup was in my hand: and I took the grapes, and pressed them into Pharaoh's cup, and I gave the cup into Pharaoh's hand. <span class="verse-num">12</span>And Joseph said unto him, This is the interpretation of it: The three branches are three days: <span class="verse-num">13</span>Yet within three days shall Pharaoh lift up thine head, and restore thee unto thy place: and thou shalt deliver Pharaoh's cup into his hand, after the former manner when thou wast his butler.
+      <span class="verse-num">9</span>And the chief butler told his dream to Joseph, and said to him, In my dream, behold, a vine was before me; <span class="verse-num">10</span>And in the vine were three branches: and it was as though it budded, and her blossoms shot forth; and the clusters thereof brought forth ripe grapes: <span class="verse-num">11</span>And Pharaoh's cup was in my hand: and I took the grapes, and pressed them into Pharaoh's cup, and I gave the cup into Pharaoh's hand.
       <br><br>
-      <span class="verse-num">14</span>But think on me when it shall be well with thee, and shew kindness, I pray thee, unto me, and make mention of me unto Pharaoh, and bring me out of this house: <span class="verse-num">15</span>For indeed I was stolen away out of the land of the Hebrews: and here also have I done nothing that they should put me into the dungeon.
+      <span class="verse-num">12</span>And Joseph said unto him, This is the interpretation of it: The three branches are three days: <span class="verse-num">13</span>Yet within three days shall Pharaoh lift up thine head, and restore thee unto thy place: and thou shalt deliver Pharaoh's cup into his hand, after the former manner when thou wast his butler. <span class="verse-num">14</span>But think on me when it shall be well with thee, and shew kindness, I pray thee, unto me, and make mention of me unto Pharaoh, and bring me out of this house: <span class="verse-num">15</span>For indeed I was stolen away out of the land of the Hebrews: and here also have I done nothing that they should put me into the dungeon.
       <br><br>
-      <span class="verse-num">16</span>When the chief baker saw that the interpretation was good, he said unto Joseph, I also was in my dream, and, behold, I had three white baskets on my head: <span class="verse-num">17</span>And in the uppermost basket there was of all manner of bakemeats for Pharaoh; and the birds did eat them out of the basket upon my head. <span class="verse-num">18</span>And Joseph answered and said, This is the interpretation thereof: The three baskets are three days: <span class="verse-num">19</span>Yet within three days shall Pharaoh lift up thy head from off thee, and shall hang thee on a tree; and the birds shall eat thy flesh from off thee.
+      <span class="verse-num">16</span>When the chief baker saw that the interpretation was good, he said unto Joseph, I also was in my dream, and, behold, I had three white baskets on my head: <span class="verse-num">17</span>And in the uppermost basket there was of all manner of bakemeats for Pharaoh; and the birds did eat them out of the basket upon my head.
       <br><br>
-      <span class="verse-num">20</span>And it came to pass the third day, which was Pharaoh's birthday, that he made a feast unto all his servants: and he lifted up the head of the chief butler and of the chief baker among his servants. <span class="verse-num">21</span>And he restored the chief butler unto his butlership again; and he gave the cup into Pharaoh's hand: <span class="verse-num">22</span>But he hanged the chief baker: as Joseph had interpreted to them.
-
-      <div class="inline-img"><img src="images/genesis-40-forgotten.jpg" alt="The restored chief butler serving Pharaoh's court, fully returned to his old life with no thought of Joseph"></div>
-
-      <span class="verse-num">23</span>Yet did not the chief butler remember Joseph, but forgat him.
+      <span class="verse-num">18</span>And Joseph answered and said, This is the interpretation thereof: The three baskets are three days: <span class="verse-num">19</span>Yet within three days shall Pharaoh lift up thy head from off thee, and shall hang thee on a tree; and the birds shall eat thy flesh from off thee.
+      <br><br>
+      <span class="verse-num">20</span>And it came to pass the third day, which was Pharaoh's birthday, that he made a feast unto all his servants: and he lifted up the head of the chief butler and of the chief baker among his servants. <span class="verse-num">21</span>And he restored the chief butler unto his butlership again; and he gave the cup into Pharaoh's hand: <span class="verse-num">22</span>But he hanged the chief baker: as Joseph had interpreted to them. <span class="verse-num">23</span>Yet did not the chief butler remember Joseph, but forgat him.
       <div style="clear: both;"></div>
     </div>
   </div>
@@ -81,37 +88,86 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: Two Dreams, Two Endings</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: One Saved, One Lost</h2>
 
-    <div class="study-p">
-      Two more prisoners arrive, both high-ranking officials who've fallen out of Pharaoh's favor, and both are troubled by dreams neither can explain. What Joseph does first is worth noticing before anything else in the chapter: he pays attention to them. "Wherefore look ye so sadly to day?" isn't the question of a man consumed by his own unjust imprisonment. And when they explain their problem, his answer redirects credit immediately, before he's even heard the dreams: "Do not interpretations belong to God?"
+    <div class="tag-row">
+      <span class="tag">Do Interpretations Belong to God</span>
+      <span class="tag">Type &amp; Shadow</span>
+      <span class="tag">Forgotten Two Full Years</span>
     </div>
 
     <div class="study-p">
-      The two dreams are built on an almost identical structure &mdash; three branches, three baskets, both counted out as three days &mdash; and yet they resolve in completely opposite directions. Joseph delivers both interpretations plainly, without softening the baker's fate to spare his feelings or inflating the butler's hope beyond what the dream actually showed.
+      This chapter's contribution to the corpus is narrow but consistent: two separate sermons, preached years apart, both single out the butler and the baker &mdash; one delivered, one hanged &mdash; as a type of the two thieves crucified alongside Christ. Neither sermon lingers on the chapter's other details; both move through it quickly on the way to a larger point about Joseph as a type of Christ, but they agree closely on this one image.
     </div>
 
+    <h3 class="sec-head">Do Interpretations Belong to God</h3>
     <div class="study-p">
-      One long-running reading treats this exact pairing &mdash; one man restored, one man executed, both sentenced by the same means on the same day &mdash; as a direct rehearsal of something that happens centuries later.
+      Joseph's answer to the two officers in verse 8 &mdash; "Do not interpretations belong to God?" &mdash; is the same posture he held throughout his imprisonment: whatever gift he carried, he attributed it immediately to its source rather than to himself. No sourced Branham commentary was found addressing this verse specifically, but it is consistent with the reading already given of Joseph as a prophet and dreamer in Genesis 37, where his own dreams were likewise not his own invention but something given him to interpret and declare.
     </div>
 
-    <!-- Branham quote: the butler and baker as type of the two thieves -->
+    <div class="type-box">
+      <div>
+        <div class="type-label">Type &amp; Shadow &mdash; One Saved, One Lost</div>
+        <div class="study-p" style="margin: 0;">
+          Brother Branham read the butler and the baker &mdash; standing before Joseph together, receiving opposite sentences from the same interpreter &mdash; as a picture of the two thieves crucified on either side of Christ: one lost, one saved, in the presence of the same Savior. He returned to this image at least twice, in sermons two years apart, using nearly identical language each time.
+        </div>
+      </div>
+    </div>
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Watch in his temptation, when he was in prison... there was a butler and a baker. And they had a dream and Joseph interpret the dream. And one of them was lost and one was saved. Jesus, when He was packed to the cross in His prison house of death, one thief was lost and the other one was saved. Perfect type, how that He gave His body as a witness or a sign.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Angel of the Covenant&rdquo; (54-0301)</div>
+      <div>
+        <div class="quote-text">Notice in the butcher and the baker, one was refused and one rejected, like the two thieves at the cross: a perfect type.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;The Children of Israel&rdquo; (47-1123, para. 32)</div>
+      </div>
+    </div>
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div>
+        <div class="quote-text">In the dungeon, how he suffered there! And&mdash;and there was two saved&hellip;The butler and the baker, one of them lost and one was saved, rather. And the&mdash;the butler&hellip;One of them was lost and the other one saved. Just as on the cross, when He was in His prison house, of tacked to the cross for our sins, become a Prisoner, one thief was lost and one was saved. See, just exactly.</div>
+        <div class="quote-cite" style="margin-top: 10px;">&mdash; William Branham, &ldquo;Christ Is the Mystery of God Revealed&rdquo; (63-0728, para. 195)</div>
       </div>
     </div>
 
+    <h3 class="sec-head">Forgotten Two Full Years</h3>
     <div class="study-p">
-      Whatever a reader makes of that parallel, Joseph's own request in the middle of all this is easy to miss and worth sitting with. It's the only time in his entire story that he asks anything for himself directly: "think on me... make mention of me unto Pharaoh, and bring me out of this house." He even states his case plainly &mdash; stolen from his own land, guilty of nothing, deserving none of this. It's a rare, unguarded moment from a man who otherwise absorbs everything that happens to him without complaint.
+      The chapter closes on a hard note that neither sermon above addresses directly: Joseph asked only to be remembered, and the chief butler, restored to exactly the position Joseph had promised him, "did not remember Joseph, but forgat him." Genesis 41:1 makes plain that this was no brief oversight &mdash; it was two full years before the butler's memory was jogged, and only then because Pharaoh himself had a dream no one else could interpret. No sourced Branham commentary addressing this delay specifically turned up in the corpus searched for this study; the text is left to speak for itself on the point.
     </div>
 
-    <div class="study-p">
-      Everything Joseph predicted comes true exactly as he said, down to the day. And then the chapter ends on a single, quiet sentence that lands harder than anything else in it: "Yet did not the chief butler remember Joseph, but forgat him." No drama, no cruelty, just an ordinary man returning to his comfortable life and simply not thinking of the one who'd told him the truth when he needed it most. Two more years will pass before that memory returns.
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Luke 23:39&ndash;43</span> &mdash; the two thieves crucified with Christ, one railing, one asking to be remembered &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 41:1</span> &mdash; two full years passing before the butler's memory returned &nbsp;&bull;&nbsp;
+      <span class="xr-key">Daniel 2:27&ndash;28</span> &mdash; Daniel giving the same answer Joseph gave, that interpretation belongs to God alone &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 37:5&ndash;11</span> &mdash; Joseph's own dreams, already studied, given rather than invented &nbsp;&bull;&nbsp;
+      <span class="xr-key">Psalm 105:17&ndash;19</span> &mdash; "the word of the LORD tried him," Joseph's imprisonment as testing before his exaltation
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 40</h2>
+    <div class="study-p" style="font-size: 16px; color: #4a2f14;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Notice in the butcher and the baker, one was refused and one rejected, like the two thieves at the cross: a perfect type.&rdquo;</div>
+      <div class="archive-cite">The Children of Israel &mdash; 47-1123, Para. 32</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;In the dungeon, how he suffered there! And&mdash;and there was two saved&hellip;The butler and the baker, one of them lost and one was saved, rather. And the&mdash;the butler&hellip;One of them was lost and the other one saved. Just as on the cross, when He was in His prison house, of tacked to the cross for our sins, become a Prisoner, one thief was lost and one was saved. See, just exactly.&rdquo;</div>
+      <div class="archive-cite">Christ Is the Mystery of God Revealed &mdash; 63-0728, Para. 195</div>
     </div>
   </div>
 

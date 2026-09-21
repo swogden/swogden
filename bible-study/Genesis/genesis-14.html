@@ -25,9 +25,19 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -41,7 +51,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-14-hero.jpg" alt="Melchizedek, king of Salem, offering bread and wine to Abram, who kneels before him with his own retinue nearby">
+    <img src="images/genesis-14-hero.jpg" alt="A robed priest-king offering bread and a cup of wine to a returning warrior and his small band of armed servants at a valley crossroads">
   </div>
 
   <!-- Scripture -->
@@ -53,7 +63,9 @@
     </div>
 
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
-      <span class="dropcap">A</span>nd it came to pass in the days of Amraphel king of Shinar, Arioch king of Ellasar, Chedorlaomer king of Elam, and Tidal king of nations; <span class="verse-num">2</span>That these made war with Bera king of Sodom, and with Birsha king of Gomorrah, Shinab king of Admah, and Shemeber king of Zeboiim, and the king of Bela, which is Zoar. <span class="verse-num">3</span>All these were joined together in the vale of Siddim, which is the salt sea. <span class="verse-num">4</span>Twelve years they served Chedorlaomer, and in the thirteenth year they rebelled. <span class="verse-num">5</span>And in the fourteenth year came Chedorlaomer, and the kings that were with him, and smote the Rephaims in Ashteroth Karnaim, and the Zuzims in Ham, and the Emims in Shaveh Kiriathaim, <span class="verse-num">6</span>And the Horites in their mount Seir, unto Elparan, which is by the wilderness. <span class="verse-num">7</span>And they returned, and came to Enmishpat, which is Kadesh, and smote all the country of the Amalekites, and also the Amorites, that dwelt in Hazezontamar.
+      <span class="dropcap">A</span>nd it came to pass in the days of Amraphel king of Shinar, Arioch king of Ellasar, Chedorlaomer king of Elam, and Tidal king of nations; <span class="verse-num">2</span>That these made war with Bera king of Sodom, and with Birsha king of Gomorrah, Shinab king of Admah, and Shemeber king of Zeboiim, and the king of Bela, which is Zoar. <span class="verse-num">3</span>All these were joined together in the vale of Siddim, which is the salt sea. <span class="verse-num">4</span>Twelve years they served Chedorlaomer, and in the thirteenth year they rebelled.
+      <br><br>
+      <span class="verse-num">5</span>And in the fourteenth year came Chedorlaomer, and the kings that were with him, and smote the Rephaims in Ashteroth Karnaim, and the Zuzims in Ham, and the Emims in Shaveh Kiriathaim, <span class="verse-num">6</span>And the Horites in their mount Seir, unto Elparan, which is by the wilderness. <span class="verse-num">7</span>And they returned, and came to Enmishpat, which is Kadesh, and smote all the country of the Amalekites, and also the Amorites, that dwelt in Hazezontamar.
       <br><br>
       <span class="verse-num">8</span>And there went out the king of Sodom, and the king of Gomorrah, and the king of Admah, and the king of Zeboiim, and the king of Bela (the same is Zoar;) and they joined battle with them in the vale of Siddim; <span class="verse-num">9</span>With Chedorlaomer the king of Elam, and with Tidal king of nations, and Amraphel king of Shinar, and Arioch king of Ellasar; four kings with five. <span class="verse-num">10</span>And the vale of Siddim was full of slimepits; and the kings of Sodom and Gomorrah fled, and fell there; and they that remained fled to the mountain. <span class="verse-num">11</span>And they took all the goods of Sodom and Gomorrah, and all their victuals, and went their way. <span class="verse-num">12</span>And they took Lot, Abram's brother's son, who dwelt in Sodom, and his goods, and departed.
       <br><br>
@@ -73,63 +85,172 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: The King With No Beginning</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: A Rescue, and a Priest Without a Genealogy</h2>
 
-    <div class="study-p">
-      Genesis 14 opens with none of Abram's usual concerns &mdash; it's regional politics, four kings against five, years of tribute and rebellion, place names most readers will never encounter again. Abram doesn't even appear until verse 13, and only then because the war has swept up someone he cares about: Lot, still living in the very city whose wickedness chapter 13 had already flagged, is taken captive along with everything he owns. The choice Lot made by sight, two chapters ago, has just cost him his freedom.
+    <div class="tag-row">
+      <span class="tag">A War Among Petty Kings</span>
+      <span class="tag">Three Hundred and Eighteen</span>
+      <span class="tag">Melchizedek, Priest and King</span>
+      <span class="tag">A Priest Without Beginning or End</span>
+      <span class="tag">Abram's Refusal</span>
     </div>
 
     <div class="study-p">
-      Abram's response is immediate and decisive &mdash; no altar-building, no waiting on a word from God first, just three hundred and eighteen trained men and a night raid that recovers everyone and everything. This is a different Abram than the one who panicked in Egypt: quick, capable, and entirely undivided about defending his family.
+      Genesis 14 is unlike anything before it in the book &mdash; a battlefield report naming nine kings, followed by the sudden appearance of a figure the rest of Scripture will spend two more books explaining. Lot's choice in chapter 13 catches up with him here, and Abram's response introduces one of the most important types in the entire Bible.
     </div>
 
+    <h3 class="sec-head">A War Among Petty Kings</h3>
     <div class="study-p">
-      Then, with no introduction and no explanation at all, the chapter's real turn arrives: "Melchizedek king of Salem brought forth bread and wine: and he was the priest of the most high God." No genealogy, no backstory &mdash; a figure this significant simply appears, blesses Abram, and (per Hebrews 7, written centuries later) vanishes from the text having raised more questions than the chapter answers. Brother Branham addressed the question of his identity directly and at length.
+      Verses 1 through 12 read like a chronicle: four eastern kings against five kings of the plain, a rebellion after twelve years of tribute, and a rout that ends with Sodom and Gomorrah's kings fleeing into slimepits while their cities are plundered. Lot is swept up in the disaster as a resident of Sodom, not as a combatant &mdash; the text is careful to call him "Abram's brother's son," tying him back to the family he had separated from in the previous chapter even as it records the consequence of where he chose to pitch his tent.
     </div>
 
-    <!-- Branham quote 1: the case that Melchizedek must be God Himself -->
+    <h3 class="sec-head">Three Hundred and Eighteen</h3>
+    <div class="study-p">
+      Verses 13 through 16 turn from the kings' war to Abram's rescue. He hears that his brother is taken, arms his own trained servants &mdash; the text specifies three hundred and eighteen men, born in his own household &mdash; and pursues the four kings' armies all the way to Dan and beyond Damascus. Brother Branham marveled at what that number represented for a man who had come into the land with nothing.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;There is several schools of thought on Him. One... claims He's just a myth... And the others says it was a priesthood... It can't be that, for in the 4th verse it says He was a Person, a &lsquo;Man.&rsquo; So He was not just a priesthood order, neither was He a myth. He was a Person. And the Person is Eternal... He had no father. He had no mother. And He had no time He ever began. And He had no time He ever ended... So It would have to be an Eternal Person... that's God, 'cause He's the only One that's Eternal.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Who Is This Melchisedec?&rdquo; (65-0221E)</div>
+        <div class="quote-text">&ldquo;Just think of the man that had been a pauper when he left the land down there in Chaldea, of Ur, had three hundred and eighteen armed men as servants. Say God don't bless you? 'Three hundred and eighteen.'&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Melchisedec, the Great Prince and King&rdquo; (55-0109M, para. 143)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Having ruled out "myth" and "priestly office" as explanations, that leaves Melchizedek, in this reading, as nothing less than a pre-incarnate appearance of Christ Himself &mdash; a conclusion Brother Branham draws even more directly elsewhere, tying it to what Melchizedek actually does in the text: not offering money for the rescued goods, but bread and wine.
+      He read the whole rescue as a picture larger than the historical event itself &mdash; Abram going after his own backslidden household member, at real risk, rather than writing him off.
     </div>
 
-    <!-- Branham quote 2: bread and wine as communion, centuries early -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Melchisedec only offered him &lsquo;bread and wine.&rsquo; ...The King of peace, the King of righteousness, met Abraham as he returned. And give him... the Communion, &lsquo;bread and wine,&rsquo; thousands of years... before bread and wine was ever an ordinance in the Church... Who was this Priest? None other than the incarnated Lord Jesus Christ, in His magnificent power.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Melchisedec, the Great Prince and King&rdquo; (55-0109M)</div>
+        <div class="quote-text">&ldquo;Abraham; 'his brother' that had gone astray. A picture of the true Church, or the true believer of God, that's blessed of God, and has the promise of God&hellip;And he went after his backslidden brother, and pursued with a little handful of men&hellip;and overcome them, and took them and slew them. And brought back all that was lost.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Melchisedec, the Great Prince and King&rdquo; (55-0109M, paras. 149, 151)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Melchizedek, Priest and King</h3>
+    <div class="study-p">
+      Verses 17 through 20 introduce Melchizedek without any warning or background &mdash; he simply appears, king of Salem and "priest of the most high God," bringing out bread and wine to meet Abram returning from battle. He blesses Abram, blesses God for the victory, and receives a tenth of everything from him. Brother Branham treated this meeting as the single most important encounter in the chapter, identifying Melchizedek's gift as a picture centuries ahead of its time.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Melchisedec did not offer him any money. Melchisedec only offered him 'bread and wine.' Melchisedec was a Priest of the Most High; the King of Jerusalem&hellip;And give him the Communion, bread and wine, thousands of years, or hundreds of years, before bread and wine was ever an ordinance in the Church.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Melchisedec, the Great Prince and King&rdquo; (55-0109M, paras. 153, 155)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">A Priest Without Beginning or End</h3>
+    <div class="study-p">
+      What makes Melchizedek unlike every other priest in Scripture, Brother Branham pointed out, is what the text does not say about him: no father, no mother, no genealogy, no record of birth or death. Hebrews 7 draws directly on this silence to describe him as a picture of an eternal priesthood, and Brother Branham identified the figure behind that silence as Christ Himself, appearing to Abram before His incarnation.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Without father, without mother&hellip;without beginning of days, or without ending of life&hellip;If He had no father, He had no mother, He had no beginning of days or ending of life, Melchisedec still exists&hellip;but was made like unto the Son of God; abideth a priest continually.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Melchisedec, the Great Prince and King&rdquo; (55-0109M, paras. 159&ndash;160)</div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Who was this Priest? None other than the incarnated Lord Jesus Christ, in His magnificent power. He was the same One&hellip;And He was in a shadow. That Melchisedec, when He become a Man of flesh, would be cut into part, and the Communion will be given, the fragments of His broken body, as we take today.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Melchisedec, the Great Prince and King&rdquo; (55-0109M, para. 163)</div>
+      </div>
+    </div>
+
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; Bread and Wine Before the Law</div>
+        <div class="study-p" style="font-size: 17px;">
+          Centuries before Moses, before the Passover, before any Communion table existed in Israel's worship, a priest without recorded ancestry hands a returning warrior bread and wine. Brother Branham read this not as coincidence but as the same pattern appearing early &mdash; Christ's own broken body and shed blood, pictured in advance, offered by the same eternal Priest who would one day offer the reality it pointed to.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Abram's Refusal</h3>
+    <div class="study-p">
+      Verses 21 through 24 close the chapter with a contrast the text sets up deliberately: the king of Sodom offers to let Abram keep all the recovered goods, and Abram refuses every bit of it, down to a thread or a shoelatchet, so that no one could ever say Sodom's king had made him rich. He asks nothing for himself, only the rightful share for the men who fought alongside him.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Abraham said, 'I won't take no thread, to a shoelatchet; that you might say you made Abraham rich.'&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Melchisedec, the Great Prince and King&rdquo; (55-0109M, para. 147)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Whatever a reader concludes about Melchizedek's exact identity, the text is clear about Abram's response: he gives this stranger a tenth of everything, centuries before Israel has a priesthood, a temple, or a law requiring tithes at all. It's given freely, to someone who asked for nothing and offered a blessing instead.
+      Read against the chapter's opening, the point stands out clearly: Abram had just received a blessing and bread and wine from the Priest of the Most High. Having already been blessed by God, he had nothing to gain and everything to lose by also being indebted to the king of Sodom.
     </div>
 
-    <div class="study-p">
-      That makes what happens next, only two verses later, land as a deliberate contrast rather than a coincidence. The king of Sodom &mdash; whose own city Abram has just risked his life to rescue &mdash; offers him all the recovered goods outright. Abram refuses everything, down to a literal shoelace.
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Hebrews 7:1&ndash;3</span> &mdash; Melchizedek, without father, without mother, without descent &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hebrews 7:4&ndash;10</span> &mdash; the argument from Abraham's tithe to Melchizedek's greater priesthood &nbsp;&bull;&nbsp;
+      <span class="xr-key">Psalm 110:4</span> &mdash; the LORD hath sworn, Thou art a priest for ever after the order of Melchizedek &nbsp;&bull;&nbsp;
+      <span class="xr-key">Matthew 26:26&ndash;28</span> &mdash; the bread and the cup of the New Testament in Christ's blood &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 13:12&ndash;13</span> &mdash; Lot's choice of Sodom, the seed of this chapter's danger &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 18:1&ndash;8</span> &mdash; the three visitors at Mamre, read by Brother Branham as the same Person appearing again
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 14</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. The individual kings and place names of verses 1&ndash;12 did not turn up direct commentary beyond the general reading of the war itself.
     </div>
 
-    <!-- Branham quote 3: refusing the king of Sodom -->
-    <div class="quote-box">
-      <div class="quote-mark">&ldquo;</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;The king of Sodom come out... and said, &lsquo;All of the goods that you have taken, that these people took away, I'll give them to you.&rsquo; ...Abraham said, &lsquo;I won't take no thread, to a shoelatchet; that you might say you made Abraham rich.&rsquo;&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Melchisedec, the Great Prince and King&rdquo; (55-0109M)</div>
-      </div>
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Just think of the man that had been a pauper when he left the land down there in Chaldea, of Ur, had three hundred and eighteen armed men as servants. Say God don't bless you? 'Three hundred and eighteen.'&rdquo;</div>
+      <div class="archive-cite">Melchisedec, the Great Prince and King &mdash; 55-0109M, para. 143</div>
     </div>
 
-    <div class="study-p">
-      Two kings meet Abram within a handful of verses of each other. One offers wealth with an unspoken price attached &mdash; the right to say afterward that he made Abram rich. The other offers bread, wine, and a blessing, and asks nothing at all except worship. Abram accepts everything from the second and refuses to take even a shoelace from the first, and the chapter lets that contrast speak for itself without further comment.
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Abraham; 'his brother' that had gone astray. A picture of the true Church, or the true believer of God, that's blessed of God, and has the promise of God&hellip;And he went after his backslidden brother, and pursued with a little handful of men&hellip;and overcome them, and took them and slew them. And brought back all that was lost.&rdquo;</div>
+      <div class="archive-cite">Melchisedec, the Great Prince and King &mdash; 55-0109M, paras. 149, 151</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Melchisedec did not offer him any money. Melchisedec only offered him 'bread and wine.' Melchisedec was a Priest of the Most High; the King of Jerusalem.&rdquo;</div>
+      <div class="archive-cite">Melchisedec, the Great Prince and King &mdash; 55-0109M, para. 153</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And give him the Communion, bread and wine, thousands of years, or hundreds of years, before bread and wine was ever an ordinance in the Church.&rdquo;</div>
+      <div class="archive-cite">Melchisedec, the Great Prince and King &mdash; 55-0109M, para. 155</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Abraham said, 'I won't take no thread, to a shoelatchet; that you might say you made Abraham rich.'&rdquo;</div>
+      <div class="archive-cite">Melchisedec, the Great Prince and King &mdash; 55-0109M, para. 147</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Without father, without mother&hellip;without beginning of days, or without ending of life&hellip;If He had no father, He had no mother, He had no beginning of days or ending of life, Melchisedec still exists&hellip;but was made like unto the Son of God; abideth a priest continually.&rdquo;</div>
+      <div class="archive-cite">Melchisedec, the Great Prince and King &mdash; 55-0109M, paras. 159&ndash;160</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Who was this Priest? None other than the incarnated Lord Jesus Christ, in His magnificent power&hellip;that Melchisedec, when He become a Man of flesh, would be cut into part, and the Communion will be given, the fragments of His broken body, as we take today.&rdquo;</div>
+      <div class="archive-cite">Melchisedec, the Great Prince and King &mdash; 55-0109M, para. 163</div>
     </div>
   </div>
 

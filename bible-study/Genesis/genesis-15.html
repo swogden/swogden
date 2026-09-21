@@ -25,9 +25,19 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -41,7 +51,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-15-hero.jpg" alt="Abram counting the stars at night, and a smoking furnace and burning lamp passing alone between the divided pieces of the covenant">
+    <img src="images/genesis-15-hero.jpg" alt="An old man standing beneath a vast night sky thick with stars, with the divided halves of sacrificial animals laid in a row on the ground before him and a small flame hovering low over the path between them">
   </div>
 
   <!-- Scripture -->
@@ -73,54 +83,185 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: A Covenant Made While He Slept</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: Counted for Righteousness, Sealed by an Oath</h2>
 
-    <div class="study-p">
-      The chapter opens on an old man's honest complaint. Abram has just won a war and refused a fortune in the previous chapter, but none of that has given him what he actually wants: an heir of his own body. He says so plainly &mdash; his estate is on track to pass to a servant, Eliezer of Damascus, for lack of any son. God doesn't rebuke the complaint. He simply answers it, and then does something with that answer that the rest of the Bible never stops returning to.
+    <div class="tag-row">
+      <span class="tag">I Am Thy Shield</span>
+      <span class="tag">Counted for Righteousness</span>
+      <span class="tag">The Sign Abram Asked For</span>
+      <span class="tag">A Horror of Great Darkness</span>
+      <span class="tag">Darkness, Furnace, and a Burning Lamp</span>
     </div>
 
     <div class="study-p">
-      "Look now toward heaven, and tell the stars, if thou be able to number them... so shall thy seed be." And then, in six words that Paul will build an entire doctrine on centuries later: "he believed in the LORD; and he counted it to him for righteousness."
+      Genesis 15 is where Abram's faith is named for what it is, in the verse the rest of Scripture keeps returning to, and where God confirms His promise the only way Brother Branham said an oath could ever be confirmed &mdash; by Himself alone.
     </div>
 
-    <!-- Branham quote 1: righteousness by simple belief -->
+    <h3 class="sec-head">I Am Thy Shield</h3>
+    <div class="study-p">
+      Verses 1 through 4 open with a vision and a complaint: God tells Abram not to fear, and Abram, still childless after years of promise, points out that his own household servant Eliezer stands to inherit everything instead. God's answer is immediate and specific &mdash; not a servant, but a son from Abram's own body. Brother Branham read this whole exchange from Hebrews 6, where the writer treats it as the classic example of God confirming a promise by His own oath, since He had no one greater to swear by.
+    </div>
+
+    <h3 class="sec-head">Counted for Righteousness</h3>
+    <div class="study-p">
+      Verses 5 and 6 give Scripture its first statement of justification by faith, centuries before Paul builds an entire doctrine on it in Romans and Galatians. God takes Abram outside and tells him to count the stars, if he can, and promises his seed will match them. Abram's response is not a plan, a condition, or a bargain &mdash; simply belief, and that belief itself is what God counts as righteousness.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;He never said, &lsquo;Now, Lord, I'll tell you what I'll do. I'll do a certain thing. And I'll do this, or that.&rsquo; He just believed the Lord, and it was counted to him for righteousness, 'cause God said so. He had swore by it, that He would do it.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;He Swore By Himself&rdquo; (54-1212)</div>
+        <div class="quote-text">&ldquo;He never said, 'Now, Lord, I'll tell you what I'll do. I'll do a certain-certain thing.' He just believed the Lord, and it was counted to him for righteousness, 'cause God said so. He had swore by it, that He would do it.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;He Swore by Himself&rdquo; (54-1212, para. 117)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Nothing about that righteousness is earned. Abram offers no sacrifice, performs no task, and passes no test before it's credited to him &mdash; belief alone is the entire transaction. That principle only gets stranger from here, because the very next thing Abram does is ask for confirmation, and God's answer to "how can I know" is one of the oddest scenes in the whole Bible.
+      He was careful to note that this faith did not stand alone, unaccompanied by any outward mark; God still gave Abraham a sign.
     </div>
 
-    <div class="study-p">
-      The ritual itself &mdash; animals cut in half, laid in two facing rows &mdash; would have looked entirely familiar to anyone in the ancient world. Treaty ceremonies of this kind were common: both parties would walk together between the pieces, symbolically saying, "may I become like this animal if I break these terms." Everything up to verse 12 sets that stage. What actually happens breaks the pattern completely.
-    </div>
-
-    <div class="study-p">
-      Abram isn't awake for it. A deep sleep and "an horror of great darkness" fall on him first, and inside that darkness he receives a precise, four-hundred-year prophecy of slavery and deliverance for descendants not yet born. Then, once it's fully dark, something passes between the pieces &mdash; and Abram is nowhere in the ceremony at all.
-    </div>
-
-    <!-- Branham quote 2: the furnace, the lamp, and grace alone -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;A deep sleep fell upon Abraham. See? Now, sleep means &lsquo;death.&rsquo; And when he opened his eyes and looked, there was a smoking furnace. That's where every sinner goes, where we all deserve to go... But notice, then after that, there come a little white light. And this little light went between these pieces of sacrifice. What was God doing? Making His covenant with Abraham. Oh, brother, not by works now, but by grace; nothing you can do... The covenant of Abraham wasn't, &lsquo;Abraham if you'll do a certain thing, I'll do it.&rsquo; He said, &lsquo;I have done it.&rsquo;&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Abraham's Covenant Confirmed&rdquo; (61-0210)</div>
+        <div class="quote-text">&ldquo;Abraham believed God, that's right, and it was imputed to him for righteousness. But God give him a sign; circumcised him, as a sign, a seal.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;He Swore by Himself&rdquo; (54-1212, para. 122)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">The Sign Abram Asked For</h3>
+    <div class="study-p">
+      Verses 7 through 11 record a second, different question &mdash; not "will You?" but "how will I know?" &mdash; and God's answer is the strange ceremony that gives the chapter its name: a heifer, a goat, and a ram, each three years old, cut in half and laid in two rows, with a turtledove and a young pigeon left whole beside them. Brother Branham gave particular attention to why every animal was specified at three years old.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Take the heifers, the goats, and everything, must be three years old. The three different dispensations; fatherhood, sonship, Holy Spirit&hellip;Only one God; three dispensations. Not three Gods; three dispensations of the same God!&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;He Swore by Himself&rdquo; (54-1212, para. 144)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Read that way, the two halves of this chapter are making exactly the same point from two different directions. The stars-and-righteousness verse states it as doctrine: Abram is counted righteous for believing, not for doing. The smoking furnace and the burning lamp show it as a picture: only one party walks through the pieces, because only one party is actually bound by what happens there. Abram sleeps through the entire ratification of his own covenant. He contributes nothing to it &mdash; not even consciousness &mdash; and it's confirmed anyway, in the same day, with land and borders spelled out in specific detail.
+      He also drew a distinction between the animals that were divided and the two birds that were not, tying the undivided birds to a covenant he believed carries through every dispensation without a break.
     </div>
 
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;The turtledove and pigeon, the reason it wasn't cut apart, because a turtledove and pigeon represents Divine healing. The covenant was broke from grace, from law to grace, but the covenant of healing lasts always, from all the way through, there's no cutting it apart at all.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Abraham&rdquo; (55-0608, para. 107)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">A Horror of Great Darkness</h3>
     <div class="study-p">
-      A promise a man can't keep for himself has to rest entirely on the One who made it. That's the whole shape of Genesis 15, whether it's showing up as a doctrine about faith or as a strange fire moving alone through the dark.
+      Verses 12 through 16 turn suddenly ominous: a deep sleep, a horror of great darkness, and a prophecy that Abram's descendants would be strangers and slaves in a foreign land for four hundred years before God judged their oppressors and brought them out with great wealth. Brother Branham read this as God foretelling the entire span of Israel's Egyptian bondage centuries in advance, exact in its terms even while Abram himself would die in peace long before any of it happened.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;God foretelling, unto Abraham, that way down in his great-great-great-grandchildren's would sojourn in a strange land, four hundred years, would be afflicted. Designated a time, exactly, how long it would be.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;He Swore by Himself&rdquo; (54-1212, para. 134)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Darkness, Furnace, and a Burning Lamp</h3>
+    <div class="study-p">
+      Verse 17 is the chapter's most striking image: after the horror of darkness, a smoking furnace and a burning lamp pass alone between the divided pieces, with no mention of Abram walking through them at all. Brother Branham read the three stages of that vision &mdash; darkness, furnace, and light &mdash; as a picture of death, of hell, and finally of Christ Himself.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;First thing, was a horrible darkness, death; then, a smoking furnace, hell; but beyond that, went a little, white Light. I want you to notice. God was showing Abraham Calvary, what He was going to confirm, this covenant between Abraham and Abraham's seed, forever.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;The Unconditional Covenant That God Made With the People&rdquo; (54-0814, para. 84)</div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;So death comes first. Then hell was the next, the smoking furnace. Then he saw a burning Lamp, a Light&hellip;And this Lamp went between each one of those pieces, making a covenant, that God, someday through the promised seed would raise up the Lord Jesus Christ to confirm the covenant with all the peoples of the earth.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Jehovah-Jireh&rdquo; (56-1209E, para. 33)</div>
+      </div>
+    </div>
+
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; A Covenant God Walks Alone</div>
+        <div class="study-p" style="font-size: 17px;">
+          In the ancient custom this ceremony reflects, both parties to a covenant would walk together between the divided pieces, each accepting the animals' fate as the penalty for breaking the agreement. Here, Abram is asleep. Only the furnace and the light pass through &mdash; God alone. Brother Branham's reading makes the point explicit: this covenant carries no condition Abram could fail to keep, because Abram was never a party required to walk it. God bound only Himself.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">The Land Given, Border to Border</h3>
+    <div class="study-p">
+      Verses 18 through 21 close the chapter with the covenant's territorial terms spelled out by name &mdash; from the river of Egypt to the Euphrates, and ten peoples already living on that ground. No sourced Branham commentary on this specific list of nations turned up in the corpus searched for this study; several of these names reappear in the fuller Table of Nations material covered in chapter 10, and this commentary does not go beyond noting that connection.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Hebrews 6:13&ndash;18</span> &mdash; God's oath by Himself, since He could swear by no greater &nbsp;&bull;&nbsp;
+      <span class="xr-key">Romans 4:1&ndash;5</span> &mdash; Abraham believed God, and it was counted to him for righteousness &nbsp;&bull;&nbsp;
+      <span class="xr-key">Galatians 3:6&ndash;9</span> &mdash; they which are of faith are the children of Abraham &nbsp;&bull;&nbsp;
+      <span class="xr-key">Exodus 12:40&ndash;41</span> &mdash; the sojourning of the children of Israel, fulfilling this chapter's four hundred years &nbsp;&bull;&nbsp;
+      <span class="xr-key">Jeremiah 34:18&ndash;19</span> &mdash; passing between the parts of a covenant sacrifice, the same ancient custom &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 10:15&ndash;19</span> &mdash; the Canaanite peoples named again in this chapter's land grant
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 15</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. The specific list of nations and borders in verses 18&ndash;21 did not turn up direct commentary in the corpus searched for this study.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;He never said, 'Now, Lord, I'll tell you what I'll do. I'll do a certain-certain thing.' He just believed the Lord, and it was counted to him for righteousness, 'cause God said so. He had swore by it, that He would do it.&rdquo;</div>
+      <div class="archive-cite">He Swore by Himself &mdash; 54-1212, para. 117</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Abraham believed God, that's right, and it was imputed to him for righteousness. But God give him a sign; circumcised him, as a sign, a seal.&rdquo;</div>
+      <div class="archive-cite">He Swore by Himself &mdash; 54-1212, para. 122</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Take the heifers, the goats, and everything, must be three years old. The three different dispensations; fatherhood, sonship, Holy Spirit&hellip;Only one God; three dispensations.&rdquo;</div>
+      <div class="archive-cite">He Swore by Himself &mdash; 54-1212, para. 144</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;God foretelling, unto Abraham, that way down in his great-great-great-grandchildren's would sojourn in a strange land, four hundred years, would be afflicted. Designated a time, exactly, how long it would be.&rdquo;</div>
+      <div class="archive-cite">He Swore by Himself &mdash; 54-1212, para. 134</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;First thing, was a horrible darkness, death; then, a smoking furnace, hell; but beyond that, went a little, white Light. I want you to notice. God was showing Abraham Calvary.&rdquo;</div>
+      <div class="archive-cite">The Unconditional Covenant That God Made With the People &mdash; 54-0814, para. 84</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;The turtledove and pigeon, the reason it wasn't cut apart, because a turtledove and pigeon represents Divine healing. The covenant was broke from grace, from law to grace, but the covenant of healing lasts always.&rdquo;</div>
+      <div class="archive-cite">Abraham &mdash; 55-0608, para. 107</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;So death comes first. Then hell was the next, the smoking furnace. Then he saw a burning Lamp, a Light&hellip;this Lamp went between each one of those pieces, making a covenant.&rdquo;</div>
+      <div class="archive-cite">Jehovah-Jireh &mdash; 56-1209E, para. 33</div>
     </div>
   </div>
 

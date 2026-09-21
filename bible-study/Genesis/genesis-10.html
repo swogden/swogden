@@ -25,9 +25,24 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
+  .gen-table { width: 100%; border-collapse: collapse; font-size: 16px; }
+  .gen-table th { text-align: left; font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 700; color: #4a2f14; padding: 10px 14px; border-bottom: 2px solid var(--accent); }
+  .gen-table td { padding: 10px 14px; border-bottom: 1px solid rgba(43,29,16,0.15); vertical-align: top; }
+  .gen-table tr:last-child td { border-bottom: none; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
+    .gen-table { font-size: 14px; }
   }
 </style>
 </head>
@@ -41,7 +56,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-10-hero.jpg" alt="Families dispersing across the land after the flood, with Nimrod's walled city rising in the distance">
+    <img src="images/genesis-10-hero.jpg" alt="An ancient map-like scene of three family groups spreading outward across hills and rivers toward the horizon, with a distant ziggurat-like tower rising on the plain">
   </div>
 
   <!-- Scripture -->
@@ -73,55 +88,219 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: Seventy Names, and One Who Stands Out</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: Every Nation on Earth, From One Family</h2>
 
-    <div class="study-p">
-      Genesis 10 does for the whole earth's peoples what chapter 5 did for one lineage: it lists them, generation by generation, until the pattern itself becomes the point. Three times over &mdash; once for Japheth's line, once for Ham's, once for Shem's &mdash; the chapter closes its section with nearly identical language: "after their families, after their tongues, in their lands, after their nations." Jewish tradition has long counted seventy nations in this table, every people on earth traced back to three brothers standing on dry ground after a flood that left only eight people alive.
+    <div class="tag-row">
+      <span class="tag">The Table of Nations</span>
+      <span class="tag">Nimrod: Founder of Babylon</span>
+      <span class="tag">Written Before the Story Is Told</span>
+      <span class="tag">Three Sons, Three Peoples</span>
     </div>
 
     <div class="study-p">
-      Inside that long, evenly-paced list, one name gets an actual description instead of just a place in a family tree: Nimrod, Ham's grandson through Cush. Everyone else in the chapter is a name that "begat" other names. Nimrod is called "a mighty one in the earth," "a mighty hunter before the LORD," and the founder of an actual kingdom &mdash; Babel among its first cities.
+      Genesis 10 is a list of names, seventy of them, and it is easy to read past a genealogy looking for a story. But this chapter makes a claim most of its readers never stop to notice: every nation, tribe, and language on earth today descends from the three men who walked off the ark. There is no other race, no separate origin, no people group Scripture treats as coming from anywhere else.
     </div>
 
-    <!-- Branham quote 1: Nimrod's lineage and Babylon -->
+    <h3 class="sec-head">The Table of Nations</h3>
+    <div class="study-p">
+      The chapter is organized by household, not by chronology &mdash; Japheth's line first (vv.2&ndash;5), then Ham's (vv.6&ndash;20), then Shem's (vv.21&ndash;31), closing with the summary of verse 32. Japheth's descendants spread into the coastlands and "isles of the Gentiles" to the north and west; Ham's into Africa, Arabia, and Canaan; Shem's through Elam, Asshur, and Arphaxad down to Eber, the ancestor from whom the word "Hebrew" is traditionally derived, and on to Peleg and Joktan.
+    </div>
+
+    <table class="gen-table">
+      <tr><th>Japheth</th><th>Ham</th><th>Shem</th></tr>
+      <tr><td>Gomer, Magog, Madai, Javan, Tubal, Meshech, Tiras &mdash; and Gomer's and Javan's sons</td><td>Cush, Mizraim, Phut, Canaan &mdash; Cush father of Nimrod; Canaan father of Sidon, Heth, and the Canaanite peoples</td><td>Elam, Asshur, Arphaxad, Lud, Aram &mdash; Arphaxad to Salah to Eber, father of Peleg and Joktan</td></tr>
+    </table>
+
+    <div class="study-p">
+      Verse 25's note on Peleg &mdash; "for in his days was the earth divided" &mdash; sits inside the Shem genealogy as a kind of marker, flagging that something significant happened in his lifetime that split the family lines apart. The text does not explain it here; it simply names the moment and moves on.
+    </div>
+
+    <h3 class="sec-head">Nimrod: Founder of Babylon</h3>
+    <div class="study-p">
+      Verses 8 through 12 slow down to focus on one man inside Ham's line: Nimrod, "a mighty hunter before the LORD," whose kingdom began at Babel, in the land of Shinar. Brother Branham returned to Nimrod again and again as the founder not just of a city but of a whole pattern &mdash; the first organized, centralized religious-political system on earth.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;From Ham come Nimrod, who built Babylon. Out of Babylon come the Catholic church, the beginning of it. Come on down through Ahab. Come on down from Ahab, into Judas Iscariot; wound it up, the antichrist.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;The Serpent's Seed&rdquo; (58-0928E)</div>
+        <div class="quote-text">&ldquo;The first place that it was pronounced, or we find Babylon, it was made by&mdash;founded by Nimrod. And Nimrod was the&mdash;a son of Ham&hellip;it was once called the 'Gates of Heaven,' or 'Gates of Paradise'&hellip;Then it was called 'confusion.'&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Why I Am a Holy-Roller&rdquo; (53-0830A, para. 24)</div>
       </div>
     </div>
 
     <div class="study-p">
-      That's a long historical line drawn from a single name in a genealogy list, and it's worth being clear about the kind of claim it is: not that everyone descended from Ham is condemned by birth, but that Babylon &mdash; the specific city and system Nimrod founded &mdash; becomes, in this reading, the template for organized religious and political power opposing God throughout the rest of Scripture, all the way to Revelation's own Babylon. Brother Branham elsewhere describes Babylon's character in plain, almost administrative terms.
+      He drew the same picture again a few months later, tracing the seed of Babylon back to what it was made of and forward to what it would grow into.
     </div>
 
-    <!-- Branham quote 2: Babylon as a system -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Babylon, founded by Nimrod: it was just perfectly idolatry, that's all... Babylon was a leading city that made all the other little cities pay tribute to it, kind of like a headquarters somewhere and where orders went out and all the rest of them had to pay in to that one place... We find Babylon in the first of the Bible, in the middle of the Bible, and in the last of the Bible.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Abraham and His Seed After Him&rdquo; (61-0416)</div>
+        <div class="quote-text">&ldquo;You know, Nimrod built Babylon. First Babylon was called the 'Gates of Heaven.' Then it was called 'confusion.' And there's where idolatry first started. Nimrod was a son of Ham, which come on back from a son of Cain.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Earnestly Contending for the Faith That Was Once Delivered to the Saints&rdquo; (53-0614A, para. 18)</div>
       </div>
     </div>
 
     <div class="study-p">
-      As for Nimrod's own character, one detail stands out: unlike the quiet, listed men around him who simply lived and had sons, he was actively building &mdash; a kingdom, a name, a system of his own making. Brother Branham reads that ambition as the same old impulse traced all the way back to Eden.
+      That last phrase &mdash; tracing Nimrod's idolatry "on back from a son of Cain" &mdash; is Brother Branham following a recurring spirit or pattern through history, not asserting a literal bloodline; Genesis 7 already established that Cain's line did not survive the flood, and Ham himself is a son of Noah, in the family that did. What he identified in Nimrod was the same works-religion, self-made-tower spirit he identified in Cain's altar back in Genesis 4 &mdash; man organizing his own way to God, or making a name for himself, apart from what God commanded &mdash; resurfacing in a new generation. He traced that same spirit forward as well, through Babel, into the Babylon of Nebuchadnezzar's day, and on into the Babylon of Revelation.
     </div>
 
-    <!-- Branham quote 3: Nimrod's self-made ambition -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Now, man has tried to achieve, though, all along... [Adam] proved his nature when he taken his bite from the tree of knowledge, separated himself from God, he tried to make himself a way back to God by covering hisself with fig leaves, a religion, making hisself &mdash; he was trying to make salvation without an atonement... And we find that man, still doing the same thing today.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;God's Provided Way&rdquo; (61-0516M)</div>
+        <div class="quote-text">&ldquo;How that formal religion begin in Cain. How it come on out and come down through the sons of Noah, Ham. Out of Ham, he had Nimrod. Nimrod built the tower of Babel. Babel comes on down through King Nebuchadnezzar's time, and on out into Revelation, Babylon.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Israel and the Church 4&rdquo; (53-0328, para. 23)</div>
       </div>
     </div>
 
     <div class="study-p">
-      Where that particular ambition of Nimrod's actually leads &mdash; a tower, a stated purpose, and a very direct response from God &mdash; is the subject of the very next chapter, not this one, so that's where we'll pick it back up. What Genesis 10 itself leaves us with is simpler and, in its own way, more remarkable than any one man's kingdom: an entire world of nations, languages, and peoples, all this study's future readers included, traced back to one family standing together after the water finally went down.
+      He also read Nimrod's kingdom-building as a project of self-sufficient organization &mdash; cities bound together under one ruler, paying tribute to one center &mdash; which he called the first organized system of its kind on earth.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;There's where the first organized church ever begin was in Babylon, by Nimrod: organized all the cities and they paid tribute and so forth to that one place.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Jehovah-Jireh&rdquo; (57-0106, para. 20)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Written Before the Story Is Told</h3>
+    <div class="study-p">
+      Genesis 11 will go back and tell the Babel story itself &mdash; the tower, the one language, the confusion of tongues that scattered the family into the nations this chapter has already listed. Reading the two chapters in order, the Table of Nations describes the world after the event that chapter 11 has not yet narrated. Brother Branham spoke of both halves of that history: mankind united under one language and one purpose until Babel, and Nimrod's tower itself as an act of proud self-reliance that God brought to nothing.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;As we come all of one language and one people until the tower of Babel, a confusion. And then their languages went different&hellip;And they broke up and scattered in different parts of the world.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Questions and Answers 2&rdquo; (54-0103E, para. 153)</div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;It was Nimrod, one day, who said that he would build a tower&hellip;that would go beyond the clouds, that, if the wrath of God ever come, he could outsmart Him&hellip;But it was brought to naught, by a confusion of tongues, and they couldn't even finish the tower.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;A Super Sign&rdquo; (59-1227M, para. 46)</div>
+      </div>
+    </div>
+
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; One Seed, Many Centuries</div>
+        <div class="study-p" style="font-size: 17px;">
+          Brother Branham did not treat Nimrod's Babylon as an isolated event but as one appearance of a pattern that runs the length of Scripture &mdash; man building his own way to God, or his own name in the earth, in place of what God actually said. He traced that pattern from Cain's altar, through Nimrod's tower, through the Babylon of the Old Testament empires, and into the Babylon of Revelation. Genesis 10 sits at the point where that pattern first takes the shape of a city and a kingdom, with a name attached.
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Three Sons, Three Peoples</h3>
+    <div class="study-p">
+      Beyond Nimrod, Brother Branham drew a broader lesson from this chapter's structure itself: everyone alive descends from one of Noah's three sons, and he mapped that threefold family onto the three groupings Jesus and the New Testament writers move among &mdash; Jew, Gentile, and Samaritan.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;There's only three races of people, we all know that, that's Jew, Gentile, and Samaritan; and the Samaritan is half Jew and Gentile. That's Ham, Shem, and Japheth's people, the three sons of Noah, where the human race started from after the antediluvian destruction.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Can We See Jesus&rdquo; (58-0619E, para. 54)</div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;According to the way we see the Scriptures, all human beings came from one tree, Adam. After the antediluvian destruction, there came forth the flood and destroyed all the human beings except the three sons of Noah and their families, from that spring every nation in the world today.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;What Is the Works of God&rdquo; (59-0404, para. 50)</div>
+      </div>
+    </div>
+
+    <div class="study-p">
+      The point he kept coming back to was singular ancestry: whatever divisions history has drawn since, Genesis 10 records one family tree with three branches, not several separate origins for the human race.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 11:1&ndash;9</span> &mdash; the Babel narrative this chapter's dispersal presupposes &nbsp;&bull;&nbsp;
+      <span class="xr-key">1 Chronicles 1:4&ndash;23</span> &mdash; the same genealogy repeated for Israel's own record-keeping &nbsp;&bull;&nbsp;
+      <span class="xr-key">Micah 5:6</span> &mdash; Assyria called "the land of Nimrod" &nbsp;&bull;&nbsp;
+      <span class="xr-key">Acts 17:26</span> &mdash; God hath made of one blood all nations of men &nbsp;&bull;&nbsp;
+      <span class="xr-key">John 4:9</span> &mdash; the Jews have no dealings with the Samaritans &nbsp;&bull;&nbsp;
+      <span class="xr-key">Revelation 17:5</span> &mdash; Babylon the Great, Mother of Harlots
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 10</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. The bulk of the archive concerns Nimrod and Babylon; the individual genealogical names of verses 2&ndash;7 and 13&ndash;30 did not turn up direct commentary in the corpus searched for this study.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Just look at that spirit, how it rose up back there in Cain, how it come on down through Ham, on out through Nimrod, into Babylon; out of Babylon, come on down into the days of the coming of Jesus.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 1 &mdash; 53-0325, para. 33</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Out of Ham's people come Nimrod. Nimrod set up the tower of Babel, which was idol-worship, the first idol-worship on the earth.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 2 &mdash; 53-0326, para. 39</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;How that formal religion begin in Cain. How it come on out and come down through the sons of Noah, Ham. Out of Ham, he had Nimrod. Nimrod built the tower of Babel. Babel comes on down through King Nebuchadnezzar's time, and on out into Revelation, Babylon.&rdquo;</div>
+      <div class="archive-cite">Israel and the Church 4 &mdash; 53-0328, para. 23</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;You know, Nimrod built Babylon. First Babylon was called the 'Gates of Heaven.' Then it was called 'confusion.' And there's where idolatry first started. Nimrod was a son of Ham, which come on back from a son of Cain.&rdquo;</div>
+      <div class="archive-cite">Earnestly Contending for the Faith That Was Once Delivered to the Saints &mdash; 53-0614A, para. 18</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;The first place that it was pronounced, or we find Babylon, it was made by&mdash;founded by Nimrod. And Nimrod was the&mdash;a son of Ham&hellip;it was once called the 'Gates of Heaven,' or 'Gates of Paradise'&hellip;Then it was called 'confusion.'&rdquo;</div>
+      <div class="archive-cite">Why I Am a Holy-Roller &mdash; 53-0830A, para. 24</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;As we come all of one language and one people until the tower of Babel, a confusion. And then their languages went different&hellip;And they broke up and scattered in different parts of the world.&rdquo;</div>
+      <div class="archive-cite">Questions and Answers 2 &mdash; 54-0103E, para. 153</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;There's where the first organized church ever begin was in Babylon, by Nimrod: organized all the cities and they paid tribute and so forth to that one place.&rdquo;</div>
+      <div class="archive-cite">Jehovah-Jireh &mdash; 57-0106, para. 20</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;How many nationalities of people are there in the world? There's three: Ham, Shem, and Japheth's people. We come from those three sons of Noah.&rdquo;</div>
+      <div class="archive-cite">Questions and Answers on Hebrews Part I &mdash; 57-0925, para. 112</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;There's only three races of people, we all know that, that's Jew, Gentile, and Samaritan; and the Samaritan is half Jew and Gentile. That's Ham, Shem, and Japheth's people, the three sons of Noah, where the human race started from after the antediluvian destruction.&rdquo;</div>
+      <div class="archive-cite">Can We See Jesus &mdash; 58-0619E, para. 54</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;According to the way we see the Scriptures, all human beings came from one tree, Adam. After the antediluvian destruction, there came forth the flood and destroyed all the human beings except the three sons of Noah and their families, from that spring every nation in the world today.&rdquo;</div>
+      <div class="archive-cite">What Is the Works of God &mdash; 59-0404, para. 50</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;It was Nimrod, one day, who said that he would build a tower&hellip;that would go beyond the clouds, that, if the wrath of God ever come, he could outsmart Him&hellip;But it was brought to naught, by a confusion of tongues, and they couldn't even finish the tower.&rdquo;</div>
+      <div class="archive-cite">A Super Sign &mdash; 59-1227M, para. 46</div>
     </div>
   </div>
 

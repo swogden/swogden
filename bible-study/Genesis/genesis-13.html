@@ -25,9 +25,19 @@
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -41,7 +51,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-13-hero.jpg" alt="Abram and Lot parting ways, each gesturing toward the land he will take, their households dividing behind them">
+    <img src="images/genesis-13-hero.jpg" alt="Two men standing on a hillside overlooking a fork in the land, one gesturing toward a lush green river plain in the distance, the other toward the dry hill country">
   </div>
 
   <!-- Scripture -->
@@ -55,11 +65,13 @@
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
       <span class="dropcap">A</span>nd Abram went up out of Egypt, he, and his wife, and all that he had, and Lot with him, into the south. <span class="verse-num">2</span>And Abram was very rich in cattle, in silver, and in gold. <span class="verse-num">3</span>And he went on his journeys from the south even to Bethel, unto the place where his tent had been at the beginning, between Bethel and Hai; <span class="verse-num">4</span>Unto the place of the altar, which he had made there at the first: and there Abram called on the name of the LORD.
       <br><br>
-      <span class="verse-num">5</span>And Lot also, which went with Abram, had flocks, and herds, and tents. <span class="verse-num">6</span>And the land was not able to bear them, that they might dwell together: for their substance was great, so that they could not dwell together. <span class="verse-num">7</span>And there was a strife between the herdmen of Abram's cattle and the herdmen of Lot's cattle: and the Canaanite and the Perizzite dwelled then in the land. <span class="verse-num">8</span>And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren. <span class="verse-num">9</span>Is not the whole land before thee? separate thyself, I pray thee, from me: if thou wilt take the left hand, then I will go to the right; or if thou depart to the right hand, then I will go to the left.
+      <span class="verse-num">5</span>And Lot also, which went with Abram, had flocks, and herds, and tents. <span class="verse-num">6</span>And the land was not able to bear them, that they might dwell together: for their substance was great, so that they could not dwell together. <span class="verse-num">7</span>And there was a strife between the herdmen of Abram's cattle and the herdmen of Lot's cattle: and the Canaanite and the Perizzite dwelled then in the land.
+      <br><br>
+      <span class="verse-num">8</span>And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren. <span class="verse-num">9</span>Is not the whole land before thee? separate thyself, I pray thee, from me: if thou wilt take the left hand, then I will go to the right; or if thou depart to the right hand, then I will go to the left.
       <br><br>
       <span class="verse-num">10</span>And Lot lifted up his eyes, and beheld all the plain of Jordan, that it was well watered every where, before the LORD destroyed Sodom and Gomorrah, even as the garden of the LORD, like the land of Egypt, as thou comest unto Zoar. <span class="verse-num">11</span>Then Lot chose him all the plain of Jordan; and Lot journeyed east: and they separated themselves the one from the other. <span class="verse-num">12</span>Abram dwelled in the land of Canaan, and Lot dwelled in the cities of the plain, and pitched his tent toward Sodom. <span class="verse-num">13</span>But the men of Sodom were wicked and sinners before the LORD exceedingly.
       <br><br>
-      <span class="verse-num">14</span>And the LORD said unto Abram, after that Lot was separated from him, Lift up now thine eyes, and look from the place where thou art northward, and southward, and eastward, and westward: <span class="verse-num">15</span>For all the land which thou seest, to thee will I give it, and to thy seed for ever. <span class="verse-num">16</span>And I will make thy seed as the dust of the earth: so that if a man can number the dust of the earth, then shall thy seed also be numbered. <span class="verse-num">17</span>Arise, walk through the land in the length of it and in the breadth of it; for I will give it thee.
+      <span class="verse-num">14</span>And the LORD said unto Abram, after that Lot was separated from him, Lift up now thine eyes, and look from the place where thou art northward, and southward, and eastward, and westward: <span class="verse-num">15</span>For all the land which thou seest, to thee will I give it, and to thy seed for ever. <span class="verse-num">16</span>And I will make thy seed as the dust of the earth: so that if a man can number the dust of the earth, then shall thy seed also be numbered. <span class="verse-num">17</span>Arise, walk through the land in the length of it and in the breadth of it; for I will give it unto thee.
       <br><br>
       <span class="verse-num">18</span>Then Abram removed his tent, and came and dwelt in the plain of Mamre, which is in Hebron, and built there an altar unto the LORD.
       <div style="clear: both;"></div>
@@ -73,50 +85,134 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: What Two Sets of Eyes Saw</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: Two Men, Two Choices, Two Destinies</h2>
 
-    <div class="study-p">
-      Abram comes back out of Egypt and goes straight back to the exact place he'd left &mdash; "unto the place of the altar, which he had made there at the first." After a chapter that ended with his nerve failing him badly, there's something quietly hopeful in that detail: he doesn't stay lost in Egypt's compromise. He retraces his steps to where he'd last called on the name of the LORD.
+    <div class="tag-row">
+      <span class="tag">Returning to the Altar</span>
+      <span class="tag">Strife and a Generous Offer</span>
+      <span class="tag">Lot's Choice</span>
+      <span class="tag">The Promise Renewed</span>
+      <span class="tag">An Altar at Mamre</span>
     </div>
 
     <div class="study-p">
-      The trouble that follows isn't sin exactly &mdash; it's success. Both men have grown too prosperous for the land to support them together, and their herdsmen start fighting over it. Abram's handling of the conflict is generous almost to a fault: as the elder, the one who actually received the promise, he still offers Lot first pick of the whole land. Whatever else this chapter says about Abram, it's a real contrast to how he handled pressure just one chapter earlier.
+      Genesis 13 brings Abram back from Egypt to the place he left, and then splits his household in two. What follows is one of the clearest side-by-side pictures in Genesis of two believers who received the same call and chose two different roads.
     </div>
 
+    <h3 class="sec-head">Returning to the Altar</h3>
     <div class="study-p">
-      Lot's choice, when it comes, is described entirely in terms of what his eyes could see: a well-watered plain, lush "even as the garden of the LORD." Nothing in the text says he consulted God about it at all.
+      Verses 1 through 4 bring Abram back out of Egypt to the exact place between Bethel and Hai where he had built his first altar in chapter 12. The text is precise about it &mdash; "unto the place of the altar, which he had made there at the first" &mdash; and there Abram calls on the name of the LORD again. Read against chapter 12's pattern of altars in Canaan and compromise in Egypt, this return is itself the point: failure in Egypt did not disqualify Abram, and his first act back in the land is worship at the very place he had worshipped before.
     </div>
 
-    <!-- Branham quote 1: Lot as a type of the carnal believer -->
+    <h3 class="sec-head">Strife and a Generous Offer</h3>
+    <div class="study-p">
+      Verses 5 through 9 record the practical problem behind the chapter's real subject: too much livestock, not enough land, and conflict between the two households' herdsmen. Abram's response is to give away his own advantage &mdash; first choice of the land &mdash; rather than assert the rights that, as the elder and the one actually carrying God's promise, he could have claimed. Brother Branham read this whole scene from the pulpit as Scripture's own case study in total separation, opening an entire message from this chapter's account of Abram and Lot dividing.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Lot wanted the world. God... separated Abraham and Lot. Lot, being a type, again, of a carnal believer who didn't think these things were true, he just went on down in Sodom. And he didn't have the real spunk to stand out... and call what was right &lsquo;right,&rsquo; and wrong &lsquo;wrong,&rsquo; so he went down.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;God's Word Calls for a Total Separation from Unbelief&rdquo; (64-0121)</div>
+        <div class="quote-text">&ldquo;And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdsmen and thy herdsmen; for we are brethren&hellip;Is not the whole land before thee? separate thyself, I pray thee, from me.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, reading Genesis 13, &ldquo;God's Word Calls for a Total Separation From Unbelief&rdquo; (64-0121, para. 2)</div>
+      </div>
+    </div>
+
+    <h3 class="sec-head">Lot's Choice</h3>
+    <div class="study-p">
+      Verses 10 through 13 give Lot the choice Abram offered, and Lot takes it on sight, without asking what kind of neighbors came with the view. The well-watered plain looks like Eden; the text immediately adds, almost as a warning label, that the men of Sodom were exceedingly wicked. Brother Branham treated Lot's choice as a picture of a believer who values what looks good over what is right, and Abraham as the pattern of the believer who holds to the Word regardless of what it costs him in the moment.
+    </div>
+
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Lot wanted the world. God&hellip;tore up his world, and separated Abraham and Lot. Lot, being a type, again, of a carnal believer who didn't think these things were true, he just went on down in Sodom. And he didn't have the real spunk to stand out&hellip;and call what was right 'right,' and wrong 'wrong,' so he went down.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;God's Word Calls for a Total Separation From Unbelief&rdquo; (64-0121, para. 74)</div>
       </div>
     </div>
 
     <div class="study-p">
-      That same sermon draws a blunt comparison between the two men &mdash; not a claim that one is saved and the other isn't, but a difference in how much of their life each was actually willing to give over.
+      He put the contrast between the two men in even sharper terms elsewhere in the same message.
     </div>
 
-    <!-- Branham quote 2: the penny and the silver dollar -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Lot was just a penny, Abraham was a silver dollar, so it taken a hundred Lots to make an Abraham... God can use him. Oh, He is using it... but He'll use what He can use, as much as they'll let Him use.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;God's Word Calls for a Total Separation from Unbelief&rdquo; (64-0121)</div>
+        <div class="quote-text">&ldquo;Lot was just a penny, Abraham was a silver dollar, so it taken a hundred Lots to make an Abraham.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;God's Word Calls for a Total Separation From Unbelief&rdquo; (64-0121, para. 76)</div>
       </div>
     </div>
 
-    <div class="study-p">
-      Once Lot is gone, the text hands Abram his own moment of lifted eyes &mdash; and the echo is almost certainly deliberate. Lot "lifted up his eyes" and picked the best-looking land available to him. Now God tells Abram, "Lift up now thine eyes," and gives him something no amount of looking could have found on its own: not the most fertile plain in view, but "all the land which thou seest," and offspring beyond counting, promised in a word rather than chosen by sight. Two men look out over the same general region. One trusts what looks good. The other is handed something no landscape could show him.
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; Two Believers, One Separation</div>
+        <div class="study-p" style="font-size: 17px;">
+          Brother Branham read the parting of Abraham and Lot as more than one family argument settled peacefully; he treated it as a recurring pattern God repeats whenever He is about to act &mdash; a carnal, world-loving believer separated out from the one who holds to the promise. He connected this same pattern forward to the days just before Sodom's destruction in Genesis 19, and from there to Jesus' own words that His coming would be "as it was in the days of Sodom" &mdash; the same kind of separation between the carnal and the genuine happening again before the end.
+        </div>
+      </div>
     </div>
 
+    <h3 class="sec-head">The Promise Renewed</h3>
     <div class="study-p">
-      Abram's response is to move again and build yet another altar, his third in two chapters, at Mamre in Hebron. Lot's story simply trails off for now, settled toward a city the text has already quietly flagged: "the men of Sodom were wicked and sinners before the LORD exceedingly." Nothing bad has happened to him yet. But the ground he's chosen has already been named for what it is, and the reader knows it even if Lot, for the moment, doesn't seem to.
+      Verses 14 through 17 record God speaking to Abram immediately after Lot leaves &mdash; not before, the text is careful to note, but "after that Lot was separated from him." The promise is repeated and enlarged: all the land in every direction, and a seed like the dust of the earth. Read alongside the type just discussed, the timing is worth noticing on its own terms: the fuller promise comes once the mixed household becomes a separated one, though this commentary does not go further than what the text itself makes plain, since no sourced Branham commentary on this specific timing turned up in the corpus searched for this study.
+    </div>
+
+    <h3 class="sec-head">An Altar at Mamre</h3>
+    <div class="study-p">
+      The chapter closes with Abram moving to the plain of Mamre in Hebron and building yet another altar there. No corpus quotation addressing this specific altar turned up for this study, so this commentary simply notes the pattern it completes: three altars now stand behind Abram &mdash; at Shechem, at Bethel, and now at Hebron &mdash; each one marking a place where he chose worship over the world's version of the same ground Lot had just chosen for its view.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Genesis 12:6&ndash;8</span> &mdash; the earlier altars at Shechem and Bethel &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 19:1&ndash;29</span> &mdash; the destruction of Sodom, and Lot's rescue from it &nbsp;&bull;&nbsp;
+      <span class="xr-key">Luke 17:28&ndash;30</span> &mdash; as it was in the days of Lot, so shall it be in the day the Son of man is revealed &nbsp;&bull;&nbsp;
+      <span class="xr-key">2 Peter 2:6&ndash;8</span> &mdash; righteous Lot, vexed with the filthy conversation of the wicked &nbsp;&bull;&nbsp;
+      <span class="xr-key">Hebrews 11:9&ndash;10</span> &mdash; Abraham dwelling in tents, looking for a city with foundations &nbsp;&bull;&nbsp;
+      <span class="xr-key">2 Corinthians 6:17</span> &mdash; come out from among them, and be ye separate
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 13</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. The altar at Mamre in verse 18 and the exact timing of the renewed promise in verses 14&ndash;17 did not turn up additional direct commentary beyond what is already covered above.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdsmen and thy herdsmen; for we are brethren&hellip;Is not the whole land before thee? separate thyself, I pray thee, from me.&rdquo;</div>
+      <div class="archive-cite">God's Word Calls for a Total Separation From Unbelief &mdash; 64-0121, para. 2</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Abraham, also, he was a separated person, from the world, when God called Abraham at seventy-five years old&hellip;Because, he was holding a promise of a son. He had to separate from his father, from his mother, from his kindred.&rdquo;</div>
+      <div class="archive-cite">God's Word Calls for a Total Separation From Unbelief &mdash; 64-0121, para. 68</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;As it was in the days of Sodom, so shall it be in the coming of the Son of man&hellip;the Holy Spirit&hellip;manifesting Hisself, separating, again, Lot from Abraham.&rdquo;</div>
+      <div class="archive-cite">God's Word Calls for a Total Separation From Unbelief &mdash; 64-0121, para. 73</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Lot wanted the world. God&hellip;tore up his world, and separated Abraham and Lot. Lot, being a type, again, of a carnal believer who didn't think these things were true, he just went on down in Sodom.&rdquo;</div>
+      <div class="archive-cite">God's Word Calls for a Total Separation From Unbelief &mdash; 64-0121, para. 74</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Lot was just a penny, Abraham was a silver dollar, so it taken a hundred Lots to make an Abraham.&rdquo;</div>
+      <div class="archive-cite">God's Word Calls for a Total Separation From Unbelief &mdash; 64-0121, para. 76</div>
     </div>
   </div>
 

@@ -23,12 +23,21 @@
   .quote-mark { font-family: 'UnifrakturMaguntia', cursive; font-size: 40px; color: #6d2331; line-height: 1; flex-shrink: 0; }
   .quote-text { font-style: italic; font-size: 17px; line-height: 1.6; color: #3b2a1a; }
   .quote-cite { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #6d2331; font-weight: 600; }
-  .note-box { font-size: 16px; font-style: italic; line-height: 1.6; color: #5a4632; padding: 16px 22px; background: rgba(90,70,50,0.06); border-radius: 4px; }
   .hero { align-self: center; box-shadow: 0 18px 40px rgba(43,29,16,0.35); max-width: 100%; }
   .hero img { display: block; width: 1000px; max-width: 100%; height: auto; border-radius: 2px; }
+  h3.sec-head { margin: 6px 0 -6px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 23px; color: #4a2f14; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); background: rgba(168,121,46,0.08); font-weight: 600; }
+  .type-box { display: flex; gap: 16px; padding: 22px 26px; background: #f0e6cc; border: 1px solid var(--accent); border-radius: 4px; }
+  .type-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .archive-quote { display: flex; flex-direction: column; gap: 7px; padding: 18px 22px; background: #fbf6e9; border-left: 3px solid var(--accent); border-radius: 2px; }
+  .archive-text { font-style: italic; font-size: 16px; line-height: 1.65; color: #3b2a1a; }
+  .archive-cite { font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; color: #8a765d; font-weight: 600; }
+  .xref-list { font-size: 16px; line-height: 1.9; color: #2b1d10; }
+  .xref-list span.xr-key { color: var(--accent); font-weight: 600; }
   @media (max-width: 900px) {
     .wrap { padding: 48px 24px 72px; gap: 36px; }
-    .study-p, .quote-text { font-size: 16px; }
+    .study-p, .quote-text, .archive-text, .xref-list { font-size: 16px; }
   }
 </style>
 </head>
@@ -42,7 +51,7 @@
 
   <!-- Hero image -->
   <div class="hero">
-    <img src="images/genesis-9-hero.jpg" alt="Noah tending a young vineyard on a sunlit hillside, a settlement of tents in the distance">
+    <img src="images/genesis-9-hero.jpg" alt="A seven-colored rainbow arching over the new earth above Noah's altar, with his three sons and their families standing beneath it">
   </div>
 
   <!-- Scripture -->
@@ -54,7 +63,9 @@
     </div>
 
     <div style="font-size: 19px; line-height: 1.85; color: #2b1d10; text-align: justify;">
-      <span class="dropcap">A</span>nd God blessed Noah and his sons, and said unto them, Be fruitful, and multiply, and replenish the earth. <span class="verse-num">2</span>And the fear of you and the dread of you shall be upon every beast of the earth, and upon every fowl of the air, upon all that moveth upon the earth, and upon all the fishes of the sea; into your hand are they delivered. <span class="verse-num">3</span>Every moving thing that liveth shall be meat for you; even as the green herb have I given you all things. <span class="verse-num">4</span>But flesh with the life thereof, which is the blood thereof, shall ye not eat. <span class="verse-num">5</span>And surely your blood of your lives will I require; at the hand of every beast will I require it, and at the hand of man; at the hand of every man's brother will I require the life of man. <span class="verse-num">6</span>Whoso sheddeth man's blood, by man shall his blood be shed: for in the image of God made he man. <span class="verse-num">7</span>And you, be ye fruitful, and multiply; bring forth abundantly in the earth, and multiply therein.
+      <span class="dropcap">A</span>nd God blessed Noah and his sons, and said unto them, Be fruitful, and multiply, and replenish the earth. <span class="verse-num">2</span>And the fear of you and the dread of you shall be upon every beast of the earth, and upon every fowl of the air, upon all that moveth upon the earth, and upon all the fishes of the sea; into your hand are they delivered. <span class="verse-num">3</span>Every moving thing that liveth shall be meat for you; even as the green herb have I given you all things. <span class="verse-num">4</span>But flesh with the life thereof, which is the blood thereof, shall ye not eat.
+      <br><br>
+      <span class="verse-num">5</span>And surely your blood of your lives will I require; at the hand of every beast will I require it, and at the hand of man; at the hand of every man's brother will I require the life of man. <span class="verse-num">6</span>Whoso sheddeth man's blood, by man shall his blood be shed: for in the image of God made he man. <span class="verse-num">7</span>And you, be ye fruitful, and multiply; bring forth abundantly in the earth, and multiply therein.
       <br><br>
       <span class="verse-num">8</span>And God spake unto Noah, and to his sons with him, saying, <span class="verse-num">9</span>And I, behold, I establish my covenant with you, and with your seed after you; <span class="verse-num">10</span>And with every living creature that is with you, of the fowl, of the cattle, and of every beast of the earth with you; from all that go out of the ark, to every beast of the earth. <span class="verse-num">11</span>And I will establish my covenant with you; neither shall all flesh be cut off any more by the waters of a flood; neither shall there any more be a flood to destroy the earth.
       <br><br>
@@ -78,58 +89,143 @@
     <div class="rule"></div>
   </div>
 
-  <!-- Study -->
+  <!-- Commentary -->
   <div class="center-col">
-    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Study: The Sign, the Vine, and the Curse</h2>
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Commentary: A Bow Sworn by Oath, and a Second Fall in a Vineyard</h2>
 
-    <div class="study-p">
-      The world Noah steps into needs new terms, and God restates the original mandate with real differences. "Be fruitful and multiply" returns from Genesis 1, but this time animals fear man rather than simply being named by him, meat is explicitly permitted for the first time, and a hard line is drawn at blood. Verse 6 goes further still, grounding the first instance of human justice &mdash; capital punishment for murder &mdash; not in law or convenience, but in the fact that man is made in the image of God. That's a strong foundation for something as serious as taking a life in judgment.
+    <div class="tag-row">
+      <span class="tag">A New Charge for a New World</span>
+      <span class="tag">The Rainbow: A Covenant Sworn by Oath</span>
+      <span class="tag">Seven Colors, Seven Ages</span>
+      <span class="tag">Noah's Vineyard</span>
+      <span class="tag">Cursed Be Canaan</span>
     </div>
 
     <div class="study-p">
-      Then comes a promise that doesn't depend on anyone's behavior at all &mdash; unconditional, and, remarkably, aimed as much at the earth itself and at God's own resolve as at Noah personally.
+      With the ark emptied and the altar smoking, God gives the new world a new charge, and then, before the chapter closes, the man who was &ldquo;perfect in his generations&rdquo; falls in a way that has nothing to do with a flood. Genesis 9 holds both a covenant sealed forever and a family broken in a single afternoon.
     </div>
 
-    <!-- Branham quote 1: the rainbow as covenant with the earth -->
+    <h3 class="sec-head">A New Charge for a New World</h3>
+    <div class="study-p">
+      Verses 1 through 7 repeat Eden's original blessing &mdash; be fruitful, multiply, replenish the earth &mdash; but add two things Eden never needed: permission to eat animal flesh, on the condition that its blood not be eaten, and the death penalty for murder, grounded explicitly in man still bearing God's image. Nothing in the corpus searched for this study directly comments on these verses, so this commentary states the text as it stands rather than assigning it a citation it does not have: a world now capable of the violence chapter 6 described is given both a wider provision and a firmer boundary than the world before the flood was given.
+    </div>
+
+    <h3 class="sec-head">The Rainbow: A Covenant Sworn by Oath</h3>
+    <div class="study-p">
+      Verses 8 through 17 give the flood's aftermath its most famous sign. Brother Branham treated the rainbow not as decoration but as the token of an oath &mdash; a covenant God made, in a sense, with Himself, since nothing exists greater than God to swear by.
+    </div>
+
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;'I do set my bow in the clouds, and it shall be for a token of a covenant betwixt me and the earth.' What? 'Betwixt Me and Noah'? No. 'Betwixt Me and the earth.'... This was God's Own covenant with Himself, a rainbow... A token of what? Of a sacrifice that has been accepted&rdquo; &mdash; pointing straight back to Noah's altar in the previous chapter.</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Revelation, Chapter Four, Part II&rdquo; (61-0101)</div>
+        <div class="quote-text">&ldquo;A covenant is always made by an oath&hellip;there was nobody greater than God, so He took an oath Himself, by Himself&hellip;this greenish&hellip;what does green represent? Life&hellip;God has promised, as He took a oath back there in Genesis, that He 'would no more' put the rainbow in the sky&hellip;that He 'would no more destroy this world by water.'&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Revelation, Chapter Four, Part II&rdquo; (61-0101, paras. 195, 197)</div>
       </div>
     </div>
 
     <div class="study-p">
-      That same sermon carries the rainbow further, into typology many readers won't have considered: the seven visible colors as a picture of seven church ages, and this rainbow's limited, half-arc appearance as a contrast to something greater still to come.
+      He read the covenant language of verses 12 through 17 as deliberately doubled &mdash; a promise to Noah personally, and a separate, larger oath God swears concerning the whole earth, tying it to the same kind of unbreakable, self-sworn promise given later to Abraham.
     </div>
 
-    <!-- Branham quote 2: the seven colors and the church ages -->
     <div class="quote-box">
       <div class="quote-mark">&ldquo;</div>
       <div style="display: flex; flex-direction: column; gap: 8px;">
-        <div class="quote-text">&ldquo;Noah's rainbow composed primarily of seven colors... seven bows, seven churches reflecting seven lights, each light wrapped into the other one... a covenant that through Seven Church Ages... He would save the earth. But... this rainbow only, horizontally, just covers one half the earth... When John saw Him [in Revelation], He surrounded the whole Throne of God.&rdquo;</div>
-        <div class="quote-cite">&mdash; William Branham, &ldquo;Revelation, Chapter Four, Part II&rdquo; (61-0101)</div>
+        <div class="quote-text">&ldquo;In Exodus 23:13 and in Hebrews 6:12, God made a covenant with Himself and swore by Himself&hellip;There was no greater to swear by when He told Abraham and Isaac&hellip;that He would make a covenant with him, an everlasting covenant.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Revelation, Chapter Four, Part II&rdquo; (61-0101, para. 194)</div>
       </div>
     </div>
 
+    <h3 class="sec-head">Seven Colors, Seven Ages</h3>
     <div class="study-p">
-      The chapter then turns, abruptly and without transition, from a cosmic covenant to a very small, very human failure. Noah &mdash; the one man found righteous enough to survive the judgment of the entire world &mdash; plants a vineyard, drinks its wine, and ends up drunk and exposed inside his own tent. Nothing in the text softens that. The man who walked with God, who built the ark exactly as instructed, who offered the sacrifice that made a covenant with the whole earth possible, is shown here at his most undignified.
+      Brother Branham went further into the rainbow's own construction, finding a second layer of meaning in the number of colors it contains.
     </div>
 
-    <div class="study-p">
-      What his three sons each do with that moment says something plain about honor. Ham sees his father's condition and goes and tells his brothers &mdash; making his father's shame into information to pass around rather than something to cover. Shem and Japheth do the opposite: they take a garment between them, walk in backward so as not to see what they're covering, and protect their father's dignity without so much as looking at what caused the problem in the first place.
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Noah's rainbow composed primarily of seven colors&hellip;Now, if you notice, seven&hellip;seven-color rainbow. That meant seven bows! Seven bows, seven churches reflecting seven lights, each light wrapped into the other one.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Revelation, Chapter Four, Part II&rdquo; (61-0101, paras. 176&ndash;177)</div>
+      </div>
     </div>
 
-    <div class="study-p">
-      What follows &mdash; Noah's curse on Canaan and blessing on Shem and Japheth &mdash; is one of the most misused passages in the entire Bible, so it's worth being exact about what the text actually says and doesn't say. The curse falls on <em>Canaan</em>, one of Ham's sons, not on Ham himself, and certainly not on any race or people group; the words "race," "color," and "skin" appear nowhere in this passage. Ham had at least three other sons &mdash; Cush, Mizraim, and Phut, named in the very next chapter &mdash; and none of them are cursed here at all. For centuries this text was twisted to justify slavery and racial hierarchy, a reading the passage itself simply does not support once you read what it actually says rather than what tradition has claimed it says.
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="quote-text">&ldquo;Seven Spirits, seven colors, seven church ages, seven ministers, seven lights, everything's in a seven. God is perfect in 'seven.' God worked six days; seventh day, He rested. The world will exist six thousand years, and the seventh thousand is the Millennium.&rdquo;</div>
+        <div class="quote-cite">&mdash; William Branham, &ldquo;Revelation, Chapter Four, Part II&rdquo; (61-0101, para. 192)</div>
+      </div>
     </div>
 
-    <div class="note-box">
-      A note on sourcing, for the sake of being consistent with how this whole study has worked: unlike almost every other passage covered so far, I couldn't find anywhere in Brother Branham's sermons where he directly addresses this specific episode &mdash; the drunkenness, the curse on Canaan, or the historical misuse of this passage. Where his own teaching runs out, this study runs out with it rather than guessing at what he might have said.
+    <!-- Types & Shadows -->
+    <div class="type-box">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div class="type-label">Type &amp; Shadow &mdash; A Bow That Cannot Be Broken</div>
+        <div class="study-p" style="font-size: 17px;">
+          A bow is a weapon turned toward the one who draws it. Set in the clouds and pointed away from the earth, it is a picture of judgment permanently redirected &mdash; the same wrath that fell in chapter 7 now stands visibly disarmed every time the sign appears. What Noah receives here is not a suggestion or a hope, but an oath God swears on His own Name, which Brother Branham read as making it as unbreakable as anything God has ever promised.
+        </div>
+      </div>
     </div>
 
+    <h3 class="sec-head">Noah's Vineyard</h3>
     <div class="study-p">
-      The chapter, and Noah's whole story, closes on a simple accounting: three hundred fifty more years lived after the flood, nine hundred fifty years total, and then he died &mdash; a man who outlasted an entire world, and lived long enough to see the beginnings of the next one take root.
+      Verses 20 and 21 turn without warning from covenant to catastrophe: the same man who walked with God through the greatest judgment in Scripture plants a vineyard, drinks its wine, and ends up drunk and exposed in his own tent. No search of the corpus for this study turned up a Branham quotation addressing this scene directly, so this commentary limits itself to what the text itself says rather than filling that gap with unsourced claims. What it says plainly is sobering on its own: surviving the flood did not make Noah immune to an ordinary, private failure, and Scripture records it without softening it.
+    </div>
+
+    <h3 class="sec-head">Cursed Be Canaan</h3>
+    <div class="study-p">
+      Verses 22 through 27 record the family's three different responses to what they found, and the consequences Noah pronounces once he wakes. The curse in verse 25 falls specifically on Canaan, Ham's son, not on Ham himself or on his other sons &mdash; a distinction the text itself makes and that this commentary preserves rather than broadening. Historically, Canaan's descendants became the Canaanite peoples who occupied the land Israel was later given, the very nations Joshua's conquest and the rest of Israel's history repeatedly confronts; verse 27's blessing on Japheth and Shem's tents runs forward into the family lines Genesis 10 lays out in the very next chapter. As with the two sections above, no sourced Branham commentary on this specific passage turned up in the corpus searched for this study, so nothing further is claimed here beyond what the text and its historical outworking in the rest of the Old Testament support.
+    </div>
+
+    <!-- Scripture cross-references -->
+    <h3 class="sec-head">Scripture Cross-References</h3>
+    <div class="xref-list">
+      <span class="xr-key">Hebrews 6:13&ndash;18</span> &mdash; God, willing to show the immutability of His counsel, sware by Himself &nbsp;&bull;&nbsp;
+      <span class="xr-key">Ezekiel 1:28</span> &mdash; as the appearance of the bow in the cloud, so was the appearance of the Lord &nbsp;&bull;&nbsp;
+      <span class="xr-key">Revelation 4:3</span> &mdash; a rainbow round about the throne, in sight like unto an emerald &nbsp;&bull;&nbsp;
+      <span class="xr-key">Leviticus 17:10&ndash;14</span> &mdash; the prohibition against eating blood, repeated under the Law &nbsp;&bull;&nbsp;
+      <span class="xr-key">Exodus 20:13</span> &mdash; thou shalt not kill &nbsp;&bull;&nbsp;
+      <span class="xr-key">Genesis 10:6&ndash;20</span> &mdash; the sons of Ham, including Canaan, and their nations &nbsp;&bull;&nbsp;
+      <span class="xr-key">Joshua 9:23</span> &mdash; the Gibeonites, of the Canaanite peoples, made bondmen to Israel
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="display: flex; align-items: center; gap: 14px; max-width: 760px; align-self: center; width: 100%;">
+    <div class="rule"></div>
+    <div class="diamond"></div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- Quote Archive -->
+  <div class="center-col">
+    <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 32px;">Quote Archive: Genesis 9</h2>
+    <div class="study-p" style="font-size: 16px; color: #6d5a3f;">
+      Every paragraph located in the sermon archive that speaks directly to this chapter, arranged chronologically by preaching date. Citations are sermon-date-code and paragraph number, per the standard Voice of God Recordings numbering, so each quote can be checked against its original context. This chapter's material is concentrated in a single message; the verses on the flesh-and-blood provision, capital punishment, and the Ham and Canaan episode did not turn up direct commentary in the corpus searched for this study.
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Noah's rainbow composed primarily of seven colors&hellip;seven-color rainbow. That meant seven bows! Seven bows, seven churches reflecting seven lights, each light wrapped into the other one.&rdquo;</div>
+      <div class="archive-cite">Revelation, Chapter Four, Part II &mdash; 61-0101, paras. 176&ndash;177</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;In Exodus 23:13 and in Hebrews 6:12, God made a covenant with Himself and swore by Himself&hellip;There was no greater to swear by when He told Abraham and Isaac&hellip;that He would make a covenant with him, an everlasting covenant.&rdquo;</div>
+      <div class="archive-cite">Revelation, Chapter Four, Part II &mdash; 61-0101, para. 194</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;A covenant is always made by an oath&hellip;there was nobody greater than God, so He took an oath Himself, by Himself.&rdquo;</div>
+      <div class="archive-cite">Revelation, Chapter Four, Part II &mdash; 61-0101, para. 195</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;This greenish&hellip;what does green represent? Life&hellip;God has promised, as He took a oath back there in Genesis, that He 'would no more' put the rainbow in the sky&hellip;that He 'would no more destroy this world by water.'&rdquo;</div>
+      <div class="archive-cite">Revelation, Chapter Four, Part II &mdash; 61-0101, para. 197</div>
+    </div>
+
+    <div class="archive-quote">
+      <div class="archive-text">&ldquo;Seven Spirits, seven colors, seven church ages, seven ministers, seven lights, everything's in a seven. God is perfect in 'seven.' God worked six days; seventh day, He rested. The world will exist six thousand years, and the seventh thousand is the Millennium.&rdquo;</div>
+      <div class="archive-cite">Revelation, Chapter Four, Part II &mdash; 61-0101, para. 192</div>
     </div>
   </div>
 
